@@ -1,0 +1,16 @@
+{
+  "name": "AI-Native 组织协议图解 v0.1",
+  "page_spec": "1080x1440, 3:4",
+  "font": "Microsoft YaHei",
+  "total_pages": 73,
+  "sets": [
+    {"folder": "01 组织运行主循环 v0.2", "pages": 12, "editable": "01 组织运行主循环 v0.2.html"},
+    {"folder": "02 Goal 协议 v0.1", "pages": 8, "editable": "02 Goal 协议 v0.1.html"},
+    {"folder": "03 Goal-Task 接口 v0.1", "pages": 8, "editable": "03 Goal-Task 接口 v0.1.html"},
+    {"folder": "04 Task 协议 v0.1", "pages": 10, "editable": "04 Task 协议 v0.1.html"},
+    {"folder": "05 Free Work Space 协议 v0.1", "pages": 9, "editable": "05 Free Work Space 协议 v0.1.html"},
+    {"folder": "06 Task Lease 与时间恢复协议 v0.1", "pages": 9, "editable": "06 Task Lease 与时间恢复协议 v0.1.html"},
+    {"folder": "07 Review 协议 v0.1", "pages": 8, "editable": "07 Review 协议 v0.1.html"},
+    {"folder": "08 Acceptance 协议 v0.1", "pages": 9, "editable": "08 Acceptance 协议 v0.1.html"}
+  ]
+}
