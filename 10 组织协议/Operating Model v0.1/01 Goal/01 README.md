@@ -16,3 +16,5 @@
 - [Mechanisms](01%20Mechanisms.md)
 
 跨模块：[00 组件版本与依赖传播](../00%20Organizational%20Reality/00%20README.md) · [02 Primary Goal 与 Task](../02%20Task%20and%20Execution/02%20README.md) · [04 知识支持或质疑 Goal](../04%20Learning%20and%20Knowledge/04%20README.md) · [06 Goal 所需能力缺口](../06%20Capability/06%20README.md) · [07 价值锚点](../07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md) · [08 Goal Authority 与风险权限分离](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[01 Visual Specification|Visual Specification]]

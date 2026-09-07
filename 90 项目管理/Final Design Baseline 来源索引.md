@@ -1,5 +1,9 @@
 # Final Design Baseline 来源索引
 
+## X1 World Layer 补充来源（2026-09-08）
+
+[X1 World Layer 收敛来源](../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-08%20X1%20World%20Layer%20%E6%94%B6%E6%95%9B%E6%9D%A5%E6%BA%90.md)记录会话ID、关键Turn与收敛裁决。X1 是 Final Baseline 的横切体验补充，不改写 00–08 的既有来源链。
+
 设计权威为用户指定对话最终冻结结论；源文保留中间提议，当前规范已合并后续修正。模块 Purpose/Spec/Topology 的文字与关系是从源文整理，拓扑 ID 和 L3 索引 ID 是文档定位编号，不是新协议字段。
 
 | 内容 | 来源 |

@@ -16,3 +16,5 @@
 - [Mechanisms](05%20Mechanisms.md)
 
 跨模块：[00 持久事实与依赖历史](../00%20Organizational%20Reality/00%20README.md) · [01 Human 目的权](../01%20Goal/01%20README.md) · [02 Execution 责任与可靠回应](../02%20Task%20and%20Execution/02%20README.md) · [03 自由工作边界](../03%20Free%20Work%20Review%20Acceptance/03%20README.md) · [04 激活与 Policy 分离](../04%20Learning%20and%20Knowledge/04%20README.md) · [07 HAU 资产连续性](../07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md) · [08 授权与外部停权](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[05 Visual Specification|Visual Specification]]

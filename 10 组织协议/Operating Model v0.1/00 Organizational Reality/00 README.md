@@ -16,3 +16,5 @@
 - [Mechanisms](00%20Mechanisms.md)
 
 跨模块：[01 Goal 组件与主目标继承](../01%20Goal/01%20README.md) · [02 Execution 事实](../02%20Task%20and%20Execution/02%20README.md) · [03 正式边界与 Result](../03%20Free%20Work%20Review%20Acceptance/03%20README.md) · [04 知识修正](../04%20Learning%20and%20Knowledge/04%20README.md) · [05 Context Reconstruction](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [06 关键依赖重验](../06%20Capability/06%20README.md) · [07 事实的价值解释](../07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md) · [08 Change Set 与 Audit](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[00 Visual Specification|Visual Specification]]

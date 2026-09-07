@@ -16,3 +16,5 @@
 - [Mechanisms](04%20Mechanisms.md)
 
 跨模块：[00 组件版本与实质依赖](../00%20Organizational%20Reality/00%20README.md) · [01 Goal Challenge](../01%20Goal/01%20README.md) · [02 执行查询及反馈](../02%20Task%20and%20Execution/02%20README.md) · [03 Return/Review Evidence](../03%20Free%20Work%20Review%20Acceptance/03%20README.md) · [05 Runtime 接触点](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [06 可教到可复现](../06%20Capability/06%20README.md) · [08 Policy Governance](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[04 Visual Specification|Visual Specification]]

@@ -16,3 +16,5 @@
 - [Mechanisms](07%20Mechanisms.md)
 
 跨模块：[00 统一事实解释](../00%20Organizational%20Reality/00%20README.md) · [01 价值锚点](../01%20Goal/01%20README.md) · [02 尝试成功失败均可贡献](../02%20Task%20and%20Execution/02%20README.md) · [04 知识下游复用](../04%20Learning%20and%20Knowledge/04%20README.md) · [05 HAU 历史与 Human Model](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [06 能力复现贡献](../06%20Capability/06%20README.md) · [08 奖励不产生 Authority](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[07 Visual Specification|Visual Specification]]

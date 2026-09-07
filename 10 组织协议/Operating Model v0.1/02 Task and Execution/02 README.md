@@ -16,3 +16,5 @@
 - [Mechanisms](02%20Mechanisms.md)
 
 跨模块：[00 尝试事件与实质依赖](../00%20Organizational%20Reality/00%20README.md) · [01 主目标及合法派生](../01%20Goal/01%20README.md) · [03 工作边界与结果验收](../03%20Free%20Work%20Review%20Acceptance/03%20README.md) · [05 Runtime 与唯一责任解析](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [06 Terrain 和能力证据](../06%20Capability/06%20README.md) · [07 贡献信号](../07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md)
+
+- [[02 Visual Specification|Visual Specification]]

@@ -16,3 +16,5 @@
 - [Mechanisms](03%20Mechanisms.md)
 
 跨模块：[00 正式采集边界与重审](../00%20Organizational%20Reality/00%20README.md) · [02 Return 和尝试](../02%20Task%20and%20Execution/02%20README.md) · [04 质量与学习双入口](../04%20Learning%20and%20Knowledge/04%20README.md) · [05 运行边界](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [06 能力证据](../06%20Capability/06%20README.md) · [08 使用风险与验收权分离](../08%20Governance%20Risk%20Audit/08%20README.md)
+
+- [[03 Visual Specification|Visual Specification]]

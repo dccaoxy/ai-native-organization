@@ -1,6 +1,6 @@
 # Global Panorama Topology v0.1
 
-> Operating Model v0.1 Final Design Baseline；文档收敛：2026-09-07。设计已冻结，未声称系统已实现或实验已验证。
+> Operating Model v0.1 Final Design Baseline；复核：2026-09-08。设计已冻结，未声称系统已实现或实验已验证。
 
 [总入口](Operating%20Model%20v0.1%20Final%20Design%20Baseline.md) · [原则树](Principle%20Tree%20v0.1.md) · [来源索引](../90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/Final%20Design%20Baseline%20%E6%9D%A5%E6%BA%90%E7%B4%A2%E5%BC%95.md)
 
@@ -23,6 +23,7 @@ Human/HAU → Goal → Task Contract → Task Bus/Claim → Execution → Free W
 - [06 Capability](../10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/06%20Capability/06%20Panorama%20Topology.md)
 - [07 Contribution Reward Honor Achievement](../10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/07%20Contribution%20Reward%20Honor%20Achievement/07%20Panorama%20Topology.md)
 - [08 Governance Risk Audit](../10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Panorama%20Topology.md)
+- [X1 Organizational World & UX Shell](../X1%20Organizational%20World%20%26%20UX%20Shell/X1%20Organizational%20World%20%26%20UX%20Shell.md)（横切体验投影）
 
 ## 视角与导航
 
@@ -34,4 +35,4 @@ Organization → Module → Mechanism → Object/State/Event → Specification/S
 
 文档节点记录稳定ID、Label、Type、Module、Sources、Principles、Freeze Class、Launch Scope、Drill-down Target；未有真实实例时只展示设计对象。[机器可读拓扑](Atlas%20Topology%20v0.1.json)保存9个模块的节点、带类型边、跨模块接口与79个机制。冻结分类与上线范围以各自文档为准。
 
-后续HTML验收包括：全局到9模块与机制可下钻；边类型与来源可查；切换视角不制造另一事实图；Task/Execution分开；Review/Acceptance/Selection分开；Knowledge更新不扩大Authority；历史视觉图明确版本。本次未建设HTML Atlas。
+后续HTML验收包括：全局到9模块与机制可下钻；支持 World/Architecture/Knowledge/Authority/Value 多视角；边类型与来源可查；切换视角不制造另一事实图；Task/Execution分开；Review/Acceptance/Selection分开；Knowledge更新不扩大Authority；历史视觉图明确版本。详细交互约束见 [X1 Atlas 信息架构](../X1%20Organizational%20World%20%26%20UX%20Shell/Interactive%20HTML%20Atlas%20Information%20Architecture.md)。本次未建设HTML Atlas。

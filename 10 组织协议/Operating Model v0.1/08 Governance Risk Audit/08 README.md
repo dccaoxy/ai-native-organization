@@ -16,3 +16,5 @@
 - [Mechanisms](08%20Mechanisms.md)
 
 跨模块：[00 Event/Version/Dependency 历史](../00%20Organizational%20Reality/00%20README.md) · [01 Goal Authority](../01%20Goal/01%20README.md) · [02 Execution Accountability](../02%20Task%20and%20Execution/02%20README.md) · [03 Acceptance 与 Risk 权分离](../03%20Free%20Work%20Review%20Acceptance/03%20README.md) · [04 知识支持 Policy](../04%20Learning%20and%20Knowledge/04%20README.md) · [05 Boundary 与 Control Plane](../05%20Agent%20Governance%20and%20Runtime/05%20README.md) · [07 激励不购买权力](../07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md)
+
+- [[08 Visual Specification|Visual Specification]]

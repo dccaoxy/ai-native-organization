@@ -1,6 +1,6 @@
 # Principle Tree v0.1
 
-> Operating Model v0.1 Final Design Baseline；文档收敛：2026-09-07。设计已冻结，未声称系统已实现或实验已验证。
+> Operating Model v0.1 Final Design Baseline；复核：2026-09-08。设计已冻结，未声称系统已实现或实验已验证。
 
 [总入口](Operating%20Model%20v0.1%20Final%20Design%20Baseline.md) · [原则树](Principle%20Tree%20v0.1.md) · [来源索引](../90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/Final%20Design%20Baseline%20%E6%9D%A5%E6%BA%90%E7%B4%A2%E5%BC%95.md)
 
@@ -22,6 +22,8 @@ L1、101条模块L2与79项L3机制目录已冻结；L3详细原则在本轮从�
 | 07 Contribution Reward Honor Achievement | 12 | 11 | [原则正文](../10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/07%20Contribution%20Reward%20Honor%20Achievement/07%20Principles.md) |
 | 08 Governance Risk Audit | 13 | 13 | [原则正文](../10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Principles.md) |
 
+X1 Organizational World & UX Shell 是独立横切体验层，冻结 WORLD-01~08，但不计入 Operating Model 的 101 条模块 L2；见 [X1 正文](../X1%20Organizational%20World%20%26%20UX%20Shell/X1%20Organizational%20World%20%26%20UX%20Shell.md)。
+
 ## Cross-cutting / Applies To
 
 树表达主属关系，Applies To表达横切适用，不复制一套有独立版本的同义原则。以下对应是对冻结语义的文档整理，非新增L1。
@@ -34,6 +36,8 @@ L1、101条模块L2与79项L3机制目录已冻结；L3详细原则在本轮从�
 | AGENT-05 权限委托只能保持或收紧 | 01 Goal Boundary、02 Execution、05 Runtime、08 Governance |
 | WORK-11 正式组织边界 | 00 Reality、03 Free Work、04 Experience、05 Control Plane、08 Audit |
 | VALUE-11 共享事实的价值解释 | 00 Event、02 Execution、04 Knowledge、06 Capability、07 Contribution |
+| WORLD-01~03 单一现实、多种投影、现实驱动世界 | 00–08 全模块的 World/Architecture/Knowledge/Authority/Value 视角 |
+| WORLD-04~08 可探索未知、非等级成长、真实空间映射、多视角 | Task Discovery、Capability、Knowledge、Governance、Value UX |
 
 Hypothesis Cloud 为共享推理构件，可由 Knowledge、Oversight、Root Cause、Risk与Failure Analysis使用。
 
