@@ -1,100 +1,34 @@
 # AI-Native Organization
 
-## GitHub 阅读入口
+一个约60名跨部门新人、为期一年的实验组织：以Human/HAU、Goal、Task/Execution、Knowledge和Capability探索效率、创新、学习与组织智能。
 
-本仓库整理自 Obsidian 项目，保留原始讨论、研究文档、PNG 图片与可编辑 HTML。正文中的 `[[双链]]` 适合在 Obsidian 中阅读；GitHub 浏览可使用以下目录链接。
+当前设计权威：[Operating Model v0.1 Final Design Baseline](00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/Operating%20Model%20v0.1%20Final%20Design%20Baseline.md)。已纳入最终逐模块收敛、Pass 2、11+1 L1、101条L2、79项L3机制、冻结分类、MVO与8项实验。
 
-- [项目总览](00%20项目总览/)
-- [组织协议](10%20组织协议/)
-- [研究议题](20%20研究议题/)
-- [原始讨论](80%20原始讨论/)
-- [项目管理与版本状态](90%20项目管理/)
-- [协议视觉图：8 套、73 张独立页面](00%20项目总览/视觉图/AI-Native%20组织协议图解%20v0.1/)
+- [Principle Tree](00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/Principle%20Tree%20v0.1.md)
+- [全局与模块Panorama拓扑](00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/Global%20Panorama%20Topology%20v0.1.md)
+- [冻结分类](90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/Freeze%20Classification%20v0.1.md)
+- [最小可运行组织](90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/Minimum%20Viable%20Organization%20v0.1.md)
+- [实验清单](20%20%E7%A0%94%E7%A9%B6%E8%AE%AE%E9%A2%98/Experiment%20Backlog%20v0.1.md)
+- [设计来源](90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/Final%20Design%20Baseline%20%E6%9D%A5%E6%BA%90%E7%B4%A2%E5%BC%95.md)
+- [当前状态](90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/%E8%AE%BE%E8%AE%A1%E7%8A%B6%E6%80%81%E4%B8%8E%E7%89%88%E6%9C%AC.md)
+- [下一步](90%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/next-actions.md)
 
-同步基线：2026-09-04。文字已纳入当日阶段设计；视觉图为此前生成版本，尚未完整覆盖最新组织记忆与行为治理机制。历史原文中的乱码、附件占位与证据缺口保留原状，不代表已无损恢复。
+## 模块
 
-这是一次阶段快照，不是自动持续同步。冻结、已确认和待设计的具体边界以版本状态文档为准。
+- [00 Organizational Reality](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/00%20Organizational%20Reality/00%20README.md)
+- [01 Goal](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/01%20Goal/01%20README.md)
+- [02 Task and Execution](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/02%20Task%20and%20Execution/02%20README.md)
+- [03 Free Work Review Acceptance](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/03%20Free%20Work%20Review%20Acceptance/03%20README.md)
+- [04 Learning and Knowledge](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20README.md)
+- [05 Agent Governance and Runtime](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/05%20Agent%20Governance%20and%20Runtime/05%20README.md)
+- [06 Capability](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/06%20Capability/06%20README.md)
+- [07 Contribution Reward Honor Achievement](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/07%20Contribution%20Reward%20Honor%20Achievement/07%20README.md)
+- [08 Governance Risk Audit](10%20%E7%BB%84%E7%BB%87%E5%8D%8F%E8%AE%AE/Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20README.md)
 
-这是一个为期一年的实验型组织设计项目：约 60 名来自不同部门的应届生，在保留正式岗位与职责的同时，组成一个跨部门的第二组织，与多种 AI Agent 共同完成真实工作。
+## 版本与载体
 
-项目不把“员工使用更多 AI 工具”等同于 AI-Native。我们研究的是：当目标、任务、能力、证据、知识与反馈都能被 Human 和 Agent 共同读取、调度和更新时，组织能否获得更高效率、更强创新、更快学习、更高组织智能，同时维持人的成长与真实连接。
+Obsidian项目为日常文档载体，本Git仓库是项目发布与版本记录副本；长期记忆仓库不是本项目源码/原文仓库。更新日期2026-09-07。历史报告和原始讨论保留当时状态，当前入口不以旧“待设计”标记覆盖最终基线。
 
-## 导航
+现有PNG/HTML为历史视觉版本，未完整表达最终Task/Execution及Reality Layer；本轮建立Panorama信息拓扑，Interactive HTML Atlas尚未实现。核心设计冻结不代表参数已定、实验已验证或M0已经上线。
 
-- [[00 项目总览/项目背景与实验目标|项目背景与实验目标]]
-- [[00 项目总览/总体设计原则|总体设计原则]]
-- [[10 组织协议/Goal Protocol v0.1|Goal Protocol v0.1]]（冻结）
-- [[10 组织协议/Task Protocol v0.1|Task Protocol v0.1]]（冻结）
-- [[10 组织协议/Goal-Task 接口补丁 v0.1|Goal–Task 接口补丁 v0.1]]（冻结）
-- [[10 组织协议/Operating Loop v0.2|Operating Loop v0.2]]（已确认）
-- [[10 组织协议/Free Work Space Protocol v0.1|Free Work Space Protocol v0.1]]（冻结）
-- [[10 组织协议/Time & Recovery Protocol v0.1|Time & Recovery Protocol v0.1]]（冻结）
-- [[10 组织协议/Task Lease & Progress Protocol v0.1|Task Lease & Progress Protocol v0.1]]（冻结）
-- [[10 组织协议/Review Protocol v0.1|Review Protocol v0.1]]（冻结）
-- [[10 组织协议/Acceptance Protocol v0.1|Acceptance Protocol v0.1]]（冻结）
-- [[10 组织协议/Audit Layer 待设计|Audit Layer]]（待设计）
-- [[10 组织协议/Organization Runtime & Protocol OTA|Organization Runtime & Protocol OTA]]（核心架构已确认）
-- [[10 组织协议/Organizational Learning & Knowledge Formation|Organizational Learning & Knowledge Formation]]（知识形成 v0.1 已冻结；行为治理未冻结）
-- [[10 组织协议/Evidence Core Principles|Evidence Core Principles]]（核心定义与原则已确认）
-- [[10 组织协议/Verification Protocol v0.1|Verification Protocol v0.1]]（冻结）
-- [[10 组织协议/Generalization & Scope|Generalization / Scope]]（核心设计已完成，纳入 Knowledge Formation v0.1）
-- [[20 研究议题/AI-Native Organization Fundamentals Backlog|Fundamentals 研究议题总索引]]
-- [[90 项目管理/设计状态与版本|设计状态与版本]]
-- [[90 项目管理/变更记录|变更记录]]
-- [[00 项目总览/视觉图/AI-Native 组织协议图解 v0.1/使用说明|AI-Native 组织协议图解 v0.1]]（73 张小红书 3:4 页面）
-
-## 当前主循环
-
-```text
-Goal Proposal → Active Goal → Decomposition → Task Proposal
-  → Validation → Active Task → Task Bus → Pull / Push → Executor Unit
-  → Free Work Space → Output + Evidence → Review（Quality + Learning）
-  → Acceptance → Result → Knowledge / Evidence / Capability / New Task
-  ↔ Organizational Memory（持续学习层）
-```
-
-完整主链及 Temporary Subtask 升级规则见 [[10 组织协议/Operating Loop v0.2|Operating Loop v0.2]]。
-
-## 当前知识形成主干
-
-```text
-Raw Events → Organizational Attention Mechanism → Observation → Pattern
-→ Hypothesis Cloud ⇄ Evidence ⇄ Verification
-→ Generalization / Scope → Knowledge
-→ Behavior Change → New Events
-```
-
-其中 [[10 组织协议/Verification Protocol v0.1|Verification Protocol v0.1]] 已冻结；[[10 组织协议/Generalization & Scope|Generalization / Scope]] 核心设计已完成并纳入 [[10 组织协议/Organizational Knowledge Formation Protocol v0.1|Organizational Knowledge Formation Protocol v0.1]]（冻结）。下一问题是 Knowledge→Behavior 由谁治理晋升。
-
-## 版本原则
-
-- Protocol 固定，Workflow 动态。
-- 冻结表示已形成 v0.1 共识，不表示永远不变；只有真实运行证据才推动 v0.2。
-- 研究问题与协议分离：未知问题进入研究议题，已确认的组织不变量进入协议。
-- 本目录当前不受 Git 管理；项目 Git 版本源待明确，不宣称已同步 GitHub。日常浏览以指定 Obsidian 项目为载体。
-
-## 当前基线入口（2026-09-04）
-
-独立工作轨道首先读取 [[90 项目管理/DESIGN-ISSUE-001 基线入口]]，再读取 [[90 项目管理/设计状态与版本]] 和 [[90 项目管理/next-actions]]。
-
-- [[10 组织协议/Organizational Knowledge Formation Protocol v0.1]]：v0.1 冻结。
-- [[10 组织协议/organizational-memory|Organizational Memory]]：核心架构已形成 / Knowledge→Behavior 治理未冻结。
-- [[10 组织协议/Knowledge to Behavior - Behavioral Authority]]：四级行为权威设计有效，晋升治理未冻结。
-- [[10 组织协议/Agent Governance & Runtime]]：一级模块，骨架已确认，待详细设计。
-- [[90 项目管理/DESIGN-ISSUE-001 基线同步裁决]]：Resolved — baseline sync gap, not protocol contradiction。
-
-## 2026-09-04 阶段基线
-
-[[设计状态与版本]] 为状态入口，[[阶段同步报告 2026-09-04]] 记录写入与证据缺口。
-
-- [[organizational-memory]]
-- [[Context Assembly v0.1]]
-- [[Knowledge Consolidation & Salience v0.1]]
-- [[Knowledge Intervention v0.1]]
-- [[Knowledge Usage Feedback]]
-- [[Knowledge Injection 与同步边界]]
-- [[Agent Governance & Runtime]]
-- [[Capability & Human Learning 待设计]]
-- [[contribution-and-honor-wall]]
-- [[Governance Audit Risk 待设计]]
-- [[设计与开发轨道]]
+[实验背景](00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E4%B8%8E%E5%AE%9E%E9%AA%8C%E7%9B%AE%E6%A0%87.md) · [长期研究议题](20%20%E7%A0%94%E7%A9%B6%E8%AE%AE%E9%A2%98/AI-Native%20Organization%20Fundamentals%20Backlog.md) · [最终收敛原始讨论](80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md)

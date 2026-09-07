@@ -1,0 +1,21 @@
+# 设计与开发轨道
+
+> 状态：分轨原则已形成，原型范围是开发建议；本次同步不代表系统已实现或已完成验证。
+
+Design Track 负责“应该怎样”、Protocol 收敛和设计裁决；Build Track 把有效基线转成可执行规格，检验是否能运行。Build 发现矛盾或未定义边界时回传 Design Issue，不能私自修改冻结 Protocol。
+
+Organization Kernel Prototype v0.1 候选范围：Core Object Schema、Event Store、Task Bus 最小闭环、Organization Gateway、薄 Runtime Adapter、最小模拟器。
+
+建议首个 Sprint：1 Human + 2 个不同 Agent，经统一 Gateway 跑通 Goal → Task → Review → Acceptance，留下完整 Event Trail。接口候选包括 register_agent、get_task、ack_task、heartbeat/progress、query_knowledge、submit、check_protocol_version。技术栈和具体字段仍待确定。
+
+暂不开发完整知识图谱 UI、积分/荣誉平台、复杂 Capability/Attention 算法、自动因果推断或完整 OTA 平台。先形成可执行规格，运行和模拟结果回到设计。
+
+## DESIGN-ISSUE-001
+
+类型：Baseline Sync Gap，不是已证实的 Protocol 逻辑矛盾。
+
+主设计裁决（`fc340e39-0c26-4ed0-a099-058ad000a951`）：Scope 核心设计已完成并纳入 Knowledge Formation v0.1；Memory 核心架构已形成而 Knowledge → Behavior 治理未最终冻结；Agent Governance & Runtime 为一级模块，骨架确认、待详细设计。
+
+状态：既有 [[DESIGN-ISSUE-001 基线同步裁决]] 已记录 Resolved。本轮进一步补齐原文与机制细节，校验结果见同步报告。详见 [[阶段同步报告 2026-09-04]]。不存在“仅因助手说已交给 Work 就认为文件已更新”的状态。
+
+本目录当前不属于 Git 仓库；既有 README 将 GitHub 私有仓库称为已落实项目版本源缺少当前证据，改为待明确项目版本管理。不把长期记忆仓库等同于本项目工作目录。

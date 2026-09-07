@@ -1,5 +1,8 @@
 # Knowledge Consolidation & Salience v0.1
 
+> 2026-09-07：本页保留有效子机制细则。整体当前基线见 [04完整规格](Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20Specification.md)；行为强度治理见 [08 Policy Governance](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md)。知识不晋级为Protocol，认知/显著性/行为权力分离，更新按组件及实质依赖传播。下文未定字段、算法与参数不等于核心设计未冻结。
+
+
 > 状态：已冻结 v0.1。收敛轮次 `ead47c74-e355-47e8-b8d5-4cc388832fa8`；同意冻结 `4065665c-6bc0-453b-9bf9-6a91b08a030b`。
 
 **Epistemic Strength** 回答“有多可信”，由 Evidence、独立性、Verification、反证与 Validated Scope 支持。**Memory Salience** 回答“在当前情境下有多值得想起”。两者分开，不混成一个总分。常用不等于更真，罕见不等于不重要。

@@ -1,9 +1,9 @@
-# Capability & Human Learning
+# Capability & Human Learning 待设计
 
-> 后续一级模块；状态：待设计，已有问题与原则，不是冻结协议。
+> 当前兼容入口；原协议正文已按最终收敛合并至Operating Model v0.1模块规格。旧名称与链接保留。
 
-研究 Execution Capability 与 Oversight Capability 的区分、Human-Agent Unit 能力上限、Junior → Senior、亲自执行与观察/Review 的关系、Learning Trace、能力证明及升级。
+[当前完整正文](Operating%20Model%20v0.1/06%20Capability/06%20Specification.md) · [冻结模块原则](Operating%20Model%20v0.1/06%20Capability/06%20Principles.md) · [机制详细原则](Operating%20Model%20v0.1/06%20Capability/06%20Mechanisms.md)
 
-Capability 不等于 Contribution；Agent 执行能力不能无限突破 Human 的监督和责任能力。已有研究保留在 [[AI-Native Organization Fundamentals Backlog]]；不预设能力评分和晋升公式。
 
-关联：[[Task Protocol v0.1]] · [[Agent Governance & Runtime]] · [[contribution-and-honor-wall]]
+
+本次合并包括第一轮及Pass 2最终修正，非仅更新状态。收敛前原文保存在历史快照，来源与差异可追溯。

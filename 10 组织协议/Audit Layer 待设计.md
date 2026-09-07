@@ -1,11 +1,9 @@
-# Audit Layer（待设计）
+# Audit Layer 待设计
 
-> 状态：**待设计**
+> 当前兼容入口；原协议正文已按最终收敛合并至Operating Model v0.1模块规格。旧名称与链接保留。
 
-Audit 是贯穿整个 Operating Loop 的横向基础设施，不属于 Acceptance 的子模块。它应覆盖 Goal 提出/批准、Task 拆解/激活、领取/派发、Boundary 与标准版本变化、Task Lease、Submit、Review、Acceptance、Knowledge Confirmation 与 Ontology 变更等关键事件。
+[当前完整正文](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md) · [冻结模块原则](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Principles.md) · [机制详细原则](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Mechanisms.md)
 
-当前只冻结边界：**Acceptance 是业务决定；Audit 证明该决定及其上下文如何形成。** Audit Protocol 的事件 Schema、权限、保留、查询与追责边界尚未设计。
 
-关联：[[Operating Loop v0.2]] · [[Acceptance Protocol v0.1]] · [[Task Lease & Progress Protocol v0.1]]
 
-所属后续一级模块：[[Governance Audit Risk 待设计]]。Agent 的运行治理与撤销问题见 [[Agent Governance & Runtime]]。
+本次合并包括第一轮及Pass 2最终修正，非仅更新状态。收敛前原文保存在历史快照，来源与差异可追溯。

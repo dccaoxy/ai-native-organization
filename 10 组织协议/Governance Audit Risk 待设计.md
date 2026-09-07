@@ -1,9 +1,9 @@
-# Governance / Audit / Risk
+# Governance Audit Risk 待设计
 
-> 后续一级模块；状态：待设计，权限与审计方向已有原则。
+> 当前兼容入口；原协议正文已按最终收敛合并至Operating Model v0.1模块规格。旧名称与链接保留。
 
-后续设计包括 Protocol 与 Knowledge 行为权力的发布/晋升权、Human 与 Agent 权限、Risk Boundary、Override、责任、Challenge、撤销与回滚。
+[当前完整正文](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md) · [冻结模块原则](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Principles.md) · [机制详细原则](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Mechanisms.md)
 
-[[Audit Layer 待设计]] 保持横向职责，不从属于 Acceptance。[[Acceptance Protocol v0.1]] 是业务生效决定；Audit 记录如何形成决定。Agent 运行治理见 [[Agent Governance & Runtime]]。
 
-不把普通 Knowledge 的高可信度或高 Salience 自动转为 Mandatory；治理主体与门槛是 [[Knowledge to Behavior - Behavioral Authority]] 当前问题。
+
+本次合并包括第一轮及Pass 2最终修正，非仅更新状态。收敛前原文保存在历史快照，来源与差异可追溯。

@@ -1,7 +1,10 @@
 # Verification Protocol v0.1
 
-> 状态：**冻结**  
-> 冻结日期：2026-09-03  
+> 2026-09-07：本页保留有效子机制细则。整体当前基线见 [04完整规格](Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20Specification.md)；行为强度治理见 [08 Policy Governance](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md)。知识不晋级为Protocol，认知/显著性/行为权力分离，更新按组件及实质依赖传播。下文未定字段、算法与参数不等于核心设计未冻结。
+
+
+> 状态：**冻结**
+> 冻结日期：2026-09-03
 > 说明：冻结的是 v0.1 决策原则；量化模型与运行 Schema 等待真实数据。
 
 ## 定义
@@ -63,4 +66,3 @@ Stop Active Verification → Act → Continue Passive Verification
 [[AI-Native Organization Fundamentals Backlog]] 中保留 **Verification Economics Model / Value of Information**。待积累 Verification Proposal、实际 Human/Compute/时间成本、Hypothesis Cloud 变化、Decision Change、Knowledge Reuse 与最终价值后，再研究数学模型。
 
 关联：[[Organizational Learning & Knowledge Formation]] · [[Evidence Core Principles]] · [[Generalization & Scope]]
-

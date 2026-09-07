@@ -1,5 +1,8 @@
 # Knowledge Usage Feedback
 
+> 2026-09-07：本页保留有效子机制细则。整体当前基线见 [04完整规格](Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20Specification.md)；行为强度治理见 [08 Policy Governance](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md)。知识不晋级为Protocol，认知/显著性/行为权力分离，更新按组件及实质依赖传播。下文未定字段、算法与参数不等于核心设计未冻结。
+
+
 > 状态：反馈链骨架已形成；采集 Schema、指标及因果归因方法待设计。
 
 **Activated → Exposed → Adopted / Rejected → Outcome → New Evidence**。

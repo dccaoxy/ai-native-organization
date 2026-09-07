@@ -1,5 +1,8 @@
 # Organizational Knowledge Formation Protocol v0.1
 
+> 2026-09-07：本页保留有效子机制细则。整体当前基线见 [04完整规格](Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20Specification.md)；行为强度治理见 [08 Policy Governance](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md)。知识不晋级为Protocol，认知/显著性/行为权力分离，更新按组件及实质依赖传播。下文未定字段、算法与参数不等于核心设计未冻结。
+
+
 > 版本：v0.1；状态：冻结。
 > 基线同步日期：2026-09-04；裁决：[[DESIGN-ISSUE-001 基线同步裁决]]。
 
@@ -23,7 +26,7 @@ Scope 模块正文见 [[Generalization & Scope]]。Knowledge 保持明确 Claim�
 
 ## 冻结边界
 
-本次是已裁决设计的基线同步，不是重新设计或升级冻结协议。知识形成 v0.1 的冻结不等于 Knowledge→Behavior 治理已冻结；后者见 [[Knowledge to Behavior - Behavioral Authority]]。具体 Schema、算法和实现层未决问题仍按其现有状态保留，不补造已冻结细则。
+本次是已裁决设计的基线同步，不是重新设计或升级冻结协议。知识形成与知识驱动的Policy Governance均已纳入最终基线，但认知成立与行为授权仍是不同判断；后者见 [[Knowledge to Behavior - Behavioral Authority]]。具体 Schema、算法和实现层未决问题仍按其现有状态保留，不补造已冻结细则。
 
 后续协议升级仍遵守 [[设计状态与版本]] 的真实 Evidence、影响范围和迁移规则。
 

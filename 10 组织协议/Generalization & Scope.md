@@ -1,5 +1,8 @@
 # Generalization & Scope
 
+> 2026-09-07：本页保留有效子机制细则。整体当前基线见 [04完整规格](Operating%20Model%20v0.1/04%20Learning%20and%20Knowledge/04%20Specification.md)；行为强度治理见 [08 Policy Governance](Operating%20Model%20v0.1/08%20Governance%20Risk%20Audit/08%20Specification.md)。知识不晋级为Protocol，认知/显著性/行为权力分离，更新按组件及实质依赖传播。下文未定字段、算法与参数不等于核心设计未冻结。
+
+
 > 状态：核心设计已完成，纳入 Knowledge Formation Protocol v0.1；运行 Schema 与自动化仍待设计。
 > 更新：2026-09-04。依据主设计对话收敛及 DESIGN-ISSUE-001 裁决。
 
