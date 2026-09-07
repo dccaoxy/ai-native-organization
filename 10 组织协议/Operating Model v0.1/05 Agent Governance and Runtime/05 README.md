@@ -6,7 +6,7 @@
 
 来源：[源文 a1b56a80](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-a1b56a80-1808-4234-93ff-c64181be2df9) · [源文 9905dc6e](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-9905dc6e-cc09-45f8-8b64-94e95f015a7a) · [源文 ec3cb0fa](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-ec3cb0fa-47c9-41b7-9356-c6655745c579)。
 
-使异构 Agent 成为可治理的组织行动接口，明确代表谁、Authority 来源、Boundary、运行状态以及如何停止；不管理所有私人智能。
+模块目的见 [Purpose](05%20Purpose.md)。
 
 - [Purpose](05%20Purpose.md)
 - [Principles](05%20Principles.md)

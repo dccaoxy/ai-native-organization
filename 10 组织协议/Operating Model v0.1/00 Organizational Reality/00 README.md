@@ -6,7 +6,7 @@
 
 来源：[源文 f80a5817](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-f80a5817-3900-4909-a5cd-3569c7dbc2e6) · [源文 ec3cb0fa](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-ec3cb0fa-47c9-41b7-9356-c6655745c579)。
 
-让整个组织共享同一套事实，回答发生过什么、当前什么依赖什么，以及现实变化应该影响哪里。不同模块解释同一事实，不各自制造事实。
+模块目的见 [Purpose](00%20Purpose.md)。
 
 - [Purpose](00%20Purpose.md)
 - [Principles](00%20Principles.md)

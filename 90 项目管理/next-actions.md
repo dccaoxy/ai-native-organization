@@ -10,3 +10,5 @@
 6. 新问题经Evidence/Hypothesis/Change Proposal进入版本修订；不能把已冻结模块重新列为从零待设计。
 
 文档已整理不代表M0上线、真实组织实验完成或Atlas已交付。原始来源限制见[来源索引](Final%20Design%20Baseline%20%E6%9D%A5%E6%BA%90%E7%B4%A2%E5%BC%95.md)。
+
+文档维护：已完成[正文去重与入口整理](文档去重与入口整理.md)。后续 Atlas 按 principleRef 读取模块机制正文。

@@ -6,7 +6,7 @@
 
 来源：[源文 4ae954b1](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-4ae954b1-3f17-4ce7-9767-aa50a07cd8d3) · [源文 f80a5817](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-f80a5817-3900-4909-a5cd-3569c7dbc2e6) · [源文 ec3cb0fa](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-ec3cb0fa-47c9-41b7-9356-c6655745c579)。
 
-表达组织希望现实发生的变化，为 Task、Capability Gap、Contribution 和学习提供方向与价值锚点；不预先规定解法。
+模块目的见 [Purpose](01%20Purpose.md)。
 
 - [Purpose](01%20Purpose.md)
 - [Principles](01%20Principles.md)

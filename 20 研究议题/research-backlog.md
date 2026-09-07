@@ -1,11 +1,13 @@
 ---
 type: redirect
 status: superseded
-canonical: "[[AI-Native Organization Fundamentals Backlog]]"
+canonical: "[[20 研究议题/AI-Native Organization Fundamentals Backlog]]"
 ---
 
 # Research Backlog（旧入口）
 
-研究议题已经合并到 [[AI-Native Organization Fundamentals Backlog]]，该文件是唯一权威总索引。
+本文件仅为旧链接兼容入口，不维护独立版本或协议正文。
 
-保留此入口仅用于兼容已有 Wikilink。
+[当前正文](AI-Native%20Organization%20Fundamentals%20Backlog.md)
+
+后续内容修订只在上述正文进行。

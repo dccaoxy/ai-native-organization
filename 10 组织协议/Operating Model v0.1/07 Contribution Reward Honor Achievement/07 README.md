@@ -6,7 +6,7 @@
 
 来源：[源文 aaf2ece8](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-aaf2ece8-406f-4e0e-ade1-4535ad986e51) · [源文 9905dc6e](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-9905dc6e-cc09-45f8-8b64-94e95f015a7a) · [源文 ec3cb0fa](../../../80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md#turn-ec3cb0fa-47c9-41b7-9356-c6655745c579)。
 
-让组织看见 HAU 创造的真实价值，以现实奖励、共同记忆和成长反馈支持后续探索、学习与协作。
+模块目的见 [Purpose](07%20Purpose.md)。
 
 - [Purpose](07%20Purpose.md)
 - [Principles](07%20Principles.md)
