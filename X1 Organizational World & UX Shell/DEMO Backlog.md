@@ -55,4 +55,3 @@
 ## 生成交接模板
 
 后续 Work 为每张 DEMO 补齐：`target audience`、`single visual question`、`source object/state snapshot`、`composition`、`labels`、`interaction candidates`、`accessibility`、`forbidden inference checklist`，并引用本页与 World Visual Bible。
-

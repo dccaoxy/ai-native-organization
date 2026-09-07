@@ -7,4 +7,3 @@
 - **Semantic Mapping**：Task 是共享契约；每份领取凭证是一场 Execution。
 - **Behavior / State**：同一 Task 可同时产生多条路线和独立状态。
 - **禁止误读**：Claim 不排他；Capability 不加锁；Task 状态不代替 Execution 状态。
-

@@ -7,4 +7,3 @@
 - **Semantic Mapping**：三座台分别表示 Review、Acceptance、Selection。
 - **Behavior / State**：内部过程默认模糊；跨边界事件与返回物进入公共视野。
 - **禁止误读**：不得全程监控；三种判断不可合并；未采用不等于无贡献。
-

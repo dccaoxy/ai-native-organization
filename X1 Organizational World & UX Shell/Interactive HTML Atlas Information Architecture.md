@@ -29,4 +29,3 @@
 ## Prototype Acceptance
 
 原型必须通过 X1 两条体验路径；能证明 Task≠Execution、唯一 Human owner、Unknown≠Risk≠Boundary、Review≠Acceptance≠Selection、Knowledge≠Policy≠Protocol；任何演示数据必须明确标为 synthetic fixture。
-

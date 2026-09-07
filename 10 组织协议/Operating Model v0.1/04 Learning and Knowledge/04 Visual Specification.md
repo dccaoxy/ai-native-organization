@@ -7,4 +7,3 @@
 - **Semantic Mapping**：书卷是 Knowledge，不是 Policy；页边界表示 Scope/Boundary。
 - **Behavior / State**：Evidence 先验证；Material Change 才强 Pulse。
 - **禁止误读**：单次经验不是真理；Pulse 不是强制工作流或全员打断。
-

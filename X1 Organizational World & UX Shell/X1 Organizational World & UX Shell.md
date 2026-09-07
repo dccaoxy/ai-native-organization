@@ -76,4 +76,3 @@ City Overview
 - **Semantic Mapping**：世界对象可追溯到 canonical object/event/dependency；多个视角仅改变投影。
 - **Behavior/State**：真实 Execution 消退迷雾，Knowledge 丰富图书馆，复现加固道路，Honor 才进入功勋殿。
 - **禁止误读**：禁止假地图、假荣誉、假能力；禁止用游戏惯例推导 winner-takes-all、等级准入或无限权限。
-

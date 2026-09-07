@@ -7,4 +7,3 @@
 - **Semantic Mapping**：雾=Unknown；危险地形=Risk；墙=Hard Boundary；通行证=Permission。
 - **Behavior / State**：Risk Shaping 可形成更窄安全路线；各 Authority 只点亮自身 Scope。
 - **禁止误读**：未知不自动染红；责任不等于无限权力；市政厅不是逐步审批中心。
-

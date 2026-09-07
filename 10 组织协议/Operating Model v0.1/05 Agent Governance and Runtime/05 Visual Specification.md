@@ -7,4 +7,3 @@
 - **Semantic Mapping**：猎犬是组织代表接口；HAU 承担工作单元责任。
 - **Behavior / State**：Agent 更换时 HAU 身份与组织状态保持；Active/Degraded/Suspended 可见。
 - **禁止误读**：Agent 不独自成为责任主体；Capability 不表示 Permission；不展示思维链。
-

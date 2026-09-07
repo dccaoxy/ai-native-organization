@@ -7,4 +7,3 @@
 - **Semantic Mapping**：时间轴只映射 Event Graph；道路只映射 material dependency。
 - **Behavior / State**：普通 Event 轻量入史；Material Change 才沿受影响道路传播。
 - **禁止误读**：关联不等于依赖；不得显示私人推理或把每个事件画成警报。
-

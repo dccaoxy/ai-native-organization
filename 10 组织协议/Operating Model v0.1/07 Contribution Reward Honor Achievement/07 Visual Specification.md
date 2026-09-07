@@ -7,4 +7,3 @@
 - **Semantic Mapping**：徽章记录经历；Honor 纪念 Event；两者都不授予 Authority。
 - **Behavior / State**：评议后才恢复归属；饱和改变价值语境但不抹除贡献。
 - **禁止误读**：不得出现人物总榜、赢家通吃或固定 Honor 配额。
-

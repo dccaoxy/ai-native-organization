@@ -7,4 +7,3 @@
 - **Semantic Mapping**：灯塔是目的变化而非路线；印记表示 Authority Source。
 - **Behavior / State**：组件 Challenge 只高亮受影响部分。
 - **禁止误读**：不得画成甘特图、任务清单或 Agent 可自行修改对象。
-

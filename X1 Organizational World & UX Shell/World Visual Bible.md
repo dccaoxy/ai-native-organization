@@ -52,4 +52,3 @@
 - 把 Task 画成唯一胜者、把 Parallel Execution 画成淘汰赛。
 - 把市政厅画成万能 Manager，或把 Agent 画成无 Human 责任的组织权力主体。
 - 展示、推断或要求保存私人思维链。
-

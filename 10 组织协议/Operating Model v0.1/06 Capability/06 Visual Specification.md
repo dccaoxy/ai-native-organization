@@ -7,4 +7,3 @@
 - **Semantic Mapping**：地形是能力情境；小径是 Candidate；道路是 Reproduced Capability；桥梁是 Dependency。
 - **Behavior / State**：探索消退迷雾，复现加固道路，依赖变化触发 Revalidation。
 - **禁止误读**：地图不是等级树；山峰不授予 Authority；一次成功不等于组织掌握。
-
