@@ -2,8 +2,8 @@
 
 复核：2026-09-08。
 
-1. 基于[已整理Panorama拓扑](../00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/Global%20Panorama%20Topology%20v0.1.md)与[X1 Atlas信息架构](../X1%20Organizational%20World%20%26%20UX%20Shell/Interactive%20HTML%20Atlas%20Information%20Architecture.md)建设可下钻 Interactive HTML Atlas，并通过两条体验路径。
-2. 按[World Visual Bible](../X1%20Organizational%20World%20%26%20UX%20Shell/World%20Visual%20Bible.md)执行[7项DEMO Backlog](../X1%20Organizational%20World%20%26%20UX%20Shell/DEMO%20Backlog.md)，先做新手村鸟瞰与赏金酒馆任务墙。
+1. 对已发布的 Interactive HTML Atlas v0.1 做下一轮下钻增强：接入完整 L2/L3、Object/Event/Dependency 详情与两条体验路径的逐步导览。
+2. DEMO-01 新手村鸟瞰与 DEMO-02 赏金酒馆任务墙已完成；下一批按[World Visual Bible](../X1%20Organizational%20World%20%26%20UX%20Shell/World%20Visual%20Bible.md)制作个人战争迷雾地图与 Organizational Capability Map。
 3. 准备2–3个真实任务及公司平台、数据、权限和风险边界；明确实际Human Authority。
 4. 按[M0](Minimum%20Viable%20Organization%20v0.1.md)形成可执行规格与首个闭环：Identity → Goal → Task → Claim/Execution → ACK/Progress → Return → Review/Acceptance → Events，适用时Selection。
 5. 明确实现字段、组件地址、执行状态机及Tunable参数；不以实现便利改写L1/L2。

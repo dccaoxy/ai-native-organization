@@ -18,6 +18,7 @@
 - [World Visual Bible](X1%20Organizational%20World%20%26%20UX%20Shell/World%20Visual%20Bible.md)
 - [DEMO Backlog](X1%20Organizational%20World%20%26%20UX%20Shell/DEMO%20Backlog.md)
 - [Interactive HTML Atlas 信息架构](X1%20Organizational%20World%20%26%20UX%20Shell/Interactive%20HTML%20Atlas%20Information%20Architecture.md)
+- [Interactive Atlas 源码](interactive-atlas/)
 
 ## 模块
 

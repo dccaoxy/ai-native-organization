@@ -4,6 +4,8 @@
 
 ## DEMO-01 新手村鸟瞰概念图
 
+> 状态：✅ 首版已生成。[[DEMO Assets/DEMO-01 新手村鸟瞰概念图.png|查看图片]]
+
 - **目的**：一眼说明组织如何从探索中增长。
 - **必须出现**：酒馆、城门、地图室、图书馆、市政厅、徽章墙/功勋殿、村外迷雾与道路。
 - **语义映射**：各空间严格映射 X1 Seed World Ontology；道路由 Capability 产生。
@@ -11,6 +13,8 @@
 - **禁止推断**：城市面积不代表组织人数或等级。
 
 ## DEMO-02 赏金酒馆任务墙
+
+> 状态：✅ 首版已生成。[[DEMO Assets/DEMO-02 赏金酒馆任务墙.png|查看图片]]
 
 - **目的**：展示 Task 是机会市场、Claim 产生 Execution。
 - **必须出现**：Task Card、Primary Goal、Expected Result、Acceptance Criteria、Boundary、Capability/Terrain 提示、多份 Claim。
