@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { BookOpen, Bot, ChevronRight, CircleDot, Compass, Crown, Flag, GitBranch, Landmark, Map, Network, Route, ScrollText, ShieldCheck, Sparkles, Target, Users } from 'lucide-react';
+import { BookOpen, Bot, ChevronRight, CircleDot, Compass, Crown, Flag, GitBranch, Landmark, Map, Network, Route, ScrollText, ShieldCheck, Sparkles, Target, Users, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
@@ -32,47 +32,51 @@ const viewCopy: Record<View, { title: string; description: string; legend: strin
 export default function Home() {
   const [view, setView] = useState<View>('world');
   const [selected, setSelected] = useState('02');
+  const [detailOpen, setDetailOpen] = useState(false);
   const module = useMemo(() => modules.find((m) => m.id === selected) ?? modules[2], [selected]);
   const ViewIcon = view === 'world' ? Compass : view === 'architecture' ? GitBranch : view === 'knowledge' ? BookOpen : view === 'authority' ? Landmark : Sparkles;
   const ModuleIcon = module.icon;
+  const selectModule = (id: string) => { setSelected(id); setDetailOpen(true); };
   return (
     <main className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#101918]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1500px] items-center gap-5 px-4 py-3 lg:px-8">
+        <div className="mx-auto flex max-w-[1800px] items-center gap-5 px-4 py-2.5 lg:px-6">
           <div className="flex min-w-fit items-center gap-3"><div className="grid size-9 place-items-center rounded-xl border border-[#e4af5c]/30 bg-[#e4af5c]/10 text-[#f2c77d]"><Compass /></div><div><p className="text-sm font-semibold tracking-wide">AI-Native Organization</p><p className="text-[11px] text-white/45">Interactive Atlas · v0.1</p></div></div>
           <Tabs value={view} onValueChange={(v) => setView(v as View)} className="ml-auto hidden lg:flex"><TabsList className="h-9 bg-white/[.06]">{views.map((item) => <TabsTrigger key={item.id} value={item.id} className="px-3 text-xs text-white/55 data-active:bg-white/10 data-active:text-white">{item.label}</TabsTrigger>)}</TabsList></Tabs>
           <span className="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-[11px] text-emerald-200">Final Design Baseline</span>
         </div>
       </header>
-      <div className="mx-auto grid max-w-[1500px] grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)_340px]">
-        <nav className="border-b border-white/10 bg-[#111c1b] p-4 lg:min-h-[calc(100vh-65px)] lg:border-b-0 lg:border-r lg:p-5" aria-label="Operating Model modules">
+      <div className="mx-auto grid max-w-[1800px] grid-cols-1 lg:grid-cols-[205px_minmax(0,1fr)]">
+        <nav className="border-b border-white/10 bg-[#111c1b] p-3 lg:min-h-[calc(100vh-57px)] lg:border-b-0 lg:border-r lg:p-3" aria-label="Operating Model modules">
           <p className="mb-3 px-2 text-[10px] font-semibold uppercase tracking-[.18em] text-white/35">Operating model</p>
-          <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3 lg:grid-cols-1">{modules.map((m) => { const Icon = m.icon; const active = m.id === selected; return <button key={m.id} onClick={() => setSelected(m.id)} className={`group flex min-w-0 items-center gap-3 rounded-xl border px-3 py-3 text-left transition ${active ? 'border-white/15 bg-white/[.09]' : 'border-transparent hover:bg-white/[.04]'}`}><span className="grid size-8 shrink-0 place-items-center rounded-lg" style={{ background: `${m.color}18`, color: m.color }}><Icon className="size-4" /></span><span className="min-w-0"><span className="block text-[10px] text-white/35">{m.id}</span><span className={`block truncate text-xs ${active ? 'text-white' : 'text-white/60'}`}>{m.name}</span></span>{active && <ChevronRight className="ml-auto size-3.5 text-white/40" />}</button>; })}</div>
-          <div className="mt-5 rounded-xl border border-[#6fd7cf]/15 bg-[#6fd7cf]/[.06] p-3"><p className="text-[10px] font-semibold uppercase tracking-wider text-[#88e2da]">X1 World Layer</p><p className="mt-1.5 text-xs leading-5 text-white/45">一个现实，多种投影。隐喻解释规则，但不创造规则。</p></div>
+          <div className="grid grid-cols-2 gap-1 sm:grid-cols-3 lg:grid-cols-1">{modules.map((m) => { const Icon = m.icon; const active = m.id === selected; return <button key={m.id} onClick={() => selectModule(m.id)} className={`group flex min-w-0 items-center gap-2 rounded-lg border px-2 py-2 text-left transition ${active ? 'border-white/15 bg-white/[.09]' : 'border-transparent hover:bg-white/[.04]'}`}><span className="grid size-7 shrink-0 place-items-center rounded-md" style={{ background: `${m.color}18`, color: m.color }}><Icon className="size-3.5" /></span><span className="min-w-0"><span className="block text-[9px] text-white/35">{m.id}</span><span className={`block truncate text-[11px] ${active ? 'text-white' : 'text-white/60'}`}>{m.name}</span></span>{active && <ChevronRight className="ml-auto size-3 text-white/40" />}</button>; })}</div>
+          <div className="mt-3 rounded-lg border border-[#6fd7cf]/15 bg-[#6fd7cf]/[.06] p-2.5"><p className="text-[9px] font-semibold uppercase tracking-wider text-[#88e2da]">X1 World Layer</p><p className="mt-1 text-[11px] leading-4 text-white/45">隐喻解释规则，但不创造规则。</p></div>
         </nav>
-        <section className="min-w-0 bg-[#152321]">
-          <div className="relative aspect-[16/9] max-h-[610px] min-h-[360px] overflow-hidden border-b border-white/10">
-            <img src="/village-atlas.png" alt="AI-native organization frontier village with functional spaces and exploration routes" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#152321] via-transparent to-black/20" />
+        <section className="min-w-0 bg-[#152321] p-2.5 lg:p-3">
+          <div className="relative min-h-[620px] overflow-hidden rounded-2xl border border-white/10 lg:h-[calc(100vh-81px)]">
+            <img src="/village-atlas-v2.png" alt="Humble AI-native organization beginner village on open frontier land" className="absolute inset-0 h-full w-full object-cover object-center" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#101b19]/80 via-transparent to-black/20" />
             <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/15 bg-black/45 px-3 py-1.5 backdrop-blur-md lg:hidden"><ViewIcon className="size-3.5 text-[#7fddd4]" /><span className="text-xs">{viewCopy[view].title}</span></div>
-            <button onClick={() => setSelected('02')} className="hotspot left-[15%] top-[24%]"><ScrollText />赏金酒馆</button>
-            <button onClick={() => setSelected('04')} className="hotspot left-[11%] top-[65%]"><BookOpen />图书馆</button>
-            <button onClick={() => setSelected('06')} className="hotspot left-[20%] top-[47%]"><Map />地图室</button>
-            <button onClick={() => setSelected('08')} className="hotspot left-[40%] top-[23%]"><Landmark />市政厅</button>
-            <button onClick={() => setSelected('03')} className="hotspot left-[55%] top-[63%]"><Route />探险路线</button>
-            <div className="absolute inset-x-5 bottom-5 flex items-end justify-between gap-4"><div className="max-w-xl rounded-2xl border border-white/15 bg-[#0e1716]/75 p-4 backdrop-blur-lg"><div className="flex items-center gap-2 text-xs text-[#8ce1d9]"><ViewIcon className="size-4" />{viewCopy[view].title}</div><p className="mt-2 text-sm leading-6 text-white/70">{viewCopy[view].description}</p></div><div className="hidden gap-2 xl:flex">{viewCopy[view].legend.map((x) => <span key={x} className="rounded-full border border-white/15 bg-black/35 px-3 py-1 text-[10px] text-white/55 backdrop-blur">{x}</span>)}</div></div>
-          </div>
-          <div className="grid gap-4 p-5 xl:grid-cols-3">
-            <article className="panel-card xl:col-span-2"><div className="flex items-start gap-4"><div className="grid size-12 shrink-0 place-items-center rounded-2xl" style={{ background: `${module.color}18`, color: module.color }}><ModuleIcon /></div><div><div className="flex items-center gap-2"><span className="text-xs text-white/35">MODULE {module.id}</span><CircleDot className="size-3" style={{ color: module.color }} /></div><h1 className="mt-1 text-2xl font-semibold tracking-tight">{module.name}</h1><p className="mt-1 text-sm text-white/45">World projection · {module.place}</p></div></div><p className="mt-5 max-w-3xl text-[15px] leading-7 text-white/68">{module.purpose}</p><div className="mt-5 flex flex-wrap gap-2">{module.mechanisms.map((x) => <span key={x} className="rounded-lg border border-white/10 bg-white/[.04] px-2.5 py-1.5 text-xs text-white/62">{x}</span>)}</div></article>
-            <article className="panel-card"><p className="section-label">State model</p><div className="mt-4 flex items-center gap-2">{module.states.map((x, i) => <div key={x} className="contents"><span className="rounded-lg border border-white/10 bg-black/15 px-2.5 py-2 text-[11px] text-white/65">{x}</span>{i < module.states.length - 1 && <ChevronRight className="size-3 text-white/25" />}</div>)}</div><p className="section-label mt-6">Frozen principles</p><ul className="mt-3 space-y-2">{module.principles.map((x) => <li key={x} className="flex gap-2 text-xs leading-5 text-white/58"><Flag className="mt-0.5 size-3.5 shrink-0" style={{ color: module.color }} />{x}</li>)}</ul></article>
+            <button onClick={() => selectModule('02')} className="hotspot left-[15%] top-[39%]"><ScrollText />赏金酒馆</button>
+            <button onClick={() => selectModule('04')} className="hotspot left-[58%] top-[27%]"><BookOpen />图书馆</button>
+            <button onClick={() => selectModule('06')} className="hotspot left-[76%] top-[40%]"><Map />地图室</button>
+            <button onClick={() => selectModule('08')} className="hotspot left-[31%] top-[75%]"><Landmark />城门 / 市政厅</button>
+            <button onClick={() => selectModule('03')} className="hotspot left-[76%] top-[14%]"><Route />探险路线</button>
+            <div className="absolute bottom-4 left-4 max-w-lg rounded-xl border border-white/15 bg-[#0e1716]/78 p-3 backdrop-blur-lg"><div className="flex items-center gap-2 text-xs text-[#8ce1d9]"><ViewIcon className="size-4" />{viewCopy[view].title}</div><p className="mt-1.5 text-xs leading-5 text-white/65">{viewCopy[view].description}</p></div>
+            <div className="absolute bottom-4 right-4 hidden gap-2 xl:flex">{viewCopy[view].legend.map((x) => <span key={x} className="rounded-full border border-white/15 bg-black/40 px-3 py-1 text-[10px] text-white/60 backdrop-blur">{x}</span>)}</div>
+
+            {detailOpen && <div className="absolute inset-0 z-30 bg-black/15" onClick={() => setDetailOpen(false)}><article role="dialog" aria-modal="true" aria-label={`${module.name} details`} onClick={(event) => event.stopPropagation()} className="absolute inset-x-3 bottom-3 max-h-[82%] overflow-y-auto rounded-2xl border border-white/15 bg-[#101918]/95 p-5 shadow-2xl backdrop-blur-xl sm:inset-x-auto sm:bottom-auto sm:right-5 sm:top-5 sm:w-[440px]">
+              <button aria-label="关闭详情" onClick={() => setDetailOpen(false)} className="absolute right-3 top-3 grid size-8 place-items-center rounded-full bg-white/[.06] text-white/55 hover:bg-white/10 hover:text-white"><X className="size-4" /></button>
+              <div className="flex items-start gap-3 pr-8"><div className="grid size-11 shrink-0 place-items-center rounded-xl" style={{ background: `${module.color}18`, color: module.color }}><ModuleIcon /></div><div><div className="flex items-center gap-2"><span className="text-[10px] text-white/35">MODULE {module.id}</span><CircleDot className="size-3" style={{ color: module.color }} /></div><h1 className="mt-1 text-xl font-semibold">{module.name}</h1><p className="mt-0.5 text-xs text-white/45">World projection · {module.place}</p></div></div>
+              <p className="mt-4 text-sm leading-6 text-white/68">{module.purpose}</p>
+              <div className="mt-4 flex flex-wrap gap-2">{module.mechanisms.map((x) => <span key={x} className="rounded-lg border border-white/10 bg-white/[.04] px-2.5 py-1.5 text-[11px] text-white/62">{x}</span>)}</div>
+              {module.id === '02' && <div className="mt-4 overflow-hidden rounded-xl border border-white/10"><img src="/tavern-task-wall.png" alt="Task wall showing one Task and parallel Executions" className="aspect-[16/8] w-full object-cover" /></div>}
+              <div className="mt-4 grid gap-3 sm:grid-cols-2"><div className="rounded-xl border border-white/10 bg-white/[.03] p-3"><p className="section-label">State model</p><div className="mt-3 flex flex-wrap items-center gap-1.5">{module.states.map((x, i) => <div key={x} className="contents"><span className="rounded-md border border-white/10 px-2 py-1.5 text-[10px] text-white/65">{x}</span>{i < module.states.length - 1 && <ChevronRight className="size-3 text-white/25" />}</div>)}</div></div><div className="rounded-xl border border-white/10 bg-white/[.03] p-3"><p className="section-label">Frozen principles</p><ul className="mt-2 space-y-1.5">{module.principles.map((x) => <li key={x} className="flex gap-2 text-[11px] leading-4 text-white/58"><Flag className="mt-0.5 size-3 shrink-0" style={{ color: module.color }} />{x}</li>)}</ul></div></div>
+              <div className="mt-4 rounded-xl border border-[#6fd7cf]/15 bg-[#6fd7cf]/[.05] p-3"><div className="flex items-center gap-2 text-xs text-white/75"><Users className="size-4 text-[#7fddd4]" />Human + Representative Agent</div><p className="mt-1.5 text-[11px] leading-5 text-white/48">HAU 是主要工作单元。世界隐喻只解释被冻结的规则；Capability 不产生 Permission。</p></div>
+              <Button className="mt-4 h-9 w-full bg-[#d7a452] text-[#15201e] hover:bg-[#ebbd73]" onClick={() => setView('architecture')}><GitBranch />查看机制与连接</Button>
+            </article></div>}
           </div>
         </section>
-        <aside className="border-t border-white/10 bg-[#101918] p-5 lg:border-l lg:border-t-0 lg:p-6">
-          <div className="flex items-center justify-between"><div><p className="section-label">Selected projection</p><h2 className="mt-1 text-lg font-semibold">{module.place}</h2></div><span className="text-2xl font-light text-white/20">{module.id}</span></div>
-          <div className="mt-5 overflow-hidden rounded-2xl border border-white/10"><img src={module.id === '02' ? '/tavern-task-wall.png' : '/village-atlas.png'} alt={module.id === '02' ? 'Task wall showing one Task and parallel Executions' : 'Selected world projection'} className="aspect-[4/3] w-full object-cover" /></div>
-          <div className="mt-5 space-y-4"><div className="rounded-xl border border-white/10 bg-white/[.035] p-4"><div className="flex items-center gap-2 text-xs font-medium text-white/75"><Users className="size-4 text-[#7fddd4]" />Human + Representative Agent</div><p className="mt-2 text-xs leading-5 text-white/45">HAU 是主要工作单元。每次 Execution 始终唯一解析到一位 Human Accountable Owner。</p></div><div className="rounded-xl border border-white/10 bg-white/[.035] p-4"><div className="flex items-center gap-2 text-xs font-medium text-white/75"><ShieldCheck className="size-4 text-[#efb85c]" />Semantic guardrail</div><p className="mt-2 text-xs leading-5 text-white/45">世界隐喻只解释被冻结的规则。Capability 不产生 Permission，成长不产生 Authority。</p></div></div>
-          <Button className="mt-5 h-10 w-full bg-[#d7a452] text-[#15201e] hover:bg-[#ebbd73]" onClick={() => setView('architecture')}><GitBranch />查看机制与连接</Button>
-        </aside>
       </div>
     </main>
   );
