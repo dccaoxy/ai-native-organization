@@ -2,7 +2,7 @@
 
 > 当前交付仅冻结信息架构与下钻语义，不以草率 HTML 代替文档基线。
 
-> 实现状态（2026-09-08）：✅ v0.1 已完成并私密发布；源码位于 `interactive-atlas/`。当前版本提供 00–08 模块选择、城市热点、World/Architecture/Knowledge/Authority/Value 五视角与两张首批 DEMO。
+> 实现状态（2026-09-08）：✅ v0.1 已完成并公开发布，无需 ChatGPT 登录；源码位于 `interactive-atlas/`。当前版本提供 00–08 模块选择、城市热点、World/Architecture/Knowledge/Authority/Value 五视角与两张首批 DEMO。
 
 ## Global Panorama
 
