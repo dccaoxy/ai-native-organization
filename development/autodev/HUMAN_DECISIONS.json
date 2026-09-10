@@ -3,23 +3,38 @@
   "decisions": [
     {
       "id": "AD00-CLOUD-MODEL-001",
-      "status": "HUMAN_DECISION_REQUIRED",
+      "status": "AUTHORIZED_PENDING_PROVISIONING",
       "scope": "unattended cloud code-authoring and repair worker",
+      "authorization": {
+        "date": "2026-09-10",
+        "source": "User instruction in development task",
+        "provider": "OpenAI via ChatGPT-authenticated Codex",
+        "model": "existing account configuration; no specific model selected",
+        "user_resource_ceiling": null,
+        "resource_policy": "No additional user-defined resource ceiling; platform quotas still apply",
+        "repository": "dccaoxy/ai-native-organization",
+        "repository_permission": "full repository permissions authorized",
+        "retained_constraints": ["no force-push or destructive history rewriting", "Frozen L1/L2 and real-world authority gates remain in force"]
+      },
+      "authentication_evidence": {
+        "date": "2026-09-10",
+        "local_cli_status": "Logged in using ChatGPT",
+        "cloud_model_auth_verified": false,
+        "credentials_copied": false
+      },
       "missing": [
-        "provider/account",
-        "spending ceiling",
-        "permitted repository/model access",
-        "secret provisioning"
+        "trusted persistent model runner provisioning and authentication",
+        "model Builder/Repair adapter implementation and end-to-end verification"
       ],
       "implemented_without_decision": [
         "backend-neutral argv adapter protocol",
         "local Work execution",
         "GitHub Actions build/test/review/audit/checkpoint/resume"
       ],
-      "prohibited_until_decision": [
-        "purchase resources",
+      "prohibited": [
         "guess credentials",
-        "treat desktop login as cloud model authorization"
+        "commit or expose account credentials",
+        "treat local CLI authentication as proof of working cloud authentication"
       ],
       "m01_engineering_blocked": false
     }

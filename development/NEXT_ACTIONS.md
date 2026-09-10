@@ -10,12 +10,12 @@
 ## 后续工程
 
 3. 为 M02 / Phase 4 建立机器 Stage Specs，扩大至约 10 HAU、3 Goal、30 Task、50–100 Execution，并继续保留 simulation 标识。
-4. 接入可替换模型 Builder/Repair 时，保留分离 Reviewer/Auditor、反证检查、摘要绑定、限额与所有 Human Gates。未配置账号/预算时，不自动购买或猜测凭据。
+4. 优先接入 ChatGPT 登录的 Codex 作为可替换模型 Builder/Repair；用户已授权全部本仓库权限，暂不设置额外资源上限。保留分离 Reviewer/Auditor、反证检查、摘要绑定、有限失败重试与所有既有 Human Gates。先验证本机 adapter，再配置可信持久 runner 的登录和恢复；不猜测凭据，不将账户登录材料写入 Git。
 5. 再按 ROADMAP 进入 M1 Learning；不能以 M01 的测试通过代替真实组织学习或文化效果证据。
 
 ## Human 决策包
 
-参见 `autodev/HUMAN_DECISIONS.json` 与 `autodev/CLOUD.md`。当前需要选择云端模型账号、预算、访问范围及 secret 提供方式，才能启用无人代码编写。
+参见 `autodev/HUMAN_DECISIONS.json` 与 `autodev/CLOUD.md`。模型路径、资源政策与仓库权限已由用户决定，不重复请求。尚需完成云端运行环境与安全登录配置；若目标 runner 需要用户交互登录，再提交具体登录操作。未验证前不声称云端无人代码编写已启用。
 真人 Pilot、真实公司数据/权限、Risk、Reward 或冻结设计变更各自另设 Gate。
 
 ## 不抢占工程主线

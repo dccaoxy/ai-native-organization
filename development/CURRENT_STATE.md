@@ -27,7 +27,8 @@ Obsidian Dashboard 只同步本仓库投影；同步回执见 `autodev/DELIVERY.
 
 ## HUMAN DECISION REQUIRED
 
-云端自动代码编写所需模型 provider/account、费用上限、仓库访问范围与 secret 配置尚未提供。
+2026-09-10 用户已选择 ChatGPT 登录的 Codex，暂不设置额外资源上限，并授权 `dccaoxy/ai-native-organization` 全部仓库权限；不再等待这三项决定。平台配额仍适用。
+本机 CLI 已核验 `Logged in using ChatGPT`。云端模型 runner 的实际登录与 Builder/Repair 接入尚未完成，状态为 `AUTHORIZED_PENDING_PROVISIONING`；不能将本机登录或既有 CI 成功当成云端模型已接通。
 真实 Human Pilot、公司数据/Action、Residual Risk、奖金政策或 Frozen L1/L2 变更仍需单独 Human 决定。
 以上未授权项目均未执行；不阻断已完成的 M01 合成工程验证。
 
