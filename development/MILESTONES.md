@@ -5,7 +5,7 @@
 | Milestone | Priority / Phase | 状态 | Outcome |
 |---|---|---|---|
 | M00 — Design Handoff | P0 / Phase 0 | Complete | 冻结设计、文档与视觉语义可被新开发者接续 |
-| AD00 — Autonomous Development Runtime | Cross-phase through Phase 8 | **Harness PASS / Cloud model worker gated** | 持久状态、独立校验、恢复和检查点 |
+| AD00 — Autonomous Development Runtime | Cross-phase through Phase 8 | **Harness + local Codex smoke PASS / Cloud host pending** | 持久状态、独立校验、恢复、检查点及真实模型提案验证 |
 | M01 — Minimum Organization | P0 / Phase 2–3 | **Complete — M0 simulation engineering; delivery verified** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
 | M02 — Synthetic Organization | P1 / Phase 4 | Planned | 合成组织压力测试事件、责任与状态机 |
 | M03 — Learning Organization | P1 / Phase 5 | Planned | Execution → Evidence → Knowledge → Capability 可追溯闭环 |

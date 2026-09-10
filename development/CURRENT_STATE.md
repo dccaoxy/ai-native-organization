@@ -10,7 +10,8 @@
 
 - AD00：持久化 Stage Specs、有限重试/修复、独立进程 Review/Audit、Human Gate、Git commit/tag/artifact、断点恢复与非破坏回滚。
 - M01：版本化契约、SQLite 事件现实、Human/HAU/Agent 绑定、Goal/Task/Execution、Boundary、正式 Return、Review/Acceptance/Selection、HTTP 与工作台。
-- 完整本地套件执行 102 项测试通过；包含复用场景的累计测试，不代表 102 个互不重复的业务场景。
+- 完整本地套件执行 107 项测试通过；包含复用场景的累计测试，不代表 107 个互不重复的业务场景。
+- ChatGPT 登录的 Codex adapter 已通过真实隔离测试：生成文件、测试/Review/Audit、checkpoint、自动进入 Human Gate、幂等恢复。见 `autodev/CODEX_SMOKE.json`；该 fixture 不代表新的 M01 Stage 验收。
 - M01 合成运行实际产生 42 条事件，通过 10 项最终断言；覆盖五类必过场景及 Agent/runtime interruption。无真实 Human 样本或 E01–E08 结论。
 - 冻结文件与原始 Git 对象的摘要核验通过；L1/L2 未修改。
 - 浏览器实际验证：合成身份/Goal 建立、发布、领取、ACK、工作台和事件同步。
@@ -22,13 +23,13 @@ S04/v1 的依赖入库缺陷已由 S04/v2 修复；保留历史，不覆盖标�
 ## 云端与外部状态
 
 GitHub Actions runner 已配置：push / manual / 每 6 小时恢复；云端实测结果见 `autodev/DELIVERY.json`。
-模型 Builder/Repair 未配置。云端可持续验证与推进准备好的 Stage，不能据此声称已在无人介入地编写后续 Milestone。
+模型 Builder/Repair adapter 已实现并完成本机真实 Build 验证，尚未部署到云端或绑定新的正式 Milestone。云端可持续验证与推进准备好的 Stage，不能据此声称已在无人介入地编写后续 Milestone。
 Obsidian Dashboard 只同步本仓库投影；同步回执见 `autodev/DELIVERY.json`。
 
 ## HUMAN DECISION REQUIRED
 
 2026-09-10 用户已选择 ChatGPT 登录的 Codex，暂不设置额外资源上限，并授权 `dccaoxy/ai-native-organization` 全部仓库权限；不再等待这三项决定。平台配额仍适用。
-本机 CLI 已核验 `Logged in using ChatGPT`。云端模型 runner 的实际登录与 Builder/Repair 接入尚未完成，状态为 `AUTHORIZED_PENDING_PROVISIONING`；不能将本机登录或既有 CI 成功当成云端模型已接通。
+本机 CLI 和真实模型调用已核验。仓库 API 确认为 public；官方账户登录 CI 方案不支持公开仓库，不能直接接入现有 Actions。云端仍缺明确的可信运行主机/私有执行环境与该环境登录，状态为 `AUTHORIZED_PENDING_PROVISIONING`；部署包见 `autodev/CODEX_RUNNER.md`。
 真实 Human Pilot、公司数据/Action、Residual Risk、奖金政策或 Frozen L1/L2 变更仍需单独 Human 决定。
 以上未授权项目均未执行；不阻断已完成的 M01 合成工程验证。
 

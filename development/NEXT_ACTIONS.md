@@ -9,8 +9,8 @@
 
 ## 后续工程
 
-3. 为 M02 / Phase 4 建立机器 Stage Specs，扩大至约 10 HAU、3 Goal、30 Task、50–100 Execution，并继续保留 simulation 标识。
-4. 优先接入 ChatGPT 登录的 Codex 作为可替换模型 Builder/Repair；用户已授权全部本仓库权限，暂不设置额外资源上限。保留分离 Reviewer/Auditor、反证检查、摘要绑定、有限失败重试与所有既有 Human Gates。先验证本机 adapter，再配置可信持久 runner 的登录和恢复；不猜测凭据，不将账户登录材料写入 Git。
+3. Codex adapter 本机真实测试已通过。按 `autodev/CODEX_RUNNER.md` 接入明确的可信云端主机/私有执行环境并实际登录；公开仓库不可采用官方账户登录 CI 方案。现有 Actions 继续无模型凭据验证。不要重复索取预算和本仓库权限。
+4. 为 M02 / Phase 4 建立机器 Stage Specs，扩大至约 10 HAU、3 Goal、30 Task、50–100 Execution，显式指定 model_write_paths 并保留分离 Reviewer/Auditor、反证检查、摘要绑定、有限失败重试与所有既有 Human Gates。新计划才绑定模型 adapter；不重写 M01 通过标签。
 5. 再按 ROADMAP 进入 M1 Learning；不能以 M01 的测试通过代替真实组织学习或文化效果证据。
 
 ## Human 决策包

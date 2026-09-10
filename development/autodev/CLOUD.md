@@ -35,11 +35,14 @@ required for this selected route. A cloud worker still needs its own working
 authentication and durable execution environment. No credentials have been
 copied and no cloud model execution has been verified.
 
-Next: implement and verify the Codex adapter locally, then provision a trusted
-persistent model runner. Prefer device login on that runner. Account-auth CI is
+Local adapter and live isolated smoke now PASS; see `CODEX_RUNNER.md` and
+`CODEX_SMOKE.json`. Next: provision an identified trusted persistent model
+runner. Prefer device login on that runner. Account-auth CI is
 an advanced option requiring secure persistence of refreshed credentials; the
 official guide excludes public/open-source repositories from that CI workflow.
-Verify repository visibility and runner trust before choosing that deployment.
+Repository API has now confirmed PUBLIC visibility: do not use that account-auth
+CI workflow here. The remaining deployment input is a trusted remote host or
+approved private execution environment; none has been provisioned.
 Never store account credentials in Git, artifacts or logs.
 Sources: [Authentication](https://learn.chatgpt.com/docs/auth),
 [Non-interactive mode](https://learn.chatgpt.com/docs/non-interactive-mode).

@@ -35,6 +35,7 @@
 - 默认在明确边界内自动推进；工程失败记为 BLOCKED_ENGINEERING。只有 Purpose/Authority/Risk、真实外部数据/权限或冻结 L1/L2 变更才记 HUMAN_DECISION_REQUIRED。
 - 每个 PASS Stage 有 commit、不可覆盖的 annotated tag、artifact 与可恢复状态。不得 force-push、reset 历史或自动操作真实公司系统。
 - 当前内置 reviewer/auditor 为确定性独立校验，不宣称已经获得独立 Human/LLM 审查。通用模型 Builder/Repair 需另行配置，不假定桌面登录等同云端凭据。
+- `autodev.codex_adapter` 已完成本机真实模型 smoke；接入规范见 `development/autodev/CODEX_RUNNER.md`。模型提案仅能写入显式 model_write_paths 与 scope 的交集，不得自动解除 model_gate。仓库已核验为 public，不将 ChatGPT 账户凭据接入本公开仓库的 Actions；云端主机尚待配置。
 
 ## 事实源与同步
 

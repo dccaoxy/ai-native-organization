@@ -178,7 +178,7 @@ class Harness:
         run.mkdir(parents=True, exist_ok=True)
         report = run / (role + ".json")
         nonce = uuid.uuid4().hex
-        env = dict(os.environ, AUTODEV_STAGE=stage["id"], AUTODEV_ROLE=role,
+        env = dict(os.environ, AUTODEV_PLAN=str(self.plan_path), AUTODEV_STAGE=stage["id"], AUTODEV_ROLE=role,
                    AUTODEV_REPORT=str(report), AUTODEV_SOURCE_DIGEST=source_digest,
                    AUTODEV_NONCE=nonce, PYTHONUTF8="1")
         start = time.time()
@@ -193,6 +193,14 @@ class Harness:
         (run / (role + ".log")).write_text(output, encoding="utf-8")
         receipt = {"ok": code == 0, "exit_code": code, "argv": argv,
                    "source_digest": source_digest, "started": start, "finished": time.time()}
+        if role in ("build", "repair") and code == 3 and report.exists():
+            data = read(report)
+            if (data.get("verdict") == "HUMAN_DECISION_REQUIRED" and
+                    data.get("role") == role and data.get("nonce") == nonce and
+                    data.get("source_digest") == source_digest):
+                receipt["human_gate"] = nonce
+                self.event(stage["id"], "HUMAN_DECISION_REQUIRED", model_gate=nonce,
+                           reason=data.get("summary", "Model requested human decision"))
         if role in ("review", "audit"):
             data = read(report) if report.exists() else {}
             receipt["ok"] = receipt["ok"] and all((
@@ -299,6 +307,8 @@ class Harness:
                 if not all(self.state["stages"].get(dep, {}).get("status") == "PASS" for dep in stage["dependencies"]):
                     self.event(sid, "BLOCKED_ENGINEERING", reason="Dependency has not passed")
                     break
+                if item.get("model_gate") and stage.get("model_gate_resolution") != item["model_gate"]:
+                    break
                 gates = [g for g in stage["human_gates"] if g["active"]]
                 changed = self.frozen_changes()
                 if gates or changed:
@@ -316,6 +326,8 @@ class Harness:
                     attempt += 1
                     self.event(sid, "BUILD", attempt=attempt, worker=socket.gethostname())
                     ok = self.command(stage, "build", attempt, "building")["ok"]
+                    if self.state["stages"][sid]["status"] == "HUMAN_DECISION_REQUIRED":
+                        break
                     manifest = self.manifest(stage)
                     source = digest(manifest)
                     for role in ("test", "review", "audit"):
@@ -346,6 +358,8 @@ class Harness:
                         self.event(sid, "REPAIR", attempt=attempt)
                         if not self.command(stage, "repair", attempt, source)["ok"]:
                             break
+                if self.state["stages"][sid]["status"] == "HUMAN_DECISION_REQUIRED":
+                    break
                 if not success:
                     self.event(sid, "BLOCKED_ENGINEERING", reason="Repair budget exhausted or repair adapter unavailable")
                     break

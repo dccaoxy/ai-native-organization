@@ -14,29 +14,37 @@
         "resource_policy": "No additional user-defined resource ceiling; platform quotas still apply",
         "repository": "dccaoxy/ai-native-organization",
         "repository_permission": "full repository permissions authorized",
-        "retained_constraints": ["no force-push or destructive history rewriting", "Frozen L1/L2 and real-world authority gates remain in force"]
+        "retained_constraints": [
+          "no force-push or destructive history rewriting",
+          "Frozen L1/L2 and real-world authority gates remain in force"
+        ]
       },
       "authentication_evidence": {
         "date": "2026-09-10",
         "local_cli_status": "Logged in using ChatGPT",
         "cloud_model_auth_verified": false,
-        "credentials_copied": false
+        "credentials_copied": false,
+        "local_model_call_verified": true,
+        "evidence": "development/autodev/CODEX_SMOKE.json"
       },
       "missing": [
-        "trusted persistent model runner provisioning and authentication",
-        "model Builder/Repair adapter implementation and end-to-end verification"
+        "identified trusted remote host or approved private execution environment",
+        "destination authentication and live cloud model end-to-end verification",
+        "new reviewed formal stage plan binding model adapter"
       ],
       "implemented_without_decision": [
         "backend-neutral argv adapter protocol",
         "local Work execution",
-        "GitHub Actions build/test/review/audit/checkpoint/resume"
+        "GitHub Actions build/test/review/audit/checkpoint/resume",
+        "Codex proposal adapter with explicit write scope and durable model Human Gate; live local smoke PASS"
       ],
       "prohibited": [
         "guess credentials",
         "commit or expose account credentials",
         "treat local CLI authentication as proof of working cloud authentication"
       ],
-      "m01_engineering_blocked": false
+      "m01_engineering_blocked": false,
+      "repository_visibility": "public"
     }
   ],
   "real_company_systems_accessed": false

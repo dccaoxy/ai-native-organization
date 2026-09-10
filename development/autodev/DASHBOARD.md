@@ -1,5 +1,7 @@
 # AutoDev Dashboard
 
+2026-09-10：Codex 真实模型提案 → 测试/独立校验 → checkpoint → 下一阶段 Gate → 恢复测试通过。完整本地套件 107 项通过。云端模型主机尚待明确与登录；公开仓库不启用账户登录 CI。详见 [接入包](CODEX_RUNNER.md) 和 [真实测试回执](CODEX_SMOKE.json)。
+
 <!-- AUTODEV:START -->
 ## AutoDev repository projection
 

@@ -1,0 +1,30 @@
+{
+  "kind": "live_codex_account_smoke",
+  "model_call_verified": true,
+  "stages": {
+    "D01": {
+      "status": "PASS",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "a45e607ccf2e9060c7f23fe71b42d179e0b5b9068aba532f2dd59b2d3a81db6b",
+      "tag": "autodev/CODEXSMOKE/D01/v1",
+      "artifact": "development/autodev/runs/CODEXSMOKE/D01/1/artifact.zip",
+      "artifact_sha256": "de70548e686eea823664cd23991ed79f79296623b0b960db487d415a9e01b5fe",
+      "commit": "f7a90edec2fdf631f250cc02d4521d16f0a68878"
+    },
+    "D02": {
+      "status": "HUMAN_DECISION_REQUIRED",
+      "gates": [
+        {
+          "condition": "synthetic demonstration of human authority gate",
+          "active": true
+        }
+      ],
+      "frozen_changes": []
+    }
+  },
+  "resume_no_duplicate_tags": true,
+  "scope": "disposable synthetic Git repository; not M01 acceptance",
+  "checkpoint_retention": "disposable commits/tags; retained artifact copied below",
+  "retained_artifact": "development/autodev/codex-smoke-artifact.zip"
+}
