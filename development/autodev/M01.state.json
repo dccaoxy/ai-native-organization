@@ -14,11 +14,13 @@
     },
     "S02": {
       "status": "BLOCKED_ENGINEERING",
-      "reason": "Missing engineering inputs",
+      "reason": "Repair budget exhausted or repair adapter unavailable",
       "missing": [
         "tests/test_store.py",
         "tests/test_store_review.py"
-      ]
+      ],
+      "attempt": 1,
+      "worker": "caoxy-TG03"
     }
   },
   "events": [
@@ -78,6 +80,43 @@
         "tests/test_store.py",
         "tests/test_store_review.py"
       ]
+    },
+    {
+      "sequence": 8,
+      "stage": "S02",
+      "status": "BUILD",
+      "time": 1789003734.1811986,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 9,
+      "stage": "S02",
+      "status": "TEST",
+      "time": 1789003734.3133585,
+      "attempt": 1
+    },
+    {
+      "sequence": 10,
+      "stage": "S02",
+      "status": "FAILED",
+      "time": 1789003734.6090875,
+      "attempt": 1,
+      "reason": "Build/test/review/audit/output failure"
+    },
+    {
+      "sequence": 11,
+      "stage": "S02",
+      "status": "REPAIR",
+      "time": 1789003734.6110396,
+      "attempt": 1
+    },
+    {
+      "sequence": 12,
+      "stage": "S02",
+      "status": "BLOCKED_ENGINEERING",
+      "time": 1789003734.7030933,
+      "reason": "Repair budget exhausted or repair adapter unavailable"
     }
   ]
 }

@@ -1,0 +1,74 @@
+test_all_core_objects_have_concrete_fields (tests.test_contract.ContractTests.test_all_core_objects_have_concrete_fields) ... ok
+test_event_envelope_and_state_transitions (tests.test_contract.ContractTests.test_event_envelope_and_state_transitions) ... ok
+test_inputs_and_parameters_are_explicit (tests.test_contract.ContractTests.test_inputs_and_parameters_are_explicit) ... ok
+test_multiple_formal_events_are_atomic (tests.test_store.StoreTests.test_multiple_formal_events_are_atomic) ... ERROR
+test_persistence_idempotency_and_replay (tests.test_store.StoreTests.test_persistence_idempotency_and_replay) ... ERROR
+
+======================================================================
+ERROR: test_multiple_formal_events_are_atomic (tests.test_store.StoreTests.test_multiple_formal_events_are_atomic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python314\Lib\shutil.py", line 701, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\caoxy\\AppData\\Local\\Temp\\tmp528cd6nr\\state.sqlite3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\caoxy\Documents\Codex\2026-09-10\referenced-chatgpt-conversation-this-is-an\work\ai-native-organization\tests\test_store.py", line 13, in tearDown
+    def tearDown(self): self.tmp.cleanup()
+                        ~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\tempfile.py", line 976, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\tempfile.py", line 956, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 705, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\tempfile.py", line 931, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\caoxy\\AppData\\Local\\Temp\\tmp528cd6nr\\state.sqlite3'
+
+======================================================================
+ERROR: test_persistence_idempotency_and_replay (tests.test_store.StoreTests.test_persistence_idempotency_and_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Python314\Lib\shutil.py", line 701, in _rmtree_unsafe
+    os.unlink(fullname)
+    ~~~~~~~~~^^^^^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\caoxy\\AppData\\Local\\Temp\\tmp0bz4p_v0\\state.sqlite3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\caoxy\Documents\Codex\2026-09-10\referenced-chatgpt-conversation-this-is-an\work\ai-native-organization\tests\test_store.py", line 13, in tearDown
+    def tearDown(self): self.tmp.cleanup()
+                        ~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\tempfile.py", line 976, in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\tempfile.py", line 956, in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 852, in rmtree
+    _rmtree_impl(path, dir_fd, onexc)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\shutil.py", line 705, in _rmtree_unsafe
+    onexc(os.unlink, fullname, err)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\tempfile.py", line 931, in onexc
+    _os.unlink(path)
+    ~~~~~~~~~~^^^^^^
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\caoxy\\AppData\\Local\\Temp\\tmp0bz4p_v0\\state.sqlite3'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.085s
+
+FAILED (errors=2)
