@@ -1,6 +1,6 @@
 # M01 — Minimum Organization
 
-状态：**Current / Engineering Specification not started**
+状态：**S01–S08 Engineering PASS；远端与 Dashboard 交付状态见 ../autodev/DELIVERY.json**
 
 优先级：**P0**
 
@@ -41,27 +41,27 @@
 
 ## Phase 2 交付物
 
-- [ ] Core Object Schemas
-- [ ] Task / Execution State Machines
-- [ ] Organizational Event Envelope + M01 Event Catalog
-- [ ] Authority / Accountability Matrix
-- [ ] API / Agent Interface Contracts
-- [ ] 最小页面与组件边界
-- [ ] Tunable Parameter Register（仅登记，不假装已验证默认值）
-- [ ] Acceptance Scenarios 与追溯矩阵
+- [x] Core Object Schemas
+- [x] Task / Execution State Machines
+- [x] Organizational Event Envelope + M01 Event Catalog
+- [x] Authority / Accountability Matrix
+- [x] API / Agent Interface Contracts
+- [x] 最小页面与组件边界
+- [x] Tunable Parameter Register（仅登记，不假装已验证默认值）
+- [x] Acceptance Scenarios 与追溯矩阵
 
 ## Phase 3 交付物
 
-- [ ] 可运行的最小应用与持久化
-- [ ] Identity / Binding
-- [ ] Goal activation
-- [ ] Task Wall：Publish / Browse / Claim
-- [ ] 独立 Execution：ACK / Progress / Blocked / Escalate / Submit / Fail / Release
-- [ ] Boundary Request 与 Human Authority 决定
-- [ ] Task Return
-- [ ] Review / Acceptance / Selection
-- [ ] 可查询的 Organizational Event Trail
-- [ ] 自动化测试与本地运行说明
+- [x] 可运行的最小应用与持久化
+- [x] Identity / Binding
+- [x] Goal activation
+- [x] Task Wall：Publish / Browse / Claim
+- [x] 独立 Execution：ACK / Progress / Blocked / Escalate / Submit / Fail / Release
+- [x] Boundary Request 与 Human Authority 决定
+- [x] Task Return
+- [x] Review / Acceptance / Selection
+- [x] 可查询的 Organizational Event Trail
+- [x] 自动化测试与本地运行说明
 
 ## 必过验收
 
@@ -96,7 +96,7 @@ M01 只有在上述五类场景可重复运行、自动检查通过、事件可�
 | S05 Free Work Space + Progress + Boundary/Escalation | PASS | autodev/M01/S05/v1 |
 | S06 Return + Review + Acceptance + Selection | PASS | autodev/M01/S06/v1 |
 | S07 End-to-End Integration | PASS | autodev/M01/S07/v1 |
-| S08 Simulation + Audit + Final Acceptance Package | PASS | autodev/M01/S08/v1 |
+| S08 Simulation + Audit + Final Acceptance Package | CHECKPOINT_PENDING | autodev/M01/S08/v2 |
 
 Source: `development/autodev/M01.state.json`. Simulation evidence is not Human Pilot or E01–E08 evidence. Phase 9 requires real Humans, time and experimental results.
 <!-- AUTODEV:END -->

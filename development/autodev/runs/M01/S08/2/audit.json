@@ -1,0 +1,26 @@
+{
+  "role": "audit",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "baseline-preservation",
+      "passed": true
+    },
+    {
+      "id": "TASK-11/AGENT-07/M01-outcome",
+      "test": "tests.test_simulation_review",
+      "source": "00 项目总览/Principle Tree v0.1.md",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "a2c52c7f0614ca9c5e528747633343f3a010afd82e84fa863512269da8d469b4",
+  "nonce": "6c40ff00afb2409fb622d7be18cc0b1d",
+  "coverage": "M01 engineering invariants only",
+  "out_of_scope": [
+    "Human Pilot evidence",
+    "M1 learning efficacy",
+    "M2 value/culture",
+    "Phase 9 completion"
+  ]
+}

@@ -162,6 +162,18 @@ class HarnessTests(unittest.TestCase):
         tag = result['stages']['D01']['tag']
         self.assertEqual(self.git('show', tag + ':dependency.txt'), 'repaired')
 
+    def test_old_tag_cannot_approve_different_candidate(self):
+        h = self.harness()
+        h.run(limit=1)
+        h.state['stages']['D01']['source_digest'] = 'different-candidate'
+        with self.assertRaises(RuntimeError): h.checkpoint(self.plan['stages'][0])
+
+    def test_artifact_tampering_cannot_complete_recovery(self):
+        h = self.harness()
+        h.run(limit=1)
+        (self.root / h.state['stages']['D01']['artifact']).write_bytes(b'tampered')
+        with self.assertRaises(RuntimeError): h.checkpoint(self.plan['stages'][0])
+
 
 if __name__ == "__main__":
     unittest.main()

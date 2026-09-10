@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "decisions": [
+    {
+      "id": "AD00-CLOUD-MODEL-001",
+      "status": "HUMAN_DECISION_REQUIRED",
+      "scope": "unattended cloud code-authoring and repair worker",
+      "missing": [
+        "provider/account",
+        "spending ceiling",
+        "permitted repository/model access",
+        "secret provisioning"
+      ],
+      "implemented_without_decision": [
+        "backend-neutral argv adapter protocol",
+        "local Work execution",
+        "GitHub Actions build/test/review/audit/checkpoint/resume"
+      ],
+      "prohibited_until_decision": [
+        "purchase resources",
+        "guess credentials",
+        "treat desktop login as cloud model authorization"
+      ],
+      "m01_engineering_blocked": false
+    }
+  ],
+  "real_company_systems_accessed": false
+}

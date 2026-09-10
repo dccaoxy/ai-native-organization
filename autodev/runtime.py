@@ -130,7 +130,11 @@ class Harness:
         self.state["events"].append({"sequence": len(self.state["events"]) + 1,
                                      "stage": sid, "status": status,
                                      "time": time.time(), **details})
-        self.state["stages"].setdefault(sid, {}).update(status=status, **details)
+        current = self.state["stages"].setdefault(sid, {})
+        if status in ('BUILD','PASS'):
+            for obsolete in ('reason','missing','gates','frozen_changes'):
+                current.pop(obsolete, None)
+        current.update(status=status, **details)
         write(self.state_path, self.state)
 
     def manifest(self, stage):
@@ -229,6 +233,10 @@ class Harness:
         item = self.state["stages"][sid]
         tag = item["tag"]
         exists = self.git("rev-parse", "--verify", "refs/tags/" + tag, check=False)
+        if exists:
+            annotation = self.git('for-each-ref','--format=%(contents)','refs/tags/' + tag)
+            if annotation != 'PASS evidence: ' + item['source_digest']:
+                raise RuntimeError('Existing checkpoint tag belongs to a different candidate; create a new revision')
         if not exists:
             self.project()
             # Commit every byte that Review/Audit actually used, including a
@@ -252,6 +260,9 @@ class Harness:
         lineage = subprocess.run(["git", "merge-base", "--is-ancestor", commit, "HEAD"], cwd=self.root)
         if lineage.returncode:
             raise RuntimeError("Unexpected checkpoint lineage")
+        artifact = self.safe(item['artifact'])
+        if hashlib.sha256(artifact.read_bytes()).hexdigest() != item['artifact_sha256']:
+            raise RuntimeError('Checkpoint artifact integrity mismatch')
         self.event(sid, "PASS", commit=commit)
         self.project()
 

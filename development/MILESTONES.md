@@ -1,11 +1,12 @@
 # Development Milestones
 
-最后更新：2026-09-08。
+最后更新：2026-09-10。
 
 | Milestone | Priority / Phase | 状态 | Outcome |
 |---|---|---|---|
 | M00 — Design Handoff | P0 / Phase 0 | Complete | 冻结设计、文档与视觉语义可被新开发者接续 |
-| M01 — Minimum Organization | P0 / Phase 2–3 | **Current / Specification not started** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
+| AD00 — Autonomous Development Runtime | Cross-phase through Phase 8 | **Harness PASS / Cloud model worker gated** | 持久状态、独立校验、恢复和检查点 |
+| M01 — Minimum Organization | P0 / Phase 2–3 | **Engineering PASS; delivery receipt in autodev/DELIVERY.json** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
 | M02 — Synthetic Organization | P1 / Phase 4 | Planned | 合成组织压力测试事件、责任与状态机 |
 | M03 — Learning Organization | P1 / Phase 5 | Planned | Execution → Evidence → Knowledge → Capability 可追溯闭环 |
 | M04 — Human Pilot | P2 / Phase 6 | Planned | 5–10 人、2–4 Cycle 的真实行为基线 |
@@ -33,7 +34,7 @@ Milestone 只有在定义的 Outcome、验收情景、证据和接续条件全�
 | S05 Free Work Space + Progress + Boundary/Escalation | PASS | autodev/M01/S05/v1 |
 | S06 Return + Review + Acceptance + Selection | PASS | autodev/M01/S06/v1 |
 | S07 End-to-End Integration | PASS | autodev/M01/S07/v1 |
-| S08 Simulation + Audit + Final Acceptance Package | PASS | autodev/M01/S08/v1 |
+| S08 Simulation + Audit + Final Acceptance Package | CHECKPOINT_PENDING | autodev/M01/S08/v2 |
 
 Source: `development/autodev/M01.state.json`. Simulation evidence is not Human Pilot or E01–E08 evidence. Phase 9 requires real Humans, time and experimental results.
 <!-- AUTODEV:END -->

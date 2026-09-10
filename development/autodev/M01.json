@@ -771,7 +771,8 @@
         "tests/test_simulation_review.py",
         "autodev",
         "organization",
-        "tests"
+        "tests",
+        ".github"
       ],
       "outputs": [
         "organization/simulation.py",
@@ -799,7 +800,8 @@
         "tests.test_work",
         "tests.test_returns",
         "tests.test_http",
-        "tests.test_simulation"
+        "tests.test_simulation",
+        "tests.test_harness"
       ],
       "review_tests": [
         "tests.test_contract_review",
@@ -809,7 +811,8 @@
         "tests.test_work_review",
         "tests.test_returns_review",
         "tests.test_http_review",
-        "tests.test_simulation_review"
+        "tests.test_simulation_review",
+        "tests.test_harness"
       ],
       "principle_checks": [
         {
@@ -872,7 +875,8 @@
           "-m",
           "autodev.auditor"
         ]
-      }
+      },
+      "revision": 2
     }
   ]
 }

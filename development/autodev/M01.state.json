@@ -103,18 +103,13 @@
       "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6"
     },
     "S08": {
-      "status": "PASS",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "tests/test_simulation.py",
-        "tests/test_simulation_review.py"
-      ],
-      "attempt": 1,
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 2,
       "worker": "caoxy-TG03",
-      "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
-      "tag": "autodev/M01/S08/v1",
-      "artifact": "development/autodev/runs/M01/S08/1/artifact.zip",
-      "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f",
+      "source_digest": "a2c52c7f0614ca9c5e528747633343f3a010afd82e84fa863512269da8d469b4",
+      "tag": "autodev/M01/S08/v2",
+      "artifact": "development/autodev/runs/M01/S08/2/artifact.zip",
+      "artifact_sha256": "6c49bd0cca205b3a88931c94565ddd726deae566fc2d1f8dde81b43e4278f656",
       "commit": "b8e674a53c6462da603d15f200db309f26640fc4"
     }
   },
@@ -664,6 +659,52 @@
       "status": "PASS",
       "time": 1789004715.4012406,
       "commit": "b8e674a53c6462da603d15f200db309f26640fc4"
+    },
+    {
+      "sequence": 69,
+      "stage": "S08",
+      "status": "REVALIDATION_REQUIRED",
+      "time": 1789005483.2158337,
+      "reason": "Final harness integrity regression checks and cloud adapter packaging"
+    },
+    {
+      "sequence": 70,
+      "stage": "S08",
+      "status": "BUILD",
+      "time": 1789005483.9614964,
+      "attempt": 2,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 71,
+      "stage": "S08",
+      "status": "TEST",
+      "time": 1789005484.1041117,
+      "attempt": 2
+    },
+    {
+      "sequence": 72,
+      "stage": "S08",
+      "status": "REVIEW",
+      "time": 1789005504.5323644,
+      "attempt": 2
+    },
+    {
+      "sequence": 73,
+      "stage": "S08",
+      "status": "AUDIT",
+      "time": 1789005530.6103597,
+      "attempt": 2
+    },
+    {
+      "sequence": 74,
+      "stage": "S08",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789005534.8832855,
+      "source_digest": "a2c52c7f0614ca9c5e528747633343f3a010afd82e84fa863512269da8d469b4",
+      "tag": "autodev/M01/S08/v2",
+      "artifact": "development/autodev/runs/M01/S08/2/artifact.zip",
+      "artifact_sha256": "6c49bd0cca205b3a88931c94565ddd726deae566fc2d1f8dde81b43e4278f656"
     }
   ]
 }
