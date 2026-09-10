@@ -1,6 +1,6 @@
 # M01 — Minimum Organization
 
-状态：**S01–S08 Engineering PASS；远端与 Dashboard 交付状态见 ../autodev/DELIVERY.json**
+状态：**Complete — S01–S08 Engineering PASS；远端、Cloud runner 与 Dashboard 交付均已验证，见 ../autodev/DELIVERY.json**
 
 优先级：**P0**
 

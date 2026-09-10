@@ -1,6 +1,27 @@
 {
-  "remote_push": "pending",
-  "cloud_workflow": "configured, unverified",
-  "obsidian_projection": "pending",
-  "m01_engineering": "S01-S08 PASS"
+  "remote_push": "verified",
+  "verified_remote_commit": "d3a41886841e051425af8e2fef009ed0624cdb8c",
+  "final_delivery_record": "Resolve the enclosing Git commit of this file; no self-referential hash is embedded",
+  "cloud_workflow": {
+    "status": "verified_success",
+    "run_id": 34428082446,
+    "url": "https://github.com/dccaoxy/ai-native-organization/actions/runs/34428082446",
+    "verify": "success",
+    "resume": "success",
+    "actual_cloud_commit": "d3a41886841e051425af8e2fef009ed0624cdb8c",
+    "artifact_count": 2,
+    "schedule": "every six hours; best-effort GitHub schedule"
+  },
+  "obsidian_projection": {
+    "status": "copied_and_readback_verified",
+    "vault": "Caoxy-Onedrive / AI Native组织",
+    "note": "00 项目总览/项目 Dashboard.md",
+    "source_commit": "d3a41886841e051425af8e2fef009ed0624cdb8c",
+    "sha256": "1FA413B4806C171B7A3077D056B44F1A1DF7B5FC2BB42C6BD94B65C853BFDF75"
+  },
+  "m01_engineering": "S01-S08 PASS; M0 simulation prototype complete",
+  "human_decision_required": [
+    "AD00-CLOUD-MODEL-001"
+  ],
+  "real_data_or_company_system_access": false
 }

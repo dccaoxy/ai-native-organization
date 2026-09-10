@@ -1,3 +1,8 @@
+## 可运行工程入口
+
+AD00 AutoDev v0 与 M01 最小组织已完成合成工程验证。
+[开发接续](AGENTS.md) · [当前状态](development/CURRENT_STATE.md) · [AutoDev](development/autodev/README.md) · [M01 验收包](development/M01_ACCEPTANCE.md) · [云端运行](development/autodev/CLOUD.md)。
+
 # AI-Native Organization
 
 一个约60名跨部门新人、为期一年的实验组织：以Human/HAU、Goal、Task/Execution、Knowledge和Capability探索效率、创新、学习与组织智能。

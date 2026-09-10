@@ -2,7 +2,7 @@
 
 最后更新：2026-09-10。此页是开发行动权威；不从聊天推断完成情况。
 
-## 当前交付收尾
+## 已完成的交付与接续核对
 
 1. 核对 `autodev/DELIVERY.json` 中的远端 commit/tags、Actions verify/resume 及 Obsidian 投影回执；缺失项只能记 pending/blocked，不能推断成功。
 2. 恢复执行使用 `python -m autodev.runtime run`；已 PASS 的 Stage 不重复创建标签。修复新缺陷需新 revision、重测和新标签。

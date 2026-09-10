@@ -1,0 +1,119 @@
+{
+  "run_id": 34428082446,
+  "url": "https://github.com/dccaoxy/ai-native-organization/actions/runs/34428082446",
+  "status": "completed",
+  "conclusion": "success",
+  "input_commit": "84e2e4089c4edc292e85ed513839001b9fb5add3",
+  "jobs": [
+    {
+      "name": "verify",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Full unit, integration, adversarial and HTTP end-to-end verification",
+          "conclusion": "success"
+        },
+        {
+          "name": "Re-execute labelled M01 simulation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Frozen baseline provenance",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "resume",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Configure checkpoint identity",
+          "conclusion": "success"
+        },
+        {
+          "name": "Resume from repository state",
+          "conclusion": "success"
+        },
+        {
+          "name": "Record actual cloud worker observation",
+          "conclusion": "success"
+        },
+        {
+          "name": "Persist state and tags without rewriting history",
+          "conclusion": "success"
+        },
+        {
+          "name": "Retain recovery evidence even when persistence fails",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 10133413563,
+      "name": "autodev-runtime-34428082446",
+      "size_in_bytes": 473091,
+      "expired": false
+    },
+    {
+      "id": 10133408430,
+      "name": "autodev-verification-34428082446",
+      "size_in_bytes": 7843,
+      "expired": false
+    }
+  ]
+}
