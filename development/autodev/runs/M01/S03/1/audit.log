@@ -1,0 +1,12 @@
+test_goal_authority_cannot_be_impersonated_by_agent (tests.test_core_review.CoreReview.test_goal_authority_cannot_be_impersonated_by_agent) ... ok
+test_real_mode_is_not_silently_enabled (tests.test_core_review.CoreReview.test_real_mode_is_not_silently_enabled) ... ok
+test_task_boundary_cannot_exceed_goal (tests.test_core_review.CoreReview.test_task_boundary_cannot_exceed_goal) ... ok
+test_three_claims_are_three_attempts (tests.test_core_review.CoreReview.test_three_claims_are_three_attempts) ... ok
+test_unpublished_and_foreign_claims_rejected (tests.test_core_review.CoreReview.test_unpublished_and_foreign_claims_rejected) ... ok
+test_three_claims_are_three_attempts (tests.test_core.CoreTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.405s
+
+OK
+

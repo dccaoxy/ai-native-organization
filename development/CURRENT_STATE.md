@@ -62,7 +62,7 @@
 |---|---|---|
 | S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
 | S02 Reality Foundation | PASS | autodev/M01/S02/v1 |
-| S03 Goal + Task + Execution Core | BLOCKED_ENGINEERING |  |
+| S03 Goal + Task + Execution Core | CHECKPOINT_PENDING | autodev/M01/S03/v1 |
 | S04 HAU + Representative Agent + Runtime | PENDING |  |
 | S05 Free Work Space + Progress + Boundary/Escalation | PENDING |  |
 | S06 Return + Review + Acceptance + Selection | PENDING |  |
