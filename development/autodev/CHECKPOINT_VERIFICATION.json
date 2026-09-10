@@ -65,17 +65,18 @@
     },
     {
       "stage": "S08",
-      "tag": "autodev/M01/S08/v2",
-      "commit": "82a6bf8ed07d156703754b293df6a447435b1900",
-      "candidate_files": 40,
+      "tag": "autodev/M01/S08/v3",
+      "commit": "ddc03417cdbc3cd5b630d00c1020cea7292ae13a",
+      "candidate_files": 41,
       "tag_matches_verified_candidate": true,
-      "artifact_sha256": "6c49bd0cca205b3a88931c94565ddd726deae566fc2d1f8dde81b43e4278f656",
+      "artifact_sha256": "753fcf0612250554b5a7b5b1d0e461ccbab0459f67603512a656274c1eda7760",
       "review_audit_digest_binding": true
     }
   ],
   "verdict": "PASS",
   "superseded_tags": [
     "autodev/M01/S04/v1",
-    "autodev/M01/S08/v1"
+    "autodev/M01/S08/v1",
+    "autodev/M01/S08/v2"
   ]
 }
