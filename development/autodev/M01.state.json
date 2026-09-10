@@ -58,7 +58,7 @@
       "commit": "db70fbaeacc1316e2a422cb0efe3309a7e69acaf"
     },
     "S05": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "reason": "Missing engineering inputs",
       "missing": [
         "tests/test_work.py",
@@ -69,7 +69,16 @@
       "source_digest": "b72fb64ec0d1b54f804d3b547e8ca45afe7c6cec770a2afa94b7ad2965a18412",
       "tag": "autodev/M01/S05/v1",
       "artifact": "development/autodev/runs/M01/S05/1/artifact.zip",
-      "artifact_sha256": "14dd62540bb76fe9d8f6ca5fc9098f2448c813cbb84c65463ca2614a8c45bf11"
+      "artifact_sha256": "14dd62540bb76fe9d8f6ca5fc9098f2448c813cbb84c65463ca2614a8c45bf11",
+      "commit": "7d49f6fb91763d755986ae7cd3f69e1784f93da9"
+    },
+    "S06": {
+      "status": "BLOCKED_ENGINEERING",
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "tests/test_returns.py",
+        "tests/test_returns_review.py"
+      ]
     }
   },
   "events": [
@@ -440,6 +449,24 @@
       "tag": "autodev/M01/S05/v1",
       "artifact": "development/autodev/runs/M01/S05/1/artifact.zip",
       "artifact_sha256": "14dd62540bb76fe9d8f6ca5fc9098f2448c813cbb84c65463ca2614a8c45bf11"
+    },
+    {
+      "sequence": 47,
+      "stage": "S05",
+      "status": "PASS",
+      "time": 1789004163.9300778,
+      "commit": "7d49f6fb91763d755986ae7cd3f69e1784f93da9"
+    },
+    {
+      "sequence": 48,
+      "stage": "S06",
+      "status": "BLOCKED_ENGINEERING",
+      "time": 1789004164.4755583,
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "tests/test_returns.py",
+        "tests/test_returns_review.py"
+      ]
     }
   ]
 }
