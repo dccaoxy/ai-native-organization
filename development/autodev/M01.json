@@ -1,0 +1,877 @@
+{
+  "schema_version": 1,
+  "id": "M01",
+  "mission": "Support engineering through Phase 8; Phase 9 cannot be auto-completed",
+  "stages": [
+    {
+      "id": "S01",
+      "title": "Specification Freeze",
+      "phase": 2,
+      "scope_maturity": "M0",
+      "dependencies": [],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_contract.py",
+        "tests/test_contract_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "specs",
+        "organization/contracts.py",
+        "organization/__init__.py",
+        "tests/test_contract.py",
+        "tests/test_contract_review.py"
+      ],
+      "scope": [
+        "specs",
+        "organization/contracts.py",
+        "organization/__init__.py",
+        "tests/test_contract.py",
+        "tests/test_contract_review.py"
+      ],
+      "exit_criteria": [
+        "All contract positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract"
+      ],
+      "review_tests": [
+        "tests.test_contract_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "TASK-09/TASK-10/WORK-08",
+          "test": "tests.test_contract_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S02",
+      "title": "Reality Foundation",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S01"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_store.py",
+        "tests/test_store_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/store.py",
+        "tests/test_store.py",
+        "tests/test_store_review.py"
+      ],
+      "scope": [
+        "organization/store.py",
+        "tests/test_store.py",
+        "tests/test_store_review.py"
+      ],
+      "exit_criteria": [
+        "All store positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "REALITY-01/REALITY-02/AGENT-11",
+          "test": "tests.test_store_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S03",
+      "title": "Goal + Task + Execution Core",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S02"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_core.py",
+        "tests/test_core_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/core.py",
+        "tests/test_core.py",
+        "tests/test_core_review.py"
+      ],
+      "scope": [
+        "organization/core.py",
+        "tests/test_core.py",
+        "tests/test_core_review.py"
+      ],
+      "exit_criteria": [
+        "All core positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "GOAL-02/GOAL-04/TASK-04/TASK-09",
+          "test": "tests.test_core_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S04",
+      "title": "HAU + Representative Agent + Runtime",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S03"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_identity.py",
+        "tests/test_identity_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/identity.py",
+        "tests/test_identity.py",
+        "tests/test_identity_review.py"
+      ],
+      "scope": [
+        "organization/identity.py",
+        "tests/test_identity.py",
+        "tests/test_identity_review.py"
+      ],
+      "exit_criteria": [
+        "All identity positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core",
+        "tests.test_identity"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review",
+        "tests.test_identity_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "AGENT-01/AGENT-05/AGENT-07",
+          "test": "tests.test_identity_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Free Work Space + Progress + Boundary/Escalation",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S04"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_work.py",
+        "tests/test_work_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/work.py",
+        "tests/test_work.py",
+        "tests/test_work_review.py"
+      ],
+      "scope": [
+        "organization/work.py",
+        "tests/test_work.py",
+        "tests/test_work_review.py"
+      ],
+      "exit_criteria": [
+        "All work positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core",
+        "tests.test_identity",
+        "tests.test_work"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review",
+        "tests.test_identity_review",
+        "tests.test_work_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "WORK-02/WORK-11/GOV-09",
+          "test": "tests.test_work_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S06",
+      "title": "Return + Review + Acceptance + Selection",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S05"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_returns.py",
+        "tests/test_returns_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/returns.py",
+        "tests/test_returns.py",
+        "tests/test_returns_review.py"
+      ],
+      "scope": [
+        "organization/returns.py",
+        "tests/test_returns.py",
+        "tests/test_returns_review.py"
+      ],
+      "exit_criteria": [
+        "All returns positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core",
+        "tests.test_identity",
+        "tests.test_work",
+        "tests.test_returns"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review",
+        "tests.test_identity_review",
+        "tests.test_work_review",
+        "tests.test_returns_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "WORK-06/WORK-07/WORK-08/WORK-10",
+          "test": "tests.test_returns_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S07",
+      "title": "End-to-End Integration",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S06"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_http.py",
+        "tests/test_http_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/server.py",
+        "organization/web",
+        "tests/test_http.py",
+        "tests/test_http_review.py"
+      ],
+      "scope": [
+        "organization/server.py",
+        "organization/web",
+        "tests/test_http.py",
+        "tests/test_http_review.py"
+      ],
+      "exit_criteria": [
+        "All http positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core",
+        "tests.test_identity",
+        "tests.test_work",
+        "tests.test_returns",
+        "tests.test_http"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review",
+        "tests.test_identity_review",
+        "tests.test_work_review",
+        "tests.test_returns_review",
+        "tests.test_http_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "REALITY-01/GOV-04",
+          "test": "tests.test_http_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    },
+    {
+      "id": "S08",
+      "title": "Simulation + Audit + Final Acceptance Package",
+      "phase": 3,
+      "scope_maturity": "M0",
+      "dependencies": [
+        "S07"
+      ],
+      "inputs": [
+        "specs/M01.contract.json",
+        "tests/test_simulation.py",
+        "tests/test_simulation_review.py",
+        "autodev",
+        "organization",
+        "tests"
+      ],
+      "outputs": [
+        "organization/simulation.py",
+        "tests/test_simulation.py",
+        "tests/test_simulation_review.py",
+        "development/M01_ACCEPTANCE.md"
+      ],
+      "scope": [
+        "organization/simulation.py",
+        "tests/test_simulation.py",
+        "tests/test_simulation_review.py",
+        "development/M01_ACCEPTANCE.md"
+      ],
+      "exit_criteria": [
+        "All simulation positive and adversarial tests pass",
+        "Bound review and audit receipts PASS",
+        "Frozen baseline hashes unchanged",
+        "Commit, annotated tag, artifact and repository recovery state exist"
+      ],
+      "tests": [
+        "tests.test_contract",
+        "tests.test_store",
+        "tests.test_core",
+        "tests.test_identity",
+        "tests.test_work",
+        "tests.test_returns",
+        "tests.test_http",
+        "tests.test_simulation"
+      ],
+      "review_tests": [
+        "tests.test_contract_review",
+        "tests.test_store_review",
+        "tests.test_core_review",
+        "tests.test_identity_review",
+        "tests.test_work_review",
+        "tests.test_returns_review",
+        "tests.test_http_review",
+        "tests.test_simulation_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "TASK-11/AGENT-07/M01-outcome",
+          "test": "tests.test_simulation_review",
+          "source": "00 项目总览/Principle Tree v0.1.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_l1_l2_change",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_company_data_or_external_action",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "new_residual_risk",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        },
+        {
+          "condition": "real_human_pilot_or_reward_policy",
+          "active": false,
+          "route": "Human purpose/authority/risk owner; no implicit approval"
+        }
+      ],
+      "repair_budget": 2,
+      "timeout_seconds": 120,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ]
+      }
+    }
+  ]
+}

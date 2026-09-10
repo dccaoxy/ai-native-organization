@@ -1,0 +1,15 @@
+test_actual_command_timeout_is_visible (tests.test_harness.HarnessTests.test_actual_command_timeout_is_visible) ... ok
+test_budget_persists_across_workers (tests.test_harness.HarnessTests.test_budget_persists_across_workers) ... ok
+test_crash_after_checkpoint_commit_before_tag_recovers (tests.test_harness.HarnessTests.test_crash_after_checkpoint_commit_before_tag_recovers) ... ok
+test_dependency_cycle_and_path_escape_rejected (tests.test_harness.HarnessTests.test_dependency_cycle_and_path_escape_rejected) ... ok
+test_frozen_change_enters_human_gate_before_build (tests.test_harness.HarnessTests.test_frozen_change_enters_human_gate_before_build) ... ok
+test_interruption_resumes_without_reusing_stale_review (tests.test_harness.HarnessTests.test_interruption_resumes_without_reusing_stale_review) ... ok
+test_repair_auto_advance_gate_resume_and_rollback (tests.test_harness.HarnessTests.test_repair_auto_advance_gate_resume_and_rollback) ... ok
+test_reviewer_cannot_mutate_candidate_and_pass (tests.test_harness.HarnessTests.test_reviewer_cannot_mutate_candidate_and_pass) ... ok
+test_timeout_budget_and_missing_receipt_fail_closed (tests.test_harness.HarnessTests.test_timeout_budget_and_missing_receipt_fail_closed) ... ok
+test_two_workers_cannot_own_same_checkout (tests.test_harness.HarnessTests.test_two_workers_cannot_own_same_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 9.758s
+
+OK

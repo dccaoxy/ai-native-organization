@@ -26,6 +26,16 @@
 
 当前是 P0 / M01。除非 M01 需要，不要优先开发 3D 地图、复杂推荐、Knowledge Pulse、Reward、Honor、Progression 或 Organization-owned Agent。
 
+## AD00 / AutoDev 接续
+
+- 层级：Phase 0–9 = 生命周期；M0/M1/M2 = 实现成熟度与 Scope；Milestone = 独立工程成果；Stage = Milestone 内自动推进单元。
+- 先读 `development/autodev/README.md`、`M01.json` 和 `M01.state.json`（若存在），再看当前 Stage 的运行证据；不能从聊天推断 PASS。
+- 工程使命覆盖到 Phase 8；Phase 9 不能由 AutoDev 自动完成，须真实 Human、时间及实验结果。
+- Build/Test、独立进程反证 Review、Principle Audit 逻辑分离；新内容必须重新验证，不复用不匹配摘要的审查。
+- 默认在明确边界内自动推进；工程失败记为 BLOCKED_ENGINEERING。只有 Purpose/Authority/Risk、真实外部数据/权限或冻结 L1/L2 变更才记 HUMAN_DECISION_REQUIRED。
+- 每个 PASS Stage 有 commit、不可覆盖的 annotated tag、artifact 与可恢复状态。不得 force-push、reset 历史或自动操作真实公司系统。
+- 当前内置 reviewer/auditor 为确定性独立校验，不宣称已经获得独立 Human/LLM 审查。通用模型 Builder/Repair 需另行配置，不假定桌面登录等同云端凭据。
+
 ## 事实源与同步
 
 - **GitHub 是 Development Source of Truth**：代码、规格、测试、技术决策、Milestone、当前状态和下一步均以本仓库为准。
