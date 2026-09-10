@@ -1,0 +1,3442 @@
+{
+  "simulation": true,
+  "state": {
+    "Human": {
+      "H0": {
+        "display_name": "Synthetic Human 0",
+        "id": "H0",
+        "kind": "human"
+      },
+      "H1": {
+        "display_name": "Synthetic Human 1",
+        "id": "H1",
+        "kind": "human"
+      },
+      "H2": {
+        "display_name": "Synthetic Human 2",
+        "id": "H2",
+        "kind": "human"
+      },
+      "H3": {
+        "display_name": "Synthetic Human 3",
+        "id": "H3",
+        "kind": "human"
+      },
+      "H4": {
+        "display_name": "Synthetic Human 4",
+        "id": "H4",
+        "kind": "human"
+      },
+      "H5": {
+        "display_name": "Synthetic Human 5",
+        "id": "H5",
+        "kind": "human"
+      },
+      "H6": {
+        "display_name": "Synthetic Human 6",
+        "id": "H6",
+        "kind": "human"
+      },
+      "H7": {
+        "display_name": "Synthetic Human 7",
+        "id": "H7",
+        "kind": "human"
+      },
+      "H8": {
+        "display_name": "Synthetic Human 8",
+        "id": "H8",
+        "kind": "human"
+      },
+      "H9": {
+        "display_name": "Synthetic Human 9",
+        "id": "H9",
+        "kind": "human"
+      }
+    },
+    "RepresentativeAgent": {
+      "A0": {
+        "active": true,
+        "hau_id": "U0",
+        "human_id": "H0",
+        "id": "A0",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A1": {
+        "active": true,
+        "hau_id": "U1",
+        "human_id": "H1",
+        "id": "A1",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A2": {
+        "active": true,
+        "hau_id": "U2",
+        "human_id": "H2",
+        "id": "A2",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A3": {
+        "active": true,
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "A3",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A4": {
+        "active": true,
+        "hau_id": "U4",
+        "human_id": "H4",
+        "id": "A4",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A5": {
+        "active": true,
+        "hau_id": "U5",
+        "human_id": "H5",
+        "id": "A5",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A6": {
+        "active": true,
+        "hau_id": "U6",
+        "human_id": "H6",
+        "id": "A6",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A7": {
+        "active": true,
+        "hau_id": "U7",
+        "human_id": "H7",
+        "id": "A7",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A8": {
+        "active": true,
+        "hau_id": "U8",
+        "human_id": "H8",
+        "id": "A8",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A9": {
+        "active": true,
+        "hau_id": "U9",
+        "human_id": "H9",
+        "id": "A9",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      }
+    },
+    "HAU": {
+      "U0": {
+        "agent_id": "A0",
+        "human_id": "H0",
+        "id": "U0"
+      },
+      "U1": {
+        "agent_id": "A1",
+        "human_id": "H1",
+        "id": "U1"
+      },
+      "U2": {
+        "agent_id": "A2",
+        "human_id": "H2",
+        "id": "U2"
+      },
+      "U3": {
+        "agent_id": "A3",
+        "human_id": "H3",
+        "id": "U3"
+      },
+      "U4": {
+        "agent_id": "A4",
+        "human_id": "H4",
+        "id": "U4"
+      },
+      "U5": {
+        "agent_id": "A5",
+        "human_id": "H5",
+        "id": "U5"
+      },
+      "U6": {
+        "agent_id": "A6",
+        "human_id": "H6",
+        "id": "U6"
+      },
+      "U7": {
+        "agent_id": "A7",
+        "human_id": "H7",
+        "id": "U7"
+      },
+      "U8": {
+        "agent_id": "A8",
+        "human_id": "H8",
+        "id": "U8"
+      },
+      "U9": {
+        "agent_id": "A9",
+        "human_id": "H9",
+        "id": "U9"
+      }
+    },
+    "Goal": {
+      "G0": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Synthetic load only",
+        "goal_authority": "H0",
+        "id": "G0",
+        "status": "active",
+        "success_criteria": "Traceable attempts"
+      },
+      "G1": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Synthetic load only",
+        "goal_authority": "H0",
+        "id": "G1",
+        "status": "active",
+        "success_criteria": "Traceable attempts"
+      },
+      "G2": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Synthetic load only",
+        "goal_authority": "H0",
+        "id": "G2",
+        "status": "active",
+        "success_criteria": "Traceable attempts"
+      }
+    },
+    "Task": {
+      "T0": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T0",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T1": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T1",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T2": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T2",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T3": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T3",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T4": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T4",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T5": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T5",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T6": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T6",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T7": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T7",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T8": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T8",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T9": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T9",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T10": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T10",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T11": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T11",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T12": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T12",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T13": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T13",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T14": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T14",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T15": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T15",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T16": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T16",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T17": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T17",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T18": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T18",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T19": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T19",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T20": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T20",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T21": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T21",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T22": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T22",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T23": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T23",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T24": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T24",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T25": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T25",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T26": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T26",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T27": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T27",
+        "primary_goal": "G0",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T28": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T28",
+        "primary_goal": "G1",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      },
+      "T29": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Recorded evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic alternatives",
+        "id": "T29",
+        "primary_goal": "G2",
+        "review_authority": "H8",
+        "selection_authority": "H9",
+        "status": "closed"
+      }
+    },
+    "Execution": {
+      "E0-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021510.9822707,
+        "hau_id": "U0",
+        "id": "E0-0",
+        "last_seen": 1789021511.0374355,
+        "return_id": "R0-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T0"
+      },
+      "E0-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021511.0005019,
+        "hau_id": "U1",
+        "id": "E0-1",
+        "last_seen": 1789021511.0471156,
+        "return_id": "R0-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T0"
+      },
+      "E1-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021511.5435798,
+        "hau_id": "U2",
+        "id": "E1-0",
+        "last_seen": 1789021511.6065664,
+        "return_id": "R1-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E1-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021511.5654032,
+        "hau_id": "U3",
+        "id": "E1-1",
+        "last_seen": 1789021511.6713634,
+        "return_id": "R1-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E2-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021511.708598,
+        "hau_id": "U4",
+        "id": "E2-0",
+        "last_seen": 1789021511.7661395,
+        "return_id": "R2-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T2"
+      },
+      "E2-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021511.7283723,
+        "hau_id": "U5",
+        "id": "E2-1",
+        "last_seen": 1789021511.8148932,
+        "return_id": "R2-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T2"
+      },
+      "E3-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021511.863479,
+        "hau_id": "U6",
+        "id": "E3-0",
+        "last_seen": 1789021511.9216037,
+        "return_id": "R3-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T3"
+      },
+      "E3-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021511.8824794,
+        "hau_id": "U7",
+        "id": "E3-1",
+        "last_seen": 1789021511.9531853,
+        "return_id": "R3-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T3"
+      },
+      "E4-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021512.0006924,
+        "hau_id": "U8",
+        "id": "E4-0",
+        "last_seen": 1789021512.0644648,
+        "return_id": "R4-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T4"
+      },
+      "E4-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021512.0222967,
+        "hau_id": "U9",
+        "id": "E4-1",
+        "last_seen": 1789021512.0999708,
+        "return_id": "R4-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T4"
+      },
+      "E5-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021512.1520655,
+        "hau_id": "U0",
+        "id": "E5-0",
+        "last_seen": 1789021512.218552,
+        "return_id": "R5-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T5"
+      },
+      "E5-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021512.1737692,
+        "hau_id": "U1",
+        "id": "E5-1",
+        "last_seen": 1789021512.229846,
+        "return_id": "R5-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T5"
+      },
+      "E6-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021512.2971928,
+        "hau_id": "U2",
+        "id": "E6-0",
+        "last_seen": 1789021512.3675876,
+        "return_id": "R6-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T6"
+      },
+      "E6-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021512.3210514,
+        "hau_id": "U3",
+        "id": "E6-1",
+        "last_seen": 1789021512.4548302,
+        "return_id": "R6-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T6"
+      },
+      "E7-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021512.5026128,
+        "hau_id": "U4",
+        "id": "E7-0",
+        "last_seen": 1789021512.5796502,
+        "return_id": "R7-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T7"
+      },
+      "E7-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021512.5262244,
+        "hau_id": "U5",
+        "id": "E7-1",
+        "last_seen": 1789021512.6422184,
+        "return_id": "R7-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T7"
+      },
+      "E8-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021512.7045457,
+        "hau_id": "U6",
+        "id": "E8-0",
+        "last_seen": 1789021512.7928977,
+        "return_id": "R8-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T8"
+      },
+      "E8-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021512.7303402,
+        "hau_id": "U7",
+        "id": "E8-1",
+        "last_seen": 1789021512.8359866,
+        "return_id": "R8-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T8"
+      },
+      "E9-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021512.8916857,
+        "hau_id": "U8",
+        "id": "E9-0",
+        "last_seen": 1789021512.974786,
+        "return_id": "R9-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T9"
+      },
+      "E9-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021512.9189503,
+        "hau_id": "U9",
+        "id": "E9-1",
+        "last_seen": 1789021513.0156815,
+        "return_id": "R9-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T9"
+      },
+      "E10-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021513.0695748,
+        "hau_id": "U0",
+        "id": "E10-0",
+        "last_seen": 1789021513.154426,
+        "return_id": "R10-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T10"
+      },
+      "E10-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021513.0971408,
+        "hau_id": "U1",
+        "id": "E10-1",
+        "last_seen": 1789021513.1683571,
+        "return_id": "R10-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T10"
+      },
+      "E11-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021513.2534888,
+        "hau_id": "U2",
+        "id": "E11-0",
+        "last_seen": 1789021513.3378565,
+        "return_id": "R11-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T11"
+      },
+      "E11-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021513.2811396,
+        "hau_id": "U3",
+        "id": "E11-1",
+        "last_seen": 1789021513.4474044,
+        "return_id": "R11-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T11"
+      },
+      "E12-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021513.5064535,
+        "hau_id": "U4",
+        "id": "E12-0",
+        "last_seen": 1789021513.594608,
+        "return_id": "R12-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T12"
+      },
+      "E12-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021513.5348933,
+        "hau_id": "U5",
+        "id": "E12-1",
+        "last_seen": 1789021513.6673865,
+        "return_id": "R12-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T12"
+      },
+      "E13-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021513.7419477,
+        "hau_id": "U6",
+        "id": "E13-0",
+        "last_seen": 1789021513.8325076,
+        "return_id": "R13-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T13"
+      },
+      "E13-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021513.7714782,
+        "hau_id": "U7",
+        "id": "E13-1",
+        "last_seen": 1789021513.8776457,
+        "return_id": "R13-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T13"
+      },
+      "E14-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021513.9402192,
+        "hau_id": "U8",
+        "id": "E14-0",
+        "last_seen": 1789021514.03599,
+        "return_id": "R14-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T14"
+      },
+      "E14-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021513.9729698,
+        "hau_id": "U9",
+        "id": "E14-1",
+        "last_seen": 1789021514.0845277,
+        "return_id": "R14-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T14"
+      },
+      "E15-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021514.1515229,
+        "hau_id": "U0",
+        "id": "E15-0",
+        "last_seen": 1789021514.2460015,
+        "return_id": "R15-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T15"
+      },
+      "E15-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021514.1829405,
+        "hau_id": "U1",
+        "id": "E15-1",
+        "last_seen": 1789021514.261988,
+        "return_id": "R15-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T15"
+      },
+      "E16-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021514.358382,
+        "hau_id": "U2",
+        "id": "E16-0",
+        "last_seen": 1789021514.457521,
+        "return_id": "R16-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T16"
+      },
+      "E16-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021514.3899815,
+        "hau_id": "U3",
+        "id": "E16-1",
+        "last_seen": 1789021514.5701506,
+        "return_id": "R16-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T16"
+      },
+      "E17-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021514.6375208,
+        "hau_id": "U4",
+        "id": "E17-0",
+        "last_seen": 1789021514.7411194,
+        "return_id": "R17-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T17"
+      },
+      "E17-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021514.6711347,
+        "hau_id": "U5",
+        "id": "E17-1",
+        "last_seen": 1789021514.8287733,
+        "return_id": "R17-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T17"
+      },
+      "E18-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021514.9159644,
+        "hau_id": "U6",
+        "id": "E18-0",
+        "last_seen": 1789021515.0241795,
+        "return_id": "R18-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T18"
+      },
+      "E18-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021514.9515798,
+        "hau_id": "U7",
+        "id": "E18-1",
+        "last_seen": 1789021515.07821,
+        "return_id": "R18-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T18"
+      },
+      "E19-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021515.15004,
+        "hau_id": "U8",
+        "id": "E19-0",
+        "last_seen": 1789021515.2603881,
+        "return_id": "R19-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T19"
+      },
+      "E19-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021515.1878142,
+        "hau_id": "U9",
+        "id": "E19-1",
+        "last_seen": 1789021515.3162122,
+        "return_id": "R19-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T19"
+      },
+      "E20-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021515.3868158,
+        "hau_id": "U0",
+        "id": "E20-0",
+        "last_seen": 1789021515.5050151,
+        "return_id": "R20-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T20"
+      },
+      "E20-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021515.4310038,
+        "hau_id": "U1",
+        "id": "E20-1",
+        "last_seen": 1789021515.525766,
+        "return_id": "R20-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T20"
+      },
+      "E21-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021515.646926,
+        "hau_id": "U2",
+        "id": "E21-0",
+        "last_seen": 1789021515.762673,
+        "return_id": "R21-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T21"
+      },
+      "E21-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021515.6862876,
+        "hau_id": "U3",
+        "id": "E21-1",
+        "last_seen": 1789021515.8970313,
+        "return_id": "R21-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T21"
+      },
+      "E22-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021515.9752936,
+        "hau_id": "U4",
+        "id": "E22-0",
+        "last_seen": 1789021516.0921123,
+        "return_id": "R22-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T22"
+      },
+      "E22-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021516.0127387,
+        "hau_id": "U5",
+        "id": "E22-1",
+        "last_seen": 1789021516.1943877,
+        "return_id": "R22-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T22"
+      },
+      "E23-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021516.2933195,
+        "hau_id": "U6",
+        "id": "E23-0",
+        "last_seen": 1789021516.4205265,
+        "return_id": "R23-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T23"
+      },
+      "E23-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021516.3347971,
+        "hau_id": "U7",
+        "id": "E23-1",
+        "last_seen": 1789021516.4824145,
+        "return_id": "R23-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T23"
+      },
+      "E24-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021516.562815,
+        "hau_id": "U8",
+        "id": "E24-0",
+        "last_seen": 1789021516.6808338,
+        "return_id": "R24-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T24"
+      },
+      "E24-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021516.602121,
+        "hau_id": "U9",
+        "id": "E24-1",
+        "last_seen": 1789021518.0042353,
+        "return_id": "R24-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T24"
+      },
+      "E25-0": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789021518.0864437,
+        "hau_id": "U0",
+        "id": "E25-0",
+        "last_seen": 1789021518.2088118,
+        "return_id": "R25-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T25"
+      },
+      "E25-1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789021518.1269941,
+        "hau_id": "U1",
+        "id": "E25-1",
+        "last_seen": 1789021518.2295673,
+        "return_id": "R25-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T25"
+      },
+      "E26-0": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789021518.3541658,
+        "hau_id": "U2",
+        "id": "E26-0",
+        "last_seen": 1789021518.480045,
+        "return_id": "R26-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T26"
+      },
+      "E26-1": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789021518.3960168,
+        "hau_id": "U3",
+        "id": "E26-1",
+        "last_seen": 1789021518.6255412,
+        "return_id": "R26-1",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T26"
+      },
+      "E27-0": {
+        "accountable_owner": "H4",
+        "claimed_at": 1789021518.719304,
+        "hau_id": "U4",
+        "id": "E27-0",
+        "last_seen": 1789021518.8575034,
+        "return_id": "R27-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T27"
+      },
+      "E27-1": {
+        "accountable_owner": "H5",
+        "claimed_at": 1789021518.7656848,
+        "hau_id": "U5",
+        "id": "E27-1",
+        "last_seen": 1789021518.9663744,
+        "return_id": "R27-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T27"
+      },
+      "E28-0": {
+        "accountable_owner": "H6",
+        "claimed_at": 1789021519.0734155,
+        "hau_id": "U6",
+        "id": "E28-0",
+        "last_seen": 1789021519.2060328,
+        "return_id": "R28-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T28"
+      },
+      "E28-1": {
+        "accountable_owner": "H7",
+        "claimed_at": 1789021519.1168242,
+        "hau_id": "U7",
+        "id": "E28-1",
+        "last_seen": 1789021519.2717593,
+        "return_id": "R28-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T28"
+      },
+      "E29-0": {
+        "accountable_owner": "H8",
+        "claimed_at": 1789021519.357988,
+        "hau_id": "U8",
+        "id": "E29-0",
+        "last_seen": 1789021519.4951746,
+        "return_id": "R29-0",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T29"
+      },
+      "E29-1": {
+        "accountable_owner": "H9",
+        "claimed_at": 1789021519.402821,
+        "hau_id": "U9",
+        "id": "E29-1",
+        "last_seen": 1789021519.567841,
+        "return_id": "R29-1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T29"
+      }
+    },
+    "Return": {
+      "R0-0": {
+        "execution_id": "E0-0",
+        "human_annotations": [],
+        "id": "R0-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R0-1": {
+        "execution_id": "E0-1",
+        "human_annotations": [],
+        "id": "R0-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R1-0": {
+        "execution_id": "E1-0",
+        "human_annotations": [],
+        "id": "R1-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R1-1": {
+        "execution_id": "E1-1",
+        "human_annotations": [],
+        "id": "R1-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R2-0": {
+        "execution_id": "E2-0",
+        "human_annotations": [],
+        "id": "R2-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R2-1": {
+        "execution_id": "E2-1",
+        "human_annotations": [],
+        "id": "R2-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R3-0": {
+        "execution_id": "E3-0",
+        "human_annotations": [],
+        "id": "R3-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R3-1": {
+        "execution_id": "E3-1",
+        "human_annotations": [],
+        "id": "R3-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R4-0": {
+        "execution_id": "E4-0",
+        "human_annotations": [],
+        "id": "R4-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R4-1": {
+        "execution_id": "E4-1",
+        "human_annotations": [],
+        "id": "R4-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R5-0": {
+        "execution_id": "E5-0",
+        "human_annotations": [],
+        "id": "R5-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R5-1": {
+        "execution_id": "E5-1",
+        "human_annotations": [],
+        "id": "R5-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R6-0": {
+        "execution_id": "E6-0",
+        "human_annotations": [],
+        "id": "R6-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R6-1": {
+        "execution_id": "E6-1",
+        "human_annotations": [],
+        "id": "R6-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R7-0": {
+        "execution_id": "E7-0",
+        "human_annotations": [],
+        "id": "R7-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R7-1": {
+        "execution_id": "E7-1",
+        "human_annotations": [],
+        "id": "R7-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R8-0": {
+        "execution_id": "E8-0",
+        "human_annotations": [],
+        "id": "R8-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R8-1": {
+        "execution_id": "E8-1",
+        "human_annotations": [],
+        "id": "R8-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R9-0": {
+        "execution_id": "E9-0",
+        "human_annotations": [],
+        "id": "R9-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R9-1": {
+        "execution_id": "E9-1",
+        "human_annotations": [],
+        "id": "R9-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R10-0": {
+        "execution_id": "E10-0",
+        "human_annotations": [],
+        "id": "R10-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R10-1": {
+        "execution_id": "E10-1",
+        "human_annotations": [],
+        "id": "R10-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R11-0": {
+        "execution_id": "E11-0",
+        "human_annotations": [],
+        "id": "R11-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R11-1": {
+        "execution_id": "E11-1",
+        "human_annotations": [],
+        "id": "R11-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R12-0": {
+        "execution_id": "E12-0",
+        "human_annotations": [],
+        "id": "R12-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R12-1": {
+        "execution_id": "E12-1",
+        "human_annotations": [],
+        "id": "R12-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R13-0": {
+        "execution_id": "E13-0",
+        "human_annotations": [],
+        "id": "R13-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R13-1": {
+        "execution_id": "E13-1",
+        "human_annotations": [],
+        "id": "R13-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R14-0": {
+        "execution_id": "E14-0",
+        "human_annotations": [],
+        "id": "R14-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R14-1": {
+        "execution_id": "E14-1",
+        "human_annotations": [],
+        "id": "R14-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R15-0": {
+        "execution_id": "E15-0",
+        "human_annotations": [],
+        "id": "R15-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R15-1": {
+        "execution_id": "E15-1",
+        "human_annotations": [],
+        "id": "R15-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R16-0": {
+        "execution_id": "E16-0",
+        "human_annotations": [],
+        "id": "R16-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R16-1": {
+        "execution_id": "E16-1",
+        "human_annotations": [],
+        "id": "R16-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R17-0": {
+        "execution_id": "E17-0",
+        "human_annotations": [],
+        "id": "R17-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R17-1": {
+        "execution_id": "E17-1",
+        "human_annotations": [],
+        "id": "R17-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R18-0": {
+        "execution_id": "E18-0",
+        "human_annotations": [],
+        "id": "R18-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R18-1": {
+        "execution_id": "E18-1",
+        "human_annotations": [],
+        "id": "R18-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R19-0": {
+        "execution_id": "E19-0",
+        "human_annotations": [],
+        "id": "R19-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R19-1": {
+        "execution_id": "E19-1",
+        "human_annotations": [],
+        "id": "R19-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R20-0": {
+        "execution_id": "E20-0",
+        "human_annotations": [],
+        "id": "R20-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R20-1": {
+        "execution_id": "E20-1",
+        "human_annotations": [],
+        "id": "R20-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R21-0": {
+        "execution_id": "E21-0",
+        "human_annotations": [],
+        "id": "R21-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R21-1": {
+        "execution_id": "E21-1",
+        "human_annotations": [],
+        "id": "R21-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R22-0": {
+        "execution_id": "E22-0",
+        "human_annotations": [],
+        "id": "R22-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R22-1": {
+        "execution_id": "E22-1",
+        "human_annotations": [],
+        "id": "R22-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R23-0": {
+        "execution_id": "E23-0",
+        "human_annotations": [],
+        "id": "R23-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R23-1": {
+        "execution_id": "E23-1",
+        "human_annotations": [],
+        "id": "R23-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R24-0": {
+        "execution_id": "E24-0",
+        "human_annotations": [],
+        "id": "R24-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R24-1": {
+        "execution_id": "E24-1",
+        "human_annotations": [],
+        "id": "R24-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R25-0": {
+        "execution_id": "E25-0",
+        "human_annotations": [],
+        "id": "R25-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R25-1": {
+        "execution_id": "E25-1",
+        "human_annotations": [],
+        "id": "R25-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "failure",
+        "reflection": "No real organization inference",
+        "result": "Synthetic failure"
+      },
+      "R26-0": {
+        "execution_id": "E26-0",
+        "human_annotations": [],
+        "id": "R26-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R26-1": {
+        "execution_id": "E26-1",
+        "human_annotations": [],
+        "id": "R26-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R27-0": {
+        "execution_id": "E27-0",
+        "human_annotations": [],
+        "id": "R27-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R27-1": {
+        "execution_id": "E27-1",
+        "human_annotations": [],
+        "id": "R27-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R28-0": {
+        "execution_id": "E28-0",
+        "human_annotations": [],
+        "id": "R28-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R28-1": {
+        "execution_id": "E28-1",
+        "human_annotations": [],
+        "id": "R28-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R29-0": {
+        "execution_id": "E29-0",
+        "human_annotations": [],
+        "id": "R29-0",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      },
+      "R29-1": {
+        "execution_id": "E29-1",
+        "human_annotations": [],
+        "id": "R29-1",
+        "major_execution_facts": "See event trail",
+        "observed_terrain": "Software fixture only",
+        "outcome": "success",
+        "reflection": "No real organization inference",
+        "result": "Synthetic candidate"
+      }
+    },
+    "Review": {
+      "VR0-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR0-0",
+        "return_id": "R0-0",
+        "reviewer": "H8"
+      },
+      "VR0-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR0-1",
+        "return_id": "R0-1",
+        "reviewer": "H8"
+      },
+      "VR1-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR1-0",
+        "return_id": "R1-0",
+        "reviewer": "H8"
+      },
+      "VR1-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR1-1",
+        "return_id": "R1-1",
+        "reviewer": "H8"
+      },
+      "VR2-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR2-0",
+        "return_id": "R2-0",
+        "reviewer": "H8"
+      },
+      "VR2-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR2-1",
+        "return_id": "R2-1",
+        "reviewer": "H8"
+      },
+      "VR3-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR3-0",
+        "return_id": "R3-0",
+        "reviewer": "H8"
+      },
+      "VR3-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR3-1",
+        "return_id": "R3-1",
+        "reviewer": "H8"
+      },
+      "VR4-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR4-0",
+        "return_id": "R4-0",
+        "reviewer": "H8"
+      },
+      "VR4-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR4-1",
+        "return_id": "R4-1",
+        "reviewer": "H8"
+      },
+      "VR5-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR5-0",
+        "return_id": "R5-0",
+        "reviewer": "H8"
+      },
+      "VR5-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR5-1",
+        "return_id": "R5-1",
+        "reviewer": "H8"
+      },
+      "VR6-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR6-0",
+        "return_id": "R6-0",
+        "reviewer": "H8"
+      },
+      "VR6-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR6-1",
+        "return_id": "R6-1",
+        "reviewer": "H8"
+      },
+      "VR7-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR7-0",
+        "return_id": "R7-0",
+        "reviewer": "H8"
+      },
+      "VR7-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR7-1",
+        "return_id": "R7-1",
+        "reviewer": "H8"
+      },
+      "VR8-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR8-0",
+        "return_id": "R8-0",
+        "reviewer": "H8"
+      },
+      "VR8-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR8-1",
+        "return_id": "R8-1",
+        "reviewer": "H8"
+      },
+      "VR9-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR9-0",
+        "return_id": "R9-0",
+        "reviewer": "H8"
+      },
+      "VR9-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR9-1",
+        "return_id": "R9-1",
+        "reviewer": "H8"
+      },
+      "VR10-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR10-0",
+        "return_id": "R10-0",
+        "reviewer": "H8"
+      },
+      "VR10-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR10-1",
+        "return_id": "R10-1",
+        "reviewer": "H8"
+      },
+      "VR11-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR11-0",
+        "return_id": "R11-0",
+        "reviewer": "H8"
+      },
+      "VR11-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR11-1",
+        "return_id": "R11-1",
+        "reviewer": "H8"
+      },
+      "VR12-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR12-0",
+        "return_id": "R12-0",
+        "reviewer": "H8"
+      },
+      "VR12-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR12-1",
+        "return_id": "R12-1",
+        "reviewer": "H8"
+      },
+      "VR13-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR13-0",
+        "return_id": "R13-0",
+        "reviewer": "H8"
+      },
+      "VR13-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR13-1",
+        "return_id": "R13-1",
+        "reviewer": "H8"
+      },
+      "VR14-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR14-0",
+        "return_id": "R14-0",
+        "reviewer": "H8"
+      },
+      "VR14-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR14-1",
+        "return_id": "R14-1",
+        "reviewer": "H8"
+      },
+      "VR15-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR15-0",
+        "return_id": "R15-0",
+        "reviewer": "H8"
+      },
+      "VR15-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR15-1",
+        "return_id": "R15-1",
+        "reviewer": "H8"
+      },
+      "VR16-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR16-0",
+        "return_id": "R16-0",
+        "reviewer": "H8"
+      },
+      "VR16-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR16-1",
+        "return_id": "R16-1",
+        "reviewer": "H8"
+      },
+      "VR17-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR17-0",
+        "return_id": "R17-0",
+        "reviewer": "H8"
+      },
+      "VR17-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR17-1",
+        "return_id": "R17-1",
+        "reviewer": "H8"
+      },
+      "VR18-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR18-0",
+        "return_id": "R18-0",
+        "reviewer": "H8"
+      },
+      "VR18-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR18-1",
+        "return_id": "R18-1",
+        "reviewer": "H8"
+      },
+      "VR19-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR19-0",
+        "return_id": "R19-0",
+        "reviewer": "H8"
+      },
+      "VR19-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR19-1",
+        "return_id": "R19-1",
+        "reviewer": "H8"
+      },
+      "VR20-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR20-0",
+        "return_id": "R20-0",
+        "reviewer": "H8"
+      },
+      "VR20-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR20-1",
+        "return_id": "R20-1",
+        "reviewer": "H8"
+      },
+      "VR21-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR21-0",
+        "return_id": "R21-0",
+        "reviewer": "H8"
+      },
+      "VR21-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR21-1",
+        "return_id": "R21-1",
+        "reviewer": "H8"
+      },
+      "VR22-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR22-0",
+        "return_id": "R22-0",
+        "reviewer": "H8"
+      },
+      "VR22-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR22-1",
+        "return_id": "R22-1",
+        "reviewer": "H8"
+      },
+      "VR23-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR23-0",
+        "return_id": "R23-0",
+        "reviewer": "H8"
+      },
+      "VR23-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR23-1",
+        "return_id": "R23-1",
+        "reviewer": "H8"
+      },
+      "VR24-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR24-0",
+        "return_id": "R24-0",
+        "reviewer": "H8"
+      },
+      "VR24-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR24-1",
+        "return_id": "R24-1",
+        "reviewer": "H8"
+      },
+      "VR25-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR25-0",
+        "return_id": "R25-0",
+        "reviewer": "H8"
+      },
+      "VR25-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR25-1",
+        "return_id": "R25-1",
+        "reviewer": "H8"
+      },
+      "VR26-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR26-0",
+        "return_id": "R26-0",
+        "reviewer": "H8"
+      },
+      "VR26-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR26-1",
+        "return_id": "R26-1",
+        "reviewer": "H8"
+      },
+      "VR27-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR27-0",
+        "return_id": "R27-0",
+        "reviewer": "H8"
+      },
+      "VR27-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR27-1",
+        "return_id": "R27-1",
+        "reviewer": "H8"
+      },
+      "VR28-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR28-0",
+        "return_id": "R28-0",
+        "reviewer": "H8"
+      },
+      "VR28-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR28-1",
+        "return_id": "R28-1",
+        "reviewer": "H8"
+      },
+      "VR29-0": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR29-0",
+        "return_id": "R29-0",
+        "reviewer": "H8"
+      },
+      "VR29-1": {
+        "credible": true,
+        "evidence": "Fixture command outcomes",
+        "id": "VR29-1",
+        "return_id": "R29-1",
+        "reviewer": "H8"
+      }
+    },
+    "Acceptance": {
+      "CR0-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR0-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R0-0",
+        "review_id": "VR0-0"
+      },
+      "CR0-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR0-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R0-1",
+        "review_id": "VR0-1"
+      },
+      "CR1-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR1-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R1-0",
+        "review_id": "VR1-0"
+      },
+      "CR1-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR1-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R1-1",
+        "review_id": "VR1-1"
+      },
+      "CR2-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR2-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R2-0",
+        "review_id": "VR2-0"
+      },
+      "CR2-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR2-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R2-1",
+        "review_id": "VR2-1"
+      },
+      "CR3-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR3-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R3-0",
+        "review_id": "VR3-0"
+      },
+      "CR3-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR3-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R3-1",
+        "review_id": "VR3-1"
+      },
+      "CR4-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR4-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R4-0",
+        "review_id": "VR4-0"
+      },
+      "CR4-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR4-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R4-1",
+        "review_id": "VR4-1"
+      },
+      "CR5-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR5-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R5-0",
+        "review_id": "VR5-0"
+      },
+      "CR5-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR5-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R5-1",
+        "review_id": "VR5-1"
+      },
+      "CR6-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR6-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R6-0",
+        "review_id": "VR6-0"
+      },
+      "CR6-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR6-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R6-1",
+        "review_id": "VR6-1"
+      },
+      "CR7-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR7-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R7-0",
+        "review_id": "VR7-0"
+      },
+      "CR7-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR7-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R7-1",
+        "review_id": "VR7-1"
+      },
+      "CR8-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR8-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R8-0",
+        "review_id": "VR8-0"
+      },
+      "CR8-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR8-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R8-1",
+        "review_id": "VR8-1"
+      },
+      "CR9-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR9-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R9-0",
+        "review_id": "VR9-0"
+      },
+      "CR9-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR9-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R9-1",
+        "review_id": "VR9-1"
+      },
+      "CR10-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR10-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R10-0",
+        "review_id": "VR10-0"
+      },
+      "CR10-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR10-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R10-1",
+        "review_id": "VR10-1"
+      },
+      "CR11-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR11-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R11-0",
+        "review_id": "VR11-0"
+      },
+      "CR11-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR11-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R11-1",
+        "review_id": "VR11-1"
+      },
+      "CR12-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR12-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R12-0",
+        "review_id": "VR12-0"
+      },
+      "CR12-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR12-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R12-1",
+        "review_id": "VR12-1"
+      },
+      "CR13-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR13-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R13-0",
+        "review_id": "VR13-0"
+      },
+      "CR13-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR13-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R13-1",
+        "review_id": "VR13-1"
+      },
+      "CR14-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR14-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R14-0",
+        "review_id": "VR14-0"
+      },
+      "CR14-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR14-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R14-1",
+        "review_id": "VR14-1"
+      },
+      "CR15-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR15-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R15-0",
+        "review_id": "VR15-0"
+      },
+      "CR15-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR15-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R15-1",
+        "review_id": "VR15-1"
+      },
+      "CR16-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR16-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R16-0",
+        "review_id": "VR16-0"
+      },
+      "CR16-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR16-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R16-1",
+        "review_id": "VR16-1"
+      },
+      "CR17-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR17-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R17-0",
+        "review_id": "VR17-0"
+      },
+      "CR17-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR17-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R17-1",
+        "review_id": "VR17-1"
+      },
+      "CR18-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR18-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R18-0",
+        "review_id": "VR18-0"
+      },
+      "CR18-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR18-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R18-1",
+        "review_id": "VR18-1"
+      },
+      "CR19-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR19-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R19-0",
+        "review_id": "VR19-0"
+      },
+      "CR19-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR19-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R19-1",
+        "review_id": "VR19-1"
+      },
+      "CR20-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR20-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R20-0",
+        "review_id": "VR20-0"
+      },
+      "CR20-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR20-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R20-1",
+        "review_id": "VR20-1"
+      },
+      "CR21-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR21-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R21-0",
+        "review_id": "VR21-0"
+      },
+      "CR21-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR21-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R21-1",
+        "review_id": "VR21-1"
+      },
+      "CR22-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR22-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R22-0",
+        "review_id": "VR22-0"
+      },
+      "CR22-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR22-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R22-1",
+        "review_id": "VR22-1"
+      },
+      "CR23-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR23-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R23-0",
+        "review_id": "VR23-0"
+      },
+      "CR23-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR23-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R23-1",
+        "review_id": "VR23-1"
+      },
+      "CR24-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR24-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R24-0",
+        "review_id": "VR24-0"
+      },
+      "CR24-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR24-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R24-1",
+        "review_id": "VR24-1"
+      },
+      "CR25-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR25-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R25-0",
+        "review_id": "VR25-0"
+      },
+      "CR25-1": {
+        "accepted": false,
+        "acceptor": "H0",
+        "id": "CR25-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R25-1",
+        "review_id": "VR25-1"
+      },
+      "CR26-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR26-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R26-0",
+        "review_id": "VR26-0"
+      },
+      "CR26-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR26-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R26-1",
+        "review_id": "VR26-1"
+      },
+      "CR27-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR27-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R27-0",
+        "review_id": "VR27-0"
+      },
+      "CR27-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR27-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R27-1",
+        "review_id": "VR27-1"
+      },
+      "CR28-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR28-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R28-0",
+        "review_id": "VR28-0"
+      },
+      "CR28-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR28-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R28-1",
+        "review_id": "VR28-1"
+      },
+      "CR29-0": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR29-0",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R29-0",
+        "review_id": "VR29-0"
+      },
+      "CR29-1": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "CR29-1",
+        "rationale": "Synthetic intended-use decision",
+        "return_id": "R29-1",
+        "review_id": "VR29-1"
+      }
+    },
+    "Selection": {
+      "SELT0": {
+        "id": "SELT0",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R0-0",
+        "selector": "H9",
+        "task_id": "T0"
+      },
+      "SELT1": {
+        "id": "SELT1",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R1-0",
+        "selector": "H9",
+        "task_id": "T1"
+      },
+      "SELT2": {
+        "id": "SELT2",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R2-0",
+        "selector": "H9",
+        "task_id": "T2"
+      },
+      "SELT3": {
+        "id": "SELT3",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R3-0",
+        "selector": "H9",
+        "task_id": "T3"
+      },
+      "SELT4": {
+        "id": "SELT4",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R4-0",
+        "selector": "H9",
+        "task_id": "T4"
+      },
+      "SELT5": {
+        "id": "SELT5",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R5-0",
+        "selector": "H9",
+        "task_id": "T5"
+      },
+      "SELT6": {
+        "id": "SELT6",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R6-0",
+        "selector": "H9",
+        "task_id": "T6"
+      },
+      "SELT7": {
+        "id": "SELT7",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R7-0",
+        "selector": "H9",
+        "task_id": "T7"
+      },
+      "SELT8": {
+        "id": "SELT8",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R8-0",
+        "selector": "H9",
+        "task_id": "T8"
+      },
+      "SELT9": {
+        "id": "SELT9",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R9-0",
+        "selector": "H9",
+        "task_id": "T9"
+      },
+      "SELT10": {
+        "id": "SELT10",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R10-0",
+        "selector": "H9",
+        "task_id": "T10"
+      },
+      "SELT11": {
+        "id": "SELT11",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R11-0",
+        "selector": "H9",
+        "task_id": "T11"
+      },
+      "SELT12": {
+        "id": "SELT12",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R12-0",
+        "selector": "H9",
+        "task_id": "T12"
+      },
+      "SELT13": {
+        "id": "SELT13",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R13-0",
+        "selector": "H9",
+        "task_id": "T13"
+      },
+      "SELT14": {
+        "id": "SELT14",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R14-0",
+        "selector": "H9",
+        "task_id": "T14"
+      },
+      "SELT15": {
+        "id": "SELT15",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R15-0",
+        "selector": "H9",
+        "task_id": "T15"
+      },
+      "SELT16": {
+        "id": "SELT16",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R16-0",
+        "selector": "H9",
+        "task_id": "T16"
+      },
+      "SELT17": {
+        "id": "SELT17",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R17-0",
+        "selector": "H9",
+        "task_id": "T17"
+      },
+      "SELT18": {
+        "id": "SELT18",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R18-0",
+        "selector": "H9",
+        "task_id": "T18"
+      },
+      "SELT19": {
+        "id": "SELT19",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R19-0",
+        "selector": "H9",
+        "task_id": "T19"
+      },
+      "SELT20": {
+        "id": "SELT20",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R20-0",
+        "selector": "H9",
+        "task_id": "T20"
+      },
+      "SELT21": {
+        "id": "SELT21",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R21-0",
+        "selector": "H9",
+        "task_id": "T21"
+      },
+      "SELT22": {
+        "id": "SELT22",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R22-0",
+        "selector": "H9",
+        "task_id": "T22"
+      },
+      "SELT23": {
+        "id": "SELT23",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R23-0",
+        "selector": "H9",
+        "task_id": "T23"
+      },
+      "SELT24": {
+        "id": "SELT24",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R24-0",
+        "selector": "H9",
+        "task_id": "T24"
+      },
+      "SELT25": {
+        "id": "SELT25",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R25-0",
+        "selector": "H9",
+        "task_id": "T25"
+      },
+      "SELT26": {
+        "id": "SELT26",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R26-0",
+        "selector": "H9",
+        "task_id": "T26"
+      },
+      "SELT27": {
+        "id": "SELT27",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R27-0",
+        "selector": "H9",
+        "task_id": "T27"
+      },
+      "SELT28": {
+        "id": "SELT28",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R28-0",
+        "selector": "H9",
+        "task_id": "T28"
+      },
+      "SELT29": {
+        "id": "SELT29",
+        "rationale": "Select one accepted candidate; retain both attempts",
+        "return_id": "R29-0",
+        "selector": "H9",
+        "task_id": "T29"
+      }
+    },
+    "WorkSignal": {
+      "bc19f1f985d14156bf8cc3e9a5d012cb": {
+        "execution_id": "E1-1",
+        "id": "bc19f1f985d14156bf8cc3e9a5d012cb",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "7c01444e3f47455b8fb3dc02b67e99e3": {
+        "execution_id": "E1-1",
+        "id": "7c01444e3f47455b8fb3dc02b67e99e3",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "1722a6836f2e4f1588b67b0a4ba6dde7": {
+        "execution_id": "E2-1",
+        "id": "1722a6836f2e4f1588b67b0a4ba6dde7",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      },
+      "8b60979053a9495cb89acb0e6099f114": {
+        "execution_id": "E6-1",
+        "id": "8b60979053a9495cb89acb0e6099f114",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "c58e0a47aee544eca813d6b97582cd98": {
+        "execution_id": "E6-1",
+        "id": "c58e0a47aee544eca813d6b97582cd98",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "c6ba3af2878045f7924b739a241890ae": {
+        "execution_id": "E7-1",
+        "id": "c6ba3af2878045f7924b739a241890ae",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      },
+      "66d1ab49c1f444d7818ba56bdcb8dab0": {
+        "execution_id": "E11-1",
+        "id": "66d1ab49c1f444d7818ba56bdcb8dab0",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "ebefe6c7ea3b4cb0801e3ba0dff1c987": {
+        "execution_id": "E11-1",
+        "id": "ebefe6c7ea3b4cb0801e3ba0dff1c987",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "396c630c30ee42d9b2cc6f1a63774087": {
+        "execution_id": "E12-1",
+        "id": "396c630c30ee42d9b2cc6f1a63774087",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      },
+      "c0d0f776e2f9431da0f4408cc698e35c": {
+        "execution_id": "E16-1",
+        "id": "c0d0f776e2f9431da0f4408cc698e35c",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "3293f1f60d1743f497db873d2b8027a9": {
+        "execution_id": "E16-1",
+        "id": "3293f1f60d1743f497db873d2b8027a9",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "1ab9f9f9475c48d196b46ac13c071258": {
+        "execution_id": "E17-1",
+        "id": "1ab9f9f9475c48d196b46ac13c071258",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      },
+      "8f9bdb18575748e88b57d0606ca7a949": {
+        "execution_id": "E21-1",
+        "id": "8f9bdb18575748e88b57d0606ca7a949",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "07f4daafe1c5423fb73fc27caa568bb7": {
+        "execution_id": "E21-1",
+        "id": "07f4daafe1c5423fb73fc27caa568bb7",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "0b74cc7833464ad3a2065f63d6268828": {
+        "execution_id": "E22-1",
+        "id": "0b74cc7833464ad3a2065f63d6268828",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      },
+      "a289697682724e8f99a6c40d196b42b8": {
+        "execution_id": "E26-1",
+        "id": "a289697682724e8f99a6c40d196b42b8",
+        "kind": "blocked",
+        "summary": "Synthetic capability/scope gap"
+      },
+      "c05f3bf3ae7b4805a5e808d0b7dd9cfb": {
+        "execution_id": "E26-1",
+        "id": "c05f3bf3ae7b4805a5e808d0b7dd9cfb",
+        "kind": "resume",
+        "summary": "Authorized synthetic resumption"
+      },
+      "3c436c1d7cf543c386afa0fab9121bb0": {
+        "execution_id": "E27-1",
+        "id": "3c436c1d7cf543c386afa0fab9121bb0",
+        "kind": "resume",
+        "summary": "Human fixture takes over interrupted attempt"
+      }
+    },
+    "BoundaryRequest": {
+      "BE1-1": {
+        "authority": "H0",
+        "execution_id": "E1-1",
+        "id": "BE1-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      },
+      "BE6-1": {
+        "authority": "H0",
+        "execution_id": "E6-1",
+        "id": "BE6-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      },
+      "BE11-1": {
+        "authority": "H0",
+        "execution_id": "E11-1",
+        "id": "BE11-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      },
+      "BE16-1": {
+        "authority": "H0",
+        "execution_id": "E16-1",
+        "id": "BE16-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      },
+      "BE21-1": {
+        "authority": "H0",
+        "execution_id": "E21-1",
+        "id": "BE21-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      },
+      "BE26-1": {
+        "authority": "H0",
+        "execution_id": "E26-1",
+        "id": "BE26-1",
+        "reason": "Explicit draft authorization needed",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      }
+    }
+  }
+}

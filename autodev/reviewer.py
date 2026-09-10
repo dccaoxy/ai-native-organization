@@ -12,7 +12,7 @@ from autodev.runtime import read, write
 
 def main():
     sid = os.environ["AUTODEV_STAGE"]
-    plan = read("development/autodev/M01.json")
+    plan = read(os.environ.get("AUTODEV_PLAN", "development/autodev/M01.json"))
     stage = next(s for s in plan["stages"] if s["id"] == sid)
     checks = stage["review_tests"]
     results = []

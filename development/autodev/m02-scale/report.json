@@ -1,0 +1,41 @@
+{
+  "kind": "synthetic software execution only",
+  "verdict": "PASS",
+  "real_human_participants": 0,
+  "checks": {
+    "population": true,
+    "all_attempts_formally_closed": true,
+    "owner_matches_hau": true,
+    "two_distinct_attempts_per_task": true,
+    "review_acceptance_selection_separate": true,
+    "failure_not_accepted": true,
+    "selection_retains_alternatives": true,
+    "event_replay_equals_state": true,
+    "simulation_labels": true,
+    "continuous_event_sequence": true,
+    "boundary_and_interruption_observable": true,
+    "restart_state_preserved": true,
+    "full_command_replay_idempotent": true
+  },
+  "object_counts": {
+    "Human": 10,
+    "RepresentativeAgent": 10,
+    "HAU": 10,
+    "Goal": 3,
+    "Task": 30,
+    "Execution": 60,
+    "Return": 60,
+    "Review": 60,
+    "Acceptance": 60,
+    "Selection": 30,
+    "WorkSignal": 18,
+    "BoundaryRequest": 6
+  },
+  "event_count": 531,
+  "elapsed_seconds": 9.464,
+  "limitations": [
+    "Sequential command load with overlapping attempts, not simultaneous worker load",
+    "Goal Challenge remains unspecified and unimplemented",
+    "Not Phase 4 final acceptance or production capacity certification"
+  ]
+}

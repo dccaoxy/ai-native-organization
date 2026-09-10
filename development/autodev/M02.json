@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "id": "M02",
+  "mission": "Synthetic engineering only; formal push/deployment require user confirmation",
+  "stages": [
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "AGENTS.md",
+        "development/milestones/M02_SYNTHETIC_ORGANIZATION.md"
+      ],
+      "outputs": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "scope": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "model_write_paths": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "exit_criteria": [
+        "Configured tests, independent review and frozen baseline audit PASS",
+        "Local commit/tag/artifact persisted; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_scale_simulation"
+      ],
+      "review_tests": [
+        "tests.test_scale_simulation"
+      ],
+      "principle_checks": [
+        {
+          "id": "Task versus Execution; unique Human owner; formal Return and separate Review Acceptance Selection; Event Trail",
+          "test": "tests.test_scale_simulation",
+          "source": "00 项目总览/Operating Model v0.1 Final Design Baseline.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_change_or_real_authority",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Not performed by this local stage; separate explicit user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "organization.scale_simulation",
+          "--output",
+          ".autodev/m02-scale"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Scale fixture and durable replay",
+      "dependencies": []
+    },
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "AGENTS.md",
+        "development/milestones/M02_SYNTHETIC_ORGANIZATION.md"
+      ],
+      "outputs": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "scope": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "model_write_paths": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "exit_criteria": [
+        "Configured tests, independent review and frozen baseline audit PASS",
+        "Local commit/tag/artifact persisted; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_scale_simulation"
+      ],
+      "review_tests": [
+        "tests.test_scale_simulation"
+      ],
+      "principle_checks": [
+        {
+          "id": "Task versus Execution; unique Human owner; formal Return and separate Review Acceptance Selection; Event Trail",
+          "test": "tests.test_scale_simulation",
+          "source": "00 项目总览/Operating Model v0.1 Final Design Baseline.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_change_or_real_authority",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Not performed by this local stage; separate explicit user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S02",
+      "title": "Concurrent attempts and invalid commands",
+      "dependencies": [
+        "S01"
+      ]
+    },
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "AGENTS.md",
+        "development/milestones/M02_SYNTHETIC_ORGANIZATION.md",
+        "specs/M02.goal-challenge.json"
+      ],
+      "outputs": [
+        "specs/M02.goal-challenge.json"
+      ],
+      "scope": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "model_write_paths": [
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py"
+      ],
+      "exit_criteria": [
+        "Configured tests, independent review and frozen baseline audit PASS",
+        "Local commit/tag/artifact persisted; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_scale_simulation"
+      ],
+      "review_tests": [
+        "tests.test_scale_simulation"
+      ],
+      "principle_checks": [
+        {
+          "id": "Task versus Execution; unique Human owner; formal Return and separate Review Acceptance Selection; Event Trail",
+          "test": "tests.test_scale_simulation",
+          "source": "00 项目总览/Operating Model v0.1 Final Design Baseline.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_change_or_real_authority",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Not performed by this local stage; separate explicit user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S03",
+      "title": "Goal Challenge and final acceptance",
+      "dependencies": [
+        "S02"
+      ]
+    }
+  ]
+}

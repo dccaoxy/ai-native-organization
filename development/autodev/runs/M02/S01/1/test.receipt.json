@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "organization.scale_simulation",
+    "--output",
+    ".autodev/m02-scale"
+  ],
+  "source_digest": "6032d8a8ce42aeef54cb63094b30d449e9670d8a2e420975ba81cad8fb2f39fc",
+  "started": 1789021661.8077312,
+  "finished": 1789021673.2817898
+}

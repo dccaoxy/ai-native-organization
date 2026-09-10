@@ -7,7 +7,7 @@ from autodev.runtime import Harness, write
 
 
 def main():
-    h = Harness(Path.cwd())
+    h = Harness(Path.cwd(), os.environ.get("AUTODEV_PLAN", "development/autodev/M01.json"))
     stage = next(s for s in h.plan["stages"] if s["id"] == os.environ["AUTODEV_STAGE"])
     findings = [{"severity": "blocking", "principle": "Frozen L1/L2", "evidence": p,
                  "resolution": "HUMAN_DECISION_REQUIRED: baseline change"} for p in h.frozen_changes()]
@@ -20,7 +20,7 @@ def main():
             findings.append({"severity": "blocking", "principle": check["id"], "evidence": check["test"], "resolution": "Repair and re-audit"})
     report = {"role": "audit", "verdict": "FAIL" if findings else "PASS", "checks": checks,
               "findings": findings, "source_digest": os.environ["AUTODEV_SOURCE_DIGEST"],
-              "nonce": os.environ["AUTODEV_NONCE"], "coverage": "M01 engineering invariants only",
+              "nonce": os.environ["AUTODEV_NONCE"], "coverage": h.plan["id"] + " listed engineering invariants only",
               "out_of_scope": ["Human Pilot evidence", "M1 learning efficacy", "M2 value/culture", "Phase 9 completion"]}
     path = Path(os.environ["AUTODEV_REPORT"])
     write(path, report)

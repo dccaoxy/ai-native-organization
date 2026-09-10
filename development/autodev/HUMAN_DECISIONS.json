@@ -3,7 +3,7 @@
   "decisions": [
     {
       "id": "AD00-CLOUD-MODEL-001",
-      "status": "AUTHORIZED_PENDING_PROVISIONING",
+      "status": "DEFERRED_BY_USER_SCOPE",
       "scope": "unattended cloud code-authoring and repair worker",
       "authorization": {
         "date": "2026-09-10",
@@ -13,7 +13,7 @@
         "user_resource_ceiling": null,
         "resource_policy": "No additional user-defined resource ceiling; platform quotas still apply",
         "repository": "dccaoxy/ai-native-organization",
-        "repository_permission": "full repository permissions authorized",
+        "repository_permission": "local development and isolated testing authorized; explicit confirmation required before each formal push/deployment",
         "retained_constraints": [
           "no force-push or destructive history rewriting",
           "Frozen L1/L2 and real-world authority gates remain in force"
@@ -56,5 +56,15 @@
       }
     }
   ],
-  "real_company_systems_accessed": false
+  "real_company_systems_accessed": false,
+  "release_policy": {
+    "source": "latest explicit user instruction, 2026-09-10",
+    "service_region": "mainland China",
+    "preserve_existing_domain_projects": true,
+    "formal_push_requires_confirmation": true,
+    "deployment_requires_confirmation": true,
+    "automatic_writeback_workflow": "disabled_manually; verified via GitHub API",
+    "active_workflow_runs_at_check": 0,
+    "overseas_provisioning_planned": false
+  }
 }

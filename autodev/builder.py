@@ -11,7 +11,7 @@ from autodev.runtime import read
 
 
 def main():
-    stage = next(s for s in read("development/autodev/M01.json")["stages"] if s["id"] == os.environ["AUTODEV_STAGE"])
+    stage = next(s for s in read(os.environ.get("AUTODEV_PLAN", "development/autodev/M01.json"))["stages"] if s["id"] == os.environ["AUTODEV_STAGE"])
     role = os.environ["AUTODEV_ROLE"]
     if role == "build":
         sys.exit(not all(compileall.compile_dir(p, quiet=1) for p in stage["build_directories"]))

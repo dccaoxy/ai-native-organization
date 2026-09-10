@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "6032d8a8ce42aeef54cb63094b30d449e9670d8a2e420975ba81cad8fb2f39fc",
+  "started": 1789021678.2617788,
+  "finished": 1789021682.3017974,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Task versus Execution; unique Human owner; formal Return and separate Review Acceptance Selection; Event Trail",
+        "test": "tests.test_scale_simulation",
+        "source": "00 项目总览/Operating Model v0.1 Final Design Baseline.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "6032d8a8ce42aeef54cb63094b30d449e9670d8a2e420975ba81cad8fb2f39fc",
+    "nonce": "0c2ead89a42d42dfa615deae96e7f8bc",
+    "coverage": "M02 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}
