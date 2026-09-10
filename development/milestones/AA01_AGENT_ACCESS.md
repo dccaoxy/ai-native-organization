@@ -3,6 +3,8 @@
 Inserted before M03 by explicit user request. Local synthetic engineering only;
 formal push and deployment require separate confirmation. No domain/server edits.
 
+Local acceptance: S01–S03 PASS; 133 cumulative tests, including 11 access tests. Actual model-assisted protocol run retained 18 synthetic events. See [acceptance package](../AA01_ACCEPTANCE.md). Not pushed or deployed.
+
 ## Contract and trust
 
 An Agent registers id/name/version/declared capabilities with its own randomly

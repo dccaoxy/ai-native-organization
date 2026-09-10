@@ -6,7 +6,7 @@
 
 1. 阅读 [`development/CURRENT_STATE.md`](development/CURRENT_STATE.md)，确认当前阶段、Milestone、已完成项与阻碍。
 2. 阅读 [`development/NEXT_ACTIONS.md`](development/NEXT_ACTIONS.md)，只从最高优先级的未完成动作开始。
-3. 阅读当前 Milestone 规格：[`development/milestones/M01_MINIMUM_ORGANIZATION.md`](development/milestones/M01_MINIMUM_ORGANIZATION.md)。
+3. 阅读最新完成的 Agent 接入规格 `development/milestones/AA01_AGENT_ACCESS.md` 和验收包，再按 NEXT_ACTIONS 进入下一工程；原 M01 规格：[`development/milestones/M01_MINIMUM_ORGANIZATION.md`](development/milestones/M01_MINIMUM_ORGANIZATION.md)。
 4. 按需读取 [`development/ROADMAP.md`](development/ROADMAP.md) 与设计入口；不要默认通读全部历史讨论。
 5. 开发前检查工作树与最近提交；开发后运行与变更风险相称的验证。
 
@@ -32,7 +32,7 @@
 
 > **Capture before optimize.** 先保证组织事实能够正确留下，再优化推荐、评分和自动化。
 
-当前本地工程是 P1 / Phase 4 / M02（S01–S04 已在明确覆盖范围内通过；见 development/M02_ACCEPTANCE.md）；下一工程是 M03/M1 规格。Goal 全生命周期与多 Goal 依赖图仍待实现。不要优先开发 3D 地图、复杂推荐、Reward、Honor、Progression 或 Organization-owned Agent。
+当前本地工程 AA01 Agent 接入 S01–S03 已 PASS，完整测试 133 项，真实模型辅助协议测试 18 条合成事件；见 development/AA01_ACCEPTANCE.md。M02 S01–S04 已在声明范围通过；下一工程是 M03/M1 规格。Goal 全生命周期与多 Goal 依赖图仍待实现。不要优先开发 3D 地图、复杂推荐、Reward、Honor、Progression 或 Organization-owned Agent。
 
 ## AD00 / AutoDev 接续
 

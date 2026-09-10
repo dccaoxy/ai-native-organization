@@ -5,7 +5,8 @@
 最新授权：仅本地开发与隔离服务器测试，正式推送和部署需用户逐次确认；不改 AEGPC.CN 现有项目/服务。相关本地变更尚未推送。原自动写回 Actions 已暂停（API 核验 disabled_manually、无进行中任务），因此下述定时运行描述仅代表已实现能力，不代表当前正在运行。当前不采购海外实例。
 
 当前工程成果：**AD00 AutoDev v0 已跑通；M01 S01–S08 工程验收 PASS。**
-当前 Stage：**M02 S04 — Integrated acceptance（本地 PASS）**。
+当前 Stage：**AA01 S03 — Agent access acceptance（本地 PASS）**。
+Agent 注册/授权、独立客户端及实际模型内容生成联调已完成；完整套件 133 项通过，18 条合成事件。见 [AA01 验收包](AA01_ACCEPTANCE.md)。未新增生产服务或 Human 网页；下一工程 M03/M1 规格。
 本地进展：M02 S01–S04 已按声明范围完成合成工程验收，均生成本地 commit/tag/artifact；尚未推送，未部署。见 [M02 验收包](M02_ACCEPTANCE.md)。
 范围：Phase 4 / M0；不代表完整 Goal 生命周期、生产容量或真人实验已完成。
 
@@ -50,13 +51,13 @@ Obsidian Dashboard 只同步本仓库投影；同步回执见 `autodev/DELIVERY.
 ## 尚未完成
 
 - Phase 1 剩余概念 DEMO、完整下钻和 3–5 人理解测试。
-- M02 / Phase 4 更大规模合成组织；M03 / M1 Learning Layer。
+- 超出 M02 声明覆盖范围的组织规模验证；M03 / M1 Learning Layer。
 - Phase 6–8 真实组织部署与行为证据；Phase 9 的真实 Human、时间与实验。
 - 当前 deterministic Review/Audit 不等同独立 Human/LLM 架构认证，也不表示 101 条 L2 的全部机制已实现。
 
 ## 无聊天接续
 
-先读 AGENTS → 本页 → NEXT_ACTIONS → autodev/README → M01.json/M01.state.json。
+先读 AGENTS → 本页 → NEXT_ACTIONS → AA01_ACCEPTANCE → autodev/README → AA01.json/AA01.state.json；M01/M02 状态为历史依据。
 Python 3.11+ / Git；`python -m unittest discover -s tests -v`；`python -m autodev.runtime run`。
 工作台：`python -m organization.server`，仅 `http://127.0.0.1:8765` 合成模式。
 

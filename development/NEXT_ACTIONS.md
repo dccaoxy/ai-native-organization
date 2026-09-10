@@ -9,6 +9,10 @@
 1. 核对 `autodev/DELIVERY.json` 中的远端 commit/tags、Actions verify/resume 及 Obsidian 投影回执；缺失项只能记 pending/blocked，不能推断成功。
 2. 恢复执行使用 `python -m autodev.runtime run`；已 PASS 的 Stage 不重复创建标签。修复新缺陷需新 revision、重测和新标签。
 
+## Agent 接入已完成
+
+AA01 S01–S03 本地 PASS，133 项完整测试通过；独立客户端和真实模型生成 Return 的 HTTP 联调通过，18 条合成事件。先读 `AA01_ACCEPTANCE.md` 与 `milestones/AA01_AGENT_ACCESS.md`；Human 审批目前使用测试控制 CLI，尚未接入生产身份或新网页。
+
 ## 后续工程
 
 3. M02 S01–S04 已本地 PASS；完整套件 122 项、整合场景 536 事件/16 断言通过，工作台 Goal Challenge 已浏览器验证。先读 `M02_ACCEPTANCE.md` 与明确的覆盖限制；不要将结果描述为已推送/已部署或完整 Goal 生命周期实现。

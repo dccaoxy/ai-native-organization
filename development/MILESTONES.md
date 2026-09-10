@@ -8,6 +8,7 @@
 | AD00 — Autonomous Development Runtime | Cross-phase through Phase 8 | **Harness + local Codex smoke PASS / Cloud host pending** | 持久状态、独立校验、恢复、检查点及真实模型提案验证 |
 | M01 — Minimum Organization | P0 / Phase 2–3 | **Complete — M0 simulation engineering; delivery verified** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
 | M02 — Synthetic Organization | P1 / Phase 4 | Local S01–S04 PASS within declared coverage; not pushed/deployed | 60 Execution / 536 事件；Goal Challenge、并发/恢复与本机工作台验证；见 M02_ACCEPTANCE |
+| AA01 — Independent Agent Access | P1 / Phase 4, M0 | Local S01–S03 PASS; not pushed/deployed | 注册/受控授权/独立客户端；133 项测试及模型辅助协议联调；见 AA01_ACCEPTANCE |
 | M03 — Learning Organization | P1 / Phase 5 | Planned | Execution → Evidence → Knowledge → Capability 可追溯闭环 |
 | M04 — Human Pilot | P2 / Phase 6 | Planned | 5–10 人、2–4 Cycle 的真实行为基线 |
 | M05 — Value & Culture | P2 / Phase 7 | Planned | Contribution → Reward / Honor 的可验证机制 |
@@ -18,7 +19,7 @@
 
 ## 当前 Milestone
 
-[`M01 — Minimum Organization`](milestones/M01_MINIMUM_ORGANIZATION.md)
+[`AA01 — Independent Agent Access`](milestones/AA01_AGENT_ACCESS.md) 已完成本地验收；下一工程 M03 规格。
 
 Milestone 只有在定义的 Outcome、验收情景、证据和接续条件全部满足时才能标记 Complete；文档存在不等于实现完成。
 
