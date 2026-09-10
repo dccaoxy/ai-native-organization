@@ -1,0 +1,135 @@
+test_decisions_and_returns_cannot_be_collapsed (tests.test_contract_review.ContractReview.test_decisions_and_returns_cannot_be_collapsed) ... ok
+test_private_thought_and_ambiguous_human_rejected (tests.test_contract_review.ContractReview.test_private_thought_and_ambiguous_human_rejected) ... ok
+test_task_cannot_swallow_attempt_or_accountability (tests.test_contract_review.ContractReview.test_task_cannot_swallow_attempt_or_accountability) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+test_concurrent_delivery_records_fact_once (tests.test_store_review.StoreReview.test_concurrent_delivery_records_fact_once) ... ok
+test_key_collision_cannot_change_history (tests.test_store_review.StoreReview.test_key_collision_cannot_change_history) ... ok
+test_multiple_formal_events_are_atomic (tests.test_store_review.StoreReview.test_multiple_formal_events_are_atomic) ... ok
+test_persistence_idempotency_and_replay (tests.test_store_review.StoreReview.test_persistence_idempotency_and_replay) ... ok
+test_tampered_event_is_not_a_valid_replay (tests.test_store_review.StoreReview.test_tampered_event_is_not_a_valid_replay) ... ok
+test_multiple_formal_events_are_atomic (tests.test_store.StoreTests.test_multiple_formal_events_are_atomic) ... ok
+test_persistence_idempotency_and_replay (tests.test_store.StoreTests.test_persistence_idempotency_and_replay) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.204s
+
+OK
+
+test_goal_authority_cannot_be_impersonated_by_agent (tests.test_core_review.CoreReview.test_goal_authority_cannot_be_impersonated_by_agent) ... ok
+test_real_mode_is_not_silently_enabled (tests.test_core_review.CoreReview.test_real_mode_is_not_silently_enabled) ... ok
+test_task_boundary_cannot_exceed_goal (tests.test_core_review.CoreReview.test_task_boundary_cannot_exceed_goal) ... ok
+test_three_claims_are_three_attempts (tests.test_core_review.CoreReview.test_three_claims_are_three_attempts) ... ok
+test_unpublished_and_foreign_claims_rejected (tests.test_core_review.CoreReview.test_unpublished_and_foreign_claims_rejected) ... ok
+test_three_claims_are_three_attempts (tests.test_core.CoreTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.347s
+
+OK
+
+test_ack_timeout_survives_worker_restart (tests.test_identity_review.IdentityReview.test_ack_timeout_survives_worker_restart) ... ok
+test_agent_offline_makes_execution_visible (tests.test_identity_review.IdentityReview.test_agent_offline_makes_execution_visible) ... ok
+test_binding_replacement_preserves_human_accountability (tests.test_identity_review.IdentityReview.test_binding_replacement_preserves_human_accountability) ... ok
+test_bootstrap_real_command_path (tests.test_identity_review.IdentityReview.test_bootstrap_real_command_path) ... ok
+test_no_agent_can_delegate_human_authority (tests.test_identity_review.IdentityReview.test_no_agent_can_delegate_human_authority) ... ok
+test_permission_is_not_inferred_from_capability (tests.test_identity_review.IdentityReview.test_permission_is_not_inferred_from_capability) ... ok
+test_replaced_agent_cannot_act_and_cannot_reassign_hau (tests.test_identity_review.IdentityReview.test_replaced_agent_cannot_act_and_cannot_reassign_hau) ... ok
+test_three_claims_are_three_attempts (tests.test_identity_review.IdentityReview.test_three_claims_are_three_attempts) ... ok
+test_ack_timeout_survives_worker_restart (tests.test_identity.IdentityTests.test_ack_timeout_survives_worker_restart) ... ok
+test_agent_offline_makes_execution_visible (tests.test_identity.IdentityTests.test_agent_offline_makes_execution_visible) ... ok
+test_binding_replacement_preserves_human_accountability (tests.test_identity.IdentityTests.test_binding_replacement_preserves_human_accountability) ... ok
+test_bootstrap_real_command_path (tests.test_identity.IdentityTests.test_bootstrap_real_command_path) ... ok
+test_three_claims_are_three_attempts (tests.test_identity.IdentityTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.826s
+
+OK
+
+test_boundary_approval_changes_only_one_attempt (tests.test_work_review.WorkReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_cannot_repeat_boundary_decision_or_cross_accountability (tests.test_work_review.WorkReview.test_cannot_repeat_boundary_decision_or_cross_accountability) ... ok
+test_no_agent_or_wrong_human_can_expand_boundary (tests.test_work_review.WorkReview.test_no_agent_or_wrong_human_can_expand_boundary) ... ok
+test_private_workspace_not_required_or_collected (tests.test_work_review.WorkReview.test_private_workspace_not_required_or_collected) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work_review.WorkReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work_review.WorkReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_work.WorkTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work.WorkTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work.WorkTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.879s
+
+OK
+
+test_annotations_cannot_silently_change_reviewed_facts (tests.test_returns_review.ReturnReview.test_annotations_cannot_silently_change_reviewed_facts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns_review.ReturnReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failed_untrusted_and_cross_result_acceptance_rejected (tests.test_returns_review.ReturnReview.test_failed_untrusted_and_cross_result_acceptance_rejected) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns_review.ReturnReview.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_no_failure_without_return_and_no_duplicate_return (tests.test_returns_review.ReturnReview.test_no_failure_without_return_and_no_duplicate_return) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns_review.ReturnReview.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns_review.ReturnReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_review_does_not_imply_acceptance_or_selection (tests.test_returns_review.ReturnReview.test_review_does_not_imply_acceptance_or_selection) ... ok
+test_three_claims_are_three_attempts (tests.test_returns_review.ReturnReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns.ReturnTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns.ReturnTests.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns.ReturnTests.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns.ReturnTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_returns.ReturnTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.633s
+
+OK
+
+test_http_command_query_persistence_and_ui (tests.test_http_review.HTTPReview.test_http_command_query_persistence_and_ui) ... ok
+test_malformed_and_path_traversal_do_not_mutate (tests.test_http_review.HTTPReview.test_malformed_and_path_traversal_do_not_mutate) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 400: 'Bad Request'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_unauthenticated_and_cross_origin_commands_rejected (tests.test_http_review.HTTPReview.test_unauthenticated_and_cross_origin_commands_rejected) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_http_command_query_persistence_and_ui (tests.test_http.HTTPTests.test_http_command_query_persistence_and_ui) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.905s
+
+OK
+
+test_http_command_query_persistence_and_ui (tests.test_http.HTTPTests.test_http_command_query_persistence_and_ui) ... ok
+test_authority_chain_survives_event_replay (tests.test_simulation_review.SimulationReview.test_authority_chain_survives_event_replay) ... ok
+test_closed_task_keeps_evidence_and_rejects_new_claim (tests.test_simulation_review.SimulationReview.test_closed_task_keeps_evidence_and_rejects_new_claim) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 409: 'Conflict'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_http_command_query_persistence_and_ui (tests.test_simulation_review.SimulationReview.test_http_command_query_persistence_and_ui) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.834s
+
+OK
+
+test_actual_command_timeout_is_visible (tests.test_harness.HarnessTests.test_actual_command_timeout_is_visible) ... ok
+test_artifact_tampering_cannot_complete_recovery (tests.test_harness.HarnessTests.test_artifact_tampering_cannot_complete_recovery) ... ok
+test_budget_persists_across_workers (tests.test_harness.HarnessTests.test_budget_persists_across_workers) ... ok
+test_checkpoint_includes_modified_input_dependency (tests.test_harness.HarnessTests.test_checkpoint_includes_modified_input_dependency) ... ok
+test_crash_after_checkpoint_commit_before_tag_recovers (tests.test_harness.HarnessTests.test_crash_after_checkpoint_commit_before_tag_recovers) ... ok
+test_dependency_cycle_and_path_escape_rejected (tests.test_harness.HarnessTests.test_dependency_cycle_and_path_escape_rejected) ... ok
+test_frozen_change_enters_human_gate_before_build (tests.test_harness.HarnessTests.test_frozen_change_enters_human_gate_before_build) ... ok
+test_interruption_resumes_without_reusing_stale_review (tests.test_harness.HarnessTests.test_interruption_resumes_without_reusing_stale_review) ... ok
+test_old_tag_cannot_approve_different_candidate (tests.test_harness.HarnessTests.test_old_tag_cannot_approve_different_candidate) ... ok
+test_repair_auto_advance_gate_resume_and_rollback (tests.test_harness.HarnessTests.test_repair_auto_advance_gate_resume_and_rollback) ... ok
+test_reviewer_cannot_mutate_candidate_and_pass (tests.test_harness.HarnessTests.test_reviewer_cannot_mutate_candidate_and_pass) ... ok
+test_timeout_budget_and_missing_receipt_fail_closed (tests.test_harness.HarnessTests.test_timeout_budget_and_missing_receipt_fail_closed) ... ok
+test_two_workers_cannot_own_same_checkout (tests.test_harness.HarnessTests.test_two_workers_cannot_own_same_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 15.055s
+
+OK
+

@@ -38,6 +38,11 @@ authority was exercised by M01's labelled synthetic scenario.
 
 ## Verification status
 
-Workflow file prepared. A committed/pushed file alone does not prove cloud
-continuity; the final delivery record must reference an actual Actions run and
-its verify/resume/artifact results, or record the external blocker.
+First verified run: [34427710307](https://github.com/dccaoxy/ai-native-organization/actions/runs/34427710307),
+verify and resume both successful on Linux, including test execution, frozen
+baseline provenance, simulation, artifact upload and ordinary Git push.
+
+`CLOUD_RECEIPT.json` records a real cloud worker observation and is committed by
+the cloud job. It is refreshed only when the candidate or Stage status changes,
+avoiding unchanged scheduled-run commits. Final delivery checks fetch the bot
+commit back from origin, rather than treating a local receipt as remote proof.

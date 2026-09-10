@@ -75,6 +75,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - name: Resume from repository state
         run: python -m autodev.runtime run
+      - name: Record actual cloud worker observation
+        run: python -m autodev.cloud_receipt
       - name: Persist state and tags without rewriting history
         if: always()
         run: git push --atomic origin HEAD:main --follow-tags

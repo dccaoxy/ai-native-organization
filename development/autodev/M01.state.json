@@ -115,13 +115,13 @@
       }
     },
     "S08": {
-      "status": "PASS",
-      "attempt": 2,
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 3,
       "worker": "caoxy-TG03",
-      "source_digest": "a2c52c7f0614ca9c5e528747633343f3a010afd82e84fa863512269da8d469b4",
-      "tag": "autodev/M01/S08/v2",
-      "artifact": "development/autodev/runs/M01/S08/2/artifact.zip",
-      "artifact_sha256": "6c49bd0cca205b3a88931c94565ddd726deae566fc2d1f8dde81b43e4278f656",
+      "source_digest": "3681ef73e150e0c524da53c43c521ca906b2a442393013232a431f90e79ed1ac",
+      "tag": "autodev/M01/S08/v3",
+      "artifact": "development/autodev/runs/M01/S08/3/artifact.zip",
+      "artifact_sha256": "753fcf0612250554b5a7b5b1d0e461ccbab0459f67603512a656274c1eda7760",
       "commit": "82a6bf8ed07d156703754b293df6a447435b1900"
     }
   },
@@ -724,6 +724,52 @@
       "status": "PASS",
       "time": 1789005535.4288683,
       "commit": "82a6bf8ed07d156703754b293df6a447435b1900"
+    },
+    {
+      "sequence": 76,
+      "stage": "S08",
+      "status": "REVALIDATION_REQUIRED",
+      "time": 1789005810.0182848,
+      "reason": "Include actual cloud receipt writeback adapter in final verified candidate"
+    },
+    {
+      "sequence": 77,
+      "stage": "S08",
+      "status": "BUILD",
+      "time": 1789005810.7024488,
+      "attempt": 3,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 78,
+      "stage": "S08",
+      "status": "TEST",
+      "time": 1789005810.8212955,
+      "attempt": 3
+    },
+    {
+      "sequence": 79,
+      "stage": "S08",
+      "status": "REVIEW",
+      "time": 1789005831.5998752,
+      "attempt": 3
+    },
+    {
+      "sequence": 80,
+      "stage": "S08",
+      "status": "AUDIT",
+      "time": 1789005857.239894,
+      "attempt": 3
+    },
+    {
+      "sequence": 81,
+      "stage": "S08",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789005861.3236408,
+      "source_digest": "3681ef73e150e0c524da53c43c521ca906b2a442393013232a431f90e79ed1ac",
+      "tag": "autodev/M01/S08/v3",
+      "artifact": "development/autodev/runs/M01/S08/3/artifact.zip",
+      "artifact_sha256": "753fcf0612250554b5a7b5b1d0e461ccbab0459f67603512a656274c1eda7760"
     }
   ]
 }

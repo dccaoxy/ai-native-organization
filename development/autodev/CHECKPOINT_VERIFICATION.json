@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "stage": "S01",
+      "tag": "autodev/M01/S01/v1",
+      "commit": "2ff0832675b1952d43b5e44f9524eef9ff4d88b6",
+      "candidate_files": 14,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "85dc329e856cfefe16f020e05cd71121745b2945750b265b5e12ea94a6a7ecd1",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S02",
+      "tag": "autodev/M01/S02/v1",
+      "commit": "c238ecb7111352063534a859415c640dd6913598",
+      "candidate_files": 17,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "0ed4c7a2e42c0139cfdc5c7db621b2b995d1f9943bd6b3e2feb1958a85909b2a",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S03",
+      "tag": "autodev/M01/S03/v1",
+      "commit": "ba6eb2ee9c80594e93ae65f513bd94492e241cf8",
+      "candidate_files": 20,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "77fd8566e3ffd49d1bd8d54d5bd1c9391913446f0f52cb71c7491bb8658fcd58",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S04",
+      "tag": "autodev/M01/S04/v2",
+      "commit": "db70fbaeacc1316e2a422cb0efe3309a7e69acaf",
+      "candidate_files": 23,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "dbd61ae35c3307a7f0d10b4b20bc113e77c4c4683de74cf44e348ff51a776694",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S05",
+      "tag": "autodev/M01/S05/v1",
+      "commit": "7d49f6fb91763d755986ae7cd3f69e1784f93da9",
+      "candidate_files": 26,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "14dd62540bb76fe9d8f6ca5fc9098f2448c813cbb84c65463ca2614a8c45bf11",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S06",
+      "tag": "autodev/M01/S06/v1",
+      "commit": "5857d590e4eb91e07ab65a8cb9a1e87dd06ff4c1",
+      "candidate_files": 29,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "5d03fde43867f8153f881371a3d15859bfe74a0ab5faf9a277f8e84eb8591612",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S07",
+      "tag": "autodev/M01/S07/v1",
+      "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6",
+      "candidate_files": 35,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "acfbe3e1c240fb62e11bfeb507b5815a1f943ea8ca54a88ba81d9269d5968c85",
+      "review_audit_digest_binding": true
+    },
+    {
+      "stage": "S08",
+      "tag": "autodev/M01/S08/v2",
+      "commit": "82a6bf8ed07d156703754b293df6a447435b1900",
+      "candidate_files": 40,
+      "tag_matches_verified_candidate": true,
+      "artifact_sha256": "6c49bd0cca205b3a88931c94565ddd726deae566fc2d1f8dde81b43e4278f656",
+      "review_audit_digest_binding": true
+    }
+  ],
+  "verdict": "PASS",
+  "superseded_tags": [
+    "autodev/M01/S04/v1",
+    "autodev/M01/S08/v1"
+  ]
+}
