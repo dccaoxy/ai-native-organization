@@ -14,6 +14,7 @@
 - M01 合成运行实际产生 42 条事件，通过 10 项最终断言；覆盖五类必过场景及 Agent/runtime interruption。无真实 Human 样本或 E01–E08 结论。
 - 冻结文件与原始 Git 对象的摘要核验通过；L1/L2 未修改。
 - 浏览器实际验证：合成身份/Goal 建立、发布、领取、ACK、工作台和事件同步。
+- Interactive Atlas Concept Demo v0.1 已实现同一合成 Execution 的 World / Architecture / Knowledge / Authority / Value 五视图投影；完整 L2/L3、对象历史与依赖下钻仍待实现。
 
 证据：`autodev/M01.state.json`、`autodev/runs/`、`autodev/simulation/`、[M01 acceptance](M01_ACCEPTANCE.md)。
 S04/v1 的依赖入库缺陷已由 S04/v2 修复；保留历史，不覆盖标签。

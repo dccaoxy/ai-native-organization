@@ -11,11 +11,11 @@
   --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border); --color-ring: var(--ring);
 }
-:root { --background:#152321; --foreground:#f3eee3; --card:#192a27; --card-foreground:#f3eee3; --primary:#e1ad5d; --primary-foreground:#14201e; --secondary:#233531; --secondary-foreground:#e8e1d4; --muted:#20312e; --muted-foreground:#9aa8a3; --accent:#25433e; --accent-foreground:#dff7f2; --border:rgba(255,255,255,.11); --ring:#72d7cd; }
-* { border-color: var(--border); } html { background:var(--background); } body { margin:0; background:var(--background); color:var(--foreground); font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif; } button { cursor:pointer; }
+:root { --background:#152321; --foreground:#f3eee3; --card:#192a27; --card-foreground:#f3eee3; --primary:#e1ad5d; --primary-foreground:#14201e; --secondary:#233531; --secondary-foreground:#e8e1d4; --muted:#20312e; --muted-foreground:#9aa8a3; --accent:#25433e; --accent-foreground:#dff7f2; --border:rgba(255,255,255,.11); --ring:#72d7cd; --popover:#14221f; --popover-foreground:#f3eee3; }
+* { border-color: var(--border); } html { background:var(--background); } body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-geist-sans),'PingFang SC','Microsoft YaHei',sans-serif; } button { cursor:pointer; }
 .panel-card { border:1px solid rgba(255,255,255,.1); border-radius:1rem; background:rgba(255,255,255,.035); padding:1.25rem; box-shadow:0 18px 40px rgba(2,8,7,.12); }
-.section-label { font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.34); }
+.section-label { font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.46); }
 .hotspot { position:absolute; z-index:10; display:flex; align-items:center; gap:.4rem; transform:translate(-50%,-50%); border:1px solid rgba(255,255,255,.24); border-radius:999px; background:rgba(10,21,19,.74); padding:.45rem .65rem; color:rgba(255,255,255,.84); font-size:11px; line-height:1; backdrop-filter:blur(8px); box-shadow:0 8px 25px rgba(0,0,0,.22); transition:.2s ease; }
 .hotspot:hover,.hotspot:focus-visible { border-color:rgba(124,225,214,.7); background:rgba(22,59,53,.9); color:white; transform:translate(-50%,-50%) scale(1.04); outline:none; }
 .hotspot svg { width:13px; height:13px; color:#88e2d9; }
-@media (max-width:700px) { .hotspot { padding:.4rem; font-size:0; } .hotspot svg { width:14px; height:14px; } }
+@media (max-width:700px) { .hotspot { padding:.5rem; } .hotspot span { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); } .hotspot svg { width:16px; height:16px; } }

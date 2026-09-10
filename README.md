@@ -49,6 +49,6 @@ GitHub 是 **Development Source of Truth**；Obsidian 是 **Project Command Cent
 
 本 GitHub 仓库是开发事实源，保存规格、代码、测试、Milestone、当前状态与下一步；Obsidian 是日常设计载体和项目总览，不形成第二套独立开发事实。长期记忆仓库不是本项目源码/原文仓库。更新日期2026-09-08。历史报告和原始讨论保留当时状态，当前入口不以旧“待设计”标记覆盖最终基线。
 
-Interactive HTML Atlas v0.1、DEMO-01 新手村鸟瞰与 DEMO-02 赏金酒馆任务墙已完成，但尚未完整表达最终 Task/Execution、Reality Layer 与全部 L2/L3 下钻；其余视觉 DEMO 和 3–5 人理解测试仍待完成。核心设计冻结不代表参数已定、实验已验证或 M01 已经上线。
+Interactive Atlas Concept Demo v0.1、DEMO-01 新手村鸟瞰与 DEMO-02 赏金酒馆任务墙已完成；同一 synthetic Execution 已提供五视角投影，但完整 L2/L3、对象历史与依赖下钻仍待实现。其余视觉 DEMO 和 3–5 人理解测试尚未完成。核心设计冻结不代表参数已定、实验已验证或 M01 已经上线。
 
 [实验背景](00%20%E9%A1%B9%E7%9B%AE%E6%80%BB%E8%A7%88/%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E4%B8%8E%E5%AE%9E%E9%AA%8C%E7%9B%AE%E6%A0%87.md) · [长期研究议题](20%20%E7%A0%94%E7%A9%B6%E8%AE%AE%E9%A2%98/AI-Native%20Organization%20Fundamentals%20Backlog.md) · [最终收敛原始讨论](80%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA/2026-09-07%20Final%20Design%20Baseline%20%E5%8E%9F%E5%A7%8B%E8%AE%A8%E8%AE%BA.md)
