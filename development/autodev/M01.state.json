@@ -14,93 +14,105 @@
     },
     "S02": {
       "status": "PASS",
-      "reason": "Repair budget exhausted or repair adapter unavailable",
-      "missing": [
-        "tests/test_store.py",
-        "tests/test_store_review.py"
-      ],
       "attempt": 2,
       "worker": "caoxy-TG03",
       "source_digest": "db9785d880b7518ebb37dfb74cee6deb17213526b879884585d004d0ed2c8b26",
       "tag": "autodev/M01/S02/v1",
       "artifact": "development/autodev/runs/M01/S02/2/artifact.zip",
       "artifact_sha256": "0ed4c7a2e42c0139cfdc5c7db621b2b995d1f9943bd6b3e2feb1958a85909b2a",
-      "commit": "c238ecb7111352063534a859415c640dd6913598"
+      "commit": "c238ecb7111352063534a859415c640dd6913598",
+      "resolved_diagnostics": {
+        "reason": "Repair budget exhausted or repair adapter unavailable",
+        "missing": [
+          "tests/test_store.py",
+          "tests/test_store_review.py"
+        ]
+      }
     },
     "S03": {
       "status": "PASS",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "tests/test_core.py",
-        "tests/test_core_review.py"
-      ],
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "db4afe5599333405e3f2d282ed897a732def6e6b5cf4b3ba39114dc88c34ce03",
       "tag": "autodev/M01/S03/v1",
       "artifact": "development/autodev/runs/M01/S03/1/artifact.zip",
       "artifact_sha256": "77fd8566e3ffd49d1bd8d54d5bd1c9391913446f0f52cb71c7491bb8658fcd58",
-      "commit": "ba6eb2ee9c80594e93ae65f513bd94492e241cf8"
+      "commit": "ba6eb2ee9c80594e93ae65f513bd94492e241cf8",
+      "resolved_diagnostics": {
+        "reason": "Missing engineering inputs",
+        "missing": [
+          "tests/test_core.py",
+          "tests/test_core_review.py"
+        ]
+      }
     },
     "S04": {
       "status": "PASS",
-      "reason": "Checkpoint dependency completeness repair; retain v1, verify v2",
-      "missing": [
-        "tests/test_identity.py",
-        "tests/test_identity_review.py"
-      ],
       "attempt": 2,
       "worker": "caoxy-TG03",
       "source_digest": "bac0c40fb92444f61b266f9a4528990564274bff2a2049ce6cc08d602ee695b1",
       "tag": "autodev/M01/S04/v2",
       "artifact": "development/autodev/runs/M01/S04/2/artifact.zip",
       "artifact_sha256": "dbd61ae35c3307a7f0d10b4b20bc113e77c4c4683de74cf44e348ff51a776694",
-      "commit": "db70fbaeacc1316e2a422cb0efe3309a7e69acaf"
+      "commit": "db70fbaeacc1316e2a422cb0efe3309a7e69acaf",
+      "resolved_diagnostics": {
+        "reason": "Checkpoint dependency completeness repair; retain v1, verify v2",
+        "missing": [
+          "tests/test_identity.py",
+          "tests/test_identity_review.py"
+        ]
+      }
     },
     "S05": {
       "status": "PASS",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "tests/test_work.py",
-        "tests/test_work_review.py"
-      ],
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "b72fb64ec0d1b54f804d3b547e8ca45afe7c6cec770a2afa94b7ad2965a18412",
       "tag": "autodev/M01/S05/v1",
       "artifact": "development/autodev/runs/M01/S05/1/artifact.zip",
       "artifact_sha256": "14dd62540bb76fe9d8f6ca5fc9098f2448c813cbb84c65463ca2614a8c45bf11",
-      "commit": "7d49f6fb91763d755986ae7cd3f69e1784f93da9"
+      "commit": "7d49f6fb91763d755986ae7cd3f69e1784f93da9",
+      "resolved_diagnostics": {
+        "reason": "Missing engineering inputs",
+        "missing": [
+          "tests/test_work.py",
+          "tests/test_work_review.py"
+        ]
+      }
     },
     "S06": {
       "status": "PASS",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "tests/test_returns.py",
-        "tests/test_returns_review.py"
-      ],
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "9193d81f2d37c7e433d9533dd5ffc3a246c540940b12218eb8d5052183be5c93",
       "tag": "autodev/M01/S06/v1",
       "artifact": "development/autodev/runs/M01/S06/1/artifact.zip",
       "artifact_sha256": "5d03fde43867f8153f881371a3d15859bfe74a0ab5faf9a277f8e84eb8591612",
-      "commit": "5857d590e4eb91e07ab65a8cb9a1e87dd06ff4c1"
+      "commit": "5857d590e4eb91e07ab65a8cb9a1e87dd06ff4c1",
+      "resolved_diagnostics": {
+        "reason": "Missing engineering inputs",
+        "missing": [
+          "tests/test_returns.py",
+          "tests/test_returns_review.py"
+        ]
+      }
     },
     "S07": {
       "status": "PASS",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "tests/test_http.py",
-        "tests/test_http_review.py"
-      ],
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "cb76814c18c21b100e666e72573be6eeafee9e3aaf1d0f7aa15aa01416e58d8b",
       "tag": "autodev/M01/S07/v1",
       "artifact": "development/autodev/runs/M01/S07/1/artifact.zip",
       "artifact_sha256": "acfbe3e1c240fb62e11bfeb507b5815a1f943ea8ca54a88ba81d9269d5968c85",
-      "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6"
+      "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6",
+      "resolved_diagnostics": {
+        "reason": "Missing engineering inputs",
+        "missing": [
+          "tests/test_http.py",
+          "tests/test_http_review.py"
+        ]
+      }
     },
     "S08": {
       "status": "PASS",
