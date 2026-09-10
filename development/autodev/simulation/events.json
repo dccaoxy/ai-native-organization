@@ -1,0 +1,1313 @@
+{
+  "simulation": true,
+  "events": [
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "m01-simulation/human-1",
+      "changes": {
+        "Human": {
+          "H1": {
+            "display_name": "Synthetic Human 1",
+            "id": "H1",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H1",
+      "id": "59b88170020c48a39888012b2812d28f",
+      "idempotency_key": "m01-simulation/human-1",
+      "occurred_at": 1789004692.1655324,
+      "sequence": 1,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/agent-1",
+      "changes": {
+        "RepresentativeAgent": {
+          "A1": {
+            "active": true,
+            "hau_id": "U1",
+            "human_id": "H1",
+            "id": "A1",
+            "permissions": [
+              "ack",
+              "blocked",
+              "claim",
+              "escalate",
+              "fail",
+              "progress",
+              "release",
+              "request_boundary",
+              "resume",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A1",
+      "id": "21a720410675446e972124475f9df803",
+      "idempotency_key": "m01-simulation/agent-1",
+      "occurred_at": 1789004692.1739016,
+      "sequence": 2,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/agent-1",
+      "changes": {
+        "HAU": {
+          "U1": {
+            "agent_id": "A1",
+            "human_id": "H1",
+            "id": "U1"
+          }
+        }
+      },
+      "correlation_id": "U1",
+      "id": "d7c40810681f4ab793d4956f4d03670f",
+      "idempotency_key": "m01-simulation/agent-1",
+      "occurred_at": 1789004692.1739547,
+      "sequence": 3,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "m01-simulation/human-2",
+      "changes": {
+        "Human": {
+          "H2": {
+            "display_name": "Synthetic Human 2",
+            "id": "H2",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H2",
+      "id": "8a848ad6ca364fbea09ae89acd51a555",
+      "idempotency_key": "m01-simulation/human-2",
+      "occurred_at": 1789004692.181967,
+      "sequence": 4,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/agent-2",
+      "changes": {
+        "RepresentativeAgent": {
+          "A2": {
+            "active": true,
+            "hau_id": "U2",
+            "human_id": "H2",
+            "id": "A2",
+            "permissions": [
+              "ack",
+              "blocked",
+              "claim",
+              "escalate",
+              "fail",
+              "progress",
+              "release",
+              "request_boundary",
+              "resume",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A2",
+      "id": "9f7d3478ccbe48e597e151f0aed768b8",
+      "idempotency_key": "m01-simulation/agent-2",
+      "occurred_at": 1789004692.190295,
+      "sequence": 5,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/agent-2",
+      "changes": {
+        "HAU": {
+          "U2": {
+            "agent_id": "A2",
+            "human_id": "H2",
+            "id": "U2"
+          }
+        }
+      },
+      "correlation_id": "U2",
+      "id": "a4f30d6515dd4248943af2a0516f05b6",
+      "idempotency_key": "m01-simulation/agent-2",
+      "occurred_at": 1789004692.1903408,
+      "sequence": 6,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "m01-simulation/human-3",
+      "changes": {
+        "Human": {
+          "H3": {
+            "display_name": "Synthetic Human 3",
+            "id": "H3",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H3",
+      "id": "d8e8aea8e1fb4ab3b842d1973f9972f1",
+      "idempotency_key": "m01-simulation/human-3",
+      "occurred_at": 1789004692.1983423,
+      "sequence": 7,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/agent-3",
+      "changes": {
+        "RepresentativeAgent": {
+          "A3": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "A3",
+            "permissions": [
+              "ack",
+              "blocked",
+              "claim",
+              "escalate",
+              "fail",
+              "progress",
+              "release",
+              "request_boundary",
+              "resume",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A3",
+      "id": "9493e428920b48478fde94a3a9d843c7",
+      "idempotency_key": "m01-simulation/agent-3",
+      "occurred_at": 1789004692.2063355,
+      "sequence": 8,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/agent-3",
+      "changes": {
+        "HAU": {
+          "U3": {
+            "agent_id": "A3",
+            "human_id": "H3",
+            "id": "U3"
+          }
+        }
+      },
+      "correlation_id": "U3",
+      "id": "e4b6251f668841d483be6d9e75edd7f0",
+      "idempotency_key": "m01-simulation/agent-3",
+      "occurred_at": 1789004692.2063768,
+      "sequence": 9,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/goal",
+      "changes": {
+        "Goal": {
+          "G1": {
+            "boundary": [
+              "read",
+              "draft"
+            ],
+            "desired_change": "Exercise minimum organization in a synthetic environment",
+            "goal_authority": "H1",
+            "id": "G1",
+            "status": "active",
+            "success_criteria": "Three independent attempts, formal returns and accountable selection"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "c050122b0000467784983ccf31909c8b",
+      "idempotency_key": "m01-simulation/goal",
+      "occurred_at": 1789004692.214612,
+      "sequence": 10,
+      "simulation": true,
+      "type": "GoalActivated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/task",
+      "changes": {
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence-backed fixture result with explicit boundary",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Synthetic fixture recommendation",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "draft"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "8b72c6bb5dd64a0db028aaeb2e26653d",
+      "idempotency_key": "m01-simulation/task",
+      "occurred_at": 1789004692.2224295,
+      "sequence": 11,
+      "simulation": true,
+      "type": "TaskCreated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/publish",
+      "changes": {
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence-backed fixture result with explicit boundary",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Synthetic fixture recommendation",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "published"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "79bd9e5187144f258fd9d298d3e79938",
+      "idempotency_key": "m01-simulation/publish",
+      "occurred_at": 1789004692.2314122,
+      "sequence": 12,
+      "simulation": true,
+      "type": "TaskPublished"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "A1",
+      "authority_source": "Human:H1/RepresentativeAgent:A1/claim",
+      "causation_id": "m01-simulation/claim-1",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789004692.241114,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789004692.241114,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "294ad07c22954e53807814d5b73cdbe0",
+      "idempotency_key": "m01-simulation/claim-1",
+      "occurred_at": 1789004692.241175,
+      "sequence": 13,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "A1",
+      "authority_source": "Human:H1/RepresentativeAgent:A1/ack",
+      "causation_id": "m01-simulation/ack-1",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789004692.241114,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789004692.2499633,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "00f85008bf3b478ca46f9f5f7daacd4c",
+      "idempotency_key": "m01-simulation/ack-1",
+      "occurred_at": 1789004692.250016,
+      "sequence": 14,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "A2",
+      "authority_source": "Human:H2/RepresentativeAgent:A2/claim",
+      "causation_id": "m01-simulation/claim-2",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.2586508,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "0d987916be024ebab55620de92003788",
+      "idempotency_key": "m01-simulation/claim-2",
+      "occurred_at": 1789004692.2587073,
+      "sequence": 15,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "A2",
+      "authority_source": "Human:H2/RepresentativeAgent:A2/ack",
+      "causation_id": "m01-simulation/ack-2",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.2669764,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "0dacd8c4da024bf8aa4e4fc6dc61c5a8",
+      "idempotency_key": "m01-simulation/ack-2",
+      "occurred_at": 1789004692.267027,
+      "sequence": 16,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "A3",
+      "authority_source": "Human:H3/RepresentativeAgent:A3/claim",
+      "causation_id": "m01-simulation/claim-3",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.2754343,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "14d17f2e1e8446c8a96a7dc713582d41",
+      "idempotency_key": "m01-simulation/claim-3",
+      "occurred_at": 1789004692.275489,
+      "sequence": 17,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "A3",
+      "authority_source": "Human:H3/RepresentativeAgent:A3/ack",
+      "causation_id": "m01-simulation/ack-3",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.2845151,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "4f9b3b5a145240babe5e497a00a6910b",
+      "idempotency_key": "m01-simulation/ack-3",
+      "occurred_at": 1789004692.2845654,
+      "sequence": 18,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "A1",
+      "authority_source": "Human:H1/RepresentativeAgent:A1/progress",
+      "causation_id": "m01-simulation/progress",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789004692.241114,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789004692.2938044,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        },
+        "WorkSignal": {
+          "a824066f55aa43d8a5fa0c993242fd4d": {
+            "execution_id": "E1",
+            "id": "a824066f55aa43d8a5fa0c993242fd4d",
+            "kind": "progress",
+            "summary": "Synthetic public checkpoint"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "52b1cb07b92d4074b402f5032782c4b0",
+      "idempotency_key": "m01-simulation/progress",
+      "occurred_at": 1789004692.2943854,
+      "sequence": 19,
+      "simulation": true,
+      "type": "Progress"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "A2",
+      "authority_source": "Human:H2/RepresentativeAgent:A2/blocked",
+      "causation_id": "m01-simulation/blocked",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.3031297,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "blocked",
+            "task_id": "T1"
+          }
+        },
+        "WorkSignal": {
+          "f7dc9848810240658edc2133bf466292": {
+            "execution_id": "E2",
+            "id": "f7dc9848810240658edc2133bf466292",
+            "kind": "blocked",
+            "summary": "Needs an explicitly authorized scope extension"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "6cdb66d425f0441fab0eb95d7f60bcdb",
+      "idempotency_key": "m01-simulation/blocked",
+      "occurred_at": 1789004692.303199,
+      "sequence": 20,
+      "simulation": true,
+      "type": "Blocked"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "A2",
+      "authority_source": "Human:H2/RepresentativeAgent:A2/request_boundary",
+      "causation_id": "m01-simulation/boundary-request",
+      "changes": {
+        "BoundaryRequest": {
+          "B1": {
+            "authority": "H1",
+            "execution_id": "E2",
+            "id": "B1",
+            "reason": "Synthetic draft action requires Human authorization",
+            "requested_scope": [
+              "read",
+              "draft"
+            ],
+            "status": "pending"
+          }
+        },
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.3118267,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "blocked",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "ecb1d8c6213347b795d24b1f91e143c7",
+      "idempotency_key": "m01-simulation/boundary-request",
+      "occurred_at": 1789004692.3118958,
+      "sequence": 21,
+      "simulation": true,
+      "type": "BoundaryRequested"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/boundary-approved",
+      "changes": {
+        "BoundaryRequest": {
+          "B1": {
+            "authority": "H1",
+            "execution_id": "E2",
+            "id": "B1",
+            "reason": "Synthetic draft action requires Human authorization",
+            "requested_scope": [
+              "read",
+              "draft"
+            ],
+            "status": "approved"
+          }
+        },
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.3118267,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read",
+              "draft"
+            ],
+            "status": "blocked",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "b6761c1e82ef4f5390896795503b968f",
+      "idempotency_key": "m01-simulation/boundary-approved",
+      "occurred_at": 1789004692.3203807,
+      "sequence": 22,
+      "simulation": true,
+      "type": "BoundaryApproved"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "A2",
+      "authority_source": "Human:H2/RepresentativeAgent:A2/resume",
+      "causation_id": "m01-simulation/resume-2",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.3297114,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read",
+              "draft"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        },
+        "WorkSignal": {
+          "2c0acee4e83049acb43234844b4c3b09": {
+            "execution_id": "E2",
+            "id": "2c0acee4e83049acb43234844b4c3b09",
+            "kind": "resume",
+            "summary": "Resume within Human-authorized scope"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "75bd055491c54478b016be1963beb3dd",
+      "idempotency_key": "m01-simulation/resume-2",
+      "occurred_at": 1789004692.3297794,
+      "sequence": 23,
+      "simulation": true,
+      "type": "Resumed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "A3",
+      "authority_source": "Human:H3/runtime:A3",
+      "causation_id": "m01-simulation/runtime-interruption",
+      "changes": {
+        "RepresentativeAgent": {
+          "A3": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "A3",
+            "permissions": [
+              "ack",
+              "blocked",
+              "claim",
+              "escalate",
+              "fail",
+              "progress",
+              "release",
+              "request_boundary",
+              "resume",
+              "submit"
+            ],
+            "runtime_status": "offline"
+          }
+        }
+      },
+      "correlation_id": "A3",
+      "id": "81915b371b1c4b7bb5c5491840c69d7c",
+      "idempotency_key": "m01-simulation/runtime-interruption",
+      "occurred_at": 1789004692.3384929,
+      "sequence": 24,
+      "simulation": true,
+      "type": "AgentStatusChanged"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "A3",
+      "authority_source": "Human:H3/runtime:A3",
+      "causation_id": "m01-simulation/runtime-interruption",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.3384202,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "interrupted",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "cb73b7cdbce5438eb181c30b6b3fd910",
+      "idempotency_key": "m01-simulation/runtime-interruption",
+      "occurred_at": 1789004692.3385377,
+      "sequence": 25,
+      "simulation": true,
+      "type": "ExecutionInterrupted"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/resume-3",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.3482394,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        },
+        "WorkSignal": {
+          "0eb524c856aa4243aa44a9843fb3947b": {
+            "execution_id": "E3",
+            "id": "0eb524c856aa4243aa44a9843fb3947b",
+            "kind": "resume",
+            "summary": "Human resumes responsibility after simulated runtime loss"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "0ccf671b75df409cb9f60dd8c61d92c7",
+      "idempotency_key": "m01-simulation/resume-3",
+      "occurred_at": 1789004692.3483036,
+      "sequence": 26,
+      "simulation": true,
+      "type": "Resumed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/return-1",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789004692.241114,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789004692.3572865,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "submitted",
+            "task_id": "T1"
+          }
+        },
+        "Return": {
+          "R1": {
+            "execution_id": "E1",
+            "human_annotations": [],
+            "id": "R1",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "success",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic candidate 1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "b5bd37f568b548939114e5e65e649862",
+      "idempotency_key": "m01-simulation/return-1",
+      "occurred_at": 1789004692.3578467,
+      "sequence": 27,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/confirm-1",
+      "changes": {
+        "Return": {
+          "R1": {
+            "execution_id": "E1",
+            "human_annotations": [
+              "confirm: Synthetic owner confirmation"
+            ],
+            "id": "R1",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "success",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic candidate 1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "f0c5c84e1e694d0185a1b8284a090c97",
+      "idempotency_key": "m01-simulation/confirm-1",
+      "occurred_at": 1789004692.370931,
+      "sequence": 28,
+      "simulation": true,
+      "type": "ReturnAnnotated"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/review-1",
+      "changes": {
+        "Review": {
+          "V1": {
+            "credible": true,
+            "evidence": "Inspected recorded synthetic command outcomes",
+            "id": "V1",
+            "return_id": "R1",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "582230175a0b42959c5929e2e7a52cdb",
+      "idempotency_key": "m01-simulation/review-1",
+      "occurred_at": 1789004692.380776,
+      "sequence": 29,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/accept-1",
+      "changes": {
+        "Acceptance": {
+          "C1": {
+            "accepted": true,
+            "acceptor": "H1",
+            "id": "C1",
+            "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+            "return_id": "R1",
+            "review_id": "V1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "c69087de51ad43cca2ac5e632cfe1588",
+      "idempotency_key": "m01-simulation/accept-1",
+      "occurred_at": 1789004692.3908746,
+      "sequence": 30,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/accept-1",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789004692.241114,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789004692.3908002,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "168dddce1e494c6ea3dafa026a23ef60",
+      "idempotency_key": "m01-simulation/accept-1",
+      "occurred_at": 1789004692.390917,
+      "sequence": 31,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/return-2",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.4001029,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read",
+              "draft"
+            ],
+            "status": "submitted",
+            "task_id": "T1"
+          }
+        },
+        "Return": {
+          "R2": {
+            "execution_id": "E2",
+            "human_annotations": [],
+            "id": "R2",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "success",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic candidate 2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "595ecff461e7404a859fde16d6359a57",
+      "idempotency_key": "m01-simulation/return-2",
+      "occurred_at": 1789004692.4001687,
+      "sequence": 32,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/confirm-2",
+      "changes": {
+        "Return": {
+          "R2": {
+            "execution_id": "E2",
+            "human_annotations": [
+              "confirm: Synthetic owner confirmation"
+            ],
+            "id": "R2",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "success",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic candidate 2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "f7b9612ee2114509a024ea6db9132f6c",
+      "idempotency_key": "m01-simulation/confirm-2",
+      "occurred_at": 1789004692.408798,
+      "sequence": 33,
+      "simulation": true,
+      "type": "ReturnAnnotated"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/review-2",
+      "changes": {
+        "Review": {
+          "V2": {
+            "credible": true,
+            "evidence": "Inspected recorded synthetic command outcomes",
+            "id": "V2",
+            "return_id": "R2",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "274466c579b4479d91a3867ba7234f56",
+      "idempotency_key": "m01-simulation/review-2",
+      "occurred_at": 1789004692.4188075,
+      "sequence": 34,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/accept-2",
+      "changes": {
+        "Acceptance": {
+          "C2": {
+            "accepted": true,
+            "acceptor": "H1",
+            "id": "C2",
+            "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+            "return_id": "R2",
+            "review_id": "V2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "020675cbb1544107b28d4893303e4ec2",
+      "idempotency_key": "m01-simulation/accept-2",
+      "occurred_at": 1789004692.431185,
+      "sequence": 35,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/accept-2",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789004692.2586508,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789004692.4310749,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read",
+              "draft"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "76cda145183e40c49b8f3c3ffc4d5bbb",
+      "idempotency_key": "m01-simulation/accept-2",
+      "occurred_at": 1789004692.4312797,
+      "sequence": 36,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/return-3",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.442626,
+            "return_id": "R3",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "failed",
+            "task_id": "T1"
+          }
+        },
+        "Return": {
+          "R3": {
+            "execution_id": "E3",
+            "human_annotations": [],
+            "id": "R3",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "failure",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic failure evidence"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "a0e17a3c818743d2a6e49c047c7cb2d9",
+      "idempotency_key": "m01-simulation/return-3",
+      "occurred_at": 1789004692.4427097,
+      "sequence": 37,
+      "simulation": true,
+      "type": "ExecutionFailed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/return-3",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789004692.2754343,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789004692.442626,
+            "return_id": "R3",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "dc51c30e9305487a98cc4bc6e9c371d2",
+      "idempotency_key": "m01-simulation/return-3",
+      "occurred_at": 1789004692.442774,
+      "sequence": 38,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/confirm-3",
+      "changes": {
+        "Return": {
+          "R3": {
+            "execution_id": "E3",
+            "human_annotations": [
+              "confirm: Synthetic owner confirmation"
+            ],
+            "id": "R3",
+            "major_execution_facts": "Command/Event trail recorded by the running system",
+            "observed_terrain": "Controlled software-test environment only",
+            "outcome": "failure",
+            "reflection": "No real Human behavior or business impact is inferred",
+            "result": "Synthetic failure evidence"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "c288c69e672b4a8d9947797da538eed1",
+      "idempotency_key": "m01-simulation/confirm-3",
+      "occurred_at": 1789004692.4546242,
+      "sequence": 39,
+      "simulation": true,
+      "type": "ReturnAnnotated"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "m01-simulation/review-3",
+      "changes": {
+        "Review": {
+          "V3": {
+            "credible": true,
+            "evidence": "Inspected recorded synthetic command outcomes",
+            "id": "V3",
+            "return_id": "R3",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "dd9e46fc8c1e43ca8bf2ffa3063dd13f",
+      "idempotency_key": "m01-simulation/review-3",
+      "occurred_at": 1789004692.468143,
+      "sequence": 40,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "m01-simulation/accept-3",
+      "changes": {
+        "Acceptance": {
+          "C3": {
+            "accepted": false,
+            "acceptor": "H1",
+            "id": "C3",
+            "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+            "return_id": "R3",
+            "review_id": "V3"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "d9b056ecfee6464983099bedb9699eda",
+      "idempotency_key": "m01-simulation/accept-3",
+      "occurred_at": 1789004692.4796164,
+      "sequence": 41,
+      "simulation": true,
+      "type": "ResultRejected"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "m01-simulation/selection",
+      "changes": {
+        "Selection": {
+          "SEL1": {
+            "id": "SEL1",
+            "rationale": "Explicit selection among two accepted synthetic candidates",
+            "return_id": "R2",
+            "selector": "H3",
+            "task_id": "T1"
+          }
+        },
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence-backed fixture result with explicit boundary",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Synthetic fixture recommendation",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "f492d0f437bf408cadb58abb183a5237",
+      "idempotency_key": "m01-simulation/selection",
+      "occurred_at": 1789004692.490275,
+      "sequence": 42,
+      "simulation": true,
+      "type": "ResultSelected"
+    }
+  ]
+}

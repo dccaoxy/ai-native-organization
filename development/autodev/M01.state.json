@@ -103,12 +103,18 @@
       "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6"
     },
     "S08": {
-      "status": "BLOCKED_ENGINEERING",
+      "status": "CHECKPOINT_PENDING",
       "reason": "Missing engineering inputs",
       "missing": [
         "tests/test_simulation.py",
         "tests/test_simulation_review.py"
-      ]
+      ],
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
+      "tag": "autodev/M01/S08/v1",
+      "artifact": "development/autodev/runs/M01/S08/1/artifact.zip",
+      "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f"
     }
   },
   "events": [
@@ -611,6 +617,45 @@
         "tests/test_simulation.py",
         "tests/test_simulation_review.py"
       ]
+    },
+    {
+      "sequence": 63,
+      "stage": "S08",
+      "status": "BUILD",
+      "time": 1789004693.2617536,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 64,
+      "stage": "S08",
+      "status": "TEST",
+      "time": 1789004693.3701031,
+      "attempt": 1
+    },
+    {
+      "sequence": 65,
+      "stage": "S08",
+      "status": "REVIEW",
+      "time": 1789004699.446052,
+      "attempt": 1
+    },
+    {
+      "sequence": 66,
+      "stage": "S08",
+      "status": "AUDIT",
+      "time": 1789004710.7239199,
+      "attempt": 1
+    },
+    {
+      "sequence": 67,
+      "stage": "S08",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789004714.8770313,
+      "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
+      "tag": "autodev/M01/S08/v1",
+      "artifact": "development/autodev/runs/M01/S08/1/artifact.zip",
+      "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f"
     }
   ]
 }

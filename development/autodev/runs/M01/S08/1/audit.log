@@ -1,0 +1,12 @@
+test_http_command_query_persistence_and_ui (tests.test_http.HTTPTests.test_http_command_query_persistence_and_ui) ... ok
+test_authority_chain_survives_event_replay (tests.test_simulation_review.SimulationReview.test_authority_chain_survives_event_replay) ... ok
+test_closed_task_keeps_evidence_and_rejects_new_claim (tests.test_simulation_review.SimulationReview.test_closed_task_keeps_evidence_and_rejects_new_claim) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 409: 'Conflict'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_http_command_query_persistence_and_ui (tests.test_simulation_review.SimulationReview.test_http_command_query_persistence_and_ui) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.846s
+
+OK
+

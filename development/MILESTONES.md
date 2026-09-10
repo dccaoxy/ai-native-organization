@@ -33,7 +33,7 @@ Milestone 只有在定义的 Outcome、验收情景、证据和接续条件全�
 | S05 Free Work Space + Progress + Boundary/Escalation | PASS | autodev/M01/S05/v1 |
 | S06 Return + Review + Acceptance + Selection | PASS | autodev/M01/S06/v1 |
 | S07 End-to-End Integration | PASS | autodev/M01/S07/v1 |
-| S08 Simulation + Audit + Final Acceptance Package | BLOCKED_ENGINEERING |  |
+| S08 Simulation + Audit + Final Acceptance Package | CHECKPOINT_PENDING | autodev/M01/S08/v1 |
 
 Source: `development/autodev/M01.state.json`. Simulation evidence is not Human Pilot or E01–E08 evidence. Phase 9 requires real Humans, time and experimental results.
 <!-- AUTODEV:END -->

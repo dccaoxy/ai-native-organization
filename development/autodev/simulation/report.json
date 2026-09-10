@@ -1,0 +1,32 @@
+{
+  "kind": "synthetic software execution, not real research evidence",
+  "checks": {
+    "three_hau_one_goal_one_task_three_independent_executions": true,
+    "success": true,
+    "failure_returns_information": true,
+    "blocked_and_boundary_extension": true,
+    "parallel_selection_preserves_all_returns": true,
+    "interruption_visible_and_recoverable": true,
+    "unique_human_accountability": true,
+    "all_attempts_closed_with_returns": true,
+    "review_acceptance_selection_distinct": true,
+    "all_evidence_labelled_simulation": true
+  },
+  "event_count": 42,
+  "object_counts": {
+    "Human": 3,
+    "RepresentativeAgent": 3,
+    "HAU": 3,
+    "Goal": 1,
+    "Task": 1,
+    "Execution": 3,
+    "WorkSignal": 4,
+    "BoundaryRequest": 1,
+    "Return": 3,
+    "Review": 3,
+    "Acceptance": 3,
+    "Selection": 1
+  },
+  "verdict": "PASS",
+  "real_human_participants": 0
+}

@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.reviewer"
+  ],
+  "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
+  "started": 1789004699.4482436,
+  "finished": 1789004710.7108657,
+  "report": {
+    "role": "review",
+    "kind": "independent-process deterministic adversarial review",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "test": "tests.test_contract_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_store_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_core_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_identity_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_work_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_returns_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_http_review",
+        "passed": true
+      },
+      {
+        "test": "tests.test_simulation_review",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
+    "nonce": "e10e18de3c414d5eb7dd2fe899ef2bad",
+    "limitations": [
+      "Does not replace independent human/LLM semantic review",
+      "Only configured engineering tests are covered"
+    ]
+  }
+}

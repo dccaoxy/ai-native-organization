@@ -1,0 +1,304 @@
+{
+  "simulation": true,
+  "state": {
+    "Human": {
+      "H1": {
+        "display_name": "Synthetic Human 1",
+        "id": "H1",
+        "kind": "human"
+      },
+      "H2": {
+        "display_name": "Synthetic Human 2",
+        "id": "H2",
+        "kind": "human"
+      },
+      "H3": {
+        "display_name": "Synthetic Human 3",
+        "id": "H3",
+        "kind": "human"
+      }
+    },
+    "RepresentativeAgent": {
+      "A1": {
+        "active": true,
+        "hau_id": "U1",
+        "human_id": "H1",
+        "id": "A1",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A2": {
+        "active": true,
+        "hau_id": "U2",
+        "human_id": "H2",
+        "id": "A2",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "A3": {
+        "active": true,
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "A3",
+        "permissions": [
+          "ack",
+          "blocked",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "offline"
+      }
+    },
+    "HAU": {
+      "U1": {
+        "agent_id": "A1",
+        "human_id": "H1",
+        "id": "U1"
+      },
+      "U2": {
+        "agent_id": "A2",
+        "human_id": "H2",
+        "id": "U2"
+      },
+      "U3": {
+        "agent_id": "A3",
+        "human_id": "H3",
+        "id": "U3"
+      }
+    },
+    "Goal": {
+      "G1": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Exercise minimum organization in a synthetic environment",
+        "goal_authority": "H1",
+        "id": "G1",
+        "status": "active",
+        "success_criteria": "Three independent attempts, formal returns and accountable selection"
+      }
+    },
+    "Task": {
+      "T1": {
+        "acceptance_authority": "H1",
+        "acceptance_criteria": "Evidence-backed fixture result with explicit boundary",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic fixture recommendation",
+        "id": "T1",
+        "primary_goal": "G1",
+        "review_authority": "H2",
+        "selection_authority": "H3",
+        "status": "closed"
+      }
+    },
+    "Execution": {
+      "E1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789004692.241114,
+        "hau_id": "U1",
+        "id": "E1",
+        "last_seen": 1789004692.3908002,
+        "return_id": "R1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E2": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789004692.2586508,
+        "hau_id": "U2",
+        "id": "E2",
+        "last_seen": 1789004692.4310749,
+        "return_id": "R2",
+        "runtime_boundary": [
+          "read",
+          "draft"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E3": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789004692.2754343,
+        "hau_id": "U3",
+        "id": "E3",
+        "last_seen": 1789004692.442626,
+        "return_id": "R3",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      }
+    },
+    "WorkSignal": {
+      "a824066f55aa43d8a5fa0c993242fd4d": {
+        "execution_id": "E1",
+        "id": "a824066f55aa43d8a5fa0c993242fd4d",
+        "kind": "progress",
+        "summary": "Synthetic public checkpoint"
+      },
+      "f7dc9848810240658edc2133bf466292": {
+        "execution_id": "E2",
+        "id": "f7dc9848810240658edc2133bf466292",
+        "kind": "blocked",
+        "summary": "Needs an explicitly authorized scope extension"
+      },
+      "2c0acee4e83049acb43234844b4c3b09": {
+        "execution_id": "E2",
+        "id": "2c0acee4e83049acb43234844b4c3b09",
+        "kind": "resume",
+        "summary": "Resume within Human-authorized scope"
+      },
+      "0eb524c856aa4243aa44a9843fb3947b": {
+        "execution_id": "E3",
+        "id": "0eb524c856aa4243aa44a9843fb3947b",
+        "kind": "resume",
+        "summary": "Human resumes responsibility after simulated runtime loss"
+      }
+    },
+    "BoundaryRequest": {
+      "B1": {
+        "authority": "H1",
+        "execution_id": "E2",
+        "id": "B1",
+        "reason": "Synthetic draft action requires Human authorization",
+        "requested_scope": [
+          "read",
+          "draft"
+        ],
+        "status": "approved"
+      }
+    },
+    "Return": {
+      "R1": {
+        "execution_id": "E1",
+        "human_annotations": [
+          "confirm: Synthetic owner confirmation"
+        ],
+        "id": "R1",
+        "major_execution_facts": "Command/Event trail recorded by the running system",
+        "observed_terrain": "Controlled software-test environment only",
+        "outcome": "success",
+        "reflection": "No real Human behavior or business impact is inferred",
+        "result": "Synthetic candidate 1"
+      },
+      "R2": {
+        "execution_id": "E2",
+        "human_annotations": [
+          "confirm: Synthetic owner confirmation"
+        ],
+        "id": "R2",
+        "major_execution_facts": "Command/Event trail recorded by the running system",
+        "observed_terrain": "Controlled software-test environment only",
+        "outcome": "success",
+        "reflection": "No real Human behavior or business impact is inferred",
+        "result": "Synthetic candidate 2"
+      },
+      "R3": {
+        "execution_id": "E3",
+        "human_annotations": [
+          "confirm: Synthetic owner confirmation"
+        ],
+        "id": "R3",
+        "major_execution_facts": "Command/Event trail recorded by the running system",
+        "observed_terrain": "Controlled software-test environment only",
+        "outcome": "failure",
+        "reflection": "No real Human behavior or business impact is inferred",
+        "result": "Synthetic failure evidence"
+      }
+    },
+    "Review": {
+      "V1": {
+        "credible": true,
+        "evidence": "Inspected recorded synthetic command outcomes",
+        "id": "V1",
+        "return_id": "R1",
+        "reviewer": "H2"
+      },
+      "V2": {
+        "credible": true,
+        "evidence": "Inspected recorded synthetic command outcomes",
+        "id": "V2",
+        "return_id": "R2",
+        "reviewer": "H2"
+      },
+      "V3": {
+        "credible": true,
+        "evidence": "Inspected recorded synthetic command outcomes",
+        "id": "V3",
+        "return_id": "R3",
+        "reviewer": "H2"
+      }
+    },
+    "Acceptance": {
+      "C1": {
+        "accepted": true,
+        "acceptor": "H1",
+        "id": "C1",
+        "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+        "return_id": "R1",
+        "review_id": "V1"
+      },
+      "C2": {
+        "accepted": true,
+        "acceptor": "H1",
+        "id": "C2",
+        "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+        "return_id": "R2",
+        "review_id": "V2"
+      },
+      "C3": {
+        "accepted": false,
+        "acceptor": "H1",
+        "id": "C3",
+        "rationale": "Synthetic intended-use judgment; failure is not an accepted success",
+        "return_id": "R3",
+        "review_id": "V3"
+      }
+    },
+    "Selection": {
+      "SEL1": {
+        "id": "SEL1",
+        "rationale": "Explicit selection among two accepted synthetic candidates",
+        "return_id": "R2",
+        "selector": "H3",
+        "task_id": "T1"
+      }
+    }
+  }
+}
