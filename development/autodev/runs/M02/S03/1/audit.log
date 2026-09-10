@@ -1,0 +1,15 @@
+test_goal_challenge_through_real_http (tests.test_goal_challenge.GoalChallengeHTTPTests.test_goal_challenge_through_real_http) ... ok
+test_agent_and_foreign_human_cannot_decide (tests.test_goal_challenge.GoalChallengeTests.test_agent_and_foreign_human_cannot_decide) ... ok
+test_boundary_authority_not_inferred_from_goal_owner (tests.test_goal_challenge.GoalChallengeTests.test_boundary_authority_not_inferred_from_goal_owner) ... ok
+test_challenge_does_not_mutate_goal_or_pause_any_work (tests.test_goal_challenge.GoalChallengeTests.test_challenge_does_not_mutate_goal_or_pause_any_work) ... ok
+test_human_modify_versions_diff_impacts_and_replay (tests.test_goal_challenge.GoalChallengeTests.test_human_modify_versions_diff_impacts_and_replay) ... ok
+test_invalid_evidence_rolls_back_entire_decision (tests.test_goal_challenge.GoalChallengeTests.test_invalid_evidence_rolls_back_entire_decision) ... ok
+test_keep_closes_challenge_without_revision (tests.test_goal_challenge.GoalChallengeTests.test_keep_closes_challenge_without_revision) ... ok
+test_offline_agent_cannot_challenge (tests.test_goal_challenge.GoalChallengeTests.test_offline_agent_cannot_challenge) ... ok
+test_stale_competing_challenge_and_double_decision_rejected (tests.test_goal_challenge.GoalChallengeTests.test_stale_competing_challenge_and_double_decision_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 5.434s
+
+OK
+

@@ -190,34 +190,57 @@
         "tests",
         "AGENTS.md",
         "development/milestones/M02_SYNTHETIC_ORGANIZATION.md",
-        "specs/M02.goal-challenge.json"
+        "specs/M02.goal-challenge.json",
+        "specs/M01.contract.json"
       ],
       "outputs": [
-        "specs/M02.goal-challenge.json"
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
       ],
       "scope": [
-        "organization/scale_simulation.py",
-        "tests/test_scale_simulation.py"
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
       ],
       "model_write_paths": [
-        "organization/scale_simulation.py",
-        "tests/test_scale_simulation.py"
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
       ],
       "exit_criteria": [
-        "Configured tests, independent review and frozen baseline audit PASS",
-        "Local commit/tag/artifact persisted; no push or deployment"
+        "Goal proposal/Keep/Modify tests and HTTP interface pass",
+        "Agent/foreign Human authority, stale version, invalid evidence and Boundary misuse rejected",
+        "Browser form shows unchanged Goal before decision and version/diff after decision",
+        "Local checkpoint only; M02 final acceptance remains separate"
       ],
       "tests": [
+        "tests.test_goal_challenge",
         "tests.test_scale_simulation"
       ],
       "review_tests": [
-        "tests.test_scale_simulation"
+        "tests.test_goal_challenge.GoalChallengeTests",
+        "tests.test_contract_review",
+        "tests.test_work_review",
+        "tests.test_returns_review"
       ],
       "principle_checks": [
         {
-          "id": "Task versus Execution; unique Human owner; formal Return and separate Review Acceptance Selection; Event Trail",
-          "test": "tests.test_scale_simulation",
-          "source": "00 项目总览/Operating Model v0.1 Final Design Baseline.md"
+          "id": "Goal Challenge is not Goal mutation; Human-only decision; versioned evidence and retained downstream attempts",
+          "test": "tests.test_goal_challenge",
+          "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md"
         }
       ],
       "human_gates": [
@@ -265,9 +288,122 @@
         ]
       },
       "id": "S03",
-      "title": "Goal Challenge and final acceptance",
+      "title": "Goal Challenge core and workbench",
       "dependencies": [
         "S02"
+      ]
+    },
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "AGENTS.md",
+        "development/milestones/M02_SYNTHETIC_ORGANIZATION.md",
+        "specs/M02.goal-challenge.json",
+        "specs/M01.contract.json",
+        "specs/M02.final-coverage.json"
+      ],
+      "outputs": [
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
+      ],
+      "scope": [
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
+      ],
+      "model_write_paths": [
+        "specs/M02.goal-challenge.json",
+        "organization/goals.py",
+        "organization/contracts.py",
+        "organization/core.py",
+        "organization/identity.py",
+        "organization/web",
+        "tests/test_goal_challenge.py"
+      ],
+      "exit_criteria": [
+        "Goal proposal/Keep/Modify tests and HTTP interface pass",
+        "Agent/foreign Human authority, stale version, invalid evidence and Boundary misuse rejected",
+        "Browser form shows unchanged Goal before decision and version/diff after decision",
+        "Local checkpoint only; M02 final acceptance remains separate"
+      ],
+      "tests": [
+        "tests.test_goal_challenge",
+        "tests.test_scale_simulation"
+      ],
+      "review_tests": [
+        "tests.test_goal_challenge.GoalChallengeTests",
+        "tests.test_contract_review",
+        "tests.test_work_review",
+        "tests.test_returns_review"
+      ],
+      "principle_checks": [
+        {
+          "id": "Goal Challenge is not Goal mutation; Human-only decision; versioned evidence and retained downstream attempts",
+          "test": "tests.test_goal_challenge",
+          "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "frozen_change_or_real_authority",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Not performed by this local stage; separate explicit user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S04",
+      "title": "Full Phase 4 coverage and final acceptance",
+      "dependencies": [
+        "S03"
       ]
     }
   ]

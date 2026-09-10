@@ -111,7 +111,9 @@ class Session:
             self.transition(obj, 'ack')
             self.emit('Execution', obj, 'ACK', auth, obj['accountable_owner'], obj['task_id'])
         else:
-            if command in ('register_human','bind_agent','agent_status','sweep'):
+            if command in ('challenge_goal','decide_goal_challenge'):
+                from organization.goals import handle
+            elif command in ('register_human','bind_agent','agent_status','sweep'):
                 from organization.identity import handle
             elif command in ('progress','blocked','escalate','resume','request_boundary','decide_boundary'):
                 from organization.work import handle

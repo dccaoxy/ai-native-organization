@@ -1,0 +1,26 @@
+{
+  "role": "audit",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "baseline-preservation",
+      "passed": true
+    },
+    {
+      "id": "Goal Challenge is not Goal mutation; Human-only decision; versioned evidence and retained downstream attempts",
+      "test": "tests.test_goal_challenge",
+      "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "6ec3208ec1e67984178d445f4d89bf328fb6f9cabc6a11755bff9bfa96758a26",
+  "nonce": "c8146a484e85413cb664c067b973a2ad",
+  "coverage": "M02 listed engineering invariants only",
+  "out_of_scope": [
+    "Human Pilot evidence",
+    "M1 learning efficacy",
+    "M2 value/culture",
+    "Phase 9 completion"
+  ]
+}

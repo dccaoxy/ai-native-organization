@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "classification": "Additive M02 engineering slice; no frozen L1/L2 changes",
+  "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md",
+  "objects": {
+    "GoalChallenge": {
+      "id": {
+        "type": "string"
+      },
+      "goal_id": {
+        "type": "string"
+      },
+      "component": {
+        "type": "string",
+        "enum": [
+          "desired_change",
+          "success_criteria",
+          "boundary",
+          "assumptions",
+          "scope",
+          "priority_time_horizon"
+        ]
+      },
+      "proposed_value": {
+        "type": "string"
+      },
+      "evidence": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "expected_revision": {
+        "type": "number"
+      },
+      "challenger": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "decided"
+        ]
+      }
+    },
+    "GoalDecision": {
+      "id": {
+        "type": "string"
+      },
+      "challenge_id": {
+        "type": "string"
+      },
+      "decision": {
+        "type": "string",
+        "enum": [
+          "keep",
+          "modify"
+        ]
+      },
+      "expected_revision": {
+        "type": "number"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "evidence": {
+        "type": "string"
+      },
+      "goal_id": {
+        "type": "string"
+      },
+      "decider": {
+        "type": "string"
+      },
+      "resulting_revision": {
+        "type": "number"
+      },
+      "affected_tasks": {
+        "type": "strings"
+      },
+      "affected_executions": {
+        "type": "strings"
+      }
+    },
+    "GoalRevision": {
+      "id": {
+        "type": "string"
+      },
+      "goal_id": {
+        "type": "string"
+      },
+      "version": {
+        "type": "number"
+      },
+      "component": {
+        "type": "string"
+      },
+      "before": {
+        "type": "object"
+      },
+      "after": {
+        "type": "object"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "evidence": {
+        "type": "string"
+      },
+      "decision_id": {
+        "type": "string"
+      },
+      "affected_tasks": {
+        "type": "strings"
+      },
+      "affected_executions": {
+        "type": "strings"
+      }
+    }
+  },
+  "events": [
+    "GoalChallenged",
+    "GoalRevised",
+    "GoalChallengeDecided"
+  ],
+  "authority_matrix": {
+    "challenge_goal": "Registered Human or active online Representative Agent explicitly delegated challenge_goal",
+    "decide_goal_challenge": "Goal Human Authority only; Keep or Modify desired_change/success_criteria"
+  },
+  "limitations": [
+    "Boundary and risk authority not inferred from Goal ownership",
+    "Pause/Achieve/Terminate/Supersede and reparenting not implemented in this slice",
+    "Impact projection uses direct Primary Goal edges only; no complete dependency graph",
+    "Tasks and Executions retain their existing contracts/status; affected ids exposed for follow-up"
+  ]
+}

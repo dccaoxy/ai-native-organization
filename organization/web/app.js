@@ -30,8 +30,44 @@ function form(title,fields) {
     $('form-dialog').showModal();
   });
 }
+function renderGoals() {
+  const revisions=Object.values(state.GoalRevision||{});
+  const version=id=>Math.max(0,...revisions.filter(r=>r.goal_id===id).map(r=>r.version));
+  $('goals').replaceChildren();$('goal-challenges').replaceChildren();$('goal-revisions').replaceChildren();
+  for(const goal of Object.values(state.Goal||{})){
+    const n=card(goal.id,'Goal / v'+version(goal.id),[goal.desired_change,'成功标准：'+goal.success_criteria,'Human Authority：'+goal.goal_authority]);
+    const choices=[['desired_change','质疑预期改变'],['success_criteria','质疑成功标准']];
+    buttons(n,choices.map(([component,label])=>[label,async()=>{
+      const x=await form(label,[['proposed_value','建议的新内容','textarea',goal[component]],['evidence','支持质疑的证据'],['reason','为什么需要调整这一组件']]);
+      if(x)await send('challenge_goal',{id:uid('Q'),goal_id:goal.id,component,expected_revision:version(goal.id),...x});
+    }]));$('goals').append(n);
+  }
+  for(const q of Object.values(state.GoalChallenge||{})){
+    const g=state.Goal[q.goal_id],current=version(q.goal_id);
+    const n=card(q.id,'Challenge / '+q.status,[q.goal_id+' · '+q.component,'建议：'+q.proposed_value,'证据：'+q.evidence,'理由：'+q.reason,'提出者：'+q.challenger]);
+    if(q.status==='pending'&&q.expected_revision!==current)n.append(element('p','目标已有新版本，请刷新证据并重新提出质疑。'));
+    if(q.status==='pending'&&q.expected_revision===current&&$('actor').value===g.goal_authority){
+      buttons(n,[['keep','保持目标'],['modify','采用修订']].map(([decision,label])=>[label,async()=>{
+        const x=await form(label+' · '+g.goal_authority,[['reason','Human 裁决理由'],['evidence','裁决所依据的证据']]);
+        if(x)await send('decide_goal_challenge',{id:uid('GD'),challenge_id:q.id,decision,expected_revision:current,...x});
+      }]));
+    }
+    const d=Object.values(state.GoalDecision||{}).find(d=>d.challenge_id===q.id);
+    if(d)n.append(element('p','裁决：'+d.decision+' · '+d.decider+' · '+d.reason));
+    $('goal-challenges').append(n);
+  }
+  for(const r of revisions){
+    $('goal-revisions').append(card(r.goal_id+' / v'+r.version,r.component,[
+      '修改前：'+r.before[r.component],'修改后：'+r.after[r.component],
+      '理由：'+r.reason,'证据：'+r.evidence,'需检查的任务：'+(r.affected_tasks.join(', ')||'无'),
+      '需检查的执行：'+(r.affected_executions.join(', ')||'无'),
+      '影响列表按直接 Primary Goal 关联生成；既有任务契约和执行状态未自动改写。']));
+  }
+  if(!$('goals').children.length)$('goals').append(element('p','先建立合成组织，再提出目标质疑。','empty'));
+}
 async function refresh() {
   const [current,trail]=await Promise.all([api('state'),api('events')]);state=current.state;
+  renderGoals();
   $('metrics').replaceChildren();
   for(const [kind,label] of [['HAU','已绑定 HAU'],['Goal','正式 Goal'],['Execution','独立 Execution'],['Return','正式 Return']]){const n=element('div',undefined,'metric');n.append(element('b',Object.keys(state[kind]||{}).length),element('span',label));$('metrics').append(n);}
   $('tasks').replaceChildren();
@@ -86,5 +122,6 @@ $('seed').onclick=()=>action(async()=>{
 });
 $('new-task').onclick=()=>action(async()=>{const x=await form('发布合成 Task（Goal Authority：H1）',[['expected_output','预期结果','text','合成场景：提出一项可验证的方案'],['acceptance_criteria','验收标准','text','结果有证据，且在声明边界内完成']]);if(x){const id=uid('T');await send('create_task',{id,primary_goal:'G1',...x,boundary:['read'],execution_mode:'parallel',review_authority:'H2',acceptance_authority:'H1',selection_authority:'H3'});await send('publish',{task_id:id});}});
 $('refresh').onclick=()=>action(refresh);
+$('actor').onchange=()=>renderGoals();
 $('sweep').onclick=()=>action(()=>send('sweep',{},'SIMULATOR'));
 refresh().then(()=>notice('已读取持久化组织状态。')).catch(e=>notice(e.message,true));

@@ -4,6 +4,10 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = json.loads((ROOT / "specs/M01.contract.json").read_text(encoding="utf-8"))
+GOAL_EXTENSION = json.loads((ROOT / "specs/M02.goal-challenge.json").read_text(encoding="utf-8"))
+CONTRACT['objects'].update(GOAL_EXTENSION['objects'])
+CONTRACT['event_catalog'].extend(GOAL_EXTENSION['events'])
+CONTRACT['authority_matrix'].update(GOAL_EXTENSION['authority_matrix'])
 
 
 def validate(name, obj):
