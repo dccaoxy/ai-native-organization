@@ -32,7 +32,7 @@
 
 > **Capture before optimize.** 先保证组织事实能够正确留下，再优化推荐、评分和自动化。
 
-当前是 P0 / M01。除非 M01 需要，不要优先开发 3D 地图、复杂推荐、Knowledge Pulse、Reward、Honor、Progression 或 Organization-owned Agent。
+当前本地工程是 P1 / Phase 4 / M02（S01/S02 已通过，S03 待实现）；M01 已完成工程验收。不要优先开发 3D 地图、复杂推荐、Knowledge Pulse、Reward、Honor、Progression 或 Organization-owned Agent。
 
 ## AD00 / AutoDev 接续
 

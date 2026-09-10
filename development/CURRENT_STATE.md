@@ -2,9 +2,21 @@
 
 最后更新：2026-09-10。GitHub main 是 Development Source of Truth。
 
+最新授权：仅本地开发与隔离服务器测试，正式推送和部署需用户逐次确认；不改 AEGPC.CN 现有项目/服务。相关本地变更尚未推送。原自动写回 Actions 已暂停（API 核验 disabled_manually、无进行中任务），因此下述定时运行描述仅代表已实现能力，不代表当前正在运行。当前不采购海外实例。
+
 当前工程成果：**AD00 AutoDev v0 已跑通；M01 S01–S08 工程验收 PASS。**
-当前 Stage：**S08 — Simulation + Audit + Final Acceptance Package**。
-范围：Phase 2–3 / M0；真实实验尚未开始。
+当前 Stage：**M02 S03 — Goal Challenge and final acceptance（工程待实现）**。
+本地进展：M02 S01、S02 均通过独立进程 Test/Review/Audit，生成本地 commit/tag/artifact；尚未推送，未部署。
+范围：Phase 4 / M0 合成稳健性验证；M02 尚未完成，真实实验尚未开始。
+
+## M02 本地验收（尚未发布）
+
+- 10 HAU、3 Goal、30 Task、60 Execution；实际产生 531 条合成事件，13 项规模/恢复断言通过。
+- 并发检查：8 个线程提交 20 个独立领取，Execution 与 Human owner 保持独立；24 次重复请求仅写入一次。冲突幂等键和跨 Task Selection 均被拒绝且不新增事件。
+- 完整本地套件 112 项执行通过。历史 M01 的证据与标签保留。
+- S01：`e940a5a` / `autodev/M02/S01/v1`；S02：`4bcc8cb` / `autodev/M02/S02/v1`。
+- 证据：`autodev/M02.state.json`、`autodev/runs/M02/`、`autodev/m02-scale/report.json`。S03 因尚无可执行 Goal Challenge 规格而停止；这是工程缺口，不要求用户批准修改冻结设计。
+- 下一步从 `10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md` 重建 Goal Challenge 契约；遵守“可 Challenge、不可静默改 Goal、Human 决定保持或改变”。
 
 ## 已完成及证据
 

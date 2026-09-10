@@ -1,5 +1,12 @@
 # AutoDev Dashboard
 
+## 本地待发布进展（2026-09-10）
+
+M02 S01/S02 已本地 PASS；112 项测试通过，规模运行 531 条合成事件。
+本地标签 `autodev/M02/S01/v1`、`autodev/M02/S02/v1`，证据见 `M02.state.json`。
+当前为 S03 Goal Challenge 工程待实现。未推送、未部署；云端自动写回保持暂停，现有域名项目未改动。
+以下 M01 历史表格不代表当前工程阶段。
+
 2026-09-10：Codex 真实模型提案 → 测试/独立校验 → checkpoint → 下一阶段 Gate → 恢复测试通过。完整本地套件 107 项通过。云端模型主机尚待明确与登录；公开仓库不启用账户登录 CI。详见 [接入包](CODEX_RUNNER.md) 和 [真实测试回执](CODEX_SMOKE.json)。
 
 <!-- AUTODEV:START -->

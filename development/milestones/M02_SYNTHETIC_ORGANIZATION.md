@@ -3,6 +3,11 @@
 Phase 4 / M0 robustness. Entirely synthetic; no Human Pilot or real company data.
 The frozen Final Design Baseline and existing M01 semantics remain authoritative.
 
+Local status: S01 PASS (`e940a5a`, `autodev/M02/S01/v1`), S02 PASS
+(`4bcc8cb`, `autodev/M02/S02/v1`). S03 is BLOCKED_ENGINEERING due to missing
+executable Goal Challenge input, not an unresolved Human permission. Full local
+suite: 112 tests. Scale: 531 events, 13 assertions. No push or deployment.
+
 ## Stages
 
 | Stage | Engineering outcome | Required evidence |
