@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.builder"
+  ],
+  "source_digest": "6003364d25276a5d279a87370a7bfa55c24179f76dc4c8e54afa58fec50ca56a",
+  "started": 1789031123.2555254,
+  "finished": 1789031132.3622077
+}

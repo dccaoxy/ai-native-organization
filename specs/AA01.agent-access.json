@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "classification": "AA01 local authenticated Agent lab; not production Human identity",
+  "objects": {
+    "AgentRegistration": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "version": {
+        "type": "string"
+      },
+      "capabilities": {
+        "type": "strings"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "approved",
+          "revoked"
+        ]
+      },
+      "human_id": {
+        "type": "string"
+      },
+      "hau_id": {
+        "type": "string"
+      },
+      "agent_id": {
+        "type": "string"
+      },
+      "permissions": {
+        "type": "strings"
+      },
+      "allowed_tasks": {
+        "type": "strings"
+      }
+    }
+  },
+  "events": [
+    "AgentRegistered",
+    "AgentRegistrationApproved",
+    "AgentRegistrationRevoked"
+  ],
+  "authority_matrix": {
+    "register_agent": "Gateway enrollment only; no authority granted",
+    "approve_agent": "Authenticated lab operator acting as registered synthetic Human; explicit HAU, permission and task scope",
+    "revoke_agent": "Bound Human via authenticated lab operator"
+  },
+  "non_goals": [
+    "Production Human authentication",
+    "Public registration or domain deployment",
+    "Credential recovery/rotation service",
+    "Untrusted same-host process isolation"
+  ]
+}

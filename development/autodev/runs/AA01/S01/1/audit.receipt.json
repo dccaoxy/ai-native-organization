@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "6003364d25276a5d279a87370a7bfa55c24179f76dc4c8e54afa58fec50ca56a",
+  "started": 1789031141.8757498,
+  "finished": 1789031151.627551,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+        "test": "tests.test_agent_access",
+        "source": "development/milestones/AA01_AGENT_ACCESS.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "6003364d25276a5d279a87370a7bfa55c24179f76dc4c8e54afa58fec50ca56a",
+    "nonce": "0f8ea2c09f74450f86e8b2f6ce516e3d",
+    "coverage": "AA01 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

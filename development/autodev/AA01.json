@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "id": "AA01",
+  "mission": "Independent Agent access before M03; local tests only",
+  "stages": [
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/AA01_AGENT_ACCESS.md",
+        "development/autodev/agent-model-demo"
+      ],
+      "outputs": [
+        "organization/agent_gateway.py",
+        "organization/agent_client.py",
+        "organization/agent_operator.py",
+        "organization/agent_demo.py",
+        "organization/enrollment.py",
+        "specs/AA01.agent-access.json",
+        "tests/test_agent_access.py"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_agent_access.py",
+        "specs/AA01.agent-access.json",
+        "autodev/agent_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_agent_access"
+      ],
+      "review_tests": [
+        "tests.test_agent_access"
+      ],
+      "principle_checks": [
+        {
+          "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+          "test": "tests.test_agent_access",
+          "source": "development/milestones/AA01_AGENT_ACCESS.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Registration and authenticated scope",
+      "dependencies": []
+    },
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/AA01_AGENT_ACCESS.md",
+        "development/autodev/agent-model-demo"
+      ],
+      "outputs": [
+        "organization/agent_gateway.py",
+        "organization/agent_client.py",
+        "organization/agent_operator.py",
+        "organization/agent_demo.py",
+        "organization/enrollment.py",
+        "specs/AA01.agent-access.json",
+        "tests/test_agent_access.py"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_agent_access.py",
+        "specs/AA01.agent-access.json",
+        "autodev/agent_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_agent_access"
+      ],
+      "review_tests": [
+        "tests.test_agent_access"
+      ],
+      "principle_checks": [
+        {
+          "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+          "test": "tests.test_agent_access",
+          "source": "development/milestones/AA01_AGENT_ACCESS.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "organization.agent_demo",
+          "--output",
+          ".autodev/agent-protocol-demo"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S02",
+      "title": "Independent client lifecycle",
+      "dependencies": [
+        "S01"
+      ]
+    },
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/AA01_AGENT_ACCESS.md",
+        "development/autodev/agent-model-demo"
+      ],
+      "outputs": [
+        "organization/agent_gateway.py",
+        "organization/agent_client.py",
+        "organization/agent_operator.py",
+        "organization/agent_demo.py",
+        "organization/enrollment.py",
+        "specs/AA01.agent-access.json",
+        "tests/test_agent_access.py"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_agent_access.py",
+        "specs/AA01.agent-access.json",
+        "autodev/agent_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_agent_access"
+      ],
+      "review_tests": [
+        "tests.test_agent_access"
+      ],
+      "principle_checks": [
+        {
+          "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+          "test": "tests.test_agent_access",
+          "source": "development/milestones/AA01_AGENT_ACCESS.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.agent_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S03",
+      "title": "Cumulative and live model evidence",
+      "dependencies": [
+        "S02"
+      ]
+    }
+  ]
+}

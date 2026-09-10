@@ -1,0 +1,13 @@
+{
+  "verdict": "PASS",
+  "kind": "actual local HTTP plus independent subprocess Agent; synthetic control Humans",
+  "model_generated_return": true,
+  "model_is_protocol_planner": false,
+  "independent_process_verified": true,
+  "pending_before_approval_verified": true,
+  "replay_no_duplicate_events": true,
+  "credentials_absent_from_event_trail": true,
+  "event_count": 18,
+  "real_human_participants": 0,
+  "real_company_systems_accessed": false
+}

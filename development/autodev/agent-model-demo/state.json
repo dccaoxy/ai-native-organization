@@ -1,0 +1,172 @@
+{
+  "simulation": true,
+  "state": {
+    "Human": {
+      "H0": {
+        "display_name": "Synthetic Human fixture 0",
+        "id": "H0",
+        "kind": "human"
+      },
+      "H1": {
+        "display_name": "Synthetic Human fixture 1",
+        "id": "H1",
+        "kind": "human"
+      },
+      "H2": {
+        "display_name": "Synthetic Human fixture 2",
+        "id": "H2",
+        "kind": "human"
+      }
+    },
+    "Goal": {
+      "G": {
+        "boundary": [
+          "read"
+        ],
+        "desired_change": "Verify independently authenticated Agent workflow",
+        "goal_authority": "H0",
+        "id": "G",
+        "status": "active",
+        "success_criteria": "A traceable synthetic Return with explicit limitations"
+      }
+    },
+    "Task": {
+      "T": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Checks distinguish registration, authorization and execution, without claiming production evidence",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Propose three checks for a safe local Agent enrollment workflow",
+        "id": "T",
+        "primary_goal": "G",
+        "review_authority": "H1",
+        "selection_authority": "H2",
+        "status": "closed"
+      }
+    },
+    "AgentRegistration": {
+      "02c0f6ff9c0a4c52863ad04f06fb03f5": {
+        "agent_id": "AG-02c0f6ff9c0a4c52863ad04f06fb03f5",
+        "allowed_tasks": [
+          "T"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U0",
+        "human_id": "H0",
+        "id": "02c0f6ff9c0a4c52863ad04f06fb03f5",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "ack",
+          "blocked",
+          "challenge_goal",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      }
+    },
+    "RepresentativeAgent": {
+      "AG-02c0f6ff9c0a4c52863ad04f06fb03f5": {
+        "active": true,
+        "hau_id": "U0",
+        "human_id": "H0",
+        "id": "AG-02c0f6ff9c0a4c52863ad04f06fb03f5",
+        "permissions": [
+          "ack",
+          "blocked",
+          "challenge_goal",
+          "claim",
+          "escalate",
+          "fail",
+          "progress",
+          "release",
+          "request_boundary",
+          "resume",
+          "submit"
+        ],
+        "runtime_status": "online"
+      }
+    },
+    "HAU": {
+      "U0": {
+        "agent_id": "AG-02c0f6ff9c0a4c52863ad04f06fb03f5",
+        "human_id": "H0",
+        "id": "U0"
+      }
+    },
+    "Execution": {
+      "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789030925.0026083,
+        "hau_id": "U0",
+        "id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1",
+        "last_seen": 1789030925.2634852,
+        "return_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T"
+      }
+    },
+    "WorkSignal": {
+      "b126628283ad4097a1123bbf3666a595": {
+        "execution_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1",
+        "id": "b126628283ad4097a1123bbf3666a595",
+        "kind": "progress",
+        "summary": "Independent test Agent reached a public checkpoint"
+      }
+    },
+    "Return": {
+      "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return": {
+        "execution_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1",
+        "human_annotations": [],
+        "id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return",
+        "major_execution_facts": "This is a proposed control design only. No tools, files, credentials, enrollment actions, or executions were used or observed. Registration, authorization, and execution are treated as distinct gates; passing one does not imply passing another.",
+        "observed_terrain": "The task specifies a read-only boundary, parallel execution mode, and separate review (H1), acceptance (H0), and selection (H2) authorities. No production environment or evidence is provided.",
+        "outcome": "success",
+        "reflection": "The recommendation is limited by the synthetic task’s sparse context. Identity format, authorization policy, test harness, audit requirements, and failure-handling procedures remain unspecified, so the checks require human review and cannot establish production safety or constitute acceptance or selection.",
+        "result": "Recommend three gated checks: (1) Registration—verify the local Agent’s identity, enrollment record, and intended endpoint are uniquely and correctly recorded. (2) Authorization—verify the registered identity receives only explicitly approved, least-privilege permissions consistent with the read-only boundary, with review by H1. (3) Execution—run a synthetic read-only validation that confirms permitted operations succeed and write or privilege-escalation attempts are denied, while recording results for H0 acceptance and H2 selection."
+      }
+    },
+    "Review": {
+      "V": {
+        "credible": true,
+        "evidence": "Test controller verified nonempty formal Return and protocol trace; not an independent semantic evaluation",
+        "id": "V",
+        "return_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return",
+        "reviewer": "H1"
+      }
+    },
+    "Acceptance": {
+      "C": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "C",
+        "rationale": "Synthetic test acceptance only; not Human business acceptance",
+        "return_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return",
+        "review_id": "V"
+      }
+    },
+    "Selection": {
+      "SEL": {
+        "id": "SEL",
+        "rationale": "Synthetic fixture completes the independent decision flow",
+        "return_id": "02c0f6ff9c0a4c52863ad04f06fb03f5/attempt-1/return",
+        "selector": "H2",
+        "task_id": "T"
+      }
+    }
+  }
+}

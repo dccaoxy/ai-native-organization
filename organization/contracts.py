@@ -8,6 +8,10 @@ GOAL_EXTENSION = json.loads((ROOT / "specs/M02.goal-challenge.json").read_text(e
 CONTRACT['objects'].update(GOAL_EXTENSION['objects'])
 CONTRACT['event_catalog'].extend(GOAL_EXTENSION['events'])
 CONTRACT['authority_matrix'].update(GOAL_EXTENSION['authority_matrix'])
+AGENT_EXTENSION = json.loads((ROOT / "specs/AA01.agent-access.json").read_text(encoding="utf-8"))
+CONTRACT['objects'].update(AGENT_EXTENSION['objects'])
+CONTRACT['event_catalog'].extend(AGENT_EXTENSION['events'])
+CONTRACT['authority_matrix'].update(AGENT_EXTENSION['authority_matrix'])
 
 
 def validate(name, obj):

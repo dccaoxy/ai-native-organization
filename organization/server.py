@@ -12,6 +12,9 @@ from organization.store import DomainError
 
 def server(path, port=0):
     org = Organization(path)
+    with org.store.connect() as db:
+        if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='agent_credentials'").fetchone():
+            raise ValueError('Agent lab databases cannot be exposed through the unauthenticated simulation UI')
     csrf = secrets.token_urlsafe(32)
     web = Path(__file__).parent / 'web'
 
