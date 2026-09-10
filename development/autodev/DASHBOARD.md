@@ -1,5 +1,10 @@
 # AutoDev Dashboard
 
+## 2026-09-11 · AA02 联合工作台
+
+当前用户授权优先项：AA02 Human × Agent 网页联合工作台，插入 M03 前。注册审批、任务/执行、边界决策、正式 Return 与分离验收页面已实现；136 项回归及实际 Edge 浏览器＋独立 Agent 进程联调通过（18 条合成事件，0 位真实 Human）。最终 checkpoint 以 development/autodev/AA02.state.json 为准。操作说明：development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md。未推送、未部署；原域名项目不变。
+
+
 ## 当前：AA01 Agent 接入本地 PASS
 
 S01–S03 已形成本地 commit/tag/artifact；完整套件 133 项通过。独立客户端与真实模型内容生成联调通过，18 条合成事件、0 位真实 Human。见 [验收包](../AA01_ACCEPTANCE.md)。无新增审批网页或常驻线上服务；下一工程 M03/M1 规格。尚未推送/部署，云端写回保持暂停。

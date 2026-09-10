@@ -1,0 +1,696 @@
+{
+  "state": {
+    "Human": {
+      "H0": {
+        "display_name": "Synthetic operator fixture 0",
+        "id": "H0",
+        "kind": "human"
+      },
+      "H1": {
+        "display_name": "Synthetic operator fixture 1",
+        "id": "H1",
+        "kind": "human"
+      },
+      "H2": {
+        "display_name": "Synthetic operator fixture 2",
+        "id": "H2",
+        "kind": "human"
+      }
+    },
+    "Goal": {
+      "G": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Test independent Agent protocol locally",
+        "goal_authority": "H0",
+        "id": "G",
+        "status": "active",
+        "success_criteria": "Traceable formal Return"
+      }
+    },
+    "Task": {
+      "T": {
+        "acceptance_authority": "H0",
+        "acceptance_criteria": "Explain registration, authorization and Return boundaries",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Suggest three local Agent registration checks",
+        "id": "T",
+        "primary_goal": "G",
+        "review_authority": "H1",
+        "selection_authority": "H2",
+        "status": "closed"
+      }
+    },
+    "AgentRegistration": {
+      "d641eb674802405e90380914698e76d0": {
+        "agent_id": "AG-d641eb674802405e90380914698e76d0",
+        "allowed_tasks": [
+          "T"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U0",
+        "human_id": "H0",
+        "id": "d641eb674802405e90380914698e76d0",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "claim",
+          "ack",
+          "progress",
+          "submit"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      }
+    },
+    "RepresentativeAgent": {
+      "AG-d641eb674802405e90380914698e76d0": {
+        "active": true,
+        "hau_id": "U0",
+        "human_id": "H0",
+        "id": "AG-d641eb674802405e90380914698e76d0",
+        "permissions": [
+          "claim",
+          "ack",
+          "progress",
+          "submit"
+        ],
+        "runtime_status": "online"
+      }
+    },
+    "HAU": {
+      "U0": {
+        "agent_id": "AG-d641eb674802405e90380914698e76d0",
+        "human_id": "H0",
+        "id": "U0"
+      }
+    },
+    "Execution": {
+      "d641eb674802405e90380914698e76d0/browser-test": {
+        "accountable_owner": "H0",
+        "claimed_at": 1789084406.890868,
+        "hau_id": "U0",
+        "id": "d641eb674802405e90380914698e76d0/browser-test",
+        "last_seen": 1789084407.0663755,
+        "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T"
+      }
+    },
+    "WorkSignal": {
+      "166ee55d562641639ab2e78eb5af6262": {
+        "execution_id": "d641eb674802405e90380914698e76d0/browser-test",
+        "id": "166ee55d562641639ab2e78eb5af6262",
+        "kind": "progress",
+        "summary": "Independent test Agent reached a public checkpoint"
+      }
+    },
+    "Return": {
+      "d641eb674802405e90380914698e76d0/browser-test/return": {
+        "execution_id": "d641eb674802405e90380914698e76d0/browser-test",
+        "human_annotations": [],
+        "id": "d641eb674802405e90380914698e76d0/browser-test/return",
+        "major_execution_facts": "Agent used authenticated claim, ACK and progress interfaces",
+        "observed_terrain": "Isolated local HTTP lab",
+        "outcome": "success",
+        "reflection": "No real Human or business outcome is claimed",
+        "result": "Synthetic deterministic Agent output"
+      }
+    },
+    "Review": {
+      "0d2d0a9d-71dd-4a31-b1c7-762af336802f": {
+        "credible": true,
+        "evidence": "Synthetic browser test: four Return fields and trace observed.",
+        "id": "0d2d0a9d-71dd-4a31-b1c7-762af336802f",
+        "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+        "reviewer": "H1"
+      }
+    },
+    "Acceptance": {
+      "4304d78b-15e6-48c0-8867-ff247d42d496": {
+        "accepted": true,
+        "acceptor": "H0",
+        "id": "4304d78b-15e6-48c0-8867-ff247d42d496",
+        "rationale": "Synthetic protocol acceptance only; no real business claim.",
+        "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+        "review_id": "0d2d0a9d-71dd-4a31-b1c7-762af336802f"
+      }
+    },
+    "Selection": {
+      "9fb74b5a-502c-42a4-a960-fa504f22c0ca": {
+        "id": "9fb74b5a-502c-42a4-a960-fa504f22c0ca",
+        "rationale": "Select sole accepted synthetic test result.",
+        "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+        "selector": "H2",
+        "task_id": "T"
+      }
+    }
+  },
+  "events": [
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "operator/h0",
+      "changes": {
+        "Human": {
+          "H0": {
+            "display_name": "Synthetic operator fixture 0",
+            "id": "H0",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H0",
+      "id": "526afc3258434a1b94e6e5283d37b267",
+      "idempotency_key": "operator/h0",
+      "occurred_at": 1789084405.342101,
+      "sequence": 1,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "operator/h1",
+      "changes": {
+        "Human": {
+          "H1": {
+            "display_name": "Synthetic operator fixture 1",
+            "id": "H1",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H1",
+      "id": "ae7f0f168e04450b9de0e666a4a8a116",
+      "idempotency_key": "operator/h1",
+      "occurred_at": 1789084405.3735437,
+      "sequence": 2,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "simulation bootstrap; no real identity claim",
+      "causation_id": "operator/h2",
+      "changes": {
+        "Human": {
+          "H2": {
+            "display_name": "Synthetic operator fixture 2",
+            "id": "H2",
+            "kind": "human"
+          }
+        }
+      },
+      "correlation_id": "H2",
+      "id": "bf266df4753b4d30824cbb2e68b3bdfd",
+      "idempotency_key": "operator/h2",
+      "occurred_at": 1789084405.4060316,
+      "sequence": 3,
+      "simulation": true,
+      "type": "HumanRegistered"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "operator/goal",
+      "changes": {
+        "Goal": {
+          "G": {
+            "boundary": [
+              "read",
+              "draft"
+            ],
+            "desired_change": "Test independent Agent protocol locally",
+            "goal_authority": "H0",
+            "id": "G",
+            "status": "active",
+            "success_criteria": "Traceable formal Return"
+          }
+        }
+      },
+      "correlation_id": "G",
+      "id": "f3296ea89719413d8b7905b54b7d0dd7",
+      "idempotency_key": "operator/goal",
+      "occurred_at": 1789084405.4354782,
+      "sequence": 4,
+      "simulation": true,
+      "type": "GoalActivated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "operator/task",
+      "changes": {
+        "Task": {
+          "T": {
+            "acceptance_authority": "H0",
+            "acceptance_criteria": "Explain registration, authorization and Return boundaries",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Suggest three local Agent registration checks",
+            "id": "T",
+            "primary_goal": "G",
+            "review_authority": "H1",
+            "selection_authority": "H2",
+            "status": "draft"
+          }
+        }
+      },
+      "correlation_id": "G",
+      "id": "7a51797bba834f169cfbe2a8e3051e76",
+      "idempotency_key": "operator/task",
+      "occurred_at": 1789084405.468557,
+      "sequence": 5,
+      "simulation": true,
+      "type": "TaskCreated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "operator/publish",
+      "changes": {
+        "Task": {
+          "T": {
+            "acceptance_authority": "H0",
+            "acceptance_criteria": "Explain registration, authorization and Return boundaries",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Suggest three local Agent registration checks",
+            "id": "T",
+            "primary_goal": "G",
+            "review_authority": "H1",
+            "selection_authority": "H2",
+            "status": "published"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "2c616c9529db48c1a68439394e9faf8b",
+      "idempotency_key": "operator/publish",
+      "occurred_at": 1789084405.477855,
+      "sequence": 6,
+      "simulation": true,
+      "type": "TaskPublished"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "AGENT_GATEWAY",
+      "authority_source": "agent enrollment; no execution authority",
+      "causation_id": "enroll/d641eb674802405e90380914698e76d0",
+      "changes": {
+        "AgentRegistration": {
+          "d641eb674802405e90380914698e76d0": {
+            "agent_id": "none",
+            "allowed_tasks": [],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "none",
+            "human_id": "none",
+            "id": "d641eb674802405e90380914698e76d0",
+            "name": "Independent synthetic test Agent",
+            "permissions": [],
+            "status": "pending",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "d641eb674802405e90380914698e76d0",
+      "id": "13f2a579a2c84e57a6ef671b3384bbc0",
+      "idempotency_key": "enroll/d641eb674802405e90380914698e76d0",
+      "occurred_at": 1789084405.6163068,
+      "sequence": 7,
+      "simulation": true,
+      "type": "AgentRegistered"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-d641eb674802405e90380914698e76d0": {
+            "active": true,
+            "hau_id": "U0",
+            "human_id": "H0",
+            "id": "AG-d641eb674802405e90380914698e76d0",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-d641eb674802405e90380914698e76d0",
+      "id": "23e90d0d0abf482099fdd2e56a2ce269",
+      "idempotency_key": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "occurred_at": 1789084406.6964428,
+      "sequence": 8,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "changes": {
+        "HAU": {
+          "U0": {
+            "agent_id": "AG-d641eb674802405e90380914698e76d0",
+            "human_id": "H0",
+            "id": "U0"
+          }
+        }
+      },
+      "correlation_id": "U0",
+      "id": "7131ef181baa4249b58c9788d710d064",
+      "idempotency_key": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "occurred_at": 1789084406.6964853,
+      "sequence": 9,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "changes": {
+        "AgentRegistration": {
+          "d641eb674802405e90380914698e76d0": {
+            "agent_id": "AG-d641eb674802405e90380914698e76d0",
+            "allowed_tasks": [
+              "T"
+            ],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "U0",
+            "human_id": "H0",
+            "id": "d641eb674802405e90380914698e76d0",
+            "name": "Independent synthetic test Agent",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "submit"
+            ],
+            "status": "approved",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "d641eb674802405e90380914698e76d0",
+      "id": "fa71a8538d714f728b15aeb43e021d81",
+      "idempotency_key": "human-web/e94795f9-2387-4601-8a23-6b0f42daf982",
+      "occurred_at": 1789084406.6965096,
+      "sequence": 10,
+      "simulation": true,
+      "type": "AgentRegistrationApproved"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "AG-d641eb674802405e90380914698e76d0",
+      "authority_source": "Human:H0/RepresentativeAgent:AG-d641eb674802405e90380914698e76d0/claim",
+      "causation_id": "agent/d641eb674802405e90380914698e76d0/browser-test/claim",
+      "changes": {
+        "Execution": {
+          "d641eb674802405e90380914698e76d0/browser-test": {
+            "accountable_owner": "H0",
+            "claimed_at": 1789084406.890868,
+            "hau_id": "U0",
+            "id": "d641eb674802405e90380914698e76d0/browser-test",
+            "last_seen": 1789084406.890868,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "fac7de75fcb54ac3a465ecbaacf98318",
+      "idempotency_key": "agent/d641eb674802405e90380914698e76d0/browser-test/claim",
+      "occurred_at": 1789084406.890915,
+      "sequence": 11,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "AG-d641eb674802405e90380914698e76d0",
+      "authority_source": "Human:H0/RepresentativeAgent:AG-d641eb674802405e90380914698e76d0/ack",
+      "causation_id": "agent/d641eb674802405e90380914698e76d0/browser-test/ack",
+      "changes": {
+        "Execution": {
+          "d641eb674802405e90380914698e76d0/browser-test": {
+            "accountable_owner": "H0",
+            "claimed_at": 1789084406.890868,
+            "hau_id": "U0",
+            "id": "d641eb674802405e90380914698e76d0/browser-test",
+            "last_seen": 1789084406.9039414,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "9fd8f71538a2496799f70d14c53a4163",
+      "idempotency_key": "agent/d641eb674802405e90380914698e76d0/browser-test/ack",
+      "occurred_at": 1789084406.9039843,
+      "sequence": 12,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "AG-d641eb674802405e90380914698e76d0",
+      "authority_source": "Human:H0/RepresentativeAgent:AG-d641eb674802405e90380914698e76d0/progress",
+      "causation_id": "agent/d641eb674802405e90380914698e76d0/browser-test/progress",
+      "changes": {
+        "Execution": {
+          "d641eb674802405e90380914698e76d0/browser-test": {
+            "accountable_owner": "H0",
+            "claimed_at": 1789084406.890868,
+            "hau_id": "U0",
+            "id": "d641eb674802405e90380914698e76d0/browser-test",
+            "last_seen": 1789084406.914064,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T"
+          }
+        },
+        "WorkSignal": {
+          "166ee55d562641639ab2e78eb5af6262": {
+            "execution_id": "d641eb674802405e90380914698e76d0/browser-test",
+            "id": "166ee55d562641639ab2e78eb5af6262",
+            "kind": "progress",
+            "summary": "Independent test Agent reached a public checkpoint"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "f313063896004146a840ca57baa86bf0",
+      "idempotency_key": "agent/d641eb674802405e90380914698e76d0/browser-test/progress",
+      "occurred_at": 1789084406.9145045,
+      "sequence": 13,
+      "simulation": true,
+      "type": "Progress"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "AG-d641eb674802405e90380914698e76d0",
+      "authority_source": "Human:H0/RepresentativeAgent:AG-d641eb674802405e90380914698e76d0/submit",
+      "causation_id": "agent/d641eb674802405e90380914698e76d0/browser-test/return",
+      "changes": {
+        "Execution": {
+          "d641eb674802405e90380914698e76d0/browser-test": {
+            "accountable_owner": "H0",
+            "claimed_at": 1789084406.890868,
+            "hau_id": "U0",
+            "id": "d641eb674802405e90380914698e76d0/browser-test",
+            "last_seen": 1789084406.9264061,
+            "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "submitted",
+            "task_id": "T"
+          }
+        },
+        "Return": {
+          "d641eb674802405e90380914698e76d0/browser-test/return": {
+            "execution_id": "d641eb674802405e90380914698e76d0/browser-test",
+            "human_annotations": [],
+            "id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "major_execution_facts": "Agent used authenticated claim, ACK and progress interfaces",
+            "observed_terrain": "Isolated local HTTP lab",
+            "outcome": "success",
+            "reflection": "No real Human or business outcome is claimed",
+            "result": "Synthetic deterministic Agent output"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "1b5e8aba094b493083619772df398361",
+      "idempotency_key": "agent/d641eb674802405e90380914698e76d0/browser-test/return",
+      "occurred_at": 1789084406.9268365,
+      "sequence": 14,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/ab9e8fda-fea5-4ce7-a589-8355a2666b17",
+      "changes": {
+        "Review": {
+          "0d2d0a9d-71dd-4a31-b1c7-762af336802f": {
+            "credible": true,
+            "evidence": "Synthetic browser test: four Return fields and trace observed.",
+            "id": "0d2d0a9d-71dd-4a31-b1c7-762af336802f",
+            "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "reviewer": "H1"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "d39df4ae7a1a4dd9a0c9bdaef304c37d",
+      "idempotency_key": "human-web/ab9e8fda-fea5-4ce7-a589-8355a2666b17",
+      "occurred_at": 1789084407.0079305,
+      "sequence": 15,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "human-web/53df0e99-f60d-496f-b5a5-5a65f9dce28d",
+      "changes": {
+        "Acceptance": {
+          "4304d78b-15e6-48c0-8867-ff247d42d496": {
+            "accepted": true,
+            "acceptor": "H0",
+            "id": "4304d78b-15e6-48c0-8867-ff247d42d496",
+            "rationale": "Synthetic protocol acceptance only; no real business claim.",
+            "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "review_id": "0d2d0a9d-71dd-4a31-b1c7-762af336802f"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "9667517281314d6abf92a546dc4134bf",
+      "idempotency_key": "human-web/53df0e99-f60d-496f-b5a5-5a65f9dce28d",
+      "occurred_at": 1789084407.066444,
+      "sequence": 16,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H0",
+      "authority_source": "Human:H0",
+      "causation_id": "human-web/53df0e99-f60d-496f-b5a5-5a65f9dce28d",
+      "changes": {
+        "Execution": {
+          "d641eb674802405e90380914698e76d0/browser-test": {
+            "accountable_owner": "H0",
+            "claimed_at": 1789084406.890868,
+            "hau_id": "U0",
+            "id": "d641eb674802405e90380914698e76d0/browser-test",
+            "last_seen": 1789084407.0663755,
+            "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "292c44d7f7524d9f888509dcfd60c09a",
+      "idempotency_key": "human-web/53df0e99-f60d-496f-b5a5-5a65f9dce28d",
+      "occurred_at": 1789084407.0664842,
+      "sequence": 17,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H0",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/c8b3b120-9f51-4f91-9749-caa21de1db93",
+      "changes": {
+        "Selection": {
+          "9fb74b5a-502c-42a4-a960-fa504f22c0ca": {
+            "id": "9fb74b5a-502c-42a4-a960-fa504f22c0ca",
+            "rationale": "Select sole accepted synthetic test result.",
+            "return_id": "d641eb674802405e90380914698e76d0/browser-test/return",
+            "selector": "H2",
+            "task_id": "T"
+          }
+        },
+        "Task": {
+          "T": {
+            "acceptance_authority": "H0",
+            "acceptance_criteria": "Explain registration, authorization and Return boundaries",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Suggest three local Agent registration checks",
+            "id": "T",
+            "primary_goal": "G",
+            "review_authority": "H1",
+            "selection_authority": "H2",
+            "status": "closed"
+          }
+        }
+      },
+      "correlation_id": "T",
+      "id": "21fe1843a8224be1b60052ef6dc1367f",
+      "idempotency_key": "human-web/c8b3b120-9f51-4f91-9749-caa21de1db93",
+      "occurred_at": 1789084407.1145298,
+      "sequence": 18,
+      "simulation": true,
+      "type": "ResultSelected"
+    }
+  ]
+}

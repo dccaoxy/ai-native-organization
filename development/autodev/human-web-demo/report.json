@@ -1,0 +1,11 @@
+{
+  "verdict": "PASS",
+  "browser": "msedge",
+  "independent_agent_process": true,
+  "synthetic_human_controls": true,
+  "real_human_participants": 0,
+  "model_called": false,
+  "event_count": 18,
+  "task_closed": true,
+  "credential_leak_in_evidence": false
+}

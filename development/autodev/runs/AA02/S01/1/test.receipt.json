@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-q"
+  ],
+  "source_digest": "7e105bb4f93090d0601eb946eb38619d5ea7343876cc90ed6828aa31a78e6a7b",
+  "started": 1789084421.6038406,
+  "finished": 1789084472.5280495
+}

@@ -1,0 +1,46 @@
+const {chromium}=require('playwright');
+const {spawnSync}=require('child_process');
+const path=require('path');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:process.env.LAB_BROWSER_CHANNEL||undefined});
+ try{
+ const page=await browser.newPage({viewport:{width:1400,height:1000}});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(process.env.LAB_URL);
+ await page.locator('#key').fill(process.env.LAB_KEY);
+ await page.getByRole('button',{name:'连接',exact:true}).click();
+ await page.locator('#workspace').waitFor({state:'visible'});
+ await page.getByLabel('HAU 编号（绑定当前 Human）').fill('U0');
+ await page.getByLabel('允许的 Task 编号（逗号分隔）').fill('T');
+ for(const name of ['claim','ack','progress','submit'])await page.getByLabel(name,{exact:true}).check();
+ await page.getByRole('button',{name:'批准注册'}).click();
+ await page.getByRole('button',{name:'撤销授权'}).waitFor();
+ const run=spawnSync(process.env.LAB_PYTHON,['-m','organization.agent_client','run','--url',process.env.LAB_URL,'--identity',process.env.LAB_IDENTITY,'--task','T','--run-id','browser-test'],{encoding:'utf8'});
+ if(run.status!==0)throw Error('Independent Agent command failed');
+ await page.getByRole('button',{name:'刷新状态'}).click();
+ await page.getByRole('button',{name:'记录 Review',exact:true}).waitFor();
+ if(await page.getByRole('button',{name:'记录 Review',exact:true}).isEnabled())throw Error('Wrong Human can review');
+ await page.locator('#actor').selectOption('H1');
+ await page.getByLabel('1 · Review：结果可信度').selectOption('true');
+ await page.getByLabel('审查证据（必填）').fill('Synthetic browser test: four Return fields and trace observed.');
+ await page.getByRole('button',{name:'记录 Review',exact:true}).click();
+ await page.getByRole('button',{name:'记录 Acceptance'}).waitFor();
+ await page.locator('#actor').selectOption('H0');
+ await page.getByLabel('2 · Acceptance：是否符合任务标准').selectOption('true');
+ await page.getByLabel('验收理由（必填）').fill('Synthetic protocol acceptance only; no real business claim.');
+ await page.getByRole('button',{name:'记录 Acceptance'}).click();
+ await page.getByRole('button',{name:'选择采用此结果'}).waitFor();
+ await page.locator('#actor').selectOption('H2');
+ await page.getByLabel('3 · Selection：选择此结果的理由').fill('Select sole accepted synthetic test result.');
+ await page.getByRole('button',{name:'选择采用此结果'}).click();
+ await page.getByText('3 · Selection 已记录',{exact:true}).waitFor();
+ await page.screenshot({path:path.join(process.env.LAB_OUTPUT,'desktop.png'),fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile horizontal overflow');
+ await page.screenshot({path:path.join(process.env.LAB_OUTPUT,'mobile.png'),fullPage:true});
+ await page.getByRole('button',{name:'退出',exact:true}).click();
+ if(await page.locator('#workspace').isVisible())throw Error('Logout did not hide state');
+ if(await page.locator('#key').inputValue())throw Error('Key retained in input');
+ if(errors.length)throw Error(errors.join(';'));
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e.message);process.exit(1)});

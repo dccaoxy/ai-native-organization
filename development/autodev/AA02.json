@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "AA02",
+  "mission": "Local Human and Agent browser joint workspace",
+  "stages": [
+    {
+      "phase": 4,
+      "scope_maturity": "M0",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md",
+        "development/autodev/human-web-demo"
+      ],
+      "outputs": [
+        "organization/agent_gateway.py",
+        "organization/human_web",
+        "organization/human_demo.py",
+        "organization/human_web_test.cjs",
+        "tests/test_human_web.py"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_human_web.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_human_web",
+        "tests.test_agent_access"
+      ],
+      "review_tests": [
+        "tests.test_human_web",
+        "tests.test_agent_access"
+      ],
+      "principle_checks": [
+        {
+          "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+          "test": "tests.test_agent_access",
+          "source": "development/milestones/AA01_AGENT_ACCESS.md"
+        },
+        {
+          "id": "Human browser control requires separate authority and origin",
+          "test": "tests.test_human_web",
+          "source": "development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-q"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Human browser and independent Agent joint acceptance",
+      "dependencies": []
+    }
+  ]
+}

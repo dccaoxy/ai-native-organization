@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "7e105bb4f93090d0601eb946eb38619d5ea7343876cc90ed6828aa31a78e6a7b",
+  "started": 1789084484.8428497,
+  "finished": 1789084496.5024714,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Registration is not delegation; unique Human owner; no Agent Human-authority impersonation; formal Return and visible interruption",
+        "test": "tests.test_agent_access",
+        "source": "development/milestones/AA01_AGENT_ACCESS.md",
+        "passed": true
+      },
+      {
+        "id": "Human browser control requires separate authority and origin",
+        "test": "tests.test_human_web",
+        "source": "development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "7e105bb4f93090d0601eb946eb38619d5ea7343876cc90ed6828aa31a78e6a7b",
+    "nonce": "c5bc2ab1a93143908e0ea96256170b3b",
+    "coverage": "AA02 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

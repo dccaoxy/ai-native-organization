@@ -1,6 +1,6 @@
 """Loopback-only, single-process authenticated Agent lab, on its own database.
 
-No legacy simulated-Human UI is served here. The separate operator credential
+The Human browser shell requires an independently supplied operator key. That credential
 represents test control authority, not production Human identity authentication.
 """
 import argparse
@@ -79,6 +79,8 @@ class Gateway:
             if path.startswith('/control/'):
                 if not self.operator(token):
                     raise DomainError('Operator credential required', 401)
+                if path == '/control/events' and method == 'GET':
+                    return {'events':self.org.store.events()}
                 if path == '/control/state' and method == 'GET':
                     return {'state':self.org.store.state()}
                 if path == '/control/commands' and method == 'POST':
@@ -135,13 +137,32 @@ def server(path, operator_token, port=0, clock=None):
             self.send_header('Content-Type','application/json; charset=utf-8')
             self.send_header('Content-Length',str(len(data)))
             self.send_header('Cache-Control','no-store')
+            self.send_header('X-Content-Type-Options','nosniff')
+            self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
             self.end_headers()
             self.wfile.write(data)
 
         def handle_request(self):
             try:
-                if self.headers.get('Host') not in (f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}') or self.headers.get('Origin'):
+                if self.headers.get('Host') not in (f'127.0.0.1:{self.server.server_port}', f'localhost:{self.server.server_port}'):
                     raise DomainError('Only direct loopback clients permitted', 403)
+                origin = self.headers.get('Origin')
+                # Only the control API accepts same-origin browser requests.
+                if origin and (not self.path.startswith('/control/') or origin != 'http://' + self.headers.get('Host','')):
+                    raise DomainError('Cross-origin request denied', 403)
+                assets = {'/':'index.html', '/human.js':'human.js', '/human.css':'human.css'}
+                if self.command == 'GET' and self.path in assets:
+                    filename = assets[self.path]
+                    payload = (Path(__file__).parent / 'human_web' / filename).read_bytes()
+                    self.send_response(200)
+                    self.send_header('Content-Type', {'html':'text/html; charset=utf-8','js':'text/javascript; charset=utf-8','css':'text/css; charset=utf-8'}[filename.rsplit('.',1)[1]])
+                    self.send_header('Content-Length',str(len(payload)))
+                    self.send_header('Cache-Control','no-store')
+                    self.send_header('X-Content-Type-Options','nosniff')
+                    self.send_header('Content-Security-Policy', "default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'")
+                    self.end_headers()
+                    self.wfile.write(payload)
+                    return
                 auth = self.headers.get('Authorization','')
                 if not auth.startswith('Bearer '):
                     raise DomainError('Bearer credential required', 401)
