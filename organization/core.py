@@ -51,6 +51,12 @@ class Session:
             raise DomainError('Agent not active or outside explicit delegation', 403)
         return 'Human:' + owner + '/RepresentativeAgent:' + agent['id'] + '/' + action
 
+    def attach(self, kind, obj):
+        """Additional changed object belonging to the same formal fact/event."""
+        validate(kind, obj)
+        self.state.setdefault(kind, {})[obj['id']] = copy.deepcopy(obj)
+        self.emitted[-1]['changes'].setdefault(kind, {})[obj['id']] = copy.deepcopy(obj)
+
     def executor(self, execution, action):
         hau = self.get('HAU', execution['hau_id'])
         if hau['human_id'] != execution['accountable_owner']:

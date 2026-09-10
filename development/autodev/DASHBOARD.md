@@ -9,7 +9,7 @@
 | S02 Reality Foundation | PASS | autodev/M01/S02/v1 |
 | S03 Goal + Task + Execution Core | PASS | autodev/M01/S03/v1 |
 | S04 HAU + Representative Agent + Runtime | PASS | autodev/M01/S04/v2 |
-| S05 Free Work Space + Progress + Boundary/Escalation | BLOCKED_ENGINEERING |  |
+| S05 Free Work Space + Progress + Boundary/Escalation | CHECKPOINT_PENDING | autodev/M01/S05/v1 |
 | S06 Return + Review + Acceptance + Selection | PENDING |  |
 | S07 End-to-End Integration | PENDING |  |
 | S08 Simulation + Audit + Final Acceptance Package | PENDING |  |

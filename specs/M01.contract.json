@@ -305,6 +305,20 @@
       "changes": {
         "type": "object"
       }
+    },
+    "WorkSignal": {
+      "id": {
+        "type": "string"
+      },
+      "execution_id": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      }
     }
   },
   "state_machines": {
@@ -508,5 +522,6 @@
     "Human Pilot evidence",
     "Agent intelligence",
     "Private work capture"
-  ]
+  ],
+  "engineering_revision": 2
 }

@@ -1,0 +1,15 @@
+test_boundary_approval_changes_only_one_attempt (tests.test_work_review.WorkReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_cannot_repeat_boundary_decision_or_cross_accountability (tests.test_work_review.WorkReview.test_cannot_repeat_boundary_decision_or_cross_accountability) ... ok
+test_no_agent_or_wrong_human_can_expand_boundary (tests.test_work_review.WorkReview.test_no_agent_or_wrong_human_can_expand_boundary) ... ok
+test_private_workspace_not_required_or_collected (tests.test_work_review.WorkReview.test_private_workspace_not_required_or_collected) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work_review.WorkReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work_review.WorkReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_work.WorkTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work.WorkTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work.WorkTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.876s
+
+OK
+
