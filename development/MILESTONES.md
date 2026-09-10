@@ -7,7 +7,7 @@
 | M00 — Design Handoff | P0 / Phase 0 | Complete | 冻结设计、文档与视觉语义可被新开发者接续 |
 | AD00 — Autonomous Development Runtime | Cross-phase through Phase 8 | **Harness + local Codex smoke PASS / Cloud host pending** | 持久状态、独立校验、恢复、检查点及真实模型提案验证 |
 | M01 — Minimum Organization | P0 / Phase 2–3 | **Complete — M0 simulation engineering; delivery verified** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
-| M02 — Synthetic Organization | P1 / Phase 4 | Local S01/S02 PASS; S03 pending; not pushed/deployed | 10 HAU / 3 Goal / 30 Task / 60 Execution；531 事件及并发/恢复测试 |
+| M02 — Synthetic Organization | P1 / Phase 4 | Local S01–S04 PASS within declared coverage; not pushed/deployed | 60 Execution / 536 事件；Goal Challenge、并发/恢复与本机工作台验证；见 M02_ACCEPTANCE |
 | M03 — Learning Organization | P1 / Phase 5 | Planned | Execution → Evidence → Knowledge → Capability 可追溯闭环 |
 | M04 — Human Pilot | P2 / Phase 6 | Planned | 5–10 人、2–4 Cycle 的真实行为基线 |
 | M05 — Value & Culture | P2 / Phase 7 | Planned | Contribution → Reward / Honor 的可验证机制 |

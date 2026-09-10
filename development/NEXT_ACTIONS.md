@@ -11,8 +11,8 @@
 
 ## 后续工程
 
-3. M02 S01/S02 本地验收已通过（10 HAU / 3 Goal / 30 Task / 60 Execution，531 事件；并发/错误输入测试通过），完整套件 112 项通过。查看 `autodev/M02.state.json` 和本地标签，不将本地结果描述为已推送或已部署。
-4. 实现 M02 S03：先读冻结 Goal Specification/Mechanisms，再定义 `specs/M02.goal-challenge.json` 与明确的命令、事件及负面测试。保留 Human Goal Authority，不因 Challenge 静默改目的。补充能力缺口、脏数据与最终覆盖证据；当前 M02 不得标记完成。模型云端路线暂缓，既有 Actions 已暂停。
+3. M02 S01–S04 已本地 PASS；完整套件 122 项、整合场景 536 事件/16 断言通过，工作台 Goal Challenge 已浏览器验证。先读 `M02_ACCEPTANCE.md` 与明确的覆盖限制；不要将结果描述为已推送/已部署或完整 Goal 生命周期实现。
+4. 准备 M03/M1 Evidence → Knowledge → Capability 的工程规格，继续遵守冻结原则。保留 Goal 完整生命周期、重挂接与多 Goal 依赖图的显式后续项，不用 M02 局部实现冒充这些机制完成。模型云端路线暂缓，既有 Actions 已暂停。
 5. 再按 ROADMAP 进入 M1 Learning；不能以 M01 的测试通过代替真实组织学习或文化效果证据。
 
 ## Human 决策包

@@ -5,18 +5,19 @@
 最新授权：仅本地开发与隔离服务器测试，正式推送和部署需用户逐次确认；不改 AEGPC.CN 现有项目/服务。相关本地变更尚未推送。原自动写回 Actions 已暂停（API 核验 disabled_manually、无进行中任务），因此下述定时运行描述仅代表已实现能力，不代表当前正在运行。当前不采购海外实例。
 
 当前工程成果：**AD00 AutoDev v0 已跑通；M01 S01–S08 工程验收 PASS。**
-当前 Stage：**M02 S03 — Goal Challenge and final acceptance（工程待实现）**。
-本地进展：M02 S01、S02 均通过独立进程 Test/Review/Audit，生成本地 commit/tag/artifact；尚未推送，未部署。
-范围：Phase 4 / M0 合成稳健性验证；M02 尚未完成，真实实验尚未开始。
+当前 Stage：**M02 S04 — Integrated acceptance（本地 PASS）**。
+本地进展：M02 S01–S04 已按声明范围完成合成工程验收，均生成本地 commit/tag/artifact；尚未推送，未部署。见 [M02 验收包](M02_ACCEPTANCE.md)。
+范围：Phase 4 / M0；不代表完整 Goal 生命周期、生产容量或真人实验已完成。
 
 ## M02 本地验收（尚未发布）
 
-- 10 HAU、3 Goal、30 Task、60 Execution；实际产生 531 条合成事件，13 项规模/恢复断言通过。
+- 10 HAU、3 Goal、30 Task、60 Execution；加入 Goal Challenge 后实际产生 536 条合成事件，16 项规模/恢复断言通过。531 条是 S01 历史运行。
 - 并发检查：8 个线程提交 20 个独立领取，Execution 与 Human owner 保持独立；24 次重复请求仅写入一次。冲突幂等键和跨 Task Selection 均被拒绝且不新增事件。
-- 完整本地套件 112 项执行通过。历史 M01 的证据与标签保留。
+- 完整本地套件 122 项执行通过。历史 M01 的证据与标签保留。
 - S01：`e940a5a` / `autodev/M02/S01/v1`；S02：`4bcc8cb` / `autodev/M02/S02/v1`。
-- 证据：`autodev/M02.state.json`、`autodev/runs/M02/`、`autodev/m02-scale/report.json`。S03 因尚无可执行 Goal Challenge 规格而停止；这是工程缺口，不要求用户批准修改冻结设计。
-- 下一步从 `10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md` 重建 Goal Challenge 契约；遵守“可 Challenge、不可静默改 Goal、Human 决定保持或改变”。
+- S03：`b48b68b` / `autodev/M02/S03/v1`；S04：`02b5d6c` / `autodev/M02/S04/v1`。证据：`autodev/M02.state.json`、`autodev/runs/M02/`、`autodev/m02-final/report.json`。
+- 本机工作台已实际验证质疑、Human 修改、v0→v1、差异/证据/影响记录。仅支持 Keep 与两个文本组件 Modify；完整生命周期/依赖图仍为后续工程。
+- 下一步准备 M03/M1 可追溯学习层规格。任何推送/部署仍先交付决策包并取得用户确认。
 
 ## 已完成及证据
 
