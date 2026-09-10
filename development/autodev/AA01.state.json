@@ -23,13 +23,14 @@
       "commit": "969bc1ab2ae8d4a5fab85682de8d84965fdde3b3"
     },
     "S03": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "6003364d25276a5d279a87370a7bfa55c24179f76dc4c8e54afa58fec50ca56a",
       "tag": "autodev/AA01/S03/v1",
       "artifact": "development/autodev/runs/AA01/S03/1/artifact.zip",
-      "artifact_sha256": "e7e3da471932832a7d12a2a31127c3b2aa12e989ebec3e90c05430f551a6eac0"
+      "artifact_sha256": "e7e3da471932832a7d12a2a31127c3b2aa12e989ebec3e90c05430f551a6eac0",
+      "commit": "02bd5d1b1d2c0ffb065d50cdf93007168dcc2a0f"
     }
   },
   "events": [
@@ -163,6 +164,13 @@
       "tag": "autodev/AA01/S03/v1",
       "artifact": "development/autodev/runs/AA01/S03/1/artifact.zip",
       "artifact_sha256": "e7e3da471932832a7d12a2a31127c3b2aa12e989ebec3e90c05430f551a6eac0"
+    },
+    {
+      "sequence": 18,
+      "stage": "S03",
+      "status": "PASS",
+      "time": 1789031252.1970792,
+      "commit": "02bd5d1b1d2c0ffb065d50cdf93007168dcc2a0f"
     }
   ]
 }
