@@ -62,3 +62,10 @@ class ScaleTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             scenario(self.org.execute, tasks=0)
         self.assertEqual(self.org.store.events(), [])
+
+    def test_goal_challenge_with_live_attempt_and_replay(self):
+        scenario(self.org.execute, tasks=3, with_goal_challenge=True)
+        events = self.org.store.events()
+        self.assertTrue(all(verify(self.org.store.state(), events, tasks=3, with_goal_challenge=True).values()))
+        scenario(self.org.execute, tasks=3, with_goal_challenge=True)
+        self.assertEqual(self.org.store.events(), events)

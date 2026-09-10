@@ -313,7 +313,11 @@
         "organization/core.py",
         "organization/identity.py",
         "organization/web",
-        "tests/test_goal_challenge.py"
+        "tests/test_goal_challenge.py",
+        "specs/M02.final-coverage.json",
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py",
+        "autodev/m02_acceptance.py"
       ],
       "scope": [
         "specs/M02.goal-challenge.json",
@@ -322,7 +326,11 @@
         "organization/core.py",
         "organization/identity.py",
         "organization/web",
-        "tests/test_goal_challenge.py"
+        "tests/test_goal_challenge.py",
+        "specs/M02.final-coverage.json",
+        "organization/scale_simulation.py",
+        "tests/test_scale_simulation.py",
+        "autodev/m02_acceptance.py"
       ],
       "model_write_paths": [
         "specs/M02.goal-challenge.json",
@@ -334,10 +342,10 @@
         "tests/test_goal_challenge.py"
       ],
       "exit_criteria": [
-        "Goal proposal/Keep/Modify tests and HTTP interface pass",
-        "Agent/foreign Human authority, stale version, invalid evidence and Boundary misuse rejected",
-        "Browser form shows unchanged Goal before decision and version/diff after decision",
-        "Local checkpoint only; M02 final acceptance remains separate"
+        "Full regression suite passes",
+        "Integrated 10 HAU / 3 Goal / 30 Task / 60 Execution scenario with Goal Challenge passes, including restart and exact replay",
+        "Independent configured negative review and baseline audit pass",
+        "Declared coverage limitations retained; local checkpoint only; no deployment"
       ],
       "tests": [
         "tests.test_goal_challenge",
@@ -347,13 +355,19 @@
         "tests.test_goal_challenge.GoalChallengeTests",
         "tests.test_contract_review",
         "tests.test_work_review",
-        "tests.test_returns_review"
+        "tests.test_returns_review",
+        "tests.test_scale_simulation"
       ],
       "principle_checks": [
         {
           "id": "Goal Challenge is not Goal mutation; Human-only decision; versioned evidence and retained downstream attempts",
           "test": "tests.test_goal_challenge",
           "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md"
+        },
+        {
+          "id": "Synthetic scale, concurrent execution ownership, idempotency and retained evidence",
+          "test": "tests.test_scale_simulation",
+          "source": "development/ROADMAP.md"
         }
       ],
       "human_gates": [
@@ -382,7 +396,7 @@
         "test": [
           "{python}",
           "-m",
-          "autodev.builder"
+          "autodev.m02_acceptance"
         ],
         "review": [
           "{python}",

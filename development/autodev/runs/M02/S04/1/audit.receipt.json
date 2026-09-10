@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "c953181fc0849b84c2c7fcb959a8a2b39b4bb1fbf6f74230f5533cb4ef8465f5",
+  "started": 1789029926.0585015,
+  "finished": 1789029936.6145873,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Goal Challenge is not Goal mutation; Human-only decision; versioned evidence and retained downstream attempts",
+        "test": "tests.test_goal_challenge",
+        "source": "10 组织协议/Operating Model v0.1/01 Goal/01 Specification.md",
+        "passed": true
+      },
+      {
+        "id": "Synthetic scale, concurrent execution ownership, idempotency and retained evidence",
+        "test": "tests.test_scale_simulation",
+        "source": "development/ROADMAP.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "c953181fc0849b84c2c7fcb959a8a2b39b4bb1fbf6f74230f5533cb4ef8465f5",
+    "nonce": "e81762dd498349d5a6ed1f5270f9a82b",
+    "coverage": "M02 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

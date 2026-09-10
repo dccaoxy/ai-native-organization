@@ -33,11 +33,13 @@
       "commit": "b48b68be930cc531a73c48b708981fd85dab75f4"
     },
     "S04": {
-      "status": "BLOCKED_ENGINEERING",
-      "reason": "Missing engineering inputs",
-      "missing": [
-        "specs/M02.final-coverage.json"
-      ]
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "c953181fc0849b84c2c7fcb959a8a2b39b4bb1fbf6f74230f5533cb4ef8465f5",
+      "tag": "autodev/M02/S04/v1",
+      "artifact": "development/autodev/runs/M02/S04/1/artifact.zip",
+      "artifact_sha256": "9008bb8fb673585296570c20391d49834bad08dcedd7793defd9ef1131b170c4"
     }
   },
   "events": [
@@ -198,6 +200,45 @@
       "missing": [
         "specs/M02.final-coverage.json"
       ]
+    },
+    {
+      "sequence": 21,
+      "stage": "S04",
+      "status": "BUILD",
+      "time": 1789029857.5529563,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 22,
+      "stage": "S04",
+      "status": "TEST",
+      "time": 1789029857.6737332,
+      "attempt": 1
+    },
+    {
+      "sequence": 23,
+      "stage": "S04",
+      "status": "REVIEW",
+      "time": 1789029912.2193503,
+      "attempt": 1
+    },
+    {
+      "sequence": 24,
+      "stage": "S04",
+      "status": "AUDIT",
+      "time": 1789029926.0559285,
+      "attempt": 1
+    },
+    {
+      "sequence": 25,
+      "stage": "S04",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789029937.202983,
+      "source_digest": "c953181fc0849b84c2c7fcb959a8a2b39b4bb1fbf6f74230f5533cb4ef8465f5",
+      "tag": "autodev/M02/S04/v1",
+      "artifact": "development/autodev/runs/M02/S04/1/artifact.zip",
+      "artifact_sha256": "9008bb8fb673585296570c20391d49834bad08dcedd7793defd9ef1131b170c4"
     }
   ]
 }

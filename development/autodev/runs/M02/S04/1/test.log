@@ -1,0 +1,13 @@
+{'kind': 'synthetic software execution only', 'verdict': 'PASS', 'real_human_participants': 0, 'checks': {'population': True, 'all_attempts_formally_closed': True, 'owner_matches_hau': True, 'two_distinct_attempts_per_task': True, 'review_acceptance_selection_separate': True, 'failure_not_accepted': True, 'selection_retains_alternatives': True, 'event_replay_equals_state': True, 'simulation_labels': True, 'continuous_event_sequence': True, 'boundary_and_interruption_observable': True, 'human_goal_decision_versioned': True, 'impact_only_live_primary_goal_branch': True, 'challenge_does_not_lose_attempts': True, 'restart_state_preserved': True, 'full_command_replay_idempotent': True}, 'object_counts': {'Human': 10, 'RepresentativeAgent': 10, 'HAU': 10, 'Goal': 3, 'Task': 30, 'Execution': 60, 'Return': 60, 'Review': 60, 'Acceptance': 60, 'GoalChallenge': 2, 'GoalDecision': 2, 'Selection': 30, 'WorkSignal': 18, 'BoundaryRequest': 6, 'GoalRevision': 1}, 'event_count': 536, 'elapsed_seconds': 9.848, 'limitations': ['Sequential command load with overlapping attempts, not simultaneous worker load', 'Goal Challenge covers Keep and textual component Modify only; full lifecycle and dependency graph are not implemented', 'Not Human Pilot or production capacity certification']}
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 400: 'Bad Request'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 409: 'Conflict'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+----------------------------------------------------------------------
+Ran 122 tests in 44.360s
+
+OK

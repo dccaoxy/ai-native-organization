@@ -9,7 +9,7 @@ from organization.identity import DELEGABLE
 from organization.store import Store
 
 
-def scenario(send, tasks=30):
+def scenario(send, tasks=30, with_goal_challenge=False):
     if not isinstance(tasks, int) or not 1 <= tasks <= 30:
         raise ValueError("Fixture task count must be 1..30")
     def call(actor, command, data, key):
@@ -31,6 +31,11 @@ def scenario(send, tasks=30):
         for branch in range(2):
             n = (t * 2 + branch) % 10
             eid, rid = f"E{t}-{branch}", f"R{t}-{branch}"
+            if with_goal_challenge and branch == 1 and t in (0, min(15, tasks - 1)):
+                outcome = 'modify' if t == min(15, tasks - 1) else 'keep'
+                qid = f'Q{t}'
+                call('H1', 'challenge_goal', {'id': qid, 'goal_id': f'G{t % 3}', 'component': 'success_criteria', 'proposed_value': 'Traceable attempts plus restart evidence', 'evidence': 'Synthetic progress exposed a criterion gap', 'reason': 'Inspect smallest meaningful component', 'expected_revision': 0}, qid)
+                call('H0', 'decide_goal_challenge', {'id': 'D'+qid, 'challenge_id': qid, 'decision': outcome, 'expected_revision': 0, 'reason': 'Synthetic Human authority judgment', 'evidence': 'Inspected synthetic work evidence'}, 'D'+qid)
             if branch == 1 and t % 5 == 1:
                 call(f"A{n}", "blocked", {"execution_id": eid, "summary": "Synthetic capability/scope gap"}, eid + "-blocked")
                 call(f"A{n}", "request_boundary", {"id": "B" + eid, "execution_id": eid, "requested_scope": ["read", "draft"], "reason": "Explicit draft authorization needed"}, eid + "-boundary")
@@ -48,7 +53,7 @@ def scenario(send, tasks=30):
         call("H9", "select", {"id": "SEL" + tid, "task_id": tid, "return_id": f"R{t}-0", "rationale": "Select one accepted candidate; retain both attempts"}, "SEL" + tid)
 
 
-def verify(state, events, tasks=30):
+def verify(state, events, tasks=30, with_goal_challenge=False):
     executions, returns = state["Execution"], state["Return"]
     checks = {
         "population": len(state["HAU"]) == 10 and len(state["Goal"]) == 3 and len(state["Task"]) == tasks and len(executions) == tasks * 2,
@@ -65,6 +70,12 @@ def verify(state, events, tasks=30):
     if tasks >= 3:
         types = {e["type"] for e in events}
         checks["boundary_and_interruption_observable"] = {"BoundaryApproved", "ExecutionInterrupted", "ExecutionFailed"}.issubset(types)
+    if with_goal_challenge:
+        t = min(15, tasks - 1)
+        change = state['GoalRevision'][f'DQ{t}/revision']
+        checks['human_goal_decision_versioned'] = change['version'] == 1 and change['before']['success_criteria'] != change['after']['success_criteria']
+        checks['impact_only_live_primary_goal_branch'] = change['affected_tasks'] == [f'T{t}'] and change['affected_executions'] == [f'E{t}-1']
+        checks['challenge_does_not_lose_attempts'] = len(executions) == tasks * 2 and len(returns) == tasks * 2
     if not all(checks.values()):
         raise AssertionError(checks)
     return checks
@@ -73,24 +84,25 @@ def verify(state, events, tasks=30):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", default=".autodev/m02-scale")
+    parser.add_argument("--with-goal-challenge", action='store_true')
     args = parser.parse_args()
     start = time.monotonic()
     with tempfile.TemporaryDirectory() as temp:
         path = Path(temp) / "scale.sqlite3"
         org = Organization(path)
-        scenario(org.execute)
+        scenario(org.execute, with_goal_challenge=args.with_goal_challenge)
         state, events = org.store.state(), org.store.events()
-        checks = verify(state, events)
+        checks = verify(state, events, with_goal_challenge=args.with_goal_challenge)
         reopened = Organization(path)
         checks["restart_state_preserved"] = reopened.store.state() == state
-        scenario(reopened.execute)
+        scenario(reopened.execute, with_goal_challenge=args.with_goal_challenge)
         checks["full_command_replay_idempotent"] = reopened.store.events() == events
         assert all(checks.values())
         output = Path(args.output)
         report = {"kind": "synthetic software execution only", "verdict": "PASS", "real_human_participants": 0,
                   "checks": checks, "object_counts": {k: len(v) for k, v in state.items()},
                   "event_count": len(events), "elapsed_seconds": round(time.monotonic() - start, 3),
-                  "limitations": ["Sequential command load with overlapping attempts, not simultaneous worker load", "Goal Challenge remains unspecified and unimplemented", "Not Phase 4 final acceptance or production capacity certification"]}
+                  "limitations": ["Sequential command load with overlapping attempts, not simultaneous worker load", "Goal Challenge covers Keep and textual component Modify only; full lifecycle and dependency graph are not implemented", "Not Human Pilot or production capacity certification"]}
         write(output / "report.json", report)
         write(output / "events.json", {"simulation": True, "events": events})
         write(output / "state.json", {"simulation": True, "state": state})

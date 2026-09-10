@@ -1,0 +1,70 @@
+test_agent_and_foreign_human_cannot_decide (tests.test_goal_challenge.GoalChallengeTests.test_agent_and_foreign_human_cannot_decide) ... ok
+test_boundary_authority_not_inferred_from_goal_owner (tests.test_goal_challenge.GoalChallengeTests.test_boundary_authority_not_inferred_from_goal_owner) ... ok
+test_challenge_does_not_mutate_goal_or_pause_any_work (tests.test_goal_challenge.GoalChallengeTests.test_challenge_does_not_mutate_goal_or_pause_any_work) ... ok
+test_human_modify_versions_diff_impacts_and_replay (tests.test_goal_challenge.GoalChallengeTests.test_human_modify_versions_diff_impacts_and_replay) ... ok
+test_invalid_evidence_rolls_back_entire_decision (tests.test_goal_challenge.GoalChallengeTests.test_invalid_evidence_rolls_back_entire_decision) ... ok
+test_keep_closes_challenge_without_revision (tests.test_goal_challenge.GoalChallengeTests.test_keep_closes_challenge_without_revision) ... ok
+test_offline_agent_cannot_challenge (tests.test_goal_challenge.GoalChallengeTests.test_offline_agent_cannot_challenge) ... ok
+test_stale_competing_challenge_and_double_decision_rejected (tests.test_goal_challenge.GoalChallengeTests.test_stale_competing_challenge_and_double_decision_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.965s
+
+OK
+
+test_decisions_and_returns_cannot_be_collapsed (tests.test_contract_review.ContractReview.test_decisions_and_returns_cannot_be_collapsed) ... ok
+test_private_thought_and_ambiguous_human_rejected (tests.test_contract_review.ContractReview.test_private_thought_and_ambiguous_human_rejected) ... ok
+test_task_cannot_swallow_attempt_or_accountability (tests.test_contract_review.ContractReview.test_task_cannot_swallow_attempt_or_accountability) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+test_boundary_approval_changes_only_one_attempt (tests.test_work_review.WorkReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_cannot_repeat_boundary_decision_or_cross_accountability (tests.test_work_review.WorkReview.test_cannot_repeat_boundary_decision_or_cross_accountability) ... ok
+test_no_agent_or_wrong_human_can_expand_boundary (tests.test_work_review.WorkReview.test_no_agent_or_wrong_human_can_expand_boundary) ... ok
+test_private_workspace_not_required_or_collected (tests.test_work_review.WorkReview.test_private_workspace_not_required_or_collected) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work_review.WorkReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work_review.WorkReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_work.WorkTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_work.WorkTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_work.WorkTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.890s
+
+OK
+
+test_annotations_cannot_silently_change_reviewed_facts (tests.test_returns_review.ReturnReview.test_annotations_cannot_silently_change_reviewed_facts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns_review.ReturnReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failed_untrusted_and_cross_result_acceptance_rejected (tests.test_returns_review.ReturnReview.test_failed_untrusted_and_cross_result_acceptance_rejected) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns_review.ReturnReview.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_no_failure_without_return_and_no_duplicate_return (tests.test_returns_review.ReturnReview.test_no_failure_without_return_and_no_duplicate_return) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns_review.ReturnReview.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns_review.ReturnReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_review_does_not_imply_acceptance_or_selection (tests.test_returns_review.ReturnReview.test_review_does_not_imply_acceptance_or_selection) ... ok
+test_three_claims_are_three_attempts (tests.test_returns_review.ReturnReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns.ReturnTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns.ReturnTests.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns.ReturnTests.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns.ReturnTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_returns.ReturnTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.739s
+
+OK
+
+test_fixture_parameters_fail_early (tests.test_scale_simulation.ScaleTests.test_fixture_parameters_fail_early) ... ok
+test_goal_challenge_with_live_attempt_and_replay (tests.test_scale_simulation.ScaleTests.test_goal_challenge_with_live_attempt_and_replay) ... ok
+test_rejected_cross_task_selection_adds_no_event (tests.test_scale_simulation.ScaleTests.test_rejected_cross_task_selection_adds_no_event) ... ok
+test_scaled_paths_reopen_and_replay (tests.test_scale_simulation.ScaleTests.test_scaled_paths_reopen_and_replay) ... ok
+test_simultaneous_claims_preserve_separate_execution_owners (tests.test_scale_simulation.ScaleTests.test_simultaneous_claims_preserve_separate_execution_owners) ... ok
+test_simultaneous_duplicate_receipts_are_exactly_once (tests.test_scale_simulation.ScaleTests.test_simultaneous_duplicate_receipts_are_exactly_once) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.583s
+
+OK
+

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Phase 4 synthetic engineering acceptance; no real Human/business conclusions",
+  "population": {
+    "HAU": 10,
+    "Goal": 3,
+    "Task": 30,
+    "Execution": 60
+  },
+  "coverage": {
+    "success_failure_formal_returns": "organization.scale_simulation --with-goal-challenge",
+    "boundary_capability_gap": "explicit synthetic blocked/scope-gap with authorized extension; not a learned capability system",
+    "parallel_execution": "tests.test_scale_simulation.ScaleTests.test_simultaneous_claims_preserve_separate_execution_owners",
+    "dirty_input": "tests.test_goal_challenge and tests.test_scale_simulation negative cases",
+    "runtime_interruption": "scale simulation offline takeover; M01 timeout/silent-failure tests retained",
+    "goal_challenge": "Keep and component Modify with Human Authority, version/diff/evidence and direct affected branch",
+    "durability": "database reopen, event replay and repeated command idempotency"
+  },
+  "excluded": [
+    "Goal Pause/Achieve/Terminate/Supersede lifecycle and reparenting",
+    "Complete multi-goal dependency graph or impact-resolution workflow",
+    "M1 learned capabilities",
+    "Real production load guarantee, authentication, deployment or Human Pilot"
+  ],
+  "release_requires_user_confirmation": true
+}

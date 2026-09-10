@@ -1,0 +1,14 @@
+{
+  "kind": "actual local browser interaction with synthetic fixture",
+  "url": "http://127.0.0.1:8876/",
+  "verified": [
+    "seed UI",
+    "challenge form submitted",
+    "Goal remained v0 before decision",
+    "Human modify form submitted",
+    "Goal v1 and diff/evidence/impact displayed",
+    "visual layout inspected"
+  ],
+  "persistent_state_readback": true,
+  "real_human_participants": 0
+}
