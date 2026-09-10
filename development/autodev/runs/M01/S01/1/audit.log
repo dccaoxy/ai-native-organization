@@ -1,0 +1,9 @@
+test_decisions_and_returns_cannot_be_collapsed (tests.test_contract_review.ContractReview.test_decisions_and_returns_cannot_be_collapsed) ... ok
+test_private_thought_and_ambiguous_human_rejected (tests.test_contract_review.ContractReview.test_private_thought_and_ambiguous_human_rejected) ... ok
+test_task_cannot_swallow_attempt_or_accountability (tests.test_contract_review.ContractReview.test_task_cannot_swallow_attempt_or_accountability) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+

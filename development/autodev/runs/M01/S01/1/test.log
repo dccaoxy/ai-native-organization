@@ -1,0 +1,8 @@
+test_all_core_objects_have_concrete_fields (tests.test_contract.ContractTests.test_all_core_objects_have_concrete_fields) ... ok
+test_event_envelope_and_state_transitions (tests.test_contract.ContractTests.test_event_envelope_and_state_transitions) ... ok
+test_inputs_and_parameters_are_explicit (tests.test_contract.ContractTests.test_inputs_and_parameters_are_explicit) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

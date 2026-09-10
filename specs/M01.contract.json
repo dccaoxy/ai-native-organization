@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "classification": "engineering contract under frozen design; not new L1/L2",
+  "objects": {
+    "Human": {
+      "id": {
+        "type": "string"
+      },
+      "display_name": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string",
+        "enum": [
+          "human"
+        ]
+      }
+    },
+    "HAU": {
+      "id": {
+        "type": "string"
+      },
+      "human_id": {
+        "type": "string"
+      },
+      "agent_id": {
+        "type": "string"
+      }
+    },
+    "RepresentativeAgent": {
+      "id": {
+        "type": "string"
+      },
+      "human_id": {
+        "type": "string"
+      },
+      "hau_id": {
+        "type": "string"
+      },
+      "active": {
+        "type": "boolean"
+      },
+      "permissions": {
+        "type": "strings"
+      },
+      "runtime_status": {
+        "type": "string",
+        "enum": [
+          "online",
+          "offline"
+        ]
+      }
+    },
+    "Goal": {
+      "id": {
+        "type": "string"
+      },
+      "desired_change": {
+        "type": "string"
+      },
+      "success_criteria": {
+        "type": "string"
+      },
+      "boundary": {
+        "type": "strings"
+      },
+      "goal_authority": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "active",
+          "paused",
+          "closed"
+        ]
+      }
+    },
+    "Task": {
+      "id": {
+        "type": "string"
+      },
+      "primary_goal": {
+        "type": "string"
+      },
+      "expected_output": {
+        "type": "string"
+      },
+      "acceptance_criteria": {
+        "type": "string"
+      },
+      "boundary": {
+        "type": "strings"
+      },
+      "execution_mode": {
+        "type": "string",
+        "enum": [
+          "parallel",
+          "competitive",
+          "collaborative"
+        ]
+      },
+      "review_authority": {
+        "type": "string"
+      },
+      "acceptance_authority": {
+        "type": "string"
+      },
+      "selection_authority": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "draft",
+          "published",
+          "closed"
+        ]
+      }
+    },
+    "Execution": {
+      "id": {
+        "type": "string"
+      },
+      "task_id": {
+        "type": "string"
+      },
+      "hau_id": {
+        "type": "string"
+      },
+      "accountable_owner": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "claimed",
+          "running",
+          "blocked",
+          "submitted",
+          "failed",
+          "released",
+          "closed",
+          "interrupted"
+        ]
+      },
+      "runtime_boundary": {
+        "type": "strings"
+      },
+      "claimed_at": {
+        "type": "number"
+      },
+      "last_seen": {
+        "type": "number"
+      },
+      "return_id": {
+        "type": "string"
+      }
+    },
+    "BoundaryRequest": {
+      "id": {
+        "type": "string"
+      },
+      "execution_id": {
+        "type": "string"
+      },
+      "requested_scope": {
+        "type": "strings"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "authority": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "approved",
+          "rejected",
+          "modified"
+        ]
+      }
+    },
+    "Return": {
+      "id": {
+        "type": "string"
+      },
+      "execution_id": {
+        "type": "string"
+      },
+      "outcome": {
+        "type": "string",
+        "enum": [
+          "success",
+          "failure",
+          "released"
+        ]
+      },
+      "result": {
+        "type": "string"
+      },
+      "observed_terrain": {
+        "type": "string"
+      },
+      "major_execution_facts": {
+        "type": "string"
+      },
+      "reflection": {
+        "type": "string"
+      },
+      "human_annotations": {
+        "type": "strings"
+      }
+    },
+    "Review": {
+      "id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "reviewer": {
+        "type": "string"
+      },
+      "credible": {
+        "type": "boolean"
+      },
+      "evidence": {
+        "type": "string"
+      }
+    },
+    "Acceptance": {
+      "id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "review_id": {
+        "type": "string"
+      },
+      "acceptor": {
+        "type": "string"
+      },
+      "accepted": {
+        "type": "boolean"
+      },
+      "rationale": {
+        "type": "string"
+      }
+    },
+    "Selection": {
+      "id": {
+        "type": "string"
+      },
+      "task_id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "selector": {
+        "type": "string"
+      },
+      "rationale": {
+        "type": "string"
+      }
+    },
+    "OrganizationalEvent": {
+      "id": {
+        "type": "string"
+      },
+      "sequence": {
+        "type": "number"
+      },
+      "type": {
+        "type": "string"
+      },
+      "actor": {
+        "type": "string"
+      },
+      "authority_source": {
+        "type": "string"
+      },
+      "accountable_owner": {
+        "type": "string"
+      },
+      "correlation_id": {
+        "type": "string"
+      },
+      "causation_id": {
+        "type": "string"
+      },
+      "idempotency_key": {
+        "type": "string"
+      },
+      "occurred_at": {
+        "type": "number"
+      },
+      "simulation": {
+        "type": "boolean"
+      },
+      "changes": {
+        "type": "object"
+      }
+    }
+  },
+  "state_machines": {
+    "Task": {
+      "publish": {
+        "from": [
+          "draft"
+        ],
+        "to": "published"
+      },
+      "select": {
+        "from": [
+          "published"
+        ],
+        "to": "closed"
+      }
+    },
+    "Execution": {
+      "ack": {
+        "from": [
+          "claimed"
+        ],
+        "to": "running"
+      },
+      "progress": {
+        "from": [
+          "running"
+        ],
+        "to": "running"
+      },
+      "blocked": {
+        "from": [
+          "running"
+        ],
+        "to": "blocked"
+      },
+      "escalate": {
+        "from": [
+          "running",
+          "blocked",
+          "interrupted"
+        ],
+        "to": "blocked"
+      },
+      "resume": {
+        "from": [
+          "blocked",
+          "interrupted"
+        ],
+        "to": "running"
+      },
+      "submit": {
+        "from": [
+          "running",
+          "blocked",
+          "interrupted"
+        ],
+        "to": "submitted"
+      },
+      "fail": {
+        "from": [
+          "claimed",
+          "running",
+          "blocked",
+          "interrupted"
+        ],
+        "to": "failed"
+      },
+      "release": {
+        "from": [
+          "claimed",
+          "running",
+          "blocked",
+          "interrupted"
+        ],
+        "to": "released"
+      },
+      "interrupt": {
+        "from": [
+          "claimed",
+          "running",
+          "blocked"
+        ],
+        "to": "interrupted"
+      },
+      "close": {
+        "from": [
+          "submitted",
+          "failed",
+          "released"
+        ],
+        "to": "closed"
+      }
+    }
+  },
+  "authority_matrix": {
+    "register_human": "simulation bootstrap only; real identity requires authenticated adapter",
+    "bind_agent": "the represented Human",
+    "agent_status": "represented Human or currently bound Agent",
+    "activate_goal": "explicit Human Goal Authority",
+    "create_task": "Goal Authority",
+    "publish": "Goal Authority",
+    "claim": "HAU Human or active Representative Agent with claim permission",
+    "ack": "Execution accountable Human or active delegated Agent",
+    "progress": "Execution owner or active delegated Agent",
+    "blocked": "Execution owner or active delegated Agent",
+    "escalate": "Execution owner or active delegated Agent",
+    "resume": "Execution owner or active delegated Agent; no pending BoundaryRequest",
+    "request_boundary": "Execution owner or active delegated Agent; no expansion yet",
+    "decide_boundary": "Goal Human Authority explicitly accepts requested/modified scope",
+    "submit": "Execution owner or active delegated Agent; structured Return required",
+    "fail": "Execution owner or active delegated Agent; structured Return required",
+    "release": "Execution owner or active delegated Agent; structured Return required",
+    "annotate_return": "Execution accountable Human; append Confirm/Correct/Add",
+    "review": "Task review_authority; credibility judgment with evidence",
+    "accept": "Task acceptance_authority; reviewed Return and intended-use rationale",
+    "select": "Task selection_authority; accepted credible successful Return",
+    "sweep": "simulation control plane using configured timeout; records interruption only"
+  },
+  "event_catalog": [
+    "HumanRegistered",
+    "AgentBound",
+    "AgentStatusChanged",
+    "GoalActivated",
+    "TaskCreated",
+    "TaskPublished",
+    "ExecutionClaimed",
+    "ACK",
+    "Progress",
+    "Blocked",
+    "Escalated",
+    "Resumed",
+    "BoundaryRequested",
+    "BoundaryApproved",
+    "BoundaryRejected",
+    "BoundaryModified",
+    "ResultSubmitted",
+    "ExecutionFailed",
+    "ExecutionReleased",
+    "ReturnAnnotated",
+    "ResultReviewed",
+    "ResultAccepted",
+    "ResultRejected",
+    "ExecutionClosed",
+    "ResultSelected",
+    "ExecutionInterrupted"
+  ],
+  "interface": {
+    "command": {
+      "actor": "authenticated adapter identity; simulation selector in M01 only",
+      "command": "authority_matrix key",
+      "data": "public fields only",
+      "idempotency_key": "required unique key bound to entire command"
+    },
+    "query": [
+      "state",
+      "events",
+      "task_wall",
+      "execution"
+    ],
+    "errors": [
+      "400 invalid input",
+      "403 authority violation",
+      "409 stale state or idempotency conflict",
+      "503 HUMAN_DECISION_REQUIRED for real mode"
+    ]
+  },
+  "parameters": {
+    "ack_timeout_seconds": {
+      "default": 300,
+      "classification": "Tunable",
+      "evidence": "engineering test default, not experimentally validated"
+    },
+    "progress_timeout_seconds": {
+      "default": 3600,
+      "classification": "Tunable",
+      "evidence": "engineering test default, not experimentally validated"
+    }
+  },
+  "invariants": [
+    "Task != Execution",
+    "Exactly one Human Accountable Owner per Execution",
+    "One active Agent interface per Human",
+    "No private thought or draft collection",
+    "Boundary expansion requires Human authorization",
+    "Success/failure/release require formal Return",
+    "Review != Acceptance != Selection",
+    "One append-only Organizational Event Trail",
+    "Runtime interruption is visible and recoverable"
+  ],
+  "pages": [
+    "Identity and bindings",
+    "Goal activation",
+    "Task Wall publish/browse/claim",
+    "Execution status, boundary request, return",
+    "Human review/acceptance/selection",
+    "Event trail and runtime interruption"
+  ],
+  "non_goals": [
+    "Real external systems",
+    "Human Pilot evidence",
+    "Agent intelligence",
+    "Private work capture"
+  ]
+}
