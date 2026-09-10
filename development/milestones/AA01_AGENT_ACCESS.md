@@ -103,3 +103,6 @@ No chat history is required to reproduce tests or resume this milestone.
 Before any server test/package release, recheck dedicated paths/ports and the
 user's approval boundary. Before formal push/deployment, show concrete changes,
 test evidence and rollback plan and wait for explicit confirmation.
+
+
+AA02 adds a Human browser shell on the dedicated gateway; same-origin control requests require the independent operator credential. Historical AA01 tests and tags remain unchanged. See [AA02](AA02_HUMAN_AGENT_WORKSPACE.md).
