@@ -1,5 +1,10 @@
 # Current Development State
 
+## 2026-09-11 · AA02 联合工作台
+
+当前用户授权优先项：AA02 Human × Agent 网页联合工作台，插入 M03 前。注册审批、任务/执行、边界决策、正式 Return 与分离验收页面已实现；136 项回归及实际 Edge 浏览器＋独立 Agent 进程联调通过（18 条合成事件，0 位真实 Human）。AA02 S01 本地 PASS：63d92f3 / autodev/AA02/S01/v1；验收及试用入口见 development/AA02_ACCEPTANCE.md。操作说明：development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md。未推送、未部署；原域名项目不变。
+
+
 最后更新：2026-09-10。GitHub main 是 Development Source of Truth。
 
 最新授权：仅本地开发与隔离服务器测试，正式推送和部署需用户逐次确认；不改 AEGPC.CN 现有项目/服务。相关本地变更尚未推送。原自动写回 Actions 已暂停（API 核验 disabled_manually、无进行中任务），因此下述定时运行描述仅代表已实现能力，不代表当前正在运行。当前不采购海外实例。
