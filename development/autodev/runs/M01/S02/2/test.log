@@ -1,0 +1,10 @@
+test_all_core_objects_have_concrete_fields (tests.test_contract.ContractTests.test_all_core_objects_have_concrete_fields) ... ok
+test_event_envelope_and_state_transitions (tests.test_contract.ContractTests.test_event_envelope_and_state_transitions) ... ok
+test_inputs_and_parameters_are_explicit (tests.test_contract.ContractTests.test_inputs_and_parameters_are_explicit) ... ok
+test_multiple_formal_events_are_atomic (tests.test_store.StoreTests.test_multiple_formal_events_are_atomic) ... ok
+test_persistence_idempotency_and_replay (tests.test_store.StoreTests.test_persistence_idempotency_and_replay) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.067s
+
+OK

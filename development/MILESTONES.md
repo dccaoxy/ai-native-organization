@@ -27,7 +27,7 @@ Milestone 只有在定义的 Outcome、验收情景、证据和接续条件全�
 | Stage | Status | Checkpoint tag |
 |---|---|---|
 | S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
-| S02 Reality Foundation | BLOCKED_ENGINEERING |  |
+| S02 Reality Foundation | CHECKPOINT_PENDING | autodev/M01/S02/v1 |
 | S03 Goal + Task + Execution Core | PENDING |  |
 | S04 HAU + Representative Agent + Runtime | PENDING |  |
 | S05 Free Work Space + Progress + Boundary/Escalation | PENDING |  |

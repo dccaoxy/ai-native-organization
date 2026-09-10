@@ -1,0 +1,22 @@
+{
+  "role": "review",
+  "kind": "independent-process deterministic adversarial review",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "test": "tests.test_contract_review",
+      "passed": true
+    },
+    {
+      "test": "tests.test_store_review",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "db9785d880b7518ebb37dfb74cee6deb17213526b879884585d004d0ed2c8b26",
+  "nonce": "302461af5265419a8c3e73f8e9a504ba",
+  "limitations": [
+    "Does not replace independent human/LLM semantic review",
+    "Only configured engineering tests are covered"
+  ]
+}
