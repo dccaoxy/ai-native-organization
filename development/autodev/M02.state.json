@@ -23,13 +23,21 @@
       "commit": "4bcc8cbd3b44ebf2fe213a64e4a05c1bf74022e0"
     },
     "S03": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "6ec3208ec1e67984178d445f4d89bf328fb6f9cabc6a11755bff9bfa96758a26",
       "tag": "autodev/M02/S03/v1",
       "artifact": "development/autodev/runs/M02/S03/1/artifact.zip",
-      "artifact_sha256": "a11e2ad7faf35dfea798953598774f1a5415bea746830e4d0553f2ed68db66a0"
+      "artifact_sha256": "a11e2ad7faf35dfea798953598774f1a5415bea746830e4d0553f2ed68db66a0",
+      "commit": "b48b68be930cc531a73c48b708981fd85dab75f4"
+    },
+    "S04": {
+      "status": "BLOCKED_ENGINEERING",
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "specs/M02.final-coverage.json"
+      ]
     }
   },
   "events": [
@@ -173,6 +181,23 @@
       "tag": "autodev/M02/S03/v1",
       "artifact": "development/autodev/runs/M02/S03/1/artifact.zip",
       "artifact_sha256": "a11e2ad7faf35dfea798953598774f1a5415bea746830e4d0553f2ed68db66a0"
+    },
+    {
+      "sequence": 19,
+      "stage": "S03",
+      "status": "PASS",
+      "time": 1789029732.6997302,
+      "commit": "b48b68be930cc531a73c48b708981fd85dab75f4"
+    },
+    {
+      "sequence": 20,
+      "stage": "S04",
+      "status": "BLOCKED_ENGINEERING",
+      "time": 1789029733.2441766,
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "specs/M02.final-coverage.json"
+      ]
     }
   ]
 }
