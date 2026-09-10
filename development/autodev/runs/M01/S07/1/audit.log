@@ -1,0 +1,16 @@
+test_http_command_query_persistence_and_ui (tests.test_http_review.HTTPReview.test_http_command_query_persistence_and_ui) ... ok
+test_malformed_and_path_traversal_do_not_mutate (tests.test_http_review.HTTPReview.test_malformed_and_path_traversal_do_not_mutate) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 400: 'Bad Request'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 404: 'Not Found'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_unauthenticated_and_cross_origin_commands_rejected (tests.test_http_review.HTTPReview.test_unauthenticated_and_cross_origin_commands_rejected) ... C:\Python314\Lib\tempfile.py:484: ResourceWarning: Implicitly cleaning up <HTTPError 403: 'Forbidden'>
+  _warnings.warn(self.warn_message, ResourceWarning)
+ok
+test_http_command_query_persistence_and_ui (tests.test_http.HTTPTests.test_http_command_query_persistence_and_ui) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.258s
+
+OK
+

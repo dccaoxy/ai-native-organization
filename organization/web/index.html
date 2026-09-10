@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="simulation-token" content="__CSRF__"><title>M01 · 最小组织工作台</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body><aside><a class="brand" href="/">◎ <strong>MINIMUM<br>ORGANIZATION</strong></a><p class="eyebrow">M01 / M0 SCOPE</p><nav><a href="#wall">任务墙</a><a href="#work">执行工作区</a><a href="#decisions">Human 决策</a><a href="#trail">组织事件</a></nav><div class="aside-note">共享意图<br>独立尝试<br>唯一 Human 责任人</div></aside>
+<main><header><div><p class="eyebrow">AI-NATIVE ORGANIZATION / ENGINEERING PROTOTYPE</p><h1>让最小组织开始运行。</h1><p>领取机会，独立执行，让结果与证据回到组织。</p></div><span class="badge">仅合成场景 · 非真实实验</span></header>
+<section class="toolbar"><label>当前模拟身份 <select id="actor"><option>H1</option><option>H2</option><option>H3</option><option>A1</option><option>A2</option><option>A3</option></select></label><button id="seed">建立 3 个合成 HAU + 1 个 Goal</button><button id="refresh" class="secondary">刷新现实</button><button id="sweep" class="secondary">检查执行中断</button></section><p id="notice" role="status">尚未读取组织状态。</p>
+<section class="metrics" id="metrics"></section>
+<section id="wall"><div class="section-head"><h2>任务墙 <span>Task 是共享契约</span></h2><button id="new-task" class="secondary">发布合成任务</button></div><div id="tasks" class="cards"></div></section>
+<section id="work"><div class="section-head"><h2>执行工作区 <span>Execution 是独立尝试</span></h2></div><p class="muted">这里只提交必要状态和正式 Return。私人思考、草稿与内部工作过程保留在 Free Work Space。</p><div id="executions" class="cards"></div></section>
+<section id="decisions"><h2>Human 决策 <span>Boundary / Review / Acceptance / Selection</span></h2><div id="boundaries" class="cards"></div><div id="returns" class="cards"></div></section>
+<section id="trail"><div class="section-head"><h2>统一组织事件 <span>由真实状态变化生成</span></h2></div><div class="table-scroll"><table><thead><tr><th>顺序</th><th>正式事件</th><th>Actor</th><th>责任人</th><th>Authority 来源</th></tr></thead><tbody id="events"></tbody></table></div></section>
+<footer>运行状态持久化于本地 SQLite 事件库。该应用只允许本机合成场景；真实身份、权限和公司数据接入仍需 Human 决策。</footer></main>
+<dialog id="form-dialog"><form id="action-form"><h2 id="form-title"></h2><div id="form-fields"></div><div class="dialog-actions"><button type="button" id="cancel" class="secondary">取消</button><button type="submit">提交正式记录</button></div></form></dialog>
+</body></html>
