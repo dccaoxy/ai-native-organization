@@ -1,0 +1,20 @@
+test_annotations_cannot_silently_change_reviewed_facts (tests.test_returns_review.ReturnReview.test_annotations_cannot_silently_change_reviewed_facts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns_review.ReturnReview.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failed_untrusted_and_cross_result_acceptance_rejected (tests.test_returns_review.ReturnReview.test_failed_untrusted_and_cross_result_acceptance_rejected) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns_review.ReturnReview.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_no_failure_without_return_and_no_duplicate_return (tests.test_returns_review.ReturnReview.test_no_failure_without_return_and_no_duplicate_return) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns_review.ReturnReview.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns_review.ReturnReview.test_rejection_modified_scope_and_formal_signals) ... ok
+test_review_does_not_imply_acceptance_or_selection (tests.test_returns_review.ReturnReview.test_review_does_not_imply_acceptance_or_selection) ... ok
+test_three_claims_are_three_attempts (tests.test_returns_review.ReturnReview.test_three_claims_are_three_attempts) ... ok
+test_boundary_approval_changes_only_one_attempt (tests.test_returns.ReturnTests.test_boundary_approval_changes_only_one_attempt) ... ok
+test_failure_release_and_annotations_have_formal_returns (tests.test_returns.ReturnTests.test_failure_release_and_annotations_have_formal_returns) ... ok
+test_parallel_returns_selection_preserves_losers (tests.test_returns.ReturnTests.test_parallel_returns_selection_preserves_losers) ... ok
+test_rejection_modified_scope_and_formal_signals (tests.test_returns.ReturnTests.test_rejection_modified_scope_and_formal_signals) ... ok
+test_three_claims_are_three_attempts (tests.test_returns.ReturnTests.test_three_claims_are_three_attempts) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.617s
+
+OK
+

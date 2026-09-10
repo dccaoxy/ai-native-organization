@@ -179,7 +179,8 @@
           "pending",
           "approved",
           "rejected",
-          "modified"
+          "modified",
+          "cancelled"
         ]
       }
     },
@@ -464,7 +465,8 @@
     "ResultRejected",
     "ExecutionClosed",
     "ResultSelected",
-    "ExecutionInterrupted"
+    "ExecutionInterrupted",
+    "BoundaryCancelled"
   ],
   "interface": {
     "command": {
@@ -523,5 +525,5 @@
     "Agent intelligence",
     "Private work capture"
   ],
-  "engineering_revision": 2
+  "engineering_revision": 3
 }
