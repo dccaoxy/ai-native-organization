@@ -5,8 +5,8 @@
 
 | Stage | Status | Checkpoint tag |
 |---|---|---|
-| S01 Specification Freeze | CHECKPOINT_PENDING | autodev/M01/S01/v1 |
-| S02 Reality Foundation | PENDING |  |
+| S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
+| S02 Reality Foundation | BLOCKED_ENGINEERING |  |
 | S03 Goal + Task + Execution Core | PENDING |  |
 | S04 HAU + Representative Agent + Runtime | PENDING |  |
 | S05 Free Work Space + Progress + Boundary/Escalation | PENDING |  |

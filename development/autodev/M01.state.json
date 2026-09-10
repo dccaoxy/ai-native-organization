@@ -3,13 +3,22 @@
   "plan": "M01",
   "stages": {
     "S01": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "011c2deec4ec9212332f95b218d14822b3a7a1dfed5116020b7c70d5353e93d9",
       "tag": "autodev/M01/S01/v1",
       "artifact": "development/autodev/runs/M01/S01/1/artifact.zip",
-      "artifact_sha256": "85dc329e856cfefe16f020e05cd71121745b2945750b265b5e12ea94a6a7ecd1"
+      "artifact_sha256": "85dc329e856cfefe16f020e05cd71121745b2945750b265b5e12ea94a6a7ecd1",
+      "commit": "2ff0832675b1952d43b5e44f9524eef9ff4d88b6"
+    },
+    "S02": {
+      "status": "BLOCKED_ENGINEERING",
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "tests/test_store.py",
+        "tests/test_store_review.py"
+      ]
     }
   },
   "events": [
@@ -51,6 +60,24 @@
       "tag": "autodev/M01/S01/v1",
       "artifact": "development/autodev/runs/M01/S01/1/artifact.zip",
       "artifact_sha256": "85dc329e856cfefe16f020e05cd71121745b2945750b265b5e12ea94a6a7ecd1"
+    },
+    {
+      "sequence": 6,
+      "stage": "S01",
+      "status": "PASS",
+      "time": 1789003660.377774,
+      "commit": "2ff0832675b1952d43b5e44f9524eef9ff4d88b6"
+    },
+    {
+      "sequence": 7,
+      "stage": "S02",
+      "status": "BLOCKED_ENGINEERING",
+      "time": 1789003661.0411935,
+      "reason": "Missing engineering inputs",
+      "missing": [
+        "tests/test_store.py",
+        "tests/test_store_review.py"
+      ]
     }
   ]
 }
