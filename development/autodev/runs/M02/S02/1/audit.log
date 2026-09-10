@@ -1,0 +1,11 @@
+test_fixture_parameters_fail_early (tests.test_scale_simulation.ScaleTests.test_fixture_parameters_fail_early) ... ok
+test_rejected_cross_task_selection_adds_no_event (tests.test_scale_simulation.ScaleTests.test_rejected_cross_task_selection_adds_no_event) ... ok
+test_scaled_paths_reopen_and_replay (tests.test_scale_simulation.ScaleTests.test_scaled_paths_reopen_and_replay) ... ok
+test_simultaneous_claims_preserve_separate_execution_owners (tests.test_scale_simulation.ScaleTests.test_simultaneous_claims_preserve_separate_execution_owners) ... ok
+test_simultaneous_duplicate_receipts_are_exactly_once (tests.test_scale_simulation.ScaleTests.test_simultaneous_duplicate_receipts_are_exactly_once) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.414s
+
+OK
+
