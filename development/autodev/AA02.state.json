@@ -3,13 +3,14 @@
   "plan": "AA02",
   "stages": {
     "S01": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "7e105bb4f93090d0601eb946eb38619d5ea7343876cc90ed6828aa31a78e6a7b",
       "tag": "autodev/AA02/S01/v1",
       "artifact": "development/autodev/runs/AA02/S01/1/artifact.zip",
-      "artifact_sha256": "920d3b7399a7426491174753b778b691151034541e3a20c124d4e7b02b15c3bd"
+      "artifact_sha256": "920d3b7399a7426491174753b778b691151034541e3a20c124d4e7b02b15c3bd",
+      "commit": "63d92f3b93b80eda75bcc5967abbbcce6fd654dc"
     }
   },
   "events": [
@@ -51,6 +52,13 @@
       "tag": "autodev/AA02/S01/v1",
       "artifact": "development/autodev/runs/AA02/S01/1/artifact.zip",
       "artifact_sha256": "920d3b7399a7426491174753b778b691151034541e3a20c124d4e7b02b15c3bd"
+    },
+    {
+      "sequence": 6,
+      "stage": "S01",
+      "status": "PASS",
+      "time": 1789084497.5928183,
+      "commit": "63d92f3b93b80eda75bcc5967abbbcce6fd654dc"
     }
   ]
 }
