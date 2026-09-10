@@ -83,7 +83,7 @@ class Store:
             events, previous = self._events(db)
             state = self.replay(events)
             emitted = handler(state)
-            if not emitted:
+            if not emitted and command != 'sweep':
                 raise DomainError('A mutation must produce formal evidence')
             created = []
             for change in emitted:

@@ -151,6 +151,17 @@ class HarnessTests(unittest.TestCase):
         self.assertEqual(result['stages']['D01']['commit'], head)
         self.assertEqual(result['stages']['D01']['status'], 'PASS')
 
+    def test_checkpoint_includes_modified_input_dependency(self):
+        (self.root / 'dependency.txt').write_text('old')
+        self.git('add', 'dependency.txt')
+        self.git('commit', '-m', 'dependency baseline')
+        self.plan['stages'][0]['inputs'].append('dependency.txt')
+        write(self.root / 'plan.json', self.plan)
+        (self.root / 'dependency.txt').write_text('repaired')
+        result = self.harness().run(limit=1)
+        tag = result['stages']['D01']['tag']
+        self.assertEqual(self.git('show', tag + ':dependency.txt'), 'repaired')
+
 
 if __name__ == "__main__":
     unittest.main()

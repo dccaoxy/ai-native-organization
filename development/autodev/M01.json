@@ -419,7 +419,8 @@
           "-m",
           "autodev.auditor"
         ]
-      }
+      },
+      "revision": 2
     },
     {
       "id": "S05",

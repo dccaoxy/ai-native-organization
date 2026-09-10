@@ -44,7 +44,7 @@
 | S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
 | S02 Reality Foundation | PASS | autodev/M01/S02/v1 |
 | S03 Goal + Task + Execution Core | PASS | autodev/M01/S03/v1 |
-| S04 HAU + Representative Agent + Runtime | PASS | autodev/M01/S04/v1 |
+| S04 HAU + Representative Agent + Runtime | CHECKPOINT_PENDING | autodev/M01/S04/v2 |
 | S05 Free Work Space + Progress + Boundary/Escalation | BLOCKED_ENGINEERING |  |
 | S06 Return + Review + Acceptance + Selection | PENDING |  |
 | S07 End-to-End Integration | PENDING |  |

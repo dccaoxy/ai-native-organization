@@ -43,18 +43,18 @@
       "commit": "ba6eb2ee9c80594e93ae65f513bd94492e241cf8"
     },
     "S04": {
-      "status": "PASS",
-      "reason": "Missing engineering inputs",
+      "status": "CHECKPOINT_PENDING",
+      "reason": "Checkpoint dependency completeness repair; retain v1, verify v2",
       "missing": [
         "tests/test_identity.py",
         "tests/test_identity_review.py"
       ],
-      "attempt": 1,
+      "attempt": 2,
       "worker": "caoxy-TG03",
-      "source_digest": "2f31f952175f2cbfa4e2fa8a235f40791a5e3d97244d2993d77678b04cd2b971",
-      "tag": "autodev/M01/S04/v1",
-      "artifact": "development/autodev/runs/M01/S04/1/artifact.zip",
-      "artifact_sha256": "824849998582b7318b696f8e5183f108201ee06d38155028b2f5be85ca156618",
+      "source_digest": "bac0c40fb92444f61b266f9a4528990564274bff2a2049ce6cc08d602ee695b1",
+      "tag": "autodev/M01/S04/v2",
+      "artifact": "development/autodev/runs/M01/S04/2/artifact.zip",
+      "artifact_sha256": "dbd61ae35c3307a7f0d10b4b20bc113e77c4c4683de74cf44e348ff51a776694",
       "commit": "8a4d76e537dbad6a859ea52f00dd9fe3c19d78ac"
     },
     "S05": {
@@ -331,6 +331,52 @@
         "tests/test_work.py",
         "tests/test_work_review.py"
       ]
+    },
+    {
+      "sequence": 34,
+      "stage": "S04",
+      "status": "REVALIDATION_REQUIRED",
+      "time": 1789004053.6881204,
+      "reason": "Checkpoint dependency completeness repair; retain v1, verify v2"
+    },
+    {
+      "sequence": 35,
+      "stage": "S04",
+      "status": "BUILD",
+      "time": 1789004054.3814497,
+      "attempt": 2,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 36,
+      "stage": "S04",
+      "status": "TEST",
+      "time": 1789004054.4848974,
+      "attempt": 2
+    },
+    {
+      "sequence": 37,
+      "stage": "S04",
+      "status": "REVIEW",
+      "time": 1789004055.2961612,
+      "attempt": 2
+    },
+    {
+      "sequence": 38,
+      "stage": "S04",
+      "status": "AUDIT",
+      "time": 1789004057.1949604,
+      "attempt": 2
+    },
+    {
+      "sequence": 39,
+      "stage": "S04",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789004059.8386936,
+      "source_digest": "bac0c40fb92444f61b266f9a4528990564274bff2a2049ce6cc08d602ee695b1",
+      "tag": "autodev/M01/S04/v2",
+      "artifact": "development/autodev/runs/M01/S04/2/artifact.zip",
+      "artifact_sha256": "dbd61ae35c3307a7f0d10b4b20bc113e77c4c4683de74cf44e348ff51a776694"
     }
   ]
 }

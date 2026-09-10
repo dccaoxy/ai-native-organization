@@ -231,7 +231,10 @@ class Harness:
         exists = self.git("rev-parse", "--verify", "refs/tags/" + tag, check=False)
         if not exists:
             self.project()
-            paths = stage["scope"] + ["development/autodev"]
+            # Commit every byte that Review/Audit actually used, including a
+            # repaired dependency from an earlier Stage. Otherwise a tag could
+            # omit a tested change while its artifact contains that change.
+            paths = list(self.manifest(stage)) + stage["scope"] + ["development/autodev"]
             if self.plan["id"] == "M01":
                 paths += ["development/CURRENT_STATE.md", "development/NEXT_ACTIONS.md",
                           "development/MILESTONES.md", "development/milestones/M01_MINIMUM_ORGANIZATION.md"]
@@ -319,7 +322,7 @@ class Harness:
                             archive.writestr("manifest.json", canonical(manifest))
                             for name in manifest:
                                 archive.write(self.safe(name), name)
-                        tag = f"autodev/{self.plan['id']}/{sid}/v1"
+                        tag = f"autodev/{self.plan['id']}/{sid}/v{stage.get('revision', 1)}"
                         self.event(sid, "CHECKPOINT_PENDING", source_digest=source, tag=tag,
                                    artifact=artifact.relative_to(self.root).as_posix(),
                                    artifact_sha256=hashlib.sha256(artifact.read_bytes()).hexdigest())
