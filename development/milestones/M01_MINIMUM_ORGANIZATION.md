@@ -91,8 +91,8 @@ M01 只有在上述五类场景可重复运行、自动检查通过、事件可�
 |---|---|---|
 | S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
 | S02 Reality Foundation | PASS | autodev/M01/S02/v1 |
-| S03 Goal + Task + Execution Core | CHECKPOINT_PENDING | autodev/M01/S03/v1 |
-| S04 HAU + Representative Agent + Runtime | PENDING |  |
+| S03 Goal + Task + Execution Core | PASS | autodev/M01/S03/v1 |
+| S04 HAU + Representative Agent + Runtime | BLOCKED_ENGINEERING |  |
 | S05 Free Work Space + Progress + Boundary/Escalation | PENDING |  |
 | S06 Return + Review + Acceptance + Selection | PENDING |  |
 | S07 End-to-End Integration | PENDING |  |
