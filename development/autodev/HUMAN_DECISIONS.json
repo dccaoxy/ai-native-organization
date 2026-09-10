@@ -28,7 +28,7 @@
         "evidence": "development/autodev/CODEX_SMOKE.json"
       },
       "missing": [
-        "identified trusted remote host or approved private execution environment",
+        "supported-region trusted model execution environment",
         "destination authentication and live cloud model end-to-end verification",
         "new reviewed formal stage plan binding model adapter"
       ],
@@ -44,7 +44,16 @@
         "treat local CLI authentication as proof of working cloud authentication"
       ],
       "m01_engineering_blocked": false,
-      "repository_visibility": "public"
+      "repository_visibility": "public",
+      "host_assessment": {
+        "source": "user-specified local AEGPC.CN project; live read-only SSH and region metadata",
+        "region": "cn-beijing",
+        "ssh_verified": true,
+        "codex_installed": false,
+        "production_mutated": false,
+        "direct_chatgpt_worker_selected": false,
+        "reason": "region absent from official ChatGPT supported-country list"
+      }
     }
   ],
   "real_company_systems_accessed": false

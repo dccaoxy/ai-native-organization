@@ -30,6 +30,7 @@ Obsidian Dashboard 只同步本仓库投影；同步回执见 `autodev/DELIVERY.
 
 2026-09-10 用户已选择 ChatGPT 登录的 Codex，暂不设置额外资源上限，并授权 `dccaoxy/ai-native-organization` 全部仓库权限；不再等待这三项决定。平台配额仍适用。
 本机 CLI 和真实模型调用已核验。仓库 API 确认为 public；官方账户登录 CI 方案不支持公开仓库，不能直接接入现有 Actions。云端仍缺明确的可信运行主机/私有执行环境与该环境登录，状态为 `AUTHORIZED_PENDING_PROVISIONING`；部署包见 `autodev/CODEX_RUNNER.md`。
+用户提供的 AEGPC.CN 阿里云主机已通过只读 SSH 核查，元数据确认为北京区；不在 ChatGPT 官方支持地域内，不选作直接模型节点。网站可保留在现有主机；仍需支持地区的执行环境。未改服务器、未复制账户凭据。本次代码云端验证通过：[34444419116](https://github.com/dccaoxy/ai-native-organization/actions/runs/34444419116)。
 真实 Human Pilot、公司数据/Action、Residual Risk、奖金政策或 Frozen L1/L2 变更仍需单独 Human 决定。
 以上未授权项目均未执行；不阻断已完成的 M01 合成工程验证。
 

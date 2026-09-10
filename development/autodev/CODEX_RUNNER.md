@@ -65,10 +65,19 @@ connection admin permission. Official account-auth CI guidance excludes public
 or open-source repositories. Do not add the ChatGPT auth cache to this repository's
 Actions secrets or enable an account-auth self-hosted Actions job here.
 
-The remaining required input is an identified trusted remote execution host or
-an approved private execution environment. No such host/account endpoint has
-been supplied or provisioned. The project's visibility has not been changed.
-Existing public-repository Actions continues account-free verification.
+The user identified their existing Aliyun host through the local AEGPC.CN
+project. Read-only SSH verification succeeded: Python 3.12.3, Node 20.20.2 and
+Git exist; Codex is absent and the existing website service is active. Instance
+metadata reports `cn-beijing`. Mainland China is absent from the official
+ChatGPT supported-country list, so this candidate is not selected as the direct
+ChatGPT account worker. No production changes or credentials transfer occurred.
+
+The remaining input is a supported-region trusted execution host or eligible
+managed execution environment. The current server can remain the website/intake
+host; model work and its persistent queue protocol can be separate. No additional
+host has been provisioned, and project visibility remains public. Existing
+public-repository Actions continues account-free verification. The adapter
+commit cce0784 passed [cloud run 34444419116](https://github.com/dccaoxy/ai-native-organization/actions/runs/34444419116).
 
 For a selected independent trusted host, prepare an isolated OS user/container,
 Python 3.11+, Git and Codex CLI; authenticate on the host using device login:
@@ -92,4 +101,5 @@ copy occurred. Resource/repository authorization is already granted; ask only
 for the missing destination/login or an actual change of deployment choice.
 
 Sources checked: [Authentication](https://learn.chatgpt.com/docs/auth),
-[Non-interactive execution and account-auth CI restriction](https://learn.chatgpt.com/docs/non-interactive-mode).
+[Non-interactive execution and account-auth CI restriction](https://learn.chatgpt.com/docs/non-interactive-mode),
+[ChatGPT supported countries](https://help.openai.com/en/articles/7947663-chatgpt-supported-countries).
