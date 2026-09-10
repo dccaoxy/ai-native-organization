@@ -103,7 +103,7 @@
       "commit": "c614f9d5c10e9622b03bb4e0e1a94f00015c46f6"
     },
     "S08": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "reason": "Missing engineering inputs",
       "missing": [
         "tests/test_simulation.py",
@@ -114,7 +114,8 @@
       "source_digest": "b079f32007db50e266e574f7beb977a1f3f0ba128d169141e5b40076780e8c3c",
       "tag": "autodev/M01/S08/v1",
       "artifact": "development/autodev/runs/M01/S08/1/artifact.zip",
-      "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f"
+      "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f",
+      "commit": "b8e674a53c6462da603d15f200db309f26640fc4"
     }
   },
   "events": [
@@ -656,6 +657,13 @@
       "tag": "autodev/M01/S08/v1",
       "artifact": "development/autodev/runs/M01/S08/1/artifact.zip",
       "artifact_sha256": "463d2da49d9a625e431f82de89a7c6ad51365a1c1cfdd2a0974ba0b6b55cf04f"
+    },
+    {
+      "sequence": 68,
+      "stage": "S08",
+      "status": "PASS",
+      "time": 1789004715.4012406,
+      "commit": "b8e674a53c6462da603d15f200db309f26640fc4"
     }
   ]
 }
