@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "2f31f952175f2cbfa4e2fa8a235f40791a5e3d97244d2993d77678b04cd2b971",
+  "started": 1789004000.3357196,
+  "finished": 1789004002.4465125,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "AGENT-01/AGENT-05/AGENT-07",
+        "test": "tests.test_identity_review",
+        "source": "00 项目总览/Principle Tree v0.1.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "2f31f952175f2cbfa4e2fa8a235f40791a5e3d97244d2993d77678b04cd2b971",
+    "nonce": "8db53e7c6b1a433cb8bbb1405ff98dd7",
+    "coverage": "M01 engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

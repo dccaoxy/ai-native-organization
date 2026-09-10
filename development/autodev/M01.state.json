@@ -43,12 +43,18 @@
       "commit": "ba6eb2ee9c80594e93ae65f513bd94492e241cf8"
     },
     "S04": {
-      "status": "BLOCKED_ENGINEERING",
+      "status": "CHECKPOINT_PENDING",
       "reason": "Missing engineering inputs",
       "missing": [
         "tests/test_identity.py",
         "tests/test_identity_review.py"
-      ]
+      ],
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "2f31f952175f2cbfa4e2fa8a235f40791a5e3d97244d2993d77678b04cd2b971",
+      "tag": "autodev/M01/S04/v1",
+      "artifact": "development/autodev/runs/M01/S04/1/artifact.zip",
+      "artifact_sha256": "824849998582b7318b696f8e5183f108201ee06d38155028b2f5be85ca156618"
     }
   },
   "events": [
@@ -259,6 +265,45 @@
         "tests/test_identity.py",
         "tests/test_identity_review.py"
       ]
+    },
+    {
+      "sequence": 27,
+      "stage": "S04",
+      "status": "BUILD",
+      "time": 1789003997.4512722,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 28,
+      "stage": "S04",
+      "status": "TEST",
+      "time": 1789003997.5582423,
+      "attempt": 1
+    },
+    {
+      "sequence": 29,
+      "stage": "S04",
+      "status": "REVIEW",
+      "time": 1789003998.387515,
+      "attempt": 1
+    },
+    {
+      "sequence": 30,
+      "stage": "S04",
+      "status": "AUDIT",
+      "time": 1789004000.333487,
+      "attempt": 1
+    },
+    {
+      "sequence": 31,
+      "stage": "S04",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789004003.0132947,
+      "source_digest": "2f31f952175f2cbfa4e2fa8a235f40791a5e3d97244d2993d77678b04cd2b971",
+      "tag": "autodev/M01/S04/v1",
+      "artifact": "development/autodev/runs/M01/S04/1/artifact.zip",
+      "artifact_sha256": "824849998582b7318b696f8e5183f108201ee06d38155028b2f5be85ca156618"
     }
   ]
 }

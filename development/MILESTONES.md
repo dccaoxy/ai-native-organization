@@ -29,7 +29,7 @@ Milestone 只有在定义的 Outcome、验收情景、证据和接续条件全�
 | S01 Specification Freeze | PASS | autodev/M01/S01/v1 |
 | S02 Reality Foundation | PASS | autodev/M01/S02/v1 |
 | S03 Goal + Task + Execution Core | PASS | autodev/M01/S03/v1 |
-| S04 HAU + Representative Agent + Runtime | BLOCKED_ENGINEERING |  |
+| S04 HAU + Representative Agent + Runtime | CHECKPOINT_PENDING | autodev/M01/S04/v1 |
 | S05 Free Work Space + Progress + Boundary/Escalation | PENDING |  |
 | S06 Return + Review + Acceptance + Selection | PENDING |  |
 | S07 End-to-End Integration | PENDING |  |
