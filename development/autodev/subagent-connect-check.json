@@ -1,0 +1,45 @@
+{
+  "verdict": "PASS",
+  "test": "independent sub-agent followed browser-generated handoff",
+  "registration_id": "619c5d53c5f7e8deb62d0d8da7ecc19a",
+  "connection_receipt_verified": true,
+  "connected_at": 1789094034.5654943,
+  "authorization_status": "pending",
+  "execution_count": 0,
+  "return_count": 0,
+  "server_event_count": 2,
+  "isolated_instance": true,
+  "same_host_tools": true,
+  "remote_reachability_verified": false,
+  "no_real_human_participant": true,
+  "source_commit": "3d9fae28ab517fdb4d1dde4b4cfe94da4fada949",
+  "child_result": {
+    "registration_id": "619c5d53c5f7e8deb62d0d8da7ecc19a",
+    "endpoint": "http://127.0.0.1:62002",
+    "http_steps": [
+      {
+        "method": "GET",
+        "path": "/v1/me",
+        "status": 200
+      },
+      {
+        "method": "POST",
+        "path": "/v1/connect",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/v1/me",
+        "status": 200
+      }
+    ],
+    "connected": true,
+    "authorization_status": "pending",
+    "task_claimed": false,
+    "execution_id": null,
+    "return_id": null,
+    "tool_environment": "local machine",
+    "outcome": "已接入，等待所属用户授权任务"
+  },
+  "temporary_server_stopped": true
+}

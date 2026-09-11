@@ -28,3 +28,8 @@
 读 PA02.state.json、规格与本包恢复；不要沿用旧源码的 PASS 回执。新增 portal_connections 表可保留，权限变更的正式事件不能删除。回退代码需确保仍可读取新事件，或以变更前一致性备份在独立目录恢复，不能覆盖活跃库或历史。
 
 工程范围无待决 Human Gate。云端安装/入口/TLS/域名/正式 push 仍须具体方案获确认后执行。默认权限不等于自动授权所有任务；未启动正式用户实验。
+
+## 独立子 Agent 实接入追加验证
+
+2026-09-11 用户要求建立子 Agent 验证注册接入。使用同一门户代码的隔离实例，通过实际浏览器生成完整说明，将文件交给无主线程历史的独立子 Agent。子 Agent 实际执行 GET /v1/me → POST /v1/connect → GET /v1/me，均 HTTP 200，注册编号匹配；父侧独立读回唯一连接回执。状态 pending，未自行授权、未创建 Execution/Return。结果见 development/autodev/subagent-connect-check.json。
+这是独立子 Agent 读取说明并调用真实 HTTP 的一次成功验证；其工具仍在本机，不能证明远端 Agent 能访问 localhost，也不能代表所有 Agent 均可理解执行。仅两条合成组织事件，账号和凭据位于忽略的隔离目录，不改用户门户数据。测试服务已停止，脱敏报告不含 token；没有 push 或云端部署。
