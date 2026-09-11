@@ -84,7 +84,7 @@ def run_task(client, task_id, run_id, result=None, outcome='success'):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['register','status','run'])
+    parser.add_argument('action', choices=['register','status','knowledge','run'])
     parser.add_argument('--url', default='http://127.0.0.1:8877')
     parser.add_argument('--identity-file', default='.autodev/test-agent.identity.json')
     parser.add_argument('--task')
@@ -107,6 +107,8 @@ def main():
         result = client.request('/v1/agents/register', {'id':identity['id'],'name':'Independent synthetic test Agent',
                                  'version':'0.1','capabilities':['synthetic-test-return']})
         print(json.dumps({'registration_id':identity['id'],'status':result['registration']['status']}))
+    elif args.action == 'knowledge':
+        print(json.dumps(client.request('/v1/knowledge'),ensure_ascii=False))
     elif args.action == 'status':
         print(json.dumps(client.request('/v1/me')))
     else:

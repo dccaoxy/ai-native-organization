@@ -13,6 +13,11 @@ CONTRACT['objects'].update(AGENT_EXTENSION['objects'])
 CONTRACT['event_catalog'].extend(AGENT_EXTENSION['events'])
 CONTRACT['authority_matrix'].update(AGENT_EXTENSION['authority_matrix'])
 
+LEARNING_EXTENSION = json.loads((ROOT / 'specs/M03.learning.json').read_text(encoding='utf-8'))
+CONTRACT['objects'].update(LEARNING_EXTENSION['objects'])
+CONTRACT['event_catalog'].extend(LEARNING_EXTENSION['events'])
+CONTRACT['authority_matrix'].update(LEARNING_EXTENSION['authority_matrix'])
+
 
 def validate(name, obj):
     definition = CONTRACT["objects"][name]

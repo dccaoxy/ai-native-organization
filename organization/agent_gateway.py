@@ -92,6 +92,10 @@ class Gateway:
             reg, state = self.authenticate(token, approved=path != '/v1/me')
             if method == 'GET' and path == '/v1/me':
                 return {'registration':reg}
+            if method == 'GET' and path == '/v1/knowledge':
+                permitted=set(reg['allowed_tasks'])
+                fields=('id','version','core_claim','scope','boundary','mechanism','transfer_conditions','status')
+                return {'knowledge':[{**{f:k[f] for f in fields},'task_ids':sorted(permitted.intersection(k['task_ids']))} for k in state.get('KnowledgeRevision',{}).values() if k['status']=='validated' and permitted.intersection(k['task_ids'])]}
             if method == 'GET' and path == '/v1/tasks':
                 tasks = [t for t in state.get('Task', {}).values() if t['id'] in reg['allowed_tasks'] and t['status'] == 'published' and state['Goal'][t['primary_goal']]['status'] == 'active']
                 return {'tasks':tasks}
@@ -150,7 +154,7 @@ def server(path, operator_token, port=0, clock=None):
                 # Only the control API accepts same-origin browser requests.
                 if origin and (not self.path.startswith('/control/') or origin != 'http://' + self.headers.get('Host','')):
                     raise DomainError('Cross-origin request denied', 403)
-                assets = {'/':'index.html', '/human.js':'human.js', '/human.css':'human.css'}
+                assets = {'/':'index.html', '/human.js':'human.js', '/human.css':'human.css', '/learning.js':'learning.js'}
                 if self.command == 'GET' and self.path in assets:
                     filename = assets[self.path]
                     payload = (Path(__file__).parent / 'human_web' / filename).read_bytes()

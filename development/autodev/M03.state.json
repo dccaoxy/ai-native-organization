@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "plan": "M03",
+  "stages": {
+    "S01": {
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+      "tag": "autodev/M03/S01/v1",
+      "artifact": "development/autodev/runs/M03/S01/1/artifact.zip",
+      "artifact_sha256": "1d451afa76c8e793b84dcc5654269327ed68557cd443c3c421696e7b9fd30fc4"
+    }
+  },
+  "events": [
+    {
+      "sequence": 1,
+      "stage": "S01",
+      "status": "BUILD",
+      "time": 1789085539.245791,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 2,
+      "stage": "S01",
+      "status": "TEST",
+      "time": 1789085539.3641667,
+      "attempt": 1
+    },
+    {
+      "sequence": 3,
+      "stage": "S01",
+      "status": "REVIEW",
+      "time": 1789085542.3722284,
+      "attempt": 1
+    },
+    {
+      "sequence": 4,
+      "stage": "S01",
+      "status": "AUDIT",
+      "time": 1789085546.9434435,
+      "attempt": 1
+    },
+    {
+      "sequence": 5,
+      "stage": "S01",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789085552.209753,
+      "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+      "tag": "autodev/M03/S01/v1",
+      "artifact": "development/autodev/runs/M03/S01/1/artifact.zip",
+      "artifact_sha256": "1d451afa76c8e793b84dcc5654269327ed68557cd443c3c421696e7b9fd30fc4"
+    }
+  ]
+}

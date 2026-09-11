@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "objects": {
+    "LearningClaim": {
+      "id": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "reviewer": {
+        "type": "string"
+      },
+      "source_return": {
+        "type": "string"
+      },
+      "previous_id": {
+        "type": "string"
+      },
+      "core_claim": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "mechanism": {
+        "type": "string"
+      },
+      "transfer_conditions": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "boundary": {
+        "type": "strings"
+      },
+      "task_ids": {
+        "type": "strings"
+      }
+    },
+    "LearningEvidence": {
+      "id": {
+        "type": "string"
+      },
+      "claim_id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "relation": {
+        "type": "string"
+      },
+      "rationale": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "upstream_sources": {
+        "type": "strings"
+      },
+      "snapshot": {
+        "type": "object"
+      }
+    },
+    "LearningVerification": {
+      "id": {
+        "type": "string"
+      },
+      "claim_id": {
+        "type": "string"
+      },
+      "reviewer": {
+        "type": "string"
+      },
+      "decision": {
+        "type": "string"
+      },
+      "falsification": {
+        "type": "string"
+      },
+      "alternatives": {
+        "type": "string"
+      },
+      "limitations": {
+        "type": "string"
+      },
+      "independence": {
+        "type": "string"
+      },
+      "evidence_ids": {
+        "type": "strings"
+      }
+    },
+    "KnowledgeRevision": {
+      "id": {
+        "type": "string"
+      },
+      "claim_id": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "core_claim": {
+        "type": "string"
+      },
+      "scope": {
+        "type": "string"
+      },
+      "mechanism": {
+        "type": "string"
+      },
+      "transfer_conditions": {
+        "type": "string"
+      },
+      "previous_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "boundary": {
+        "type": "strings"
+      },
+      "task_ids": {
+        "type": "strings"
+      },
+      "evidence_ids": {
+        "type": "strings"
+      },
+      "delta": {
+        "type": "object"
+      },
+      "version": {
+        "type": "number"
+      }
+    },
+    "CapabilityRoute": {
+      "id": {
+        "type": "string"
+      },
+      "source_return": {
+        "type": "string"
+      },
+      "source_hau": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "knowledge_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "reproduction_ids": {
+        "type": "strings"
+      },
+      "components": {
+        "type": "object"
+      }
+    },
+    "KnowledgeUse": {
+      "id": {
+        "type": "string"
+      },
+      "execution_id": {
+        "type": "string"
+      },
+      "knowledge_id": {
+        "type": "string"
+      },
+      "decision": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "package_id": {
+        "type": "string"
+      }
+    },
+    "LearningOutcome": {
+      "id": {
+        "type": "string"
+      },
+      "use_id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "interpretation": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      }
+    },
+    "CapabilityReproduction": {
+      "id": {
+        "type": "string"
+      },
+      "package_id": {
+        "type": "string"
+      },
+      "use_id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "reviewer": {
+        "type": "string"
+      },
+      "outcome": {
+        "type": "string"
+      }
+    }
+  },
+  "events": [
+    "ClaimProposed",
+    "EvidenceLinked",
+    "ClaimVerified",
+    "KnowledgePublished",
+    "KnowledgeSuperseded",
+    "KnowledgeChallenged",
+    "RouteCaptured",
+    "RouteAssembled",
+    "RouteStale",
+    "KnowledgeUsed",
+    "LearningOutcomeRecorded",
+    "ReproductionRecorded"
+  ],
+  "authority_matrix": {
+    "propose_claim": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "capture_evidence": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "verify_claim": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "assemble_route": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "use_knowledge": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "record_learning_outcome": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation",
+    "record_reproduction": "explicit Human authority; use_knowledge also scoped RepresentativeAgent delegation"
+  }
+}

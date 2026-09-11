@@ -16,6 +16,9 @@ def handle(s, command, data):
                auth, execution['accountable_owner'], execution['task_id'])
         execution['return_id'] = result['id']
         s.attach('Execution', execution)
+        if command == 'submit':
+            from organization.learning import capture_route
+            capture_route(s,result,execution)
         for request in pending(s, execution['id']):
             request = dict(request, status='cancelled')
             s.emit('BoundaryRequest', request, 'BoundaryCancelled', auth, execution['accountable_owner'], execution['task_id'])

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "id": "M03",
+  "mission": "Minimal traceable learning engineering; not learning efficacy or full Phase 5",
+  "stages": [
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/M03_LEARNING_ORGANIZATION.md",
+        "development/autodev/learning-demo"
+      ],
+      "outputs": [
+        "organization/learning.py",
+        "specs/M03.learning.json",
+        "organization/human_web/learning.js",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/M03.learning.json",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py",
+        "autodev/learning_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "KNOW-02/03/05/06/13 and CAP-01/02/08/11 within declared local subset",
+          "test": "tests.test_learning",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        },
+        {
+          "id": "Explicit Agent delegation and source projection boundary",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Evidence and candidate capture",
+      "dependencies": []
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/M03_LEARNING_ORGANIZATION.md",
+        "development/autodev/learning-demo"
+      ],
+      "outputs": [
+        "organization/learning.py",
+        "specs/M03.learning.json",
+        "organization/human_web/learning.js",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/M03.learning.json",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py",
+        "autodev/learning_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "KNOW-02/03/05/06/13 and CAP-01/02/08/11 within declared local subset",
+          "test": "tests.test_learning",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        },
+        {
+          "id": "Explicit Agent delegation and source projection boundary",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S02",
+      "title": "Bounded knowledge and verification",
+      "dependencies": [
+        "S01"
+      ]
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/M03_LEARNING_ORGANIZATION.md",
+        "development/autodev/learning-demo"
+      ],
+      "outputs": [
+        "organization/learning.py",
+        "specs/M03.learning.json",
+        "organization/human_web/learning.js",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/M03.learning.json",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py",
+        "autodev/learning_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "KNOW-02/03/05/06/13 and CAP-01/02/08/11 within declared local subset",
+          "test": "tests.test_learning",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        },
+        {
+          "id": "Explicit Agent delegation and source projection boundary",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S03",
+      "title": "Scoped reuse and capability",
+      "dependencies": [
+        "S02"
+      ]
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/M03_LEARNING_ORGANIZATION.md",
+        "development/autodev/learning-demo"
+      ],
+      "outputs": [
+        "organization/learning.py",
+        "specs/M03.learning.json",
+        "organization/human_web/learning.js",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/M03.learning.json",
+        "tests/test_learning.py",
+        "tests/test_learning_gateway.py",
+        "autodev/learning_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_learning",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "KNOW-02/03/05/06/13 and CAP-01/02/08/11 within declared local subset",
+          "test": "tests.test_learning",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        },
+        {
+          "id": "Explicit Agent delegation and source projection boundary",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/M03_LEARNING_ORGANIZATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.learning_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S04",
+      "title": "Browser integration and local acceptance",
+      "dependencies": [
+        "S03"
+      ]
+    }
+  ]
+}
