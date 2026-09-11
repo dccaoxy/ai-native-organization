@@ -1,0 +1,116 @@
+{
+  "objects": {
+    "KnowledgeImpact": {
+      "id": {
+        "type": "string"
+      },
+      "knowledge_id": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "triggers": {
+        "type": "strings"
+      },
+      "package_ids": {
+        "type": "strings"
+      },
+      "execution_ids": {
+        "type": "strings"
+      }
+    },
+    "LearningChallenge": {
+      "id": {
+        "type": "string"
+      },
+      "execution_id": {
+        "type": "string"
+      },
+      "use_id": {
+        "type": "string"
+      },
+      "return_id": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "reporter": {
+        "type": "string"
+      }
+    },
+    "RevisionRationale": {
+      "id": {
+        "type": "string"
+      },
+      "claim_id": {
+        "type": "string"
+      },
+      "previous_id": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "addressed_triggers": {
+        "type": "strings"
+      }
+    },
+    "RevalidationPlan": {
+      "id": {
+        "type": "string"
+      },
+      "knowledge_id": {
+        "type": "string"
+      },
+      "task_id": {
+        "type": "string"
+      },
+      "owner": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string"
+      },
+      "replacement_package": {
+        "type": "string"
+      },
+      "reproduction_id": {
+        "type": "string"
+      }
+    },
+    "RouteRevision": {
+      "id": {
+        "type": "string"
+      },
+      "previous_package": {
+        "type": "string"
+      },
+      "package_id": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      }
+    }
+  },
+  "events": [
+    "KnowledgeImpactRecorded",
+    "LearningChallengeReported",
+    "RevisionExplained",
+    "RevalidationPlanned",
+    "RouteRevised",
+    "RevalidationCompleted"
+  ],
+  "authority_matrix": {
+    "report_knowledge_issue": "Explicit Human authority; report_knowledge_issue may be delegated to owning Agent",
+    "revise_knowledge": "Explicit Human authority; report_knowledge_issue may be delegated to owning Agent",
+    "plan_revalidation": "Explicit Human authority; report_knowledge_issue may be delegated to owning Agent",
+    "revise_route": "Explicit Human authority; report_knowledge_issue may be delegated to owning Agent",
+    "complete_revalidation": "Explicit Human authority; report_knowledge_issue may be delegated to owning Agent"
+  }
+}

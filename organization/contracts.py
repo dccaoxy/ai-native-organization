@@ -18,6 +18,11 @@ CONTRACT['objects'].update(LEARNING_EXTENSION['objects'])
 CONTRACT['event_catalog'].extend(LEARNING_EXTENSION['events'])
 CONTRACT['authority_matrix'].update(LEARNING_EXTENSION['authority_matrix'])
 
+REVALIDATION = json.loads((ROOT / 'specs/R01.revalidation.json').read_text(encoding='utf-8'))
+CONTRACT['objects'].update(REVALIDATION['objects'])
+CONTRACT['event_catalog'].extend(REVALIDATION['events'])
+CONTRACT['authority_matrix'].update(REVALIDATION['authority_matrix'])
+
 
 def validate(name, obj):
     definition = CONTRACT["objects"][name]

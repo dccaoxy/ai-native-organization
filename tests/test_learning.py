@@ -25,7 +25,7 @@ class LearningTests(unittest.TestCase):
         self.call('accept',{'id':f'AC{i}','return_id':f'R{i}','review_id':f'RV{i}','accepted':not fail,'rationale':'Fixture criterion only'},'H1')
 
     def propose(self,cid='K1',previous='none'):
-        return self.call('propose_claim',{'id':cid,'return_id':'R1','reviewer':'H3','previous_id':previous,'core_claim':'Synthetic bounded claim','scope':'Explicit local fixture only','boundary':['read'],'mechanism':'Candidate explanation, no causal proof','transfer_conditions':'Same fixture protocol; not real business','task_ids':['T2']})
+        return self.call('revise_knowledge' if previous!='none' else 'propose_claim',{**({'reason':'Fixture revision','addressed_triggers':self.org.store.state().get('KnowledgeImpact',{}).get('impact/'+previous,{}).get('triggers',[])} if previous!='none' else {}),'id':cid,'return_id':'R1','reviewer':'H3','previous_id':previous,'core_claim':'Synthetic bounded claim','scope':'Explicit local fixture only','boundary':['read'],'mechanism':'Candidate explanation, no causal proof','transfer_conditions':'Same fixture protocol; not real business','task_ids':['T2']})
 
     def evidence(self,i,cid='K1',relation='supports',upstream=None):
         return self.call('capture_evidence',{'id':cid+f'/EV{i}','claim_id':cid,'return_id':f'R{i}','relation':relation,'rationale':'Synthetic relation, not empirical evidence','upstream_sources':upstream or [f'fixture-source-{i}']},f'H{i}')

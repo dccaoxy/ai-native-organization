@@ -21,13 +21,16 @@ def accepted(s,rid):
     return any(a['return_id']==rid and a['accepted'] for a in items(s,'Acceptance'))
 
 
-def invalidate(s,kid,auth,status):
+def invalidate(s,kid,auth,status,trigger=None):
     k=s.get('KnowledgeRevision',kid);k['status']=status
     s.emit('KnowledgeRevision',k,'KnowledgeSuperseded' if status=='superseded' else 'KnowledgeChallenged',auth,k['author'])
     for route in items(s,'CapabilityRoute'):
         if route['knowledge_id']==kid and route['status']!='stale':
             route=dict(route,status='stale')
             s.emit('CapabilityRoute',route,'RouteStale',auth,route['owner'])
+
+    from organization.revalidation import record_impact
+    record_impact(s,kid,auth,trigger or status)
 
 
 def capture_route(s,r,e):
@@ -70,7 +73,9 @@ def handle(s,command,d):
             s.emit('CapabilityRoute',route,'RouteCaptured',auth,s.actor,e['task_id'])
         if d['relation']=='contradicts':
             for k in items(s,'KnowledgeRevision'):
-                if k['claim_id']==claim['id'] and k['status']=='validated':invalidate(s,k['id'],auth,'challenged')
+                if k['claim_id']==claim['id']:
+                    from organization.revalidation import challenge_knowledge
+                    challenge_knowledge(s,k['id'],auth,'evidence/'+d['id'])
     elif command=='verify_claim':
         require(d,['id','claim_id','decision','evidence_ids','falsification','alternatives','limitations','independence'])
         s.new('LearningVerification',d['id']);c=s.get('LearningClaim',d['claim_id']);auth=s.authority(c['reviewer'])
@@ -81,6 +86,9 @@ def handle(s,command,d):
         if not evidence or any(x['claim_id']!=c['id'] for x in evidence):raise DomainError('Evidence must belong to this claim')
         if set(d['evidence_ids'])!={x['id'] for x in items(s,'LearningEvidence') if x['claim_id']==c['id']}:raise DomainError('Verification must consider all current evidence',409)
         if d['decision']=='validated':
+            if c['previous_id']!='none':
+                from organization.revalidation import ensure_revision_context
+                ensure_revision_context(s,c)
             if any(x['relation']=='contradicts' for x in evidence):raise DomainError('Counter evidence requires a revised bounded claim',409)
             support=[x for x in evidence if x['relation']=='supports']
             if len({x['snapshot']['execution']['hau_id'] for x in support})<2:raise DomainError('Minimum local gate: two source HAUs required',409)
@@ -112,7 +120,8 @@ def handle(s,command,d):
         require(d,['id','execution_id','knowledge_id','decision','reason','package_id'])
         s.new('KnowledgeUse',d['id']);e=s.get('Execution',d['execution_id']);auth=s.executor(e,command);k=s.get('KnowledgeRevision',d['knowledge_id'])
         if e['status'] not in ('claimed','running','blocked'):raise DomainError('Knowledge use requires live Execution',409)
-        if k['status']!='validated' or e['task_id'] not in k['task_ids']:raise DomainError('Knowledge not valid for explicit task scope',403)
+        from organization.revalidation import eligible_tasks
+        if k['status']!='validated' or e['task_id'] not in eligible_tasks(s.state,k):raise DomainError('Knowledge not valid for explicit task scope',403)
         if not set(k['boundary']).issubset(e['runtime_boundary']):raise DomainError('Knowledge cannot expand runtime boundary',403)
         if d['decision'] not in ('adopted','rejected'):raise DomainError('Explicit adoption or rejection required')
         text(d['reason'])
@@ -127,9 +136,10 @@ def handle(s,command,d):
         if any(x['use_id']==u['id'] for x in items(s,'LearningOutcome')):raise DomainError('Outcome already linked',409)
         text(d['interpretation']);s.emit('LearningOutcome',{**d,'owner':s.actor},'LearningOutcomeRecorded',auth,s.actor,e['task_id'])
         # Failure is a revalidation signal, not proof that knowledge caused it.
-        if r['outcome']!='success':
+        if r['outcome']!='success' and u['decision']=='adopted':
             k=s.get('KnowledgeRevision',u['knowledge_id'])
-            if k['status']=='validated':invalidate(s,k['id'],auth,'challenged')
+            from organization.revalidation import challenge_knowledge
+            challenge_knowledge(s,k['id'],auth,'outcome/'+d['id'])
     elif command=='record_reproduction':
         require(d,['id','package_id','use_id','return_id'])
         s.new('CapabilityReproduction',d['id']);route=s.get('CapabilityRoute',d['package_id']);auth=s.authority(route['owner']);u=s.get('KnowledgeUse',d['use_id']);r,e=source(s,d['return_id']);k=s.get('KnowledgeRevision',route['knowledge_id'])

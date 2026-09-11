@@ -2,7 +2,7 @@ from organization.core import require
 from organization.contracts import CONTRACT, validate
 from organization.store import DomainError
 
-DELEGABLE = {'claim','ack','progress','blocked','escalate','resume','request_boundary','submit','fail','release','challenge_goal','use_knowledge'}
+DELEGABLE = {'claim','ack','progress','blocked','escalate','resume','request_boundary','submit','fail','release','challenge_goal','use_knowledge','report_knowledge_issue'}
 
 
 def interrupt(s, execution, authority):

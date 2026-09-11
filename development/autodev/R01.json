@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "id": "R01",
+  "mission": "Local knowledge invalidation and explicit new-task revalidation",
+  "stages": [
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/R01_REVALIDATION.md",
+        "development/autodev/revalidation-demo"
+      ],
+      "outputs": [
+        "organization/revalidation.py",
+        "specs/R01.revalidation.json",
+        "organization/human_web/learning.js",
+        "tests/test_revalidation.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/R01.revalidation.json",
+        "tests/test_learning.py",
+        "tests/test_revalidation.py",
+        "autodev/revalidation_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "Bounded revalidation, lineage, reasons, Human authority, no stale restoration",
+          "test": "tests.test_revalidation",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        },
+        {
+          "id": "Agent knowledge access and explicit delegation",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Impact and scoped signals",
+      "dependencies": []
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/R01_REVALIDATION.md",
+        "development/autodev/revalidation-demo"
+      ],
+      "outputs": [
+        "organization/revalidation.py",
+        "specs/R01.revalidation.json",
+        "organization/human_web/learning.js",
+        "tests/test_revalidation.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/R01.revalidation.json",
+        "tests/test_learning.py",
+        "tests/test_revalidation.py",
+        "autodev/revalidation_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "Bounded revalidation, lineage, reasons, Human authority, no stale restoration",
+          "test": "tests.test_revalidation",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        },
+        {
+          "id": "Agent knowledge access and explicit delegation",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S02",
+      "title": "Explicit revision and new-task revalidation",
+      "dependencies": [
+        "S01"
+      ]
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/R01_REVALIDATION.md",
+        "development/autodev/revalidation-demo"
+      ],
+      "outputs": [
+        "organization/revalidation.py",
+        "specs/R01.revalidation.json",
+        "organization/human_web/learning.js",
+        "tests/test_revalidation.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/R01.revalidation.json",
+        "tests/test_learning.py",
+        "tests/test_revalidation.py",
+        "autodev/revalidation_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "review_tests": [
+        "tests.test_revalidation",
+        "tests.test_learning_gateway"
+      ],
+      "principle_checks": [
+        {
+          "id": "Bounded revalidation, lineage, reasons, Human authority, no stale restoration",
+          "test": "tests.test_revalidation",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        },
+        {
+          "id": "Agent knowledge access and explicit delegation",
+          "test": "tests.test_learning_gateway",
+          "source": "development/milestones/R01_REVALIDATION.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.revalidation_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S03",
+      "title": "Browser and independent Agent acceptance",
+      "dependencies": [
+        "S02"
+      ]
+    }
+  ]
+}

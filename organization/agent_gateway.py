@@ -92,10 +92,14 @@ class Gateway:
             reg, state = self.authenticate(token, approved=path != '/v1/me')
             if method == 'GET' and path == '/v1/me':
                 return {'registration':reg}
+            if method == 'GET' and path == '/v1/knowledge-alerts':
+                own={e['id'] for e in state.get('Execution',{}).values() if e['hau_id']==reg['hau_id'] and e['task_id'] in reg['allowed_tasks']}
+                return {'alerts':[{'use_id':u['id'],'execution_id':u['execution_id'],'knowledge_id':u['knowledge_id'],'status':state['KnowledgeRevision'][u['knowledge_id']]['status']} for u in state.get('KnowledgeUse',{}).values() if u['execution_id'] in own and u['decision']=='adopted' and state['KnowledgeRevision'][u['knowledge_id']]['status']!='validated']}
             if method == 'GET' and path == '/v1/knowledge':
+                from organization.revalidation import eligible_tasks
                 permitted=set(reg['allowed_tasks'])
                 fields=('id','version','core_claim','scope','boundary','mechanism','transfer_conditions','status')
-                return {'knowledge':[{**{f:k[f] for f in fields},'task_ids':sorted(permitted.intersection(k['task_ids']))} for k in state.get('KnowledgeRevision',{}).values() if k['status']=='validated' and permitted.intersection(k['task_ids'])]}
+                return {'knowledge':[{**{f:k[f] for f in fields},'task_ids':sorted(permitted.intersection(eligible_tasks(state,k)))} for k in state.get('KnowledgeRevision',{}).values() if k['status']=='validated' and permitted.intersection(eligible_tasks(state,k))]}
             if method == 'GET' and path == '/v1/tasks':
                 tasks = [t for t in state.get('Task', {}).values() if t['id'] in reg['allowed_tasks'] and t['status'] == 'published' and state['Goal'][t['primary_goal']]['status'] == 'active']
                 return {'tasks':tasks}

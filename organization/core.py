@@ -111,7 +111,9 @@ class Session:
             self.transition(obj, 'ack')
             self.emit('Execution', obj, 'ACK', auth, obj['accountable_owner'], obj['task_id'])
         else:
-            if command in ('propose_claim','capture_evidence','verify_claim','assemble_route','use_knowledge','record_learning_outcome','record_reproduction'):
+            if command in ('report_knowledge_issue','revise_knowledge','plan_revalidation','revise_route','complete_revalidation'):
+                from organization.revalidation import handle
+            elif command in ('propose_claim','capture_evidence','verify_claim','assemble_route','use_knowledge','record_learning_outcome','record_reproduction'):
                 from organization.learning import handle
             elif command in ('register_agent','approve_agent','revoke_agent'):
                 from organization.enrollment import handle
