@@ -23,3 +23,7 @@ POST /v1/connect 在验证凭据和注册编号后记录首次连接回执；重
 repair budget=1；工程失败持久化修复，Frozen/Human Authority/Risk 变化进入 HUMAN_DECISION_REQUIRED。本地开发不需重复确认；push、云端常驻安装、域名改动仍须另行确认。
 
 恢复看 PA02.state.json 和运行回执；回滚代码以独立 checkout/revert，新增 portal_connections 表可保留，旧事件历史不能删除。旧版代码可能不识别 AgentAccessUpdated，应保留 PA02 版本读取已产生该事件的数据或使用变更前的一致性备份，不对活跃账号库直接降级。
+
+## 完成记录
+
+S01 本地 PASS：7d71e90 / autodev/PA02/S01/v1；171 项完整回归、17 条合成事件，真实浏览器与独立 HTTP 客户端验证通过。无模型调用；详情见 development/PA02_ACCEPTANCE.md。

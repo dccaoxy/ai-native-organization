@@ -1,5 +1,11 @@
 # Current Development State
 
+## 当前：PA02 Agent 接入说明与默认权限
+
+2026-09-11：S01 本地 PASS，7d71e90 / autodev/PA02/S01/v1。网页可复制包含真实地址/一次性凭据/动作与边界的完整 Agent 接入文本；独立客户端确认连接回执，pending 不获执行权限。基础操作默认预选、中文解释、高级折叠，Human 仍选择任务并确认；授权后可网页调整，变更立即生效且不改 Execution owner/boundary。171 项完整回归、8 项账号/权限测试、实际网页与独立客户端通过；17 条合成事件，0 位真实参与者，无模型调用。见 development/PA02_ACCEPTANCE.md、autodev/PA02.state.json。
+
+8876 本地门户已更新，原事件指纹不变并已有一致性备份；未推送、未云端部署。复制说明不能让纯文字或无法访问本机 localhost 的云端 Agent 自动获得网络能力；下一步仍是确认云端隔离入口与常驻部署，正式用户试验尚未启动。
+
 ## 当前：PA01 普通用户网页门户
 
 2026-09-11：用户要求不再安装依赖或执行命令，正式用户试用推迟至网页入口完善之后。PA01 S01/S02 已本地 PASS，账号注册/登录、服务端固定 Human 身份、目标任务创建发布、所属 Agent 凭据/授权、网页协议客户端及分离审查验收可用。169 项完整回归，最终网页双账号流程 16 条合成事件，后续 6 项安全回归通过；0 位真实参与者、未调用模型。检查点 6a25577 / autodev/PA01/S01/v1、a1ce994 / autodev/PA01/S02/v1。见 development/PA01_ACCEPTANCE.md、PORTAL_USER_GUIDE.md 与 autodev/PA01.state.json。
