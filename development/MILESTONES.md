@@ -1,5 +1,9 @@
 # Development Milestones
 
+## 当前：M03 最小可追溯学习闭环
+
+2026-09-11 用户已确认开发 M03。先读 development/milestones/M03_LEARNING_ORGANIZATION.md 与 development/autodev/M03.state.json；S01–S04 已本地 PASS，152 项测试通过，实际浏览器＋独立 Agent 跨任务复用产生 38 条合成事件；见 development/M03_ACCEPTANCE.md。范围为 Evidence 关系/快照、独立验证的有界 Knowledge 版本、授权复用和 Capability 候选/复现/重验信号。不是完整学习组织或真实效果验证；未推送/部署。下一步试用可追溯来源链并补充反证/版本变化的复验体验，暂不跳入 Human Pilot。
+
 ## 2026-09-11 · AA02 联合工作台
 
 当前用户授权优先项：AA02 Human × Agent 网页联合工作台，插入 M03 前。注册审批、任务/执行、边界决策、正式 Return 与分离验收页面已实现；136 项回归及实际 Edge 浏览器＋独立 Agent 进程联调通过（18 条合成事件，0 位真实 Human）。AA02 S01 本地 PASS：63d92f3 / autodev/AA02/S01/v1；验收及试用入口见 development/AA02_ACCEPTANCE.md。操作说明：development/milestones/AA02_HUMAN_AGENT_WORKSPACE.md。未推送、未部署；原域名项目不变。
@@ -14,7 +18,7 @@
 | M01 — Minimum Organization | P0 / Phase 2–3 | **Complete — M0 simulation engineering; delivery verified** | 3 HAU 围绕 1 Goal 跑通多 Execution 的完整 M0 闭环 |
 | M02 — Synthetic Organization | P1 / Phase 4 | Local S01–S04 PASS within declared coverage; not pushed/deployed | 60 Execution / 536 事件；Goal Challenge、并发/恢复与本机工作台验证；见 M02_ACCEPTANCE |
 | AA01 — Independent Agent Access | P1 / Phase 4, M0 | Local S01–S03 PASS; not pushed/deployed | 注册/受控授权/独立客户端；133 项测试及模型辅助协议联调；见 AA01_ACCEPTANCE |
-| M03 — Learning Organization | P1 / Phase 5 | Planned | Execution → Evidence → Knowledge → Capability 可追溯闭环 |
+| M03 — Learning Organization | P1 / Phase 5 | Minimal S01–S04 local PASS; full learning mechanisms incomplete | 152 tests / 38 synthetic events; see M03_ACCEPTANCE.md |
 | M04 — Human Pilot | P2 / Phase 6 | Planned | 5–10 人、2–4 Cycle 的真实行为基线 |
 | M05 — Value & Culture | P2 / Phase 7 | Planned | Contribution → Reward / Honor 的可验证机制 |
 | M06 — Bounded Automation | P3 / Phase 8 | Planned | 低风险、可复现能力的 Organization-owned Agent 执行 |
