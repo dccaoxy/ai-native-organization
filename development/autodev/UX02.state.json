@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "plan": "UX02",
+  "stages": {
+    "S01": {
+      "status": "BLOCKED_ENGINEERING",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "reason": "Repair budget exhausted or repair adapter unavailable"
+    }
+  },
+  "events": [
+    {
+      "sequence": 1,
+      "stage": "S01",
+      "status": "BUILD",
+      "time": 1789088344.4075756,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 2,
+      "stage": "S01",
+      "status": "TEST",
+      "time": 1789088344.5365062,
+      "attempt": 1
+    },
+    {
+      "sequence": 3,
+      "stage": "S01",
+      "status": "REVIEW",
+      "time": 1789088404.6879773,
+      "attempt": 1
+    },
+    {
+      "sequence": 4,
+      "stage": "S01",
+      "status": "FAILED",
+      "time": 1789088411.6237757,
+      "attempt": 1,
+      "reason": "Build/test/review/audit/output failure"
+    },
+    {
+      "sequence": 5,
+      "stage": "S01",
+      "status": "REPAIR",
+      "time": 1789088411.6255562,
+      "attempt": 1
+    },
+    {
+      "sequence": 6,
+      "stage": "S01",
+      "status": "BLOCKED_ENGINEERING",
+      "time": 1789088411.7042687,
+      "reason": "Repair budget exhausted or repair adapter unavailable"
+    }
+  ]
+}

@@ -1,12 +1,35 @@
 {
   "verdict": "PASS",
+  "synthetic": true,
+  "real_human_participants": 0,
+  "model_called": false,
+  "initial_execution_count": 0,
+  "initial_knowledge_count": 0,
+  "initial_event_count": 6,
+  "event_count": 80,
+  "registered_agents": 4,
+  "independent_agent_processes": true,
   "real_browser": true,
-  "prefill_checked": true,
-  "drafts_survive_refresh": true,
-  "drafts_isolated_by_human": true,
-  "logout_clears_drafts": true,
-  "no_automatic_decisions": true,
-  "source_unchanged": true,
+  "browser": "msedge",
+  "restarts": [
+    {
+      "number": 1,
+      "events_before": 13,
+      "events_after": 13
+    },
+    {
+      "number": 2,
+      "events_before": 53,
+      "events_after": 53
+    }
+  ],
+  "restart_idempotency": true,
+  "agent_interruption_recovery": true,
+  "foreign_human_recovery_disabled": true,
+  "event_replay_matches": true,
+  "new_task_revalidation": "passed",
+  "old_knowledge": "superseded",
+  "old_package": "stale",
   "source_hashes": {
     "organization/agent_client.py": "78d81251e0c3cf41e3ec8c9bdfaf719e9c4d792ce8a2ae002467192c8344e714",
     "organization/agent_demo.py": "d05fb422e9c55765e528c18446a6209685cfacf886f9f2adaf76e60a0e890d3c",
@@ -44,6 +67,12 @@
     "organization/human_web/learning.js": "09d55c2b166c18a42cb2433136b1eaad48e11880279e93213f8f4e4c7a5aedb8",
     "organization/web/app.js": "9ed85c555b1d92c187b54bc081a8696469d495fbc9719b4ed249404383b4692f",
     "organization/web/index.html": "99adfecde536fef4620265a20c1a2dab6aead12f3010c59de290654e70630610",
-    "organization/web/style.css": "5e935e8385881c7dccd805a8964648939f71dd765ae15ac35ccb9ffa557279f5"
+    "organization/web/style.css": "5e935e8385881c7dccd805a8964648939f71dd765ae15ac35ccb9ffa557279f5",
+    "specs/AA01.agent-access.json": "caf5d415c32ced1d577bdc94f55335193b94298eb154954bbfbf98e31ac27888",
+    "specs/M01.contract.json": "60eaba956ea6c7be2c149516efa856ea1290550f63b9e926c82fc07a98d12090",
+    "specs/M02.final-coverage.json": "eaa3aa12fcc4250bd9d356894f98254c728690ff85fd987f0b08f21dbe7ff5a6",
+    "specs/M02.goal-challenge.json": "7ee560e93cdd6cfeca580526ad5c78385f8a3ccbdb4b605aff499f5c2cf47012",
+    "specs/M03.learning.json": "715536dfe3c734ba32ba6c0f447aebb87282ee4c61acd8d06fccd13c78d10dd6",
+    "specs/R01.revalidation.json": "049cc1f06fa90c7232572c663b7ad5fe0b268d14893c07dcb2e3ee20d87e6a28"
   }
 }

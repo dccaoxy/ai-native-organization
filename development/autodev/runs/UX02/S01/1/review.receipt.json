@@ -1,0 +1,48 @@
+{
+  "ok": false,
+  "exit_code": 1,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.reviewer"
+  ],
+  "source_digest": "a780fb70cf99256b63b3a156c1ddd3f68d7bb6ba7557e65c045f66f9e413ece0",
+  "started": 1789088404.6899364,
+  "finished": 1789088411.604525,
+  "report": {
+    "role": "review",
+    "kind": "independent-process deterministic adversarial review",
+    "verdict": "FAIL",
+    "checks": [
+      {
+        "test": "tests.test_identity",
+        "passed": true
+      },
+      {
+        "test": "tests.test_agent_gateway",
+        "passed": false
+      },
+      {
+        "test": "tests.test_revalidation",
+        "passed": true
+      },
+      {
+        "test": "tests.test_human_web",
+        "passed": true
+      }
+    ],
+    "findings": [
+      {
+        "severity": "blocking",
+        "check": "tests.test_agent_gateway",
+        "reason": "Adversarial test failed"
+      }
+    ],
+    "source_digest": "a780fb70cf99256b63b3a156c1ddd3f68d7bb6ba7557e65c045f66f9e413ece0",
+    "nonce": "ddafb4adb8d14ba39c49802abba68243",
+    "limitations": [
+      "Does not replace independent human/LLM semantic review",
+      "Only configured engineering tests are covered"
+    ]
+  }
+}

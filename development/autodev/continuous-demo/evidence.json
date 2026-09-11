@@ -1,0 +1,4134 @@
+{
+  "state": {
+    "HAU": {
+      "U1": {
+        "agent_id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+        "human_id": "H1",
+        "id": "U1"
+      },
+      "U2": {
+        "agent_id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+        "human_id": "H2",
+        "id": "U2"
+      },
+      "U3": {
+        "agent_id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+        "human_id": "H3",
+        "id": "U3"
+      }
+    },
+    "Human": {
+      "H1": {
+        "display_name": "Simulation H1",
+        "id": "H1",
+        "kind": "human"
+      },
+      "H2": {
+        "display_name": "Simulation H2",
+        "id": "H2",
+        "kind": "human"
+      },
+      "H3": {
+        "display_name": "Simulation H3",
+        "id": "H3",
+        "kind": "human"
+      }
+    },
+    "RepresentativeAgent": {
+      "A1": {
+        "active": false,
+        "hau_id": "U1",
+        "human_id": "H1",
+        "id": "A1",
+        "permissions": [
+          "claim",
+          "ack",
+          "progress",
+          "blocked",
+          "escalate",
+          "resume",
+          "request_boundary",
+          "submit",
+          "fail",
+          "release"
+        ],
+        "runtime_status": "online"
+      },
+      "A2": {
+        "active": false,
+        "hau_id": "U2",
+        "human_id": "H2",
+        "id": "A2",
+        "permissions": [
+          "claim",
+          "ack",
+          "progress",
+          "blocked",
+          "escalate",
+          "resume",
+          "request_boundary",
+          "submit",
+          "fail",
+          "release"
+        ],
+        "runtime_status": "online"
+      },
+      "A3": {
+        "active": false,
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "A3",
+        "permissions": [
+          "claim",
+          "ack",
+          "progress",
+          "blocked",
+          "escalate",
+          "resume",
+          "request_boundary",
+          "submit",
+          "fail",
+          "release"
+        ],
+        "runtime_status": "online"
+      },
+      "AG-8ef1372b61804034a1dc3caf70e5168c": {
+        "active": true,
+        "hau_id": "U1",
+        "human_id": "H1",
+        "id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "AG-fd86ab8d51a44744929b489bdae7c5ff": {
+        "active": true,
+        "hau_id": "U2",
+        "human_id": "H2",
+        "id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit"
+        ],
+        "runtime_status": "online"
+      },
+      "AG-882f722d9e384ff5871a00e9c97485d5": {
+        "active": false,
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "AG-882f722d9e384ff5871a00e9c97485d5",
+        "permissions": [
+          "claim",
+          "ack",
+          "fail",
+          "use_knowledge",
+          "report_knowledge_issue"
+        ],
+        "runtime_status": "online"
+      },
+      "AG-c80cbf5db1924c64ade00198c14bb01b": {
+        "active": true,
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit",
+          "use_knowledge"
+        ],
+        "runtime_status": "online"
+      }
+    },
+    "Goal": {
+      "G1": {
+        "boundary": [
+          "read",
+          "draft"
+        ],
+        "desired_change": "Simulation outcome",
+        "goal_authority": "H1",
+        "id": "G1",
+        "status": "active",
+        "success_criteria": "Explicit fixture criterion"
+      }
+    },
+    "Task": {
+      "T1": {
+        "acceptance_authority": "H1",
+        "acceptance_criteria": "Evidence matches fixture criterion",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Fixture result",
+        "id": "T1",
+        "primary_goal": "G1",
+        "review_authority": "H2",
+        "selection_authority": "H3",
+        "status": "closed"
+      },
+      "T2": {
+        "acceptance_authority": "H1",
+        "acceptance_criteria": "Traceable bounded reuse",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Synthetic reuse",
+        "id": "T2",
+        "primary_goal": "G1",
+        "review_authority": "H2",
+        "selection_authority": "H3",
+        "status": "published"
+      },
+      "T3": {
+        "acceptance_authority": "H1",
+        "acceptance_criteria": "Formal trace and revised scope check",
+        "boundary": [
+          "read"
+        ],
+        "execution_mode": "parallel",
+        "expected_output": "Reproduce revised synthetic route",
+        "id": "T3",
+        "primary_goal": "G1",
+        "review_authority": "H2",
+        "selection_authority": "H3",
+        "status": "published"
+      }
+    },
+    "AgentRegistration": {
+      "8ef1372b61804034a1dc3caf70e5168c": {
+        "agent_id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+        "allowed_tasks": [
+          "T1"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U1",
+        "human_id": "H1",
+        "id": "8ef1372b61804034a1dc3caf70e5168c",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      },
+      "fd86ab8d51a44744929b489bdae7c5ff": {
+        "agent_id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+        "allowed_tasks": [
+          "T1"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U2",
+        "human_id": "H2",
+        "id": "fd86ab8d51a44744929b489bdae7c5ff",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      },
+      "882f722d9e384ff5871a00e9c97485d5": {
+        "agent_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+        "allowed_tasks": [
+          "T2"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "882f722d9e384ff5871a00e9c97485d5",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "claim",
+          "ack",
+          "fail",
+          "use_knowledge",
+          "report_knowledge_issue"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      },
+      "c80cbf5db1924c64ade00198c14bb01b": {
+        "agent_id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+        "allowed_tasks": [
+          "T3"
+        ],
+        "capabilities": [
+          "synthetic-test-return"
+        ],
+        "hau_id": "U3",
+        "human_id": "H3",
+        "id": "c80cbf5db1924c64ade00198c14bb01b",
+        "name": "Independent synthetic test Agent",
+        "permissions": [
+          "claim",
+          "ack",
+          "submit",
+          "use_knowledge"
+        ],
+        "status": "approved",
+        "version": "0.1"
+      }
+    },
+    "Execution": {
+      "E1": {
+        "accountable_owner": "H1",
+        "claimed_at": 1789088279.236766,
+        "hau_id": "U1",
+        "id": "E1",
+        "last_seen": 1789088280.3204072,
+        "return_id": "R1",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E2": {
+        "accountable_owner": "H2",
+        "claimed_at": 1789088280.6789742,
+        "hau_id": "U2",
+        "id": "E2",
+        "last_seen": 1789088280.9704335,
+        "return_id": "R2",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T1"
+      },
+      "E3": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789088282.0294504,
+        "hau_id": "U3",
+        "id": "E3",
+        "last_seen": 1789088282.34747,
+        "return_id": "R3",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T2"
+      },
+      "E4": {
+        "accountable_owner": "H3",
+        "claimed_at": 1789088284.3071134,
+        "hau_id": "U3",
+        "id": "E4",
+        "last_seen": 1789088284.5445645,
+        "return_id": "R4",
+        "runtime_boundary": [
+          "read"
+        ],
+        "status": "closed",
+        "task_id": "T3"
+      }
+    },
+    "CapabilityRoute": {
+      "route/R1": {
+        "components": {
+          "agent_configuration": "Explicit read scope only",
+          "data": "Synthetic fixture v1",
+          "oversight": "H2 Review, H1 Acceptance; no production authority",
+          "practice": "Use bounded claim as context, then produce formal Return",
+          "runtime": "Local test process",
+          "tools": "Local protocol Client"
+        },
+        "id": "route/R1",
+        "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "owner": "H1",
+        "reproduction_ids": [],
+        "source_hau": "U1",
+        "source_return": "R1",
+        "status": "stale"
+      },
+      "route/R2": {
+        "components": {
+          "missing": [
+            "knowledge",
+            "data",
+            "tools",
+            "agent_configuration",
+            "runtime",
+            "oversight"
+          ],
+          "observed_terrain": "Isolated fixture 2",
+          "practice": "Independent client Return",
+          "reflection": "Protocol test, no efficacy claim"
+        },
+        "id": "route/R2",
+        "knowledge_id": "none",
+        "owner": "H2",
+        "reproduction_ids": [],
+        "source_hau": "U2",
+        "source_return": "R2",
+        "status": "candidate"
+      },
+      "c75c87e4-5e42-419d-afe1-4815e804f307": {
+        "components": {
+          "agent_configuration": "explicit delegation",
+          "data": "fixture v2",
+          "oversight": "Separate H2 review and H1 acceptance",
+          "practice": "Bounded claim as context only",
+          "runtime": "isolated loopback",
+          "tools": "local client"
+        },
+        "id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "knowledge_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "owner": "H1",
+        "reproduction_ids": [
+          "a5978768-a2ad-4405-832c-3ce994e4e38a"
+        ],
+        "source_hau": "U1",
+        "source_return": "R1",
+        "status": "reproduced"
+      },
+      "route/R4": {
+        "components": {
+          "missing": [
+            "knowledge",
+            "data",
+            "tools",
+            "agent_configuration",
+            "runtime",
+            "oversight"
+          ],
+          "observed_terrain": "New planned test task",
+          "practice": "Recorded new version adoption and formal Return",
+          "reflection": "No empirical learning efficacy claim"
+        },
+        "id": "route/R4",
+        "knowledge_id": "none",
+        "owner": "H3",
+        "reproduction_ids": [],
+        "source_hau": "U3",
+        "source_return": "R4",
+        "status": "candidate"
+      }
+    },
+    "Return": {
+      "R1": {
+        "execution_id": "E1",
+        "human_annotations": [],
+        "id": "R1",
+        "major_execution_facts": "Independent client Return",
+        "observed_terrain": "Isolated fixture 1",
+        "outcome": "success",
+        "reflection": "Protocol test, no efficacy claim",
+        "result": "Synthetic source 1"
+      },
+      "R2": {
+        "execution_id": "E2",
+        "human_annotations": [],
+        "id": "R2",
+        "major_execution_facts": "Independent client Return",
+        "observed_terrain": "Isolated fixture 2",
+        "outcome": "success",
+        "reflection": "Protocol test, no efficacy claim",
+        "result": "Synthetic source 2"
+      },
+      "R3": {
+        "execution_id": "E3",
+        "human_annotations": [],
+        "id": "R3",
+        "major_execution_facts": "Reuse failed in declared synthetic case",
+        "observed_terrain": "Unexpected fixture condition",
+        "outcome": "failure",
+        "reflection": "Need revised scope; no causal proof",
+        "result": "Explicit synthetic failure"
+      },
+      "R4": {
+        "execution_id": "E4",
+        "human_annotations": [],
+        "id": "R4",
+        "major_execution_facts": "Recorded new version adoption and formal Return",
+        "observed_terrain": "New planned test task",
+        "outcome": "success",
+        "reflection": "No empirical learning efficacy claim",
+        "result": "Synthetic revalidation succeeded"
+      }
+    },
+    "Review": {
+      "33f0c149-ec40-4e0d-9bcc-729ee383c4ee": {
+        "credible": true,
+        "evidence": "Synthetic trace reviewed; no real Human participant",
+        "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+        "return_id": "R1",
+        "reviewer": "H2"
+      },
+      "cdc10416-530f-4415-971e-aefdf86aaf70": {
+        "credible": true,
+        "evidence": "Synthetic trace reviewed; no real Human participant",
+        "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+        "return_id": "R2",
+        "reviewer": "H2"
+      },
+      "d3702e1b-f984-405c-a463-a4627d2c3eb6": {
+        "credible": true,
+        "evidence": "Synthetic new task trace inspected",
+        "id": "d3702e1b-f984-405c-a463-a4627d2c3eb6",
+        "return_id": "R4",
+        "reviewer": "H2"
+      }
+    },
+    "Acceptance": {
+      "86023abb-f575-4282-8d71-4c3e23942108": {
+        "accepted": true,
+        "acceptor": "H1",
+        "id": "86023abb-f575-4282-8d71-4c3e23942108",
+        "rationale": "Synthetic protocol criteria met",
+        "return_id": "R1",
+        "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+      },
+      "95c20d1b-3807-475d-bb7e-6f0a17568c31": {
+        "accepted": true,
+        "acceptor": "H1",
+        "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+        "rationale": "Synthetic protocol criteria met",
+        "return_id": "R2",
+        "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+      },
+      "894c1b4d-eac5-4b9a-858c-0b852478e8e1": {
+        "accepted": true,
+        "acceptor": "H1",
+        "id": "894c1b4d-eac5-4b9a-858c-0b852478e8e1",
+        "rationale": "Fixture criteria met",
+        "return_id": "R4",
+        "review_id": "d3702e1b-f984-405c-a463-a4627d2c3eb6"
+      }
+    },
+    "Selection": {
+      "a032aa1e-a9d6-4bc2-abfa-7d754f41f19a": {
+        "id": "a032aa1e-a9d6-4bc2-abfa-7d754f41f19a",
+        "rationale": "Synthetic selection distinct from review and acceptance",
+        "return_id": "R1",
+        "selector": "H3",
+        "task_id": "T1"
+      }
+    },
+    "LearningClaim": {
+      "e0278168-8eae-4f0b-b407-76e028d764b8": {
+        "author": "H1",
+        "boundary": [
+          "read"
+        ],
+        "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+        "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "mechanism": "Protocol trace may help reproduce the fixture",
+        "previous_id": "none",
+        "reviewer": "H3",
+        "scope": "Local synthetic tasks only",
+        "source_return": "R1",
+        "status": "validated",
+        "task_ids": [
+          "T2"
+        ],
+        "transfer_conditions": "Same local fixture; no real business extrapolation"
+      },
+      "289052c3-d364-4092-b66b-1887a2f04e4d": {
+        "author": "H1",
+        "boundary": [
+          "read"
+        ],
+        "core_claim": "Narrowed synthetic claim",
+        "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "mechanism": "Candidate revised explanation",
+        "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "reviewer": "H3",
+        "scope": "Revalidation fixture only",
+        "source_return": "R1",
+        "status": "validated",
+        "task_ids": [
+          "T3"
+        ],
+        "transfer_conditions": "Exclude the failed synthetic condition"
+      }
+    },
+    "LearningEvidence": {
+      "50f1a496-545b-4661-8be7-e3d060760f83": {
+        "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "id": "50f1a496-545b-4661-8be7-e3d060760f83",
+        "owner": "H1",
+        "rationale": "Independent synthetic fixture source; not empirical research",
+        "relation": "supports",
+        "return_id": "R1",
+        "snapshot": {
+          "acceptances": [
+            {
+              "accepted": true,
+              "acceptor": "H1",
+              "id": "86023abb-f575-4282-8d71-4c3e23942108",
+              "rationale": "Synthetic protocol criteria met",
+              "return_id": "R1",
+              "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+            }
+          ],
+          "execution": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088280.3204072,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          },
+          "return": {
+            "execution_id": "E1",
+            "human_annotations": [],
+            "id": "R1",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 1",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 1"
+          },
+          "reviews": [
+            {
+              "credible": true,
+              "evidence": "Synthetic trace reviewed; no real Human participant",
+              "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+              "return_id": "R1",
+              "reviewer": "H2"
+            }
+          ],
+          "task": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        },
+        "upstream_sources": [
+          "synthetic-source-1"
+        ]
+      },
+      "edc88bff-5a13-4709-bd47-314d8b13f2e9": {
+        "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "id": "edc88bff-5a13-4709-bd47-314d8b13f2e9",
+        "owner": "H2",
+        "rationale": "Independent synthetic fixture source; not empirical research",
+        "relation": "supports",
+        "return_id": "R2",
+        "snapshot": {
+          "acceptances": [
+            {
+              "accepted": true,
+              "acceptor": "H1",
+              "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+              "rationale": "Synthetic protocol criteria met",
+              "return_id": "R2",
+              "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+            }
+          ],
+          "execution": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.9704335,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          },
+          "return": {
+            "execution_id": "E2",
+            "human_annotations": [],
+            "id": "R2",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 2",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 2"
+          },
+          "reviews": [
+            {
+              "credible": true,
+              "evidence": "Synthetic trace reviewed; no real Human participant",
+              "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+              "return_id": "R2",
+              "reviewer": "H2"
+            }
+          ],
+          "task": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        },
+        "upstream_sources": [
+          "synthetic-source-2"
+        ]
+      },
+      "a531e013-31fc-4842-aaba-de4cf9188c0d": {
+        "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "id": "a531e013-31fc-4842-aaba-de4cf9188c0d",
+        "owner": "H1",
+        "rationale": "Source supports only revised fixture scope",
+        "relation": "supports",
+        "return_id": "R1",
+        "snapshot": {
+          "acceptances": [
+            {
+              "accepted": true,
+              "acceptor": "H1",
+              "id": "86023abb-f575-4282-8d71-4c3e23942108",
+              "rationale": "Synthetic protocol criteria met",
+              "return_id": "R1",
+              "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+            }
+          ],
+          "execution": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088280.3204072,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          },
+          "return": {
+            "execution_id": "E1",
+            "human_annotations": [],
+            "id": "R1",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 1",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 1"
+          },
+          "reviews": [
+            {
+              "credible": true,
+              "evidence": "Synthetic trace reviewed; no real Human participant",
+              "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+              "return_id": "R1",
+              "reviewer": "H2"
+            }
+          ],
+          "task": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        },
+        "upstream_sources": [
+          "synthetic-source-1"
+        ]
+      },
+      "64068482-a3ae-43e3-8035-6b36e6979be1": {
+        "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "id": "64068482-a3ae-43e3-8035-6b36e6979be1",
+        "owner": "H2",
+        "rationale": "Source supports only revised fixture scope",
+        "relation": "supports",
+        "return_id": "R2",
+        "snapshot": {
+          "acceptances": [
+            {
+              "accepted": true,
+              "acceptor": "H1",
+              "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+              "rationale": "Synthetic protocol criteria met",
+              "return_id": "R2",
+              "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+            }
+          ],
+          "execution": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.9704335,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          },
+          "return": {
+            "execution_id": "E2",
+            "human_annotations": [],
+            "id": "R2",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 2",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 2"
+          },
+          "reviews": [
+            {
+              "credible": true,
+              "evidence": "Synthetic trace reviewed; no real Human participant",
+              "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+              "return_id": "R2",
+              "reviewer": "H2"
+            }
+          ],
+          "task": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        },
+        "upstream_sources": [
+          "synthetic-source-2"
+        ]
+      }
+    },
+    "LearningVerification": {
+      "842bd54f-befb-498e-b789-3766be441a97": {
+        "alternatives": "Fixture bias and shared implementation",
+        "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "decision": "validated",
+        "evidence_ids": [
+          "50f1a496-545b-4661-8be7-e3d060760f83",
+          "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+        ],
+        "falsification": "Synthetic negative-path tests, no real causal proof",
+        "id": "842bd54f-befb-498e-b789-3766be441a97",
+        "independence": "Separate declared synthetic sources, not real independent experimental evidence",
+        "limitations": "Only protocol correctness",
+        "reviewer": "H3"
+      },
+      "a0366fa9-2a45-4398-b9c2-dc55eb5eccad": {
+        "alternatives": "Fixture bias remains possible",
+        "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "decision": "validated",
+        "evidence_ids": [
+          "a531e013-31fc-4842-aaba-de4cf9188c0d",
+          "64068482-a3ae-43e3-8035-6b36e6979be1"
+        ],
+        "falsification": "Responded to ISSUE by narrowing fixture scope",
+        "id": "a0366fa9-2a45-4398-b9c2-dc55eb5eccad",
+        "independence": "Distinct declared fixture provenance only",
+        "limitations": "No real business efficacy",
+        "reviewer": "H3"
+      }
+    },
+    "KnowledgeRevision": {
+      "e0278168-8eae-4f0b-b407-76e028d764b8": {
+        "author": "H1",
+        "boundary": [
+          "read"
+        ],
+        "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+        "delta": {
+          "boundary": {
+            "after": [
+              "read"
+            ],
+            "before": null
+          },
+          "core_claim": {
+            "after": "Synthetic fixture supports a traceable bounded reuse route",
+            "before": null
+          },
+          "mechanism": {
+            "after": "Protocol trace may help reproduce the fixture",
+            "before": null
+          },
+          "scope": {
+            "after": "Local synthetic tasks only",
+            "before": null
+          },
+          "task_ids": {
+            "after": [
+              "T2"
+            ],
+            "before": null
+          },
+          "transfer_conditions": {
+            "after": "Same local fixture; no real business extrapolation",
+            "before": null
+          }
+        },
+        "evidence_ids": [
+          "50f1a496-545b-4661-8be7-e3d060760f83",
+          "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+        ],
+        "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "mechanism": "Protocol trace may help reproduce the fixture",
+        "previous_id": "none",
+        "scope": "Local synthetic tasks only",
+        "status": "superseded",
+        "task_ids": [
+          "T2"
+        ],
+        "transfer_conditions": "Same local fixture; no real business extrapolation",
+        "version": 1
+      },
+      "289052c3-d364-4092-b66b-1887a2f04e4d": {
+        "author": "H1",
+        "boundary": [
+          "read"
+        ],
+        "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "core_claim": "Narrowed synthetic claim",
+        "delta": {
+          "core_claim": {
+            "after": "Narrowed synthetic claim",
+            "before": "Synthetic fixture supports a traceable bounded reuse route"
+          },
+          "mechanism": {
+            "after": "Candidate revised explanation",
+            "before": "Protocol trace may help reproduce the fixture"
+          },
+          "scope": {
+            "after": "Revalidation fixture only",
+            "before": "Local synthetic tasks only"
+          },
+          "task_ids": {
+            "after": [
+              "T3"
+            ],
+            "before": [
+              "T2"
+            ]
+          },
+          "transfer_conditions": {
+            "after": "Exclude the failed synthetic condition",
+            "before": "Same local fixture; no real business extrapolation"
+          }
+        },
+        "evidence_ids": [
+          "a531e013-31fc-4842-aaba-de4cf9188c0d",
+          "64068482-a3ae-43e3-8035-6b36e6979be1"
+        ],
+        "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "mechanism": "Candidate revised explanation",
+        "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "scope": "Revalidation fixture only",
+        "status": "validated",
+        "task_ids": [
+          "T3"
+        ],
+        "transfer_conditions": "Exclude the failed synthetic condition",
+        "version": 2
+      }
+    },
+    "KnowledgeUse": {
+      "USE1": {
+        "decision": "adopted",
+        "execution_id": "E3",
+        "id": "USE1",
+        "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "package_id": "route/R1",
+        "reason": "Synthetic attempted reuse"
+      },
+      "USE4": {
+        "decision": "adopted",
+        "execution_id": "E4",
+        "id": "USE4",
+        "knowledge_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "reason": "Matches revised fixture scope"
+      }
+    },
+    "WorkSignal": {
+      "cf74646129eb4d53b7bceee3a00f772f": {
+        "execution_id": "E3",
+        "id": "cf74646129eb4d53b7bceee3a00f772f",
+        "kind": "resume",
+        "summary": "Synthetic reconnect; persisted execution checked"
+      }
+    },
+    "LearningChallenge": {
+      "ISSUE": {
+        "execution_id": "E3",
+        "id": "ISSUE",
+        "reason": "Synthetic failure challenges applicability",
+        "reporter": "AG-882f722d9e384ff5871a00e9c97485d5",
+        "return_id": "R3",
+        "use_id": "USE1"
+      }
+    },
+    "KnowledgeImpact": {
+      "impact/e0278168-8eae-4f0b-b407-76e028d764b8": {
+        "execution_ids": [],
+        "id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+        "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "package_ids": [
+          "route/R1"
+        ],
+        "status": "resolved",
+        "triggers": [
+          "challenge/ISSUE",
+          "superseded"
+        ]
+      }
+    },
+    "RevalidationPlan": {
+      "d0a22173-9cc7-408b-a894-f20fed2b7544": {
+        "id": "d0a22173-9cc7-408b-a894-f20fed2b7544",
+        "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "owner": "H1",
+        "reason": "Respond to Agent fixture failure",
+        "replacement_package": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "reproduction_id": "a5978768-a2ad-4405-832c-3ce994e4e38a",
+        "status": "passed",
+        "task_id": "T3"
+      }
+    },
+    "RevisionRationale": {
+      "289052c3-d364-4092-b66b-1887a2f04e4d": {
+        "addressed_triggers": [
+          "challenge/ISSUE"
+        ],
+        "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+        "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+        "reason": "Narrow scope after ISSUE; no causal conclusion"
+      }
+    },
+    "RouteRevision": {
+      "c75c87e4-5e42-419d-afe1-4815e804f307": {
+        "id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "previous_package": "route/R1",
+        "reason": "Preserve original route and test new version"
+      }
+    },
+    "LearningOutcome": {
+      "2bbdbefc-25f4-4e1a-ac0f-4885ac98328d": {
+        "id": "2bbdbefc-25f4-4e1a-ac0f-4885ac98328d",
+        "interpretation": "New fixture task succeeded; no causal assertion",
+        "owner": "H3",
+        "return_id": "R4",
+        "use_id": "USE4"
+      }
+    },
+    "CapabilityReproduction": {
+      "a5978768-a2ad-4405-832c-3ce994e4e38a": {
+        "id": "a5978768-a2ad-4405-832c-3ce994e4e38a",
+        "outcome": "reproduced",
+        "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+        "return_id": "R4",
+        "reviewer": "H1",
+        "use_id": "USE4"
+      }
+    }
+  },
+  "events": [
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "SIMULATOR",
+      "authority_source": "test fixture",
+      "causation_id": "seed",
+      "changes": {
+        "HAU": {
+          "U1": {
+            "agent_id": "A1",
+            "human_id": "H1",
+            "id": "U1"
+          },
+          "U2": {
+            "agent_id": "A2",
+            "human_id": "H2",
+            "id": "U2"
+          },
+          "U3": {
+            "agent_id": "A3",
+            "human_id": "H3",
+            "id": "U3"
+          }
+        },
+        "Human": {
+          "H1": {
+            "display_name": "Simulation H1",
+            "id": "H1",
+            "kind": "human"
+          },
+          "H2": {
+            "display_name": "Simulation H2",
+            "id": "H2",
+            "kind": "human"
+          },
+          "H3": {
+            "display_name": "Simulation H3",
+            "id": "H3",
+            "kind": "human"
+          }
+        },
+        "RepresentativeAgent": {
+          "A1": {
+            "active": true,
+            "hau_id": "U1",
+            "human_id": "H1",
+            "id": "A1",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          },
+          "A2": {
+            "active": true,
+            "hau_id": "U2",
+            "human_id": "H2",
+            "id": "A2",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          },
+          "A3": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "A3",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "seed",
+      "id": "0aabe641d5e649bd85b79c3dd7499647",
+      "idempotency_key": "seed",
+      "occurred_at": 1789088277.9290075,
+      "sequence": 1,
+      "simulation": true,
+      "type": "FixtureSeed"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "1",
+      "changes": {
+        "Goal": {
+          "G1": {
+            "boundary": [
+              "read",
+              "draft"
+            ],
+            "desired_change": "Simulation outcome",
+            "goal_authority": "H1",
+            "id": "G1",
+            "status": "active",
+            "success_criteria": "Explicit fixture criterion"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "10f1f33c646140269a20fed94210c5c0",
+      "idempotency_key": "1",
+      "occurred_at": 1789088277.9358566,
+      "sequence": 2,
+      "simulation": true,
+      "type": "GoalActivated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "2",
+      "changes": {
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "draft"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "031ced645cf4467bb2dd3514ef69ba24",
+      "idempotency_key": "2",
+      "occurred_at": 1789088277.9432344,
+      "sequence": 3,
+      "simulation": true,
+      "type": "TaskCreated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "3",
+      "changes": {
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "published"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "776b5cc86cc54fc5a12079727ccffb02",
+      "idempotency_key": "3",
+      "occurred_at": 1789088277.9503467,
+      "sequence": 4,
+      "simulation": true,
+      "type": "TaskPublished"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "4",
+      "changes": {
+        "Task": {
+          "T2": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Traceable bounded reuse",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Synthetic reuse",
+            "id": "T2",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "draft"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "102d26e5cd374b708514823b819f6dc4",
+      "idempotency_key": "4",
+      "occurred_at": 1789088277.9577873,
+      "sequence": 5,
+      "simulation": true,
+      "type": "TaskCreated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "5",
+      "changes": {
+        "Task": {
+          "T2": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Traceable bounded reuse",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Synthetic reuse",
+            "id": "T2",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "published"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "16e612bee94b448cae766bc40afc87b0",
+      "idempotency_key": "5",
+      "occurred_at": 1789088277.9651253,
+      "sequence": 6,
+      "simulation": true,
+      "type": "TaskPublished"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "AGENT_GATEWAY",
+      "authority_source": "agent enrollment; no execution authority",
+      "causation_id": "enroll/8ef1372b61804034a1dc3caf70e5168c",
+      "changes": {
+        "AgentRegistration": {
+          "8ef1372b61804034a1dc3caf70e5168c": {
+            "agent_id": "none",
+            "allowed_tasks": [],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "none",
+            "human_id": "none",
+            "id": "8ef1372b61804034a1dc3caf70e5168c",
+            "name": "Independent synthetic test Agent",
+            "permissions": [],
+            "status": "pending",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "8ef1372b61804034a1dc3caf70e5168c",
+      "id": "f6a87979cd634f7fa4d3446d56ff1930",
+      "idempotency_key": "enroll/8ef1372b61804034a1dc3caf70e5168c",
+      "occurred_at": 1789088278.9804108,
+      "sequence": 7,
+      "simulation": true,
+      "type": "AgentRegistered"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "changes": {
+        "RepresentativeAgent": {
+          "A1": {
+            "active": false,
+            "hau_id": "U1",
+            "human_id": "H1",
+            "id": "A1",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A1",
+      "id": "27e5f263edb249c491261cb3d99a6554",
+      "idempotency_key": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "occurred_at": 1789088279.1070032,
+      "sequence": 8,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-8ef1372b61804034a1dc3caf70e5168c": {
+            "active": true,
+            "hau_id": "U1",
+            "human_id": "H1",
+            "id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+      "id": "a1803b31b91544b8828fcb339f939a5c",
+      "idempotency_key": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "occurred_at": 1789088279.1070495,
+      "sequence": 9,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "changes": {
+        "HAU": {
+          "U1": {
+            "agent_id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+            "human_id": "H1",
+            "id": "U1"
+          }
+        }
+      },
+      "correlation_id": "U1",
+      "id": "ed239a4b12514b01a04094a6b9c5ba08",
+      "idempotency_key": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "occurred_at": 1789088279.107075,
+      "sequence": 10,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "changes": {
+        "AgentRegistration": {
+          "8ef1372b61804034a1dc3caf70e5168c": {
+            "agent_id": "AG-8ef1372b61804034a1dc3caf70e5168c",
+            "allowed_tasks": [
+              "T1"
+            ],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "U1",
+            "human_id": "H1",
+            "id": "8ef1372b61804034a1dc3caf70e5168c",
+            "name": "Independent synthetic test Agent",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit"
+            ],
+            "status": "approved",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "8ef1372b61804034a1dc3caf70e5168c",
+      "id": "47e3aef50a854f76929cf4168885657e",
+      "idempotency_key": "human-web/00c6f4ce-7c55-44c0-96a1-9b16695c20f0",
+      "occurred_at": 1789088279.1070952,
+      "sequence": 11,
+      "simulation": true,
+      "type": "AgentRegistrationApproved"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-8ef1372b61804034a1dc3caf70e5168c",
+      "authority_source": "Human:H1/RepresentativeAgent:AG-8ef1372b61804034a1dc3caf70e5168c/claim",
+      "causation_id": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/claim",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088279.236766,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "9a19c1777a57402f89d22d46acea3675",
+      "idempotency_key": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/claim",
+      "occurred_at": 1789088279.2368178,
+      "sequence": 12,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-8ef1372b61804034a1dc3caf70e5168c",
+      "authority_source": "Human:H1/RepresentativeAgent:AG-8ef1372b61804034a1dc3caf70e5168c/ack",
+      "causation_id": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/ack",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088279.268493,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "38e5a3f2c2fb4368af6d974136844d69",
+      "idempotency_key": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/ack",
+      "occurred_at": 1789088279.2685413,
+      "sequence": 13,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-8ef1372b61804034a1dc3caf70e5168c",
+      "authority_source": "Human:H1/RepresentativeAgent:AG-8ef1372b61804034a1dc3caf70e5168c/submit",
+      "causation_id": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/return",
+      "changes": {
+        "CapabilityRoute": {
+          "route/R1": {
+            "components": {
+              "missing": [
+                "knowledge",
+                "data",
+                "tools",
+                "agent_configuration",
+                "runtime",
+                "oversight"
+              ],
+              "observed_terrain": "Isolated fixture 1",
+              "practice": "Independent client Return",
+              "reflection": "Protocol test, no efficacy claim"
+            },
+            "id": "route/R1",
+            "knowledge_id": "none",
+            "owner": "H1",
+            "reproduction_ids": [],
+            "source_hau": "U1",
+            "source_return": "R1",
+            "status": "candidate"
+          }
+        },
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088280.141504,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "submitted",
+            "task_id": "T1"
+          }
+        },
+        "Return": {
+          "R1": {
+            "execution_id": "E1",
+            "human_annotations": [],
+            "id": "R1",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 1",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "5a267ae5cc83420c81fe92b4f736a08e",
+      "idempotency_key": "agent/8ef1372b61804034a1dc3caf70e5168c/continuous/1/return",
+      "occurred_at": 1789088280.1426408,
+      "sequence": 14,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/0fc13dd7-f652-4b61-9594-68f1418cabaa",
+      "changes": {
+        "Review": {
+          "33f0c149-ec40-4e0d-9bcc-729ee383c4ee": {
+            "credible": true,
+            "evidence": "Synthetic trace reviewed; no real Human participant",
+            "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+            "return_id": "R1",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "e1a9283ac74745839d7c5b760e7d4d38",
+      "idempotency_key": "human-web/0fc13dd7-f652-4b61-9594-68f1418cabaa",
+      "occurred_at": 1789088280.257736,
+      "sequence": 15,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/0404e7a6-604b-4f4b-949d-15d216991daa",
+      "changes": {
+        "Acceptance": {
+          "86023abb-f575-4282-8d71-4c3e23942108": {
+            "accepted": true,
+            "acceptor": "H1",
+            "id": "86023abb-f575-4282-8d71-4c3e23942108",
+            "rationale": "Synthetic protocol criteria met",
+            "return_id": "R1",
+            "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "7e58e9a4ecd949e4becd13ec4e160253",
+      "idempotency_key": "human-web/0404e7a6-604b-4f4b-949d-15d216991daa",
+      "occurred_at": 1789088280.320476,
+      "sequence": 16,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/0404e7a6-604b-4f4b-949d-15d216991daa",
+      "changes": {
+        "Execution": {
+          "E1": {
+            "accountable_owner": "H1",
+            "claimed_at": 1789088279.236766,
+            "hau_id": "U1",
+            "id": "E1",
+            "last_seen": 1789088280.3204072,
+            "return_id": "R1",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "fd1f3e6e4c194bfd933fffb8dc3ec2fb",
+      "idempotency_key": "human-web/0404e7a6-604b-4f4b-949d-15d216991daa",
+      "occurred_at": 1789088280.3205163,
+      "sequence": 17,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "AGENT_GATEWAY",
+      "authority_source": "agent enrollment; no execution authority",
+      "causation_id": "enroll/fd86ab8d51a44744929b489bdae7c5ff",
+      "changes": {
+        "AgentRegistration": {
+          "fd86ab8d51a44744929b489bdae7c5ff": {
+            "agent_id": "none",
+            "allowed_tasks": [],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "none",
+            "human_id": "none",
+            "id": "fd86ab8d51a44744929b489bdae7c5ff",
+            "name": "Independent synthetic test Agent",
+            "permissions": [],
+            "status": "pending",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "fd86ab8d51a44744929b489bdae7c5ff",
+      "id": "bbb9b92233db46bca4b370933d48cc64",
+      "idempotency_key": "enroll/fd86ab8d51a44744929b489bdae7c5ff",
+      "occurred_at": 1789088280.449785,
+      "sequence": 18,
+      "simulation": true,
+      "type": "AgentRegistered"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "changes": {
+        "RepresentativeAgent": {
+          "A2": {
+            "active": false,
+            "hau_id": "U2",
+            "human_id": "H2",
+            "id": "A2",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A2",
+      "id": "15a837eba7e34c7a861a2d66b727e382",
+      "idempotency_key": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "occurred_at": 1789088280.5550847,
+      "sequence": 19,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-fd86ab8d51a44744929b489bdae7c5ff": {
+            "active": true,
+            "hau_id": "U2",
+            "human_id": "H2",
+            "id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+      "id": "d785dbaa09e54aa4bb1a6ccf7ebd3c41",
+      "idempotency_key": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "occurred_at": 1789088280.5551364,
+      "sequence": 20,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "changes": {
+        "HAU": {
+          "U2": {
+            "agent_id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+            "human_id": "H2",
+            "id": "U2"
+          }
+        }
+      },
+      "correlation_id": "U2",
+      "id": "e67e19ea3121414b8d97172b58828a78",
+      "idempotency_key": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "occurred_at": 1789088280.555162,
+      "sequence": 21,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "changes": {
+        "AgentRegistration": {
+          "fd86ab8d51a44744929b489bdae7c5ff": {
+            "agent_id": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+            "allowed_tasks": [
+              "T1"
+            ],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "U2",
+            "human_id": "H2",
+            "id": "fd86ab8d51a44744929b489bdae7c5ff",
+            "name": "Independent synthetic test Agent",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit"
+            ],
+            "status": "approved",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "fd86ab8d51a44744929b489bdae7c5ff",
+      "id": "33334bbe797247dcaea48894fe0d9685",
+      "idempotency_key": "human-web/2a1570bc-2edd-496a-95c2-88b20644b41e",
+      "occurred_at": 1789088280.555181,
+      "sequence": 22,
+      "simulation": true,
+      "type": "AgentRegistrationApproved"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+      "authority_source": "Human:H2/RepresentativeAgent:AG-fd86ab8d51a44744929b489bdae7c5ff/claim",
+      "causation_id": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/claim",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.6789742,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "53de3d728d93435bb8e07c6e3ad84e9e",
+      "idempotency_key": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/claim",
+      "occurred_at": 1789088280.6790206,
+      "sequence": 23,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+      "authority_source": "Human:H2/RepresentativeAgent:AG-fd86ab8d51a44744929b489bdae7c5ff/ack",
+      "causation_id": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/ack",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.7109714,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "ac8baaca13044e14b6f8a55039c32df5",
+      "idempotency_key": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/ack",
+      "occurred_at": 1789088280.711009,
+      "sequence": 24,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "AG-fd86ab8d51a44744929b489bdae7c5ff",
+      "authority_source": "Human:H2/RepresentativeAgent:AG-fd86ab8d51a44744929b489bdae7c5ff/submit",
+      "causation_id": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/return",
+      "changes": {
+        "CapabilityRoute": {
+          "route/R2": {
+            "components": {
+              "missing": [
+                "knowledge",
+                "data",
+                "tools",
+                "agent_configuration",
+                "runtime",
+                "oversight"
+              ],
+              "observed_terrain": "Isolated fixture 2",
+              "practice": "Independent client Return",
+              "reflection": "Protocol test, no efficacy claim"
+            },
+            "id": "route/R2",
+            "knowledge_id": "none",
+            "owner": "H2",
+            "reproduction_ids": [],
+            "source_hau": "U2",
+            "source_return": "R2",
+            "status": "candidate"
+          }
+        },
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.829821,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "submitted",
+            "task_id": "T1"
+          }
+        },
+        "Return": {
+          "R2": {
+            "execution_id": "E2",
+            "human_annotations": [],
+            "id": "R2",
+            "major_execution_facts": "Independent client Return",
+            "observed_terrain": "Isolated fixture 2",
+            "outcome": "success",
+            "reflection": "Protocol test, no efficacy claim",
+            "result": "Synthetic source 2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "57482475111c472b967d9bf071e5d520",
+      "idempotency_key": "agent/fd86ab8d51a44744929b489bdae7c5ff/continuous/2/return",
+      "occurred_at": 1789088280.8298986,
+      "sequence": 25,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/167cda64-6b6b-450c-956d-ed9528c305a7",
+      "changes": {
+        "Review": {
+          "cdc10416-530f-4415-971e-aefdf86aaf70": {
+            "credible": true,
+            "evidence": "Synthetic trace reviewed; no real Human participant",
+            "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+            "return_id": "R2",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "720033161f4248eb9662a0be2bae43a3",
+      "idempotency_key": "human-web/167cda64-6b6b-450c-956d-ed9528c305a7",
+      "occurred_at": 1789088280.9050088,
+      "sequence": 26,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/2fd003c4-4835-4c66-9941-36c51a1d7fe1",
+      "changes": {
+        "Acceptance": {
+          "95c20d1b-3807-475d-bb7e-6f0a17568c31": {
+            "accepted": true,
+            "acceptor": "H1",
+            "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+            "rationale": "Synthetic protocol criteria met",
+            "return_id": "R2",
+            "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "05cc714c4ec148d4aa5d45a2157e9a57",
+      "idempotency_key": "human-web/2fd003c4-4835-4c66-9941-36c51a1d7fe1",
+      "occurred_at": 1789088280.9705024,
+      "sequence": 27,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/2fd003c4-4835-4c66-9941-36c51a1d7fe1",
+      "changes": {
+        "Execution": {
+          "E2": {
+            "accountable_owner": "H2",
+            "claimed_at": 1789088280.6789742,
+            "hau_id": "U2",
+            "id": "E2",
+            "last_seen": 1789088280.9704335,
+            "return_id": "R2",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T1"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "01ae5e5ca411432b8f8c04e261ceb379",
+      "idempotency_key": "human-web/2fd003c4-4835-4c66-9941-36c51a1d7fe1",
+      "occurred_at": 1789088280.9705513,
+      "sequence": 28,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/53052643-d1eb-49b9-a087-c0ce18c87bbc",
+      "changes": {
+        "Selection": {
+          "a032aa1e-a9d6-4bc2-abfa-7d754f41f19a": {
+            "id": "a032aa1e-a9d6-4bc2-abfa-7d754f41f19a",
+            "rationale": "Synthetic selection distinct from review and acceptance",
+            "return_id": "R1",
+            "selector": "H3",
+            "task_id": "T1"
+          }
+        },
+        "Task": {
+          "T1": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Evidence matches fixture criterion",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Fixture result",
+            "id": "T1",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "closed"
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "f15c3612a61b4a1fb9693c49ad2347e5",
+      "idempotency_key": "human-web/53052643-d1eb-49b9-a087-c0ce18c87bbc",
+      "occurred_at": 1789088281.027606,
+      "sequence": 29,
+      "simulation": true,
+      "type": "ResultSelected"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/4acbe4b4-7687-4f7e-a93c-a4c0fde071cd",
+      "changes": {
+        "LearningClaim": {
+          "e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+            "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "mechanism": "Protocol trace may help reproduce the fixture",
+            "previous_id": "none",
+            "reviewer": "H3",
+            "scope": "Local synthetic tasks only",
+            "source_return": "R1",
+            "status": "candidate",
+            "task_ids": [
+              "T2"
+            ],
+            "transfer_conditions": "Same local fixture; no real business extrapolation"
+          }
+        }
+      },
+      "correlation_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "33b9f6cee117413e9c323a362456c0b7",
+      "idempotency_key": "human-web/4acbe4b4-7687-4f7e-a93c-a4c0fde071cd",
+      "occurred_at": 1789088281.1583493,
+      "sequence": 30,
+      "simulation": true,
+      "type": "ClaimProposed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/13a30fab-5638-45ee-85b8-a7a9ae5929ef",
+      "changes": {
+        "LearningEvidence": {
+          "50f1a496-545b-4661-8be7-e3d060760f83": {
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "id": "50f1a496-545b-4661-8be7-e3d060760f83",
+            "owner": "H1",
+            "rationale": "Independent synthetic fixture source; not empirical research",
+            "relation": "supports",
+            "return_id": "R1",
+            "snapshot": {
+              "acceptances": [
+                {
+                  "accepted": true,
+                  "acceptor": "H1",
+                  "id": "86023abb-f575-4282-8d71-4c3e23942108",
+                  "rationale": "Synthetic protocol criteria met",
+                  "return_id": "R1",
+                  "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+                }
+              ],
+              "execution": {
+                "accountable_owner": "H1",
+                "claimed_at": 1789088279.236766,
+                "hau_id": "U1",
+                "id": "E1",
+                "last_seen": 1789088280.3204072,
+                "return_id": "R1",
+                "runtime_boundary": [
+                  "read"
+                ],
+                "status": "closed",
+                "task_id": "T1"
+              },
+              "return": {
+                "execution_id": "E1",
+                "human_annotations": [],
+                "id": "R1",
+                "major_execution_facts": "Independent client Return",
+                "observed_terrain": "Isolated fixture 1",
+                "outcome": "success",
+                "reflection": "Protocol test, no efficacy claim",
+                "result": "Synthetic source 1"
+              },
+              "reviews": [
+                {
+                  "credible": true,
+                  "evidence": "Synthetic trace reviewed; no real Human participant",
+                  "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+                  "return_id": "R1",
+                  "reviewer": "H2"
+                }
+              ],
+              "task": {
+                "acceptance_authority": "H1",
+                "acceptance_criteria": "Evidence matches fixture criterion",
+                "boundary": [
+                  "read"
+                ],
+                "execution_mode": "parallel",
+                "expected_output": "Fixture result",
+                "id": "T1",
+                "primary_goal": "G1",
+                "review_authority": "H2",
+                "selection_authority": "H3",
+                "status": "closed"
+              }
+            },
+            "upstream_sources": [
+              "synthetic-source-1"
+            ]
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "7b3b8f7b43674e6a81cd70b38d97fcd9",
+      "idempotency_key": "human-web/13a30fab-5638-45ee-85b8-a7a9ae5929ef",
+      "occurred_at": 1789088281.2628038,
+      "sequence": 31,
+      "simulation": true,
+      "type": "EvidenceLinked"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/9fd9132e-2ab0-43d1-8d83-3025dd75c5ed",
+      "changes": {
+        "LearningEvidence": {
+          "edc88bff-5a13-4709-bd47-314d8b13f2e9": {
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "id": "edc88bff-5a13-4709-bd47-314d8b13f2e9",
+            "owner": "H2",
+            "rationale": "Independent synthetic fixture source; not empirical research",
+            "relation": "supports",
+            "return_id": "R2",
+            "snapshot": {
+              "acceptances": [
+                {
+                  "accepted": true,
+                  "acceptor": "H1",
+                  "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+                  "rationale": "Synthetic protocol criteria met",
+                  "return_id": "R2",
+                  "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+                }
+              ],
+              "execution": {
+                "accountable_owner": "H2",
+                "claimed_at": 1789088280.6789742,
+                "hau_id": "U2",
+                "id": "E2",
+                "last_seen": 1789088280.9704335,
+                "return_id": "R2",
+                "runtime_boundary": [
+                  "read"
+                ],
+                "status": "closed",
+                "task_id": "T1"
+              },
+              "return": {
+                "execution_id": "E2",
+                "human_annotations": [],
+                "id": "R2",
+                "major_execution_facts": "Independent client Return",
+                "observed_terrain": "Isolated fixture 2",
+                "outcome": "success",
+                "reflection": "Protocol test, no efficacy claim",
+                "result": "Synthetic source 2"
+              },
+              "reviews": [
+                {
+                  "credible": true,
+                  "evidence": "Synthetic trace reviewed; no real Human participant",
+                  "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+                  "return_id": "R2",
+                  "reviewer": "H2"
+                }
+              ],
+              "task": {
+                "acceptance_authority": "H1",
+                "acceptance_criteria": "Evidence matches fixture criterion",
+                "boundary": [
+                  "read"
+                ],
+                "execution_mode": "parallel",
+                "expected_output": "Fixture result",
+                "id": "T1",
+                "primary_goal": "G1",
+                "review_authority": "H2",
+                "selection_authority": "H3",
+                "status": "closed"
+              }
+            },
+            "upstream_sources": [
+              "synthetic-source-2"
+            ]
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "4dce3d9099e04eb293918ebc58ee735f",
+      "idempotency_key": "human-web/9fd9132e-2ab0-43d1-8d83-3025dd75c5ed",
+      "occurred_at": 1789088281.368349,
+      "sequence": 32,
+      "simulation": true,
+      "type": "EvidenceLinked"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/e0b232ee-d257-494f-afa0-81d3336651e9",
+      "changes": {
+        "LearningClaim": {
+          "e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+            "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "mechanism": "Protocol trace may help reproduce the fixture",
+            "previous_id": "none",
+            "reviewer": "H3",
+            "scope": "Local synthetic tasks only",
+            "source_return": "R1",
+            "status": "validated",
+            "task_ids": [
+              "T2"
+            ],
+            "transfer_conditions": "Same local fixture; no real business extrapolation"
+          }
+        },
+        "LearningVerification": {
+          "842bd54f-befb-498e-b789-3766be441a97": {
+            "alternatives": "Fixture bias and shared implementation",
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "decision": "validated",
+            "evidence_ids": [
+              "50f1a496-545b-4661-8be7-e3d060760f83",
+              "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+            ],
+            "falsification": "Synthetic negative-path tests, no real causal proof",
+            "id": "842bd54f-befb-498e-b789-3766be441a97",
+            "independence": "Separate declared synthetic sources, not real independent experimental evidence",
+            "limitations": "Only protocol correctness",
+            "reviewer": "H3"
+          }
+        }
+      },
+      "correlation_id": "842bd54f-befb-498e-b789-3766be441a97",
+      "id": "fccf8538f9164a8b8dca1ef413ecf8d4",
+      "idempotency_key": "human-web/e0b232ee-d257-494f-afa0-81d3336651e9",
+      "occurred_at": 1789088281.4880373,
+      "sequence": 33,
+      "simulation": true,
+      "type": "ClaimVerified"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/e0b232ee-d257-494f-afa0-81d3336651e9",
+      "changes": {
+        "KnowledgeRevision": {
+          "e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+            "delta": {
+              "boundary": {
+                "after": [
+                  "read"
+                ],
+                "before": null
+              },
+              "core_claim": {
+                "after": "Synthetic fixture supports a traceable bounded reuse route",
+                "before": null
+              },
+              "mechanism": {
+                "after": "Protocol trace may help reproduce the fixture",
+                "before": null
+              },
+              "scope": {
+                "after": "Local synthetic tasks only",
+                "before": null
+              },
+              "task_ids": {
+                "after": [
+                  "T2"
+                ],
+                "before": null
+              },
+              "transfer_conditions": {
+                "after": "Same local fixture; no real business extrapolation",
+                "before": null
+              }
+            },
+            "evidence_ids": [
+              "50f1a496-545b-4661-8be7-e3d060760f83",
+              "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+            ],
+            "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "mechanism": "Protocol trace may help reproduce the fixture",
+            "previous_id": "none",
+            "scope": "Local synthetic tasks only",
+            "status": "validated",
+            "task_ids": [
+              "T2"
+            ],
+            "transfer_conditions": "Same local fixture; no real business extrapolation",
+            "version": 1
+          }
+        }
+      },
+      "correlation_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "67d131035e4c449796f8dc49bf5b8d3f",
+      "idempotency_key": "human-web/e0b232ee-d257-494f-afa0-81d3336651e9",
+      "occurred_at": 1789088281.4881086,
+      "sequence": 34,
+      "simulation": true,
+      "type": "KnowledgePublished"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/1d21b55b-f81e-44ad-bbd7-c769c7dfecf2",
+      "changes": {
+        "CapabilityRoute": {
+          "route/R1": {
+            "components": {
+              "agent_configuration": "Explicit read scope only",
+              "data": "Synthetic fixture v1",
+              "oversight": "H2 Review, H1 Acceptance; no production authority",
+              "practice": "Use bounded claim as context, then produce formal Return",
+              "runtime": "Local test process",
+              "tools": "Local protocol Client"
+            },
+            "id": "route/R1",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "owner": "H1",
+            "reproduction_ids": [],
+            "source_hau": "U1",
+            "source_return": "R1",
+            "status": "candidate"
+          }
+        }
+      },
+      "correlation_id": "route/R1",
+      "id": "03943553fff844d5b115bc0a3fe9bdb1",
+      "idempotency_key": "human-web/1d21b55b-f81e-44ad-bbd7-c769c7dfecf2",
+      "occurred_at": 1789088281.616859,
+      "sequence": 35,
+      "simulation": true,
+      "type": "RouteAssembled"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "AGENT_GATEWAY",
+      "authority_source": "agent enrollment; no execution authority",
+      "causation_id": "enroll/882f722d9e384ff5871a00e9c97485d5",
+      "changes": {
+        "AgentRegistration": {
+          "882f722d9e384ff5871a00e9c97485d5": {
+            "agent_id": "none",
+            "allowed_tasks": [],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "none",
+            "human_id": "none",
+            "id": "882f722d9e384ff5871a00e9c97485d5",
+            "name": "Independent synthetic test Agent",
+            "permissions": [],
+            "status": "pending",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "882f722d9e384ff5871a00e9c97485d5",
+      "id": "94ce1fd4abf448a1a81fa219f516dff0",
+      "idempotency_key": "enroll/882f722d9e384ff5871a00e9c97485d5",
+      "occurred_at": 1789088281.7818198,
+      "sequence": 36,
+      "simulation": true,
+      "type": "AgentRegistered"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "changes": {
+        "RepresentativeAgent": {
+          "A3": {
+            "active": false,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "A3",
+            "permissions": [
+              "claim",
+              "ack",
+              "progress",
+              "blocked",
+              "escalate",
+              "resume",
+              "request_boundary",
+              "submit",
+              "fail",
+              "release"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "A3",
+      "id": "a506bce6e1224289a196d50404be5bd1",
+      "idempotency_key": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "occurred_at": 1789088281.9175625,
+      "sequence": 37,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-882f722d9e384ff5871a00e9c97485d5": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "permissions": [
+              "claim",
+              "ack",
+              "fail",
+              "use_knowledge",
+              "report_knowledge_issue"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "id": "75a8888a57d1476187d8a0b2f79a68a8",
+      "idempotency_key": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "occurred_at": 1789088281.9176087,
+      "sequence": 38,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "changes": {
+        "HAU": {
+          "U3": {
+            "agent_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "human_id": "H3",
+            "id": "U3"
+          }
+        }
+      },
+      "correlation_id": "U3",
+      "id": "d6f64f108f9149f7b3b041c6fac89ab1",
+      "idempotency_key": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "occurred_at": 1789088281.9176345,
+      "sequence": 39,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "changes": {
+        "AgentRegistration": {
+          "882f722d9e384ff5871a00e9c97485d5": {
+            "agent_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "allowed_tasks": [
+              "T2"
+            ],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "882f722d9e384ff5871a00e9c97485d5",
+            "name": "Independent synthetic test Agent",
+            "permissions": [
+              "claim",
+              "ack",
+              "fail",
+              "use_knowledge",
+              "report_knowledge_issue"
+            ],
+            "status": "approved",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "882f722d9e384ff5871a00e9c97485d5",
+      "id": "ada579eeee2a4292991b8751d4a3fc7b",
+      "idempotency_key": "human-web/6d96344b-5328-4663-ba3e-373f210e2999",
+      "occurred_at": 1789088281.917654,
+      "sequence": 40,
+      "simulation": true,
+      "type": "AgentRegistrationApproved"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/claim",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/3/claim",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.0294504,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T2"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "6c5c96191f8949ff81fdca8e73b646c6",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/3/claim",
+      "occurred_at": 1789088282.0294936,
+      "sequence": 41,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/ack",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/3/ack",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.0458648,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T2"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "63cdb19f727741b0ad80251df02e2ffb",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/3/ack",
+      "occurred_at": 1789088282.045901,
+      "sequence": 42,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/use_knowledge",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/use",
+      "changes": {
+        "KnowledgeUse": {
+          "USE1": {
+            "decision": "adopted",
+            "execution_id": "E3",
+            "id": "USE1",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "package_id": "route/R1",
+            "reason": "Synthetic attempted reuse"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "e34a767031674a3a9f760cd76947b857",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/use",
+      "occurred_at": 1789088282.073029,
+      "sequence": 43,
+      "simulation": true,
+      "type": "KnowledgeUsed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/runtime:AG-882f722d9e384ff5871a00e9c97485d5",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/offline",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-882f722d9e384ff5871a00e9c97485d5": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "permissions": [
+              "claim",
+              "ack",
+              "fail",
+              "use_knowledge",
+              "report_knowledge_issue"
+            ],
+            "runtime_status": "offline"
+          }
+        }
+      },
+      "correlation_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "id": "3f2ce83f1952410b9842c6629b85346e",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/offline",
+      "occurred_at": 1789088282.107047,
+      "sequence": 44,
+      "simulation": true,
+      "type": "AgentStatusChanged"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/runtime:AG-882f722d9e384ff5871a00e9c97485d5",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/offline",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.1069913,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "interrupted",
+            "task_id": "T2"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "3478b64715f34e9d91e6893233afbab1",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/continuous/offline",
+      "occurred_at": 1789088282.1070857,
+      "sequence": 45,
+      "simulation": true,
+      "type": "ExecutionInterrupted"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3/runtime:H3",
+      "causation_id": "human-web/69f9c291-d2da-4e93-aa1b-9a21c060ffef",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-882f722d9e384ff5871a00e9c97485d5": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "permissions": [
+              "claim",
+              "ack",
+              "fail",
+              "use_knowledge",
+              "report_knowledge_issue"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "id": "db6f39c99ed64752a972a67f25089e1b",
+      "idempotency_key": "human-web/69f9c291-d2da-4e93-aa1b-9a21c060ffef",
+      "occurred_at": 1789088282.1882675,
+      "sequence": 46,
+      "simulation": true,
+      "type": "AgentStatusChanged"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/51b43d98-fe9d-499d-a09a-d1f3de9db3fd",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.2364109,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T2"
+          }
+        },
+        "WorkSignal": {
+          "cf74646129eb4d53b7bceee3a00f772f": {
+            "execution_id": "E3",
+            "id": "cf74646129eb4d53b7bceee3a00f772f",
+            "kind": "resume",
+            "summary": "Synthetic reconnect; persisted execution checked"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "7957b6eaf0444ef2b5e048897afe17d7",
+      "idempotency_key": "human-web/51b43d98-fe9d-499d-a09a-d1f3de9db3fd",
+      "occurred_at": 1789088282.236469,
+      "sequence": 47,
+      "simulation": true,
+      "type": "Resumed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/fail",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/fail",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.34747,
+            "return_id": "R3",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "failed",
+            "task_id": "T2"
+          }
+        },
+        "Return": {
+          "R3": {
+            "execution_id": "E3",
+            "human_annotations": [],
+            "id": "R3",
+            "major_execution_facts": "Reuse failed in declared synthetic case",
+            "observed_terrain": "Unexpected fixture condition",
+            "outcome": "failure",
+            "reflection": "Need revised scope; no causal proof",
+            "result": "Explicit synthetic failure"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "ad5fee78780c4df2b5bce3f2943c9167",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/fail",
+      "occurred_at": 1789088282.3475535,
+      "sequence": 48,
+      "simulation": true,
+      "type": "ExecutionFailed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/fail",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/fail",
+      "changes": {
+        "Execution": {
+          "E3": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088282.0294504,
+            "hau_id": "U3",
+            "id": "E3",
+            "last_seen": 1789088282.34747,
+            "return_id": "R3",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T2"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "cecb6764c99b42998614ffa5f4176a49",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/fail",
+      "occurred_at": 1789088282.3476024,
+      "sequence": 49,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/report_knowledge_issue",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "changes": {
+        "LearningChallenge": {
+          "ISSUE": {
+            "execution_id": "E3",
+            "id": "ISSUE",
+            "reason": "Synthetic failure challenges applicability",
+            "reporter": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "return_id": "R3",
+            "use_id": "USE1"
+          }
+        }
+      },
+      "correlation_id": "T2",
+      "id": "9fe5d264339145fe930c2b6652e945f4",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "occurred_at": 1789088282.367382,
+      "sequence": 50,
+      "simulation": true,
+      "type": "LearningChallengeReported"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/report_knowledge_issue",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "changes": {
+        "KnowledgeRevision": {
+          "e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+            "delta": {
+              "boundary": {
+                "after": [
+                  "read"
+                ],
+                "before": null
+              },
+              "core_claim": {
+                "after": "Synthetic fixture supports a traceable bounded reuse route",
+                "before": null
+              },
+              "mechanism": {
+                "after": "Protocol trace may help reproduce the fixture",
+                "before": null
+              },
+              "scope": {
+                "after": "Local synthetic tasks only",
+                "before": null
+              },
+              "task_ids": {
+                "after": [
+                  "T2"
+                ],
+                "before": null
+              },
+              "transfer_conditions": {
+                "after": "Same local fixture; no real business extrapolation",
+                "before": null
+              }
+            },
+            "evidence_ids": [
+              "50f1a496-545b-4661-8be7-e3d060760f83",
+              "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+            ],
+            "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "mechanism": "Protocol trace may help reproduce the fixture",
+            "previous_id": "none",
+            "scope": "Local synthetic tasks only",
+            "status": "challenged",
+            "task_ids": [
+              "T2"
+            ],
+            "transfer_conditions": "Same local fixture; no real business extrapolation",
+            "version": 1
+          }
+        }
+      },
+      "correlation_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "cec617b6a7cf4b708b605fae258fcd31",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "occurred_at": 1789088282.367424,
+      "sequence": 51,
+      "simulation": true,
+      "type": "KnowledgeChallenged"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/report_knowledge_issue",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "changes": {
+        "CapabilityRoute": {
+          "route/R1": {
+            "components": {
+              "agent_configuration": "Explicit read scope only",
+              "data": "Synthetic fixture v1",
+              "oversight": "H2 Review, H1 Acceptance; no production authority",
+              "practice": "Use bounded claim as context, then produce formal Return",
+              "runtime": "Local test process",
+              "tools": "Local protocol Client"
+            },
+            "id": "route/R1",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "owner": "H1",
+            "reproduction_ids": [],
+            "source_hau": "U1",
+            "source_return": "R1",
+            "status": "stale"
+          }
+        }
+      },
+      "correlation_id": "route/R1",
+      "id": "8bd49a5cfe4d483794e07427d140658b",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "occurred_at": 1789088282.36746,
+      "sequence": 52,
+      "simulation": true,
+      "type": "RouteStale"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-882f722d9e384ff5871a00e9c97485d5/report_knowledge_issue",
+      "causation_id": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "changes": {
+        "KnowledgeImpact": {
+          "impact/e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "execution_ids": [],
+            "id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "package_ids": [
+              "route/R1"
+            ],
+            "status": "open",
+            "triggers": [
+              "challenge/ISSUE"
+            ]
+          }
+        }
+      },
+      "correlation_id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "0f22fe76691f4432b7d74cc36c05fbc9",
+      "idempotency_key": "agent/882f722d9e384ff5871a00e9c97485d5/r01/issue",
+      "occurred_at": 1789088282.367484,
+      "sequence": 53,
+      "simulation": true,
+      "type": "KnowledgeImpactRecorded"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "changes": {
+        "Task": {
+          "T3": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Formal trace and revised scope check",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Reproduce revised synthetic route",
+            "id": "T3",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "draft"
+          }
+        }
+      },
+      "correlation_id": "G1",
+      "id": "03d2321e173243e1a6ca8dbb86414560",
+      "idempotency_key": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "occurred_at": 1789088283.2159915,
+      "sequence": 54,
+      "simulation": true,
+      "type": "TaskCreated"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "changes": {
+        "Task": {
+          "T3": {
+            "acceptance_authority": "H1",
+            "acceptance_criteria": "Formal trace and revised scope check",
+            "boundary": [
+              "read"
+            ],
+            "execution_mode": "parallel",
+            "expected_output": "Reproduce revised synthetic route",
+            "id": "T3",
+            "primary_goal": "G1",
+            "review_authority": "H2",
+            "selection_authority": "H3",
+            "status": "published"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "5dfac3069c6747e191e95a96b4449259",
+      "idempotency_key": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "occurred_at": 1789088283.2160335,
+      "sequence": 55,
+      "simulation": true,
+      "type": "TaskPublished"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "changes": {
+        "RevalidationPlan": {
+          "d0a22173-9cc7-408b-a894-f20fed2b7544": {
+            "id": "d0a22173-9cc7-408b-a894-f20fed2b7544",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "owner": "H1",
+            "reason": "Respond to Agent fixture failure",
+            "replacement_package": "none",
+            "reproduction_id": "none",
+            "status": "pending",
+            "task_id": "T3"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "cebf6f4e976249148762d1849012e619",
+      "idempotency_key": "human-web/53edcee6-91a8-4aef-885a-f0d90b18494a",
+      "occurred_at": 1789088283.2160587,
+      "sequence": 56,
+      "simulation": true,
+      "type": "RevalidationPlanned"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/212c9ccb-ef48-4f7c-b0b7-3760a54ff2e1",
+      "changes": {
+        "LearningClaim": {
+          "289052c3-d364-4092-b66b-1887a2f04e4d": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "core_claim": "Narrowed synthetic claim",
+            "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "mechanism": "Candidate revised explanation",
+            "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "reviewer": "H3",
+            "scope": "Revalidation fixture only",
+            "source_return": "R1",
+            "status": "candidate",
+            "task_ids": [
+              "T3"
+            ],
+            "transfer_conditions": "Exclude the failed synthetic condition"
+          }
+        }
+      },
+      "correlation_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+      "id": "96fe7cc137e24265b159cb444f729d71",
+      "idempotency_key": "human-web/212c9ccb-ef48-4f7c-b0b7-3760a54ff2e1",
+      "occurred_at": 1789088283.366458,
+      "sequence": 57,
+      "simulation": true,
+      "type": "ClaimProposed"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/212c9ccb-ef48-4f7c-b0b7-3760a54ff2e1",
+      "changes": {
+        "RevisionRationale": {
+          "289052c3-d364-4092-b66b-1887a2f04e4d": {
+            "addressed_triggers": [
+              "challenge/ISSUE"
+            ],
+            "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "reason": "Narrow scope after ISSUE; no causal conclusion"
+          }
+        }
+      },
+      "correlation_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+      "id": "9a8b58117fec4c2883c99f932b4167c8",
+      "idempotency_key": "human-web/212c9ccb-ef48-4f7c-b0b7-3760a54ff2e1",
+      "occurred_at": 1789088283.3665051,
+      "sequence": 58,
+      "simulation": true,
+      "type": "RevisionExplained"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/14ffebd3-2715-4c2a-a1c0-0eb60e2705af",
+      "changes": {
+        "LearningEvidence": {
+          "a531e013-31fc-4842-aaba-de4cf9188c0d": {
+            "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "id": "a531e013-31fc-4842-aaba-de4cf9188c0d",
+            "owner": "H1",
+            "rationale": "Source supports only revised fixture scope",
+            "relation": "supports",
+            "return_id": "R1",
+            "snapshot": {
+              "acceptances": [
+                {
+                  "accepted": true,
+                  "acceptor": "H1",
+                  "id": "86023abb-f575-4282-8d71-4c3e23942108",
+                  "rationale": "Synthetic protocol criteria met",
+                  "return_id": "R1",
+                  "review_id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee"
+                }
+              ],
+              "execution": {
+                "accountable_owner": "H1",
+                "claimed_at": 1789088279.236766,
+                "hau_id": "U1",
+                "id": "E1",
+                "last_seen": 1789088280.3204072,
+                "return_id": "R1",
+                "runtime_boundary": [
+                  "read"
+                ],
+                "status": "closed",
+                "task_id": "T1"
+              },
+              "return": {
+                "execution_id": "E1",
+                "human_annotations": [],
+                "id": "R1",
+                "major_execution_facts": "Independent client Return",
+                "observed_terrain": "Isolated fixture 1",
+                "outcome": "success",
+                "reflection": "Protocol test, no efficacy claim",
+                "result": "Synthetic source 1"
+              },
+              "reviews": [
+                {
+                  "credible": true,
+                  "evidence": "Synthetic trace reviewed; no real Human participant",
+                  "id": "33f0c149-ec40-4e0d-9bcc-729ee383c4ee",
+                  "return_id": "R1",
+                  "reviewer": "H2"
+                }
+              ],
+              "task": {
+                "acceptance_authority": "H1",
+                "acceptance_criteria": "Evidence matches fixture criterion",
+                "boundary": [
+                  "read"
+                ],
+                "execution_mode": "parallel",
+                "expected_output": "Fixture result",
+                "id": "T1",
+                "primary_goal": "G1",
+                "review_authority": "H2",
+                "selection_authority": "H3",
+                "status": "closed"
+              }
+            },
+            "upstream_sources": [
+              "synthetic-source-1"
+            ]
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "84f63b51c715462fbf7e40dd399f33c4",
+      "idempotency_key": "human-web/14ffebd3-2715-4c2a-a1c0-0eb60e2705af",
+      "occurred_at": 1789088283.4730108,
+      "sequence": 59,
+      "simulation": true,
+      "type": "EvidenceLinked"
+    },
+    {
+      "accountable_owner": "H2",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/012ff71b-4db8-40ea-8138-ac7ca3c3d6ce",
+      "changes": {
+        "LearningEvidence": {
+          "64068482-a3ae-43e3-8035-6b36e6979be1": {
+            "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "id": "64068482-a3ae-43e3-8035-6b36e6979be1",
+            "owner": "H2",
+            "rationale": "Source supports only revised fixture scope",
+            "relation": "supports",
+            "return_id": "R2",
+            "snapshot": {
+              "acceptances": [
+                {
+                  "accepted": true,
+                  "acceptor": "H1",
+                  "id": "95c20d1b-3807-475d-bb7e-6f0a17568c31",
+                  "rationale": "Synthetic protocol criteria met",
+                  "return_id": "R2",
+                  "review_id": "cdc10416-530f-4415-971e-aefdf86aaf70"
+                }
+              ],
+              "execution": {
+                "accountable_owner": "H2",
+                "claimed_at": 1789088280.6789742,
+                "hau_id": "U2",
+                "id": "E2",
+                "last_seen": 1789088280.9704335,
+                "return_id": "R2",
+                "runtime_boundary": [
+                  "read"
+                ],
+                "status": "closed",
+                "task_id": "T1"
+              },
+              "return": {
+                "execution_id": "E2",
+                "human_annotations": [],
+                "id": "R2",
+                "major_execution_facts": "Independent client Return",
+                "observed_terrain": "Isolated fixture 2",
+                "outcome": "success",
+                "reflection": "Protocol test, no efficacy claim",
+                "result": "Synthetic source 2"
+              },
+              "reviews": [
+                {
+                  "credible": true,
+                  "evidence": "Synthetic trace reviewed; no real Human participant",
+                  "id": "cdc10416-530f-4415-971e-aefdf86aaf70",
+                  "return_id": "R2",
+                  "reviewer": "H2"
+                }
+              ],
+              "task": {
+                "acceptance_authority": "H1",
+                "acceptance_criteria": "Evidence matches fixture criterion",
+                "boundary": [
+                  "read"
+                ],
+                "execution_mode": "parallel",
+                "expected_output": "Fixture result",
+                "id": "T1",
+                "primary_goal": "G1",
+                "review_authority": "H2",
+                "selection_authority": "H3",
+                "status": "closed"
+              }
+            },
+            "upstream_sources": [
+              "synthetic-source-2"
+            ]
+          }
+        }
+      },
+      "correlation_id": "T1",
+      "id": "0b9d54f7a77845dd88ac25aa0374efde",
+      "idempotency_key": "human-web/012ff71b-4db8-40ea-8138-ac7ca3c3d6ce",
+      "occurred_at": 1789088283.5782235,
+      "sequence": 60,
+      "simulation": true,
+      "type": "EvidenceLinked"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "changes": {
+        "LearningClaim": {
+          "289052c3-d364-4092-b66b-1887a2f04e4d": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "core_claim": "Narrowed synthetic claim",
+            "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "mechanism": "Candidate revised explanation",
+            "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "reviewer": "H3",
+            "scope": "Revalidation fixture only",
+            "source_return": "R1",
+            "status": "validated",
+            "task_ids": [
+              "T3"
+            ],
+            "transfer_conditions": "Exclude the failed synthetic condition"
+          }
+        },
+        "LearningVerification": {
+          "a0366fa9-2a45-4398-b9c2-dc55eb5eccad": {
+            "alternatives": "Fixture bias remains possible",
+            "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "decision": "validated",
+            "evidence_ids": [
+              "a531e013-31fc-4842-aaba-de4cf9188c0d",
+              "64068482-a3ae-43e3-8035-6b36e6979be1"
+            ],
+            "falsification": "Responded to ISSUE by narrowing fixture scope",
+            "id": "a0366fa9-2a45-4398-b9c2-dc55eb5eccad",
+            "independence": "Distinct declared fixture provenance only",
+            "limitations": "No real business efficacy",
+            "reviewer": "H3"
+          }
+        }
+      },
+      "correlation_id": "a0366fa9-2a45-4398-b9c2-dc55eb5eccad",
+      "id": "319623a5adce4636af4b71af3bc7254f",
+      "idempotency_key": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "occurred_at": 1789088283.7023633,
+      "sequence": 61,
+      "simulation": true,
+      "type": "ClaimVerified"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "changes": {
+        "KnowledgeRevision": {
+          "e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "claim_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "core_claim": "Synthetic fixture supports a traceable bounded reuse route",
+            "delta": {
+              "boundary": {
+                "after": [
+                  "read"
+                ],
+                "before": null
+              },
+              "core_claim": {
+                "after": "Synthetic fixture supports a traceable bounded reuse route",
+                "before": null
+              },
+              "mechanism": {
+                "after": "Protocol trace may help reproduce the fixture",
+                "before": null
+              },
+              "scope": {
+                "after": "Local synthetic tasks only",
+                "before": null
+              },
+              "task_ids": {
+                "after": [
+                  "T2"
+                ],
+                "before": null
+              },
+              "transfer_conditions": {
+                "after": "Same local fixture; no real business extrapolation",
+                "before": null
+              }
+            },
+            "evidence_ids": [
+              "50f1a496-545b-4661-8be7-e3d060760f83",
+              "edc88bff-5a13-4709-bd47-314d8b13f2e9"
+            ],
+            "id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "mechanism": "Protocol trace may help reproduce the fixture",
+            "previous_id": "none",
+            "scope": "Local synthetic tasks only",
+            "status": "superseded",
+            "task_ids": [
+              "T2"
+            ],
+            "transfer_conditions": "Same local fixture; no real business extrapolation",
+            "version": 1
+          }
+        }
+      },
+      "correlation_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "8be658ee8b20491e8aa7e908de4d59dd",
+      "idempotency_key": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "occurred_at": 1789088283.702414,
+      "sequence": 62,
+      "simulation": true,
+      "type": "KnowledgeSuperseded"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "changes": {
+        "KnowledgeImpact": {
+          "impact/e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "execution_ids": [],
+            "id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "package_ids": [
+              "route/R1"
+            ],
+            "status": "open",
+            "triggers": [
+              "challenge/ISSUE",
+              "superseded"
+            ]
+          }
+        }
+      },
+      "correlation_id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+      "id": "3c1affe3b3524f77a120807d700b0362",
+      "idempotency_key": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "occurred_at": 1789088283.7024512,
+      "sequence": 63,
+      "simulation": true,
+      "type": "KnowledgeImpactRecorded"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "changes": {
+        "KnowledgeRevision": {
+          "289052c3-d364-4092-b66b-1887a2f04e4d": {
+            "author": "H1",
+            "boundary": [
+              "read"
+            ],
+            "claim_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "core_claim": "Narrowed synthetic claim",
+            "delta": {
+              "core_claim": {
+                "after": "Narrowed synthetic claim",
+                "before": "Synthetic fixture supports a traceable bounded reuse route"
+              },
+              "mechanism": {
+                "after": "Candidate revised explanation",
+                "before": "Protocol trace may help reproduce the fixture"
+              },
+              "scope": {
+                "after": "Revalidation fixture only",
+                "before": "Local synthetic tasks only"
+              },
+              "task_ids": {
+                "after": [
+                  "T3"
+                ],
+                "before": [
+                  "T2"
+                ]
+              },
+              "transfer_conditions": {
+                "after": "Exclude the failed synthetic condition",
+                "before": "Same local fixture; no real business extrapolation"
+              }
+            },
+            "evidence_ids": [
+              "a531e013-31fc-4842-aaba-de4cf9188c0d",
+              "64068482-a3ae-43e3-8035-6b36e6979be1"
+            ],
+            "id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "mechanism": "Candidate revised explanation",
+            "previous_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "scope": "Revalidation fixture only",
+            "status": "validated",
+            "task_ids": [
+              "T3"
+            ],
+            "transfer_conditions": "Exclude the failed synthetic condition",
+            "version": 2
+          }
+        }
+      },
+      "correlation_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+      "id": "99672f6b3b3e4d449d747e8c57e17766",
+      "idempotency_key": "human-web/d30a8c77-b43c-4adb-a2ea-062cc31f57b3",
+      "occurred_at": 1789088283.7024736,
+      "sequence": 64,
+      "simulation": true,
+      "type": "KnowledgePublished"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/d57961af-1bcf-4494-a0b5-d30f3d1106b4",
+      "changes": {
+        "CapabilityRoute": {
+          "c75c87e4-5e42-419d-afe1-4815e804f307": {
+            "components": {
+              "agent_configuration": "explicit delegation",
+              "data": "fixture v2",
+              "oversight": "Separate H2 review and H1 acceptance",
+              "practice": "Bounded claim as context only",
+              "runtime": "isolated loopback",
+              "tools": "local client"
+            },
+            "id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "knowledge_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "owner": "H1",
+            "reproduction_ids": [],
+            "source_hau": "U1",
+            "source_return": "R1",
+            "status": "candidate"
+          }
+        },
+        "RouteRevision": {
+          "c75c87e4-5e42-419d-afe1-4815e804f307": {
+            "id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "previous_package": "route/R1",
+            "reason": "Preserve original route and test new version"
+          }
+        }
+      },
+      "correlation_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+      "id": "7af906a737de461e8f80e806f49e2e58",
+      "idempotency_key": "human-web/d57961af-1bcf-4494-a0b5-d30f3d1106b4",
+      "occurred_at": 1789088283.8494697,
+      "sequence": 65,
+      "simulation": true,
+      "type": "RouteRevised"
+    },
+    {
+      "accountable_owner": "not-applicable",
+      "actor": "AGENT_GATEWAY",
+      "authority_source": "agent enrollment; no execution authority",
+      "causation_id": "enroll/c80cbf5db1924c64ade00198c14bb01b",
+      "changes": {
+        "AgentRegistration": {
+          "c80cbf5db1924c64ade00198c14bb01b": {
+            "agent_id": "none",
+            "allowed_tasks": [],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "none",
+            "human_id": "none",
+            "id": "c80cbf5db1924c64ade00198c14bb01b",
+            "name": "Independent synthetic test Agent",
+            "permissions": [],
+            "status": "pending",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "c80cbf5db1924c64ade00198c14bb01b",
+      "id": "652d1de25312439c821b9a9e76c2f6b2",
+      "idempotency_key": "enroll/c80cbf5db1924c64ade00198c14bb01b",
+      "occurred_at": 1789088284.0011656,
+      "sequence": 66,
+      "simulation": true,
+      "type": "AgentRegistered"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-882f722d9e384ff5871a00e9c97485d5": {
+            "active": false,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "AG-882f722d9e384ff5871a00e9c97485d5",
+            "permissions": [
+              "claim",
+              "ack",
+              "fail",
+              "use_knowledge",
+              "report_knowledge_issue"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-882f722d9e384ff5871a00e9c97485d5",
+      "id": "5fc9e5e4f3634062a160c1495e09dd0f",
+      "idempotency_key": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "occurred_at": 1789088284.168339,
+      "sequence": 67,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "changes": {
+        "RepresentativeAgent": {
+          "AG-c80cbf5db1924c64ade00198c14bb01b": {
+            "active": true,
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit",
+              "use_knowledge"
+            ],
+            "runtime_status": "online"
+          }
+        }
+      },
+      "correlation_id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+      "id": "c7ab056abef541ea83a4719c8a72b8b6",
+      "idempotency_key": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "occurred_at": 1789088284.168383,
+      "sequence": 68,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "changes": {
+        "HAU": {
+          "U3": {
+            "agent_id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+            "human_id": "H3",
+            "id": "U3"
+          }
+        }
+      },
+      "correlation_id": "U3",
+      "id": "f5f919014bfc452dab64f3c214b6415c",
+      "idempotency_key": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "occurred_at": 1789088284.1684084,
+      "sequence": 69,
+      "simulation": true,
+      "type": "AgentBound"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "changes": {
+        "AgentRegistration": {
+          "c80cbf5db1924c64ade00198c14bb01b": {
+            "agent_id": "AG-c80cbf5db1924c64ade00198c14bb01b",
+            "allowed_tasks": [
+              "T3"
+            ],
+            "capabilities": [
+              "synthetic-test-return"
+            ],
+            "hau_id": "U3",
+            "human_id": "H3",
+            "id": "c80cbf5db1924c64ade00198c14bb01b",
+            "name": "Independent synthetic test Agent",
+            "permissions": [
+              "claim",
+              "ack",
+              "submit",
+              "use_knowledge"
+            ],
+            "status": "approved",
+            "version": "0.1"
+          }
+        }
+      },
+      "correlation_id": "c80cbf5db1924c64ade00198c14bb01b",
+      "id": "813eb8cab794443f98d0a02618ad7db3",
+      "idempotency_key": "human-web/8130a977-cdd9-4a49-a781-246aa0c4f526",
+      "occurred_at": 1789088284.1684294,
+      "sequence": 70,
+      "simulation": true,
+      "type": "AgentRegistrationApproved"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-c80cbf5db1924c64ade00198c14bb01b",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-c80cbf5db1924c64ade00198c14bb01b/claim",
+      "causation_id": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newclaim",
+      "changes": {
+        "Execution": {
+          "E4": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088284.3071134,
+            "hau_id": "U3",
+            "id": "E4",
+            "last_seen": 1789088284.3071134,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "claimed",
+            "task_id": "T3"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "172aca55b4454459ba86899b05ea9596",
+      "idempotency_key": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newclaim",
+      "occurred_at": 1789088284.3071585,
+      "sequence": 71,
+      "simulation": true,
+      "type": "ExecutionClaimed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-c80cbf5db1924c64ade00198c14bb01b",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-c80cbf5db1924c64ade00198c14bb01b/ack",
+      "causation_id": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newack",
+      "changes": {
+        "Execution": {
+          "E4": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088284.3071134,
+            "hau_id": "U3",
+            "id": "E4",
+            "last_seen": 1789088284.3387933,
+            "return_id": "none",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "running",
+            "task_id": "T3"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "c298bed166b14352900a44f9d8fbb567",
+      "idempotency_key": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newack",
+      "occurred_at": 1789088284.33883,
+      "sequence": 72,
+      "simulation": true,
+      "type": "ACK"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-c80cbf5db1924c64ade00198c14bb01b",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-c80cbf5db1924c64ade00198c14bb01b/use_knowledge",
+      "causation_id": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newuse",
+      "changes": {
+        "KnowledgeUse": {
+          "USE4": {
+            "decision": "adopted",
+            "execution_id": "E4",
+            "id": "USE4",
+            "knowledge_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "reason": "Matches revised fixture scope"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "8530019061b8477781173b254c475b59",
+      "idempotency_key": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newuse",
+      "occurred_at": 1789088284.3705888,
+      "sequence": 73,
+      "simulation": true,
+      "type": "KnowledgeUsed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "AG-c80cbf5db1924c64ade00198c14bb01b",
+      "authority_source": "Human:H3/RepresentativeAgent:AG-c80cbf5db1924c64ade00198c14bb01b/submit",
+      "causation_id": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newreturn",
+      "changes": {
+        "CapabilityRoute": {
+          "route/R4": {
+            "components": {
+              "missing": [
+                "knowledge",
+                "data",
+                "tools",
+                "agent_configuration",
+                "runtime",
+                "oversight"
+              ],
+              "observed_terrain": "New planned test task",
+              "practice": "Recorded new version adoption and formal Return",
+              "reflection": "No empirical learning efficacy claim"
+            },
+            "id": "route/R4",
+            "knowledge_id": "none",
+            "owner": "H3",
+            "reproduction_ids": [],
+            "source_hau": "U3",
+            "source_return": "R4",
+            "status": "candidate"
+          }
+        },
+        "Execution": {
+          "E4": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088284.3071134,
+            "hau_id": "U3",
+            "id": "E4",
+            "last_seen": 1789088284.3856008,
+            "return_id": "R4",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "submitted",
+            "task_id": "T3"
+          }
+        },
+        "Return": {
+          "R4": {
+            "execution_id": "E4",
+            "human_annotations": [],
+            "id": "R4",
+            "major_execution_facts": "Recorded new version adoption and formal Return",
+            "observed_terrain": "New planned test task",
+            "outcome": "success",
+            "reflection": "No empirical learning efficacy claim",
+            "result": "Synthetic revalidation succeeded"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "a7c53e138d404c878166f62acb042026",
+      "idempotency_key": "agent/c80cbf5db1924c64ade00198c14bb01b/r01/newreturn",
+      "occurred_at": 1789088284.385671,
+      "sequence": 74,
+      "simulation": true,
+      "type": "ResultSubmitted"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H2",
+      "authority_source": "Human:H2",
+      "causation_id": "human-web/2aaf3354-b933-466c-9dcb-6a0c5d51d885",
+      "changes": {
+        "Review": {
+          "d3702e1b-f984-405c-a463-a4627d2c3eb6": {
+            "credible": true,
+            "evidence": "Synthetic new task trace inspected",
+            "id": "d3702e1b-f984-405c-a463-a4627d2c3eb6",
+            "return_id": "R4",
+            "reviewer": "H2"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "ac3a9a015f2f417f98c1834d6d816d8a",
+      "idempotency_key": "human-web/2aaf3354-b933-466c-9dcb-6a0c5d51d885",
+      "occurred_at": 1789088284.4689558,
+      "sequence": 75,
+      "simulation": true,
+      "type": "ResultReviewed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/3f1c3192-0fa1-4beb-bcbc-8e69f92a1425",
+      "changes": {
+        "Acceptance": {
+          "894c1b4d-eac5-4b9a-858c-0b852478e8e1": {
+            "accepted": true,
+            "acceptor": "H1",
+            "id": "894c1b4d-eac5-4b9a-858c-0b852478e8e1",
+            "rationale": "Fixture criteria met",
+            "return_id": "R4",
+            "review_id": "d3702e1b-f984-405c-a463-a4627d2c3eb6"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "663d652aedfd4151b1e942a31c9cb758",
+      "idempotency_key": "human-web/3f1c3192-0fa1-4beb-bcbc-8e69f92a1425",
+      "occurred_at": 1789088284.5446255,
+      "sequence": 76,
+      "simulation": true,
+      "type": "ResultAccepted"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/3f1c3192-0fa1-4beb-bcbc-8e69f92a1425",
+      "changes": {
+        "Execution": {
+          "E4": {
+            "accountable_owner": "H3",
+            "claimed_at": 1789088284.3071134,
+            "hau_id": "U3",
+            "id": "E4",
+            "last_seen": 1789088284.5445645,
+            "return_id": "R4",
+            "runtime_boundary": [
+              "read"
+            ],
+            "status": "closed",
+            "task_id": "T3"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "dd1552bca3724a1eb2f1ac7fe042dd23",
+      "idempotency_key": "human-web/3f1c3192-0fa1-4beb-bcbc-8e69f92a1425",
+      "occurred_at": 1789088284.544666,
+      "sequence": 77,
+      "simulation": true,
+      "type": "ExecutionClosed"
+    },
+    {
+      "accountable_owner": "H3",
+      "actor": "H3",
+      "authority_source": "Human:H3",
+      "causation_id": "human-web/df236fd7-34ec-4a73-87ed-7b32a3087e37",
+      "changes": {
+        "LearningOutcome": {
+          "2bbdbefc-25f4-4e1a-ac0f-4885ac98328d": {
+            "id": "2bbdbefc-25f4-4e1a-ac0f-4885ac98328d",
+            "interpretation": "New fixture task succeeded; no causal assertion",
+            "owner": "H3",
+            "return_id": "R4",
+            "use_id": "USE4"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "89c01e64592946118ae45a1b86bd6965",
+      "idempotency_key": "human-web/df236fd7-34ec-4a73-87ed-7b32a3087e37",
+      "occurred_at": 1789088284.648002,
+      "sequence": 78,
+      "simulation": true,
+      "type": "LearningOutcomeRecorded"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/492327eb-d273-4b18-ae85-8d8eb034b6a1",
+      "changes": {
+        "CapabilityReproduction": {
+          "a5978768-a2ad-4405-832c-3ce994e4e38a": {
+            "id": "a5978768-a2ad-4405-832c-3ce994e4e38a",
+            "outcome": "reproduced",
+            "package_id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "return_id": "R4",
+            "reviewer": "H1",
+            "use_id": "USE4"
+          }
+        },
+        "CapabilityRoute": {
+          "c75c87e4-5e42-419d-afe1-4815e804f307": {
+            "components": {
+              "agent_configuration": "explicit delegation",
+              "data": "fixture v2",
+              "oversight": "Separate H2 review and H1 acceptance",
+              "practice": "Bounded claim as context only",
+              "runtime": "isolated loopback",
+              "tools": "local client"
+            },
+            "id": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "knowledge_id": "289052c3-d364-4092-b66b-1887a2f04e4d",
+            "owner": "H1",
+            "reproduction_ids": [
+              "a5978768-a2ad-4405-832c-3ce994e4e38a"
+            ],
+            "source_hau": "U1",
+            "source_return": "R1",
+            "status": "reproduced"
+          }
+        }
+      },
+      "correlation_id": "a5978768-a2ad-4405-832c-3ce994e4e38a",
+      "id": "61438adf94d34b8b961bf9eb61741d40",
+      "idempotency_key": "human-web/492327eb-d273-4b18-ae85-8d8eb034b6a1",
+      "occurred_at": 1789088284.74069,
+      "sequence": 79,
+      "simulation": true,
+      "type": "ReproductionRecorded"
+    },
+    {
+      "accountable_owner": "H1",
+      "actor": "H1",
+      "authority_source": "Human:H1",
+      "causation_id": "human-web/8a31dcc3-45cb-442d-9297-8c6e4008cd7f",
+      "changes": {
+        "KnowledgeImpact": {
+          "impact/e0278168-8eae-4f0b-b407-76e028d764b8": {
+            "execution_ids": [],
+            "id": "impact/e0278168-8eae-4f0b-b407-76e028d764b8",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "package_ids": [
+              "route/R1"
+            ],
+            "status": "resolved",
+            "triggers": [
+              "challenge/ISSUE",
+              "superseded"
+            ]
+          }
+        },
+        "RevalidationPlan": {
+          "d0a22173-9cc7-408b-a894-f20fed2b7544": {
+            "id": "d0a22173-9cc7-408b-a894-f20fed2b7544",
+            "knowledge_id": "e0278168-8eae-4f0b-b407-76e028d764b8",
+            "owner": "H1",
+            "reason": "Respond to Agent fixture failure",
+            "replacement_package": "c75c87e4-5e42-419d-afe1-4815e804f307",
+            "reproduction_id": "a5978768-a2ad-4405-832c-3ce994e4e38a",
+            "status": "passed",
+            "task_id": "T3"
+          }
+        }
+      },
+      "correlation_id": "T3",
+      "id": "3e2b4f4fc5664266b7be039cfeb5dac2",
+      "idempotency_key": "human-web/8a31dcc3-45cb-442d-9297-8c6e4008cd7f",
+      "occurred_at": 1789088284.8393714,
+      "sequence": 80,
+      "simulation": true,
+      "type": "RevalidationCompleted"
+    }
+  ]
+}

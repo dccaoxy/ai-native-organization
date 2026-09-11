@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "UX02",
+  "mission": "Continuous local browser and Agent acceptance with interruption and restart recovery",
+  "stages": [
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md",
+        "development/autodev/workspace-demo",
+        "development/autodev/continuous-demo"
+      ],
+      "outputs": [
+        "organization/continuous_demo.py",
+        "organization/continuous_web_test.cjs",
+        "organization/human_web/human.js"
+      ],
+      "scope": [
+        "organization",
+        "autodev/continuous_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Start with zero Execution and zero KnowledgeRevision; four real HTTP Agent registrations",
+        "Actual browser approvals, separate Review/Acceptance/Selection, knowledge and new task revalidation pass",
+        "Two server restarts preserve events; duplicate requests add no events; Agent interruption resumes with Human action",
+        "Full suite, independent deterministic review and frozen principle audit pass; local checkpoint only"
+      ],
+      "tests": [
+        "tests.test_workspace",
+        "tests.test_revalidation"
+      ],
+      "review_tests": [
+        "tests.test_identity",
+        "tests.test_agent_gateway",
+        "tests.test_revalidation",
+        "tests.test_human_web"
+      ],
+      "principle_checks": [
+        {
+          "id": "Unique Human ownership and scoped Agent recovery",
+          "test": "tests.test_identity",
+          "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md"
+        },
+        {
+          "id": "Invalid knowledge does not regain validity silently",
+          "test": "tests.test_revalidation",
+          "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md"
+        },
+        {
+          "id": "Separate Review Acceptance and Selection",
+          "test": "tests.test_core",
+          "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 240,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.continuous_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Continuous acceptance from registration to knowledge revalidation",
+      "dependencies": []
+    }
+  ]
+}
