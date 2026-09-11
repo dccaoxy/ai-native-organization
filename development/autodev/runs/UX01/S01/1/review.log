@@ -1,0 +1,17 @@
+test_bad_source_does_not_create_or_overwrite_workspace (tests.test_workspace.WorkspaceTests.test_bad_source_does_not_create_or_overwrite_workspace) ... ok
+test_consistent_seed_and_restart_preserve_source_and_key (tests.test_workspace.WorkspaceTests.test_consistent_seed_and_restart_preserve_source_and_key) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.072s
+
+OK
+
+test_agent_cannot_use_browser_control (tests.test_human_web.HumanWebTests.test_agent_cannot_use_browser_control) ... ok
+test_public_shell_never_discloses_control_key (tests.test_human_web.HumanWebTests.test_public_shell_never_discloses_control_key) ... ok
+test_same_origin_control_and_cross_origin_denial (tests.test_human_web.HumanWebTests.test_same_origin_control_and_cross_origin_denial) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.659s
+
+OK
+

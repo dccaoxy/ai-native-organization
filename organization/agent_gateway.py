@@ -158,7 +158,7 @@ def server(path, operator_token, port=0, clock=None):
                 # Only the control API accepts same-origin browser requests.
                 if origin and (not self.path.startswith('/control/') or origin != 'http://' + self.headers.get('Host','')):
                     raise DomainError('Cross-origin request denied', 403)
-                assets = {'/':'index.html', '/human.js':'human.js', '/human.css':'human.css', '/learning.js':'learning.js'}
+                assets = {'/':'index.html', '/human.js':'human.js', '/human.css':'human.css', '/learning.js':'learning.js', '/flow.js':'flow.js'}
                 if self.command == 'GET' and self.path in assets:
                     filename = assets[self.path]
                     payload = (Path(__file__).parent / 'human_web' / filename).read_bytes()

@@ -1,9 +1,9 @@
 "use strict";
 function renderLearning(){
- const root=$('learning-list');root.replaceChildren();
+ const root=$('learning-list');saveLearningDrafts(root);root.replaceChildren();
  const choices=kind=>values(kind).map(x=>[x.id,x.id+' · '+(x.status||x.outcome||'')]);
  const none=kind=>[['none','无 / 新建版本系列'],...choices(kind)];
- function form(title,cmd,fields,transform=x=>x){const d=node('details',undefined,root);node('summary',title,d);const inputs={};for(const [key,label,kind,options] of fields){inputs[key]=kind==='select'?select(d,label,options):field(d,label,'',kind==='text'?'textarea':'input');}button(d,'记录：'+title,()=>{const data={};for(const [key,label,kind]of fields){let value=inputs[key].value.trim();if(!value&&kind!=='optional_list')throw Error('请填写：'+label);data[key]=(kind==='list'||kind==='optional_list')?value.split(',').map(x=>x.trim()).filter(Boolean):value;}if(!['assemble_route','complete_revalidation'].includes(cmd))data.id=crypto.randomUUID();return command(cmd,transform(data));});}
+ function form(title,cmd,fields,transform=x=>x){const d=node('details',undefined,root);node('summary',title,d);d.dataset.command=cmd;d.dataset.actor=$('actor').value;d.dataset.requestId=crypto.randomUUID();const inputs={};for(const [key,label,kind,options] of fields){inputs[key]=kind==='select'?select(d,label,options):field(d,label,'',kind==='text'?'textarea':'input');inputs[key].dataset.field=key;}configureLearningForm(cmd,inputs,d);button(d,'记录：'+title,()=>{const data={};for(const [key,label,kind]of fields){let value=inputs[key].value.trim();if(!value&&kind!=='optional_list')throw Error('请填写：'+label);data[key]=(kind==='list'||kind==='optional_list')?value.split(',').map(x=>x.trim()).filter(Boolean):value;}if(!['assemble_route','complete_revalidation'].includes(cmd))data.id=d.dataset.requestId;return command(cmd,transform(data));});}
  form('1 · 提出候选认知','propose_claim',[
  ['return_id','来源 Return','select',choices('Return')],['reviewer','独立验证 Human','select',choices('Human')],['previous_id','修订自哪个知识版本','select',[['none','新候选；版本修订请使用步骤 9']]],['core_claim','核心主张','text'],['scope','适用情境','text'],['boundary','所需操作边界（逗号分隔）','list'],['mechanism','候选机制解释','text'],['transfer_conditions','迁移条件与不适用情形','text'],['task_ids','本轮适用 Task 编号（逗号分隔）','list']]);
  form('2 · 关联证据','capture_evidence',[

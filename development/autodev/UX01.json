@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "id": "UX01",
+  "mission": "One local entry and less repetitive Human input",
+  "stages": [
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "autodev",
+        "organization",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/UX01_UNIFIED_WORKSPACE.md",
+        "development/autodev/workspace-demo"
+      ],
+      "outputs": [
+        "organization/workspace.py",
+        "organization/human_web/flow.js",
+        "tests/test_workspace.py"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_workspace.py",
+        "autodev/workspace_acceptance.py"
+      ],
+      "exit_criteria": [
+        "Independent configured tests and audit pass",
+        "Only explicitly approved Agent identity/permissions/tasks can execute",
+        "Local checkpoint artifact recorded; no push or deployment"
+      ],
+      "tests": [
+        "tests.test_workspace"
+      ],
+      "review_tests": [
+        "tests.test_workspace",
+        "tests.test_human_web"
+      ],
+      "principle_checks": [
+        {
+          "id": "Preserve source data and explicit Human control",
+          "test": "tests.test_workspace",
+          "source": "development/milestones/UX01_UNIFIED_WORKSPACE.md"
+        },
+        {
+          "id": "Human access remains authenticated",
+          "test": "tests.test_human_web",
+          "source": "development/milestones/UX01_UNIFIED_WORKSPACE.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 180,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.workspace_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Unified local workspace and guided forms",
+      "dependencies": []
+    }
+  ]
+}

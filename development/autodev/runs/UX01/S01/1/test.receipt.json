@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.workspace_acceptance"
+  ],
+  "source_digest": "0f973de4834fc7974994ceb317fee88e02a080829236e234ff4fdc8345e35e72",
+  "started": 1789087353.9864702,
+  "finished": 1789087413.1700156
+}

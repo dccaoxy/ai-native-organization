@@ -1,0 +1,32 @@
+{
+  "role": "audit",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "baseline-preservation",
+      "passed": true
+    },
+    {
+      "id": "Preserve source data and explicit Human control",
+      "test": "tests.test_workspace",
+      "source": "development/milestones/UX01_UNIFIED_WORKSPACE.md",
+      "passed": true
+    },
+    {
+      "id": "Human access remains authenticated",
+      "test": "tests.test_human_web",
+      "source": "development/milestones/UX01_UNIFIED_WORKSPACE.md",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "0f973de4834fc7974994ceb317fee88e02a080829236e234ff4fdc8345e35e72",
+  "nonce": "b9d0df1938f04026827c26b75179f179",
+  "coverage": "UX01 listed engineering invariants only",
+  "out_of_scope": [
+    "Human Pilot evidence",
+    "M1 learning efficacy",
+    "M2 value/culture",
+    "Phase 9 completion"
+  ]
+}
