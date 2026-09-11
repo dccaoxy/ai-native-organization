@@ -3,13 +3,23 @@
   "plan": "M03",
   "stages": {
     "S01": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
       "tag": "autodev/M03/S01/v1",
       "artifact": "development/autodev/runs/M03/S01/1/artifact.zip",
-      "artifact_sha256": "1d451afa76c8e793b84dcc5654269327ed68557cd443c3c421696e7b9fd30fc4"
+      "artifact_sha256": "1d451afa76c8e793b84dcc5654269327ed68557cd443c3c421696e7b9fd30fc4",
+      "commit": "359b6f7c51d8f3e816778c901a819b38a3058c63"
+    },
+    "S02": {
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+      "tag": "autodev/M03/S02/v1",
+      "artifact": "development/autodev/runs/M03/S02/1/artifact.zip",
+      "artifact_sha256": "e8de9fa2ca464df2bddbdb41d49378c87b18949bc22f4d35e3119fe31d4424c8"
     }
   },
   "events": [
@@ -51,6 +61,52 @@
       "tag": "autodev/M03/S01/v1",
       "artifact": "development/autodev/runs/M03/S01/1/artifact.zip",
       "artifact_sha256": "1d451afa76c8e793b84dcc5654269327ed68557cd443c3c421696e7b9fd30fc4"
+    },
+    {
+      "sequence": 6,
+      "stage": "S01",
+      "status": "PASS",
+      "time": 1789085552.7904146,
+      "commit": "359b6f7c51d8f3e816778c901a819b38a3058c63"
+    },
+    {
+      "sequence": 7,
+      "stage": "S02",
+      "status": "BUILD",
+      "time": 1789085553.2692518,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 8,
+      "stage": "S02",
+      "status": "TEST",
+      "time": 1789085553.3736672,
+      "attempt": 1
+    },
+    {
+      "sequence": 9,
+      "stage": "S02",
+      "status": "REVIEW",
+      "time": 1789085557.4110584,
+      "attempt": 1
+    },
+    {
+      "sequence": 10,
+      "stage": "S02",
+      "status": "AUDIT",
+      "time": 1789085562.1713314,
+      "attempt": 1
+    },
+    {
+      "sequence": 11,
+      "stage": "S02",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789085566.3820171,
+      "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+      "tag": "autodev/M03/S02/v1",
+      "artifact": "development/autodev/runs/M03/S02/1/artifact.zip",
+      "artifact_sha256": "e8de9fa2ca464df2bddbdb41d49378c87b18949bc22f4d35e3119fe31d4424c8"
     }
   ]
 }

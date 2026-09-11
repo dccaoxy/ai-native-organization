@@ -1,0 +1,32 @@
+{
+  "role": "audit",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "baseline-preservation",
+      "passed": true
+    },
+    {
+      "id": "KNOW-02/03/05/06/13 and CAP-01/02/08/11 within declared local subset",
+      "test": "tests.test_learning",
+      "source": "development/milestones/M03_LEARNING_ORGANIZATION.md",
+      "passed": true
+    },
+    {
+      "id": "Explicit Agent delegation and source projection boundary",
+      "test": "tests.test_learning_gateway",
+      "source": "development/milestones/M03_LEARNING_ORGANIZATION.md",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+  "nonce": "faca6f9eeb814fdaa74eef14a29c59d0",
+  "coverage": "M03 listed engineering invariants only",
+  "out_of_scope": [
+    "Human Pilot evidence",
+    "M1 learning efficacy",
+    "M2 value/culture",
+    "Phase 9 completion"
+  ]
+}
