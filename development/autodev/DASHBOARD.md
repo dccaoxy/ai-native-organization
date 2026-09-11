@@ -1,5 +1,11 @@
 # AutoDev Dashboard
 
+## 当前：PA01 普通用户网页门户
+
+2026-09-11：用户要求不再安装依赖或执行命令，正式用户试用推迟至网页入口完善之后。PA01 S01/S02 已本地 PASS，账号注册/登录、服务端固定 Human 身份、目标任务创建发布、所属 Agent 凭据/授权、网页协议客户端及分离审查验收可用。169 项完整回归，最终网页双账号流程 16 条合成事件，后续 6 项安全回归通过；0 位真实参与者、未调用模型。检查点 6a25577 / autodev/PA01/S01/v1、a1ce994 / autodev/PA01/S02/v1。见 development/PA01_ACCEPTANCE.md、PORTAL_USER_GUIDE.md 与 autodev/PA01.state.json。
+
+普通用户本地入口改为 http://127.0.0.1:8876 ，独立账号库和开发侧后台进程；8877 旧合成控制台保留。下一步核验并提交云端隔离入口/TLS/常驻服务部署方案供确认，再做正式用户测试；不要再要求用户运行 Python/Node 或手动启动后端。deploy/test-portal 是未部署的候选包。未 push、未云端部署、未改现有域名；当前不是关机后仍可用的云端服务。
+
 ## 当前：UX02 连续验收与恢复
 
 2026-09-11：UX02 S01 已本地 PASS。从零 Execution/Knowledge 的隔离库连续完成 4 个 HTTP Agent 注册、浏览器授权/验收、知识形成、失效与新任务重验；80 条合成事件，2 次服务实例重启，幂等重试与事件 replay 通过。163 项完整回归、独立确定性 Review/Audit 通过；首次 Review 配置错误及修复记录保留。新增所属 Human 确认 Agent 恢复入口、执行待办及中文知识状态。见 development/UX02_ACCEPTANCE.md 与 development/CONTINUOUS_TRIAL.md；状态 development/autodev/UX02.state.json。checkpoint 18c0761 / autodev/UX02/S01/v1。统一入口仍为 8877，旧试用数据未导入本轮测试记录。未推送、未部署，不代表真人试点或云端持续运行。

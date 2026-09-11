@@ -31,3 +31,7 @@
 repair budget=1；工程失败进入 BLOCKED_ENGINEERING，按真实回执修复；不伪造通过。若涉及冻结语义、真人 Purpose/Authority/Risk 则 HUMAN_DECISION_REQUIRED。账号预留后、事件前中断可在登录时幂等补全 HumanRegistered。会话和注册归属落 SQLite，不依赖聊天或浏览器内存；未保存的一次性 Agent 凭据不可事后读回。
 
 回滚停止本独立门户并使用旧代码 checkout；旧实验室不受影响。数据库需正确 SQLite backup，勿覆盖或混合账号库。不得 force-push、覆盖 tag 或销毁历史。
+
+## 本地完成记录
+
+S01 / S02 均 PASS；详见 development/PA01_ACCEPTANCE.md。S02 依赖 S01，输入相同，输出账号专用引导文案和不遮挡内容的通知样式；退出条件为重新通过双账号网页全流程、6 项账号安全测试与独立 Review/Audit。S01 完整回归 169 项。服务器常驻候选包未安装，正式用户测试尚未开始。
