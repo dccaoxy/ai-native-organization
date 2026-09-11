@@ -1,3 +1,7 @@
+## 2026-09-11 OpenClaw 独立 Agent 测试准备
+
+本机 OpenClaw/MiniMax 独立审查任务已完成 Claim/ACK/Progress/Submit，R-openclaw-review-1；受限工具只暴露指定证据，不向模型暴露凭据。首次协议失败修复后重试通过。Reviewer给出PASS，但仅为抽样审查建议；Human验收和完整返工链未执行。见 [OPENCLAW_LOCAL_TEST.md](OPENCLAW_LOCAL_TEST.md)。隔离测试服务已停止，未推送/部署。
+
 # Next Actions
 
 ## 当前：PA02 Agent 接入说明与默认权限
