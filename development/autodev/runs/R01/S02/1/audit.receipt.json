@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
+  "started": 1789086737.7957976,
+  "finished": 1789086743.9154165,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Bounded revalidation, lineage, reasons, Human authority, no stale restoration",
+        "test": "tests.test_revalidation",
+        "source": "development/milestones/R01_REVALIDATION.md",
+        "passed": true
+      },
+      {
+        "id": "Agent knowledge access and explicit delegation",
+        "test": "tests.test_learning_gateway",
+        "source": "development/milestones/R01_REVALIDATION.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
+    "nonce": "b22426dc2fc7428bbd222e77e4574553",
+    "coverage": "R01 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

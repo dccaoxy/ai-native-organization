@@ -3,13 +3,23 @@
   "plan": "R01",
   "stages": {
     "S01": {
-      "status": "CHECKPOINT_PENDING",
+      "status": "PASS",
       "attempt": 1,
       "worker": "caoxy-TG03",
       "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
       "tag": "autodev/R01/S01/v1",
       "artifact": "development/autodev/runs/R01/S01/1/artifact.zip",
-      "artifact_sha256": "24bea48eaf60340b4ec1191f38c5c8ff584ac80a8f3a9ac098895583c3fa1ce5"
+      "artifact_sha256": "24bea48eaf60340b4ec1191f38c5c8ff584ac80a8f3a9ac098895583c3fa1ce5",
+      "commit": "677fb863afb4b7504651ef02ac0b9d5509a5aaf5"
+    },
+    "S02": {
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 1,
+      "worker": "caoxy-TG03",
+      "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
+      "tag": "autodev/R01/S02/v1",
+      "artifact": "development/autodev/runs/R01/S02/1/artifact.zip",
+      "artifact_sha256": "72e5cde668373358d4dfe615004fd8df7665fe7d3dcc90f996a4d3c17a08d87d"
     }
   },
   "events": [
@@ -51,6 +61,52 @@
       "tag": "autodev/R01/S01/v1",
       "artifact": "development/autodev/runs/R01/S01/1/artifact.zip",
       "artifact_sha256": "24bea48eaf60340b4ec1191f38c5c8ff584ac80a8f3a9ac098895583c3fa1ce5"
+    },
+    {
+      "sequence": 6,
+      "stage": "S01",
+      "status": "PASS",
+      "time": 1789086728.3492877,
+      "commit": "677fb863afb4b7504651ef02ac0b9d5509a5aaf5"
+    },
+    {
+      "sequence": 7,
+      "stage": "S02",
+      "status": "BUILD",
+      "time": 1789086728.8585217,
+      "attempt": 1,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 8,
+      "stage": "S02",
+      "status": "TEST",
+      "time": 1789086729.0740807,
+      "attempt": 1
+    },
+    {
+      "sequence": 9,
+      "stage": "S02",
+      "status": "REVIEW",
+      "time": 1789086732.940907,
+      "attempt": 1
+    },
+    {
+      "sequence": 10,
+      "stage": "S02",
+      "status": "AUDIT",
+      "time": 1789086737.7934184,
+      "attempt": 1
+    },
+    {
+      "sequence": 11,
+      "stage": "S02",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789086744.4492862,
+      "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
+      "tag": "autodev/R01/S02/v1",
+      "artifact": "development/autodev/runs/R01/S02/1/artifact.zip",
+      "artifact_sha256": "72e5cde668373358d4dfe615004fd8df7665fe7d3dcc90f996a4d3c17a08d87d"
     }
   ]
 }
