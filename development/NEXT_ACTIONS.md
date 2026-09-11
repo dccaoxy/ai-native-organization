@@ -1,5 +1,11 @@
 # Next Actions
 
+## 当前：UX02 连续验收与恢复
+
+2026-09-11：UX02 S01 已本地 PASS。从零 Execution/Knowledge 的隔离库连续完成 4 个 HTTP Agent 注册、浏览器授权/验收、知识形成、失效与新任务重验；80 条合成事件，2 次服务实例重启，幂等重试与事件 replay 通过。163 项完整回归、独立确定性 Review/Audit 通过；首次 Review 配置错误及修复记录保留。新增所属 Human 确认 Agent 恢复入口、执行待办及中文知识状态。见 development/UX02_ACCEPTANCE.md 与 development/CONTINUOUS_TRIAL.md；状态 development/autodev/UX02.state.json。checkpoint 18c0761 / autodev/UX02/S01/v1。统一入口仍为 8877，旧试用数据未导入本轮测试记录。未推送、未部署，不代表真人试点或云端持续运行。
+
+下一步：按试用指南在统一入口亲自走查角色待办与知识变化，收集具体交互问题再修复；不要因本轮合成 PASS 自动启动真人 Pilot、接入公司数据或恢复云端写回。
+
 ## 当前：UX01 统一试用入口
 
 2026-09-11：统一启动器、关联字段带入、按 Human 隔离的页面内存草稿及待办导航已实现，S01 已本地 PASS，163 项回归及实际浏览器验证通过；见 development/UX01_ACCEPTANCE.md，状态见 development/autodev/UX01.state.json，规格见 development/milestones/UX01_UNIFIED_WORKSPACE.md。后续使用固定本地 8877 入口；旧实验室保留。未推送、未部署。

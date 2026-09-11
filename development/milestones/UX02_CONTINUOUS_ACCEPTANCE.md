@@ -29,3 +29,7 @@
 确定性脚本执行 Agent 协议，浏览器自动选择合成 Human；0 位真实参与者，未调用模型。Review/Audit 是独立确定性进程，不是独立 LLM 或真人语义认证。
 
 回滚用独立 checkout 或新 revert；标签/历史不覆盖，不 force-push。此轮未迁移数据库 schema，所有连续测试数据在临时目录，旧实验室和统一试用数据保持原样。恢复本阶段依据 UX02.state.json、run receipts 和源码，不依赖聊天。
+
+## 本地完成记录
+
+S01 PASS：18c0761 / autodev/UX02/S01/v1；163 项完整回归、80 条连续合成事件和两次服务实例重启验证通过。机器状态见 development/autodev/UX02.state.json；范围、首次配置失败和 attempt 2 回执见 development/UX02_ACCEPTANCE.md。未推送或部署。
