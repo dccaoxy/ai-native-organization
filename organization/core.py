@@ -115,7 +115,7 @@ class Session:
                 from organization.revalidation import handle
             elif command in ('propose_claim','capture_evidence','verify_claim','assemble_route','use_knowledge','record_learning_outcome','record_reproduction'):
                 from organization.learning import handle
-            elif command in ('register_agent','approve_agent','revoke_agent'):
+            elif command in ('register_agent','approve_agent','revoke_agent','update_agent_access'):
                 from organization.enrollment import handle
             elif command in ('challenge_goal','decide_goal_challenge'):
                 from organization.goals import handle

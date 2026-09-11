@@ -67,3 +67,45 @@ class PortalTests(unittest.TestCase):
         d={'command':'activate_goal','data':{'id':'G','desired_change':'test','success_criteria':'trace','boundary':['read'],'goal_authority':a['human']},'idempotency_key':'goal'}
         self.assertEqual(self.req('/api/commands',d,c,a['csrf'])[0],200);n=len(self.http.portal.store.events())
         self.assertEqual(self.req('/api/commands',d,c,a['csrf'])[0],200);self.assertEqual(n,len(self.http.portal.store.events()))
+    def test_access_update_immediate_without_rebinding_execution(self):
+        from organization.agent_client import Client,ProtocolError
+        a,c=self.account('alice');b,bc=self.account('bob')
+        portal=self.http.portal
+        def cmd(name,data,key):return portal.dispatch('/api/commands',a['human'],{'command':name,'data':data,'idempotency_key':key})
+        cmd('activate_goal',{'id':'G','desired_change':'test','success_criteria':'trace','boundary':['read'],'goal_authority':a['human']},'g')
+        cmd('create_task',{'id':'T','primary_goal':'G','expected_output':'test','acceptance_criteria':'trace','boundary':['read'],'execution_mode':'parallel','review_authority':b['human'],'acceptance_authority':a['human'],'selection_authority':a['human']},'t')
+        cmd('publish',{'task_id':'T'},'pub')
+        reg=portal.dispatch('/api/agent',a['human'],{'name':'client'})
+        scope={'registration_id':reg['registration_id'],'permissions':['claim','ack','progress','submit'],'allowed_tasks':['T']}
+        cmd('approve_agent',{**scope,'hau_id':'ignored'},'approval')
+        agent=Client(self.url,reg['token']);me=agent.request('/v1/me')['registration']
+        agent.command('claim',{'id':'E','task_id':'T','hau_id':me['hau_id']},'claim');agent.command('ack',{'execution_id':'E'},'ack')
+        before=portal.store.state()['Execution']['E'];new={**scope,'permissions':['claim','ack']}
+        cmd('update_agent_access',new,'change')
+        self.assertEqual(portal.store.state()['Execution']['E'],before)
+        self.assertEqual(agent.request('/v1/me')['registration']['permissions'],new['permissions'])
+        with self.assertRaises(ProtocolError) as e:agent.command('progress',{'execution_id':'E','summary':'denied'},'progress')
+        self.assertEqual(e.exception.status,403)
+        with self.assertRaises(ProtocolError) as e:agent.command('update_agent_access',scope,'self-elevate')
+        self.assertEqual(e.exception.status,403)
+        from organization.store import DomainError
+        with self.assertRaises(DomainError):portal.dispatch('/api/commands',b['human'],{'command':'update_agent_access','data':scope,'idempotency_key':'foreign'})
+        with self.assertRaises(DomainError):cmd('update_agent_access',{**scope,'permissions':['accept']},'human-only')
+        cmd('update_agent_access',{**scope,'permissions':[],'allowed_tasks':[]},'pause')
+        self.assertEqual(agent.request('/v1/tasks')['tasks'],[])
+        cmd('update_agent_access',scope,'restore')
+        self.assertEqual(agent.request('/v1/me')['registration']['permissions'],scope['permissions'])
+        self.assertEqual(portal.store.events()[-1]['type'],'AgentAccessUpdated')
+
+    def test_connection_receipt_is_idempotent_and_persists(self):
+        from organization.agent_client import Client,ProtocolError
+        a,c=self.account('alice');reg=self.http.portal.dispatch('/api/agent',a['human'],{'name':'client'})
+        agent=Client(self.url,reg['token']);body={'registration_id':reg['registration_id']}
+        n=len(self.http.portal.store.events());receipt=agent.request('/v1/connect',body)
+        self.assertEqual(receipt['registration_status'],'pending')
+        self.assertEqual(agent.request('/v1/connect',body),receipt)
+        self.assertEqual(len(self.http.portal.store.events()),n)
+        with self.assertRaises(ProtocolError):agent.request('/v1/connect',{'registration_id':'another'})
+        self.http.shutdown();self.http.server_close();self.thread.join();self.start()
+        agent=Client(self.url,reg['token']);self.assertEqual(agent.request('/v1/connect',body),receipt)
+        data=self.req('/api/state',cookie=c)[1];self.assertEqual(data['connections'][reg['registration_id']],receipt['connected_at'])

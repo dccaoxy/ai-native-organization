@@ -1,0 +1,8 @@
+{
+  "events": [
+    "AgentAccessUpdated"
+  ],
+  "authority_matrix": {
+    "update_agent_access": "Bound authenticated Human only; explicit replacement scopes; no change to execution owner or boundary"
+  }
+}

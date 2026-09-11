@@ -16,7 +16,7 @@ POST /v1/commands 的请求格式：
 常用命令 data：
 claim: {"id":"新 Execution 编号","task_id":"所选任务编号","hau_id":"/v1/me 返回的 HAU"}
 ack: {"execution_id":"已领取的 Execution 编号"}
-submit 或 fail: {"id":"新 Return 编号","execution_id":"Execution 编号","result":"正式结果","observed_terrain":"观察事实","major_execution_facts":"主要执行事实","reflection":"反思及限制"}
+submit、fail 或 release: {"id":"新 Return 编号","execution_id":"Execution 编号","result":"正式结果","observed_terrain":"观察事实","major_execution_facts":"主要执行事实","reflection":"反思及限制"}
 agent_status: {"agent_id":"/v1/me 返回的 agent_id","runtime_status":"offline 或 online"}
 
 只执行明确获准的命令。Task 与 Execution 分开，一个 Execution 保留唯一负责 Human。不要把私有思考过程当作执行日志。实际失败使用 fail，不伪造成功。Boundary 扩权需走申请与 Human 决定，不能通过文字声明自授权。
@@ -24,3 +24,8 @@ agent_status: {"agent_id":"/v1/me 返回的 agent_id","runtime_status":"offline 
 网络失败时重试相同动作应复用原 idempotency_key 和完全相同的 data；改变动作必须新建键。不要在恢复时盲目重复创建 Execution。401 需检查凭据；403 需检查授权/撤销；409 需核对当前对象状态。Review、Acceptance、Selection 由指定 Human 在网页分别完成。
 
 测试环境不提供模型托管。可连接已有支持 HTTP 的 Agent；网页内另有明确标识的浏览器协议测试客户端，它不调用模型或完成实际业务。
+
+
+补充接入确认：POST /v1/connect，请求 {"registration_id":"网页提供的编号"}。pending 凭据也可调用；不授予执行权限，重复调用幂等。GET /v1/me 可先确认身份。网页已预建注册记录，不要重复注册。
+基础操作参数：progress、blocked、escalate、resume 的 data 均为 {"execution_id":"执行编号","summary":"简洁事实说明"}。这些命令必须已授权且符合当前 Execution 状态；resume 不能绕过待决边界申请。
+用户修改权限后立即生效，旧执行的负责人/边界不变；每次继续前重新读取 /v1/me。移除任务或某项命令后，不得继续使用旧权限。

@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "PA02",
+  "mission": "Self-contained Agent onboarding and editable Human-owned default scope",
+  "stages": [
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "organization",
+        "autodev",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/PA02_AGENT_ONBOARDING.md",
+        "development/autodev/portal-demo",
+        "deploy/test-portal"
+      ],
+      "outputs": [
+        "organization/portal_web/portal.js",
+        "organization/enrollment.py",
+        "specs/PA02.agent-onboarding.json",
+        "tests/test_portal.py"
+      ],
+      "scope": [
+        "organization",
+        "specs/PA02.agent-onboarding.json",
+        "tests/test_portal.py"
+      ],
+      "exit_criteria": [
+        "Complete transferable instructions and idempotent authenticated connection receipt",
+        "Chinese explained basic permissions preselected with explicit Human task choice",
+        "Scope changes immediate; no self elevation or execution accountability rebinding",
+        "Full regression and source-bound browser/client chain pass; no push/deployment"
+      ],
+      "tests": [
+        "tests.test_portal"
+      ],
+      "review_tests": [
+        "tests.test_portal",
+        "tests.test_agent_access",
+        "tests.test_human_web"
+      ],
+      "principle_checks": [
+        {
+          "id": "Authenticated unique Human authority and no actor spoofing",
+          "test": "tests.test_portal",
+          "source": "development/milestones/PA02_AGENT_ONBOARDING.md"
+        },
+        {
+          "id": "Scoped Agent delegation and revocation",
+          "test": "tests.test_agent_access",
+          "source": "development/milestones/PA02_AGENT_ONBOARDING.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 240,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.portal_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S01",
+      "title": "Complete Agent handoff and editable scopes",
+      "dependencies": []
+    }
+  ]
+}

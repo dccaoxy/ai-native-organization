@@ -23,6 +23,10 @@ CONTRACT['objects'].update(REVALIDATION['objects'])
 CONTRACT['event_catalog'].extend(REVALIDATION['events'])
 CONTRACT['authority_matrix'].update(REVALIDATION['authority_matrix'])
 
+ONBOARDING = json.loads((ROOT / 'specs/PA02.agent-onboarding.json').read_text(encoding='utf-8'))
+CONTRACT['event_catalog'].extend(ONBOARDING['events'])
+CONTRACT['authority_matrix'].update(ONBOARDING['authority_matrix'])
+
 
 def validate(name, obj):
     definition = CONTRACT["objects"][name]

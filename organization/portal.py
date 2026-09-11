@@ -17,7 +17,7 @@ from organization.agent_gateway import Gateway
 from organization.core import Session, require
 from organization.store import DomainError
 
-HUMAN_COMMANDS = set('activate_goal create_task publish approve_agent revoke_agent agent_status resume decide_boundary review accept select annotate_return challenge_goal decide_goal_challenge propose_claim capture_evidence verify_claim assemble_route use_knowledge record_learning_outcome record_reproduction report_knowledge_issue revise_knowledge plan_revalidation revise_route complete_revalidation'.split())
+HUMAN_COMMANDS = set('activate_goal create_task publish approve_agent update_agent_access revoke_agent agent_status resume decide_boundary review accept select annotate_return challenge_goal decide_goal_challenge propose_claim capture_evidence verify_claim assemble_route use_knowledge record_learning_outcome record_reproduction report_knowledge_issue revise_knowledge plan_revalidation revise_route complete_revalidation'.split())
 
 
 class Portal:
@@ -29,6 +29,7 @@ class Portal:
             db.executescript('''
             CREATE TABLE IF NOT EXISTS portal_accounts (username TEXT PRIMARY KEY, human TEXT UNIQUE NOT NULL, name TEXT NOT NULL, salt TEXT NOT NULL, password TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS portal_sessions (hash TEXT PRIMARY KEY, human TEXT NOT NULL, csrf TEXT NOT NULL, expires REAL NOT NULL);
+            CREATE TABLE IF NOT EXISTS portal_connections (registration TEXT PRIMARY KEY, connected_at REAL NOT NULL);
             CREATE TABLE IF NOT EXISTS portal_agents (registration TEXT PRIMARY KEY, human TEXT NOT NULL);
             CREATE TABLE IF NOT EXISTS portal_limits (key TEXT PRIMARY KEY, count INTEGER NOT NULL, until REAL NOT NULL);
             ''')
@@ -98,7 +99,8 @@ class Portal:
                 state=self.store.state()
                 with self.store.connect() as db:owned={r[0] for r in db.execute('SELECT registration FROM portal_agents WHERE human=?',(human,))}
                 state['AgentRegistration']={k:v for k,v in state.get('AgentRegistration',{}).items() if k in owned}
-                return {'state':state,'events':self.store.events(),'human':human}
+                with self.store.connect() as db:connections={r[0]:r[1] for r in db.execute('SELECT registration,connected_at FROM portal_connections') if r[0] in owned}
+                return {'state':state,'events':self.store.events(),'human':human,'connections':connections}
             if path=='/api/agent':
                 require(data,['name'])
                 if not isinstance(data['name'],str) or not 1<=len(data['name'].strip())<=80:raise DomainError('请填写 Agent 名称')
@@ -110,7 +112,7 @@ class Portal:
                 require(data,['command','data','idempotency_key'])
                 cmd=data['command'];payload=data['data']
                 if cmd not in HUMAN_COMMANDS:raise DomainError('此操作不可从 Human 门户执行',403)
-                if cmd in ('approve_agent','revoke_agent'):
+                if cmd in ('approve_agent','revoke_agent','update_agent_access'):
                     self.owned(human,payload.get('registration_id'))
                     if cmd=='approve_agent':payload={**payload,'hau_id':'U-'+human}
                 result=self.gateway.org.execute(human,cmd,payload,'portal/'+human+'/'+data['idempotency_key'])
@@ -146,6 +148,16 @@ def server(path,port=0,origin=None):
                     if self.path=='/v1/agents/register':raise DomainError('请由所属 Human 在网页创建 Agent 接入凭据',403)
                     auth=self.headers.get('Authorization','')
                     if not auth.startswith('Bearer '):raise DomainError('Agent credential required',401)
+                    if self.path=='/v1/connect' and self.command=='POST':
+                        require(data,['registration_id'])
+                        with portal.lock:
+                            reg,_=portal.gateway.authenticate(auth[7:],approved=False)
+                            if reg['id']!=data['registration_id']:raise DomainError('Registration mismatch',403)
+                            with portal.store.connect() as db:
+                                if not db.execute('SELECT 1 FROM portal_agents WHERE registration=?',(reg['id'],)).fetchone():raise DomainError('Portal registration required',403)
+                                db.execute('INSERT OR IGNORE INTO portal_connections VALUES (?,?)',(reg['id'],time.time()))
+                                first=db.execute('SELECT connected_at FROM portal_connections WHERE registration=?',(reg['id'],)).fetchone()[0]
+                            return self.reply(200,{'connected':True,'connected_at':first,'registration_status':reg['status']})
                     return self.reply(200,portal.gateway.dispatch(self.command,self.path,auth[7:],data))
                 if self.command=='POST' and self.headers.get('Origin')!=self.server.origin:raise DomainError('Same-origin browser required',403)
                 if self.path=='/api/signup' and self.command=='POST':return self.reply(200,portal.signup(data,self.client_address[0]))

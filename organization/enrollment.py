@@ -27,6 +27,22 @@ def handle(s, command, data):
         reg.update(status='approved', human_id=owner, hau_id=data['hau_id'],
                    agent_id=agent_id, permissions=data['permissions'], allowed_tasks=data['allowed_tasks'])
         s.emit('AgentRegistration', reg, 'AgentRegistrationApproved', 'Human:' + owner, owner)
+    elif command == 'update_agent_access':
+        from organization.identity import DELEGABLE
+        require(data, ['registration_id','permissions','allowed_tasks'])
+        reg = s.get('AgentRegistration', data['registration_id'])
+        auth = s.authority(reg['human_id'])
+        agent = s.get('RepresentativeAgent', reg['agent_id'])
+        if reg['status'] != 'approved' or not agent['active'] or s.get('HAU', reg['hau_id'])['agent_id'] != agent['id']:
+            raise DomainError('Only the current approved Agent can change scope', 409)
+        if not isinstance(data['permissions'], list) or any(not isinstance(p,str) or p not in DELEGABLE for p in data['permissions']):
+            raise DomainError('Human-only authority cannot be delegated',403)
+        if not isinstance(data['allowed_tasks'],list):raise DomainError('Explicit task list required')
+        for tid in data['allowed_tasks']:s.get('Task',tid)
+        reg.update(permissions=list(data['permissions']),allowed_tasks=list(data['allowed_tasks']))
+        agent['permissions']=list(data['permissions'])
+        s.emit('AgentRegistration',reg,'AgentAccessUpdated',auth,reg['human_id'])
+        s.attach('RepresentativeAgent',agent)
     elif command == 'revoke_agent':
         require(data, ['registration_id'])
         reg = s.get('AgentRegistration', data['registration_id'])
