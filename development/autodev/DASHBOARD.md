@@ -2,7 +2,7 @@
 
 ## 当前：R01 知识失效与新任务重验
 
-2026-09-11 用户已确认此轮工程。影响记录、Agent 问题报告、修订理由、新重验任务、替代能力包和完成记录已实现；实际网页＋独立 Agent 流程已跑通。S01–S03 最终验收进行中，以 development/autodev/R01.state.json 为准；范围见 development/milestones/R01_REVALIDATION.md。仅本地，不推送/部署，不进入真人 Pilot。
+2026-09-11 用户已确认此轮工程。影响记录、Agent 问题报告、修订理由、新重验任务、替代能力包和完成记录已实现；实际网页＋独立 Agent 流程已跑通。S01–S03 已本地 PASS，完整测试 161 项，实际浏览器＋独立 Agent 运行 65 条合成事件；验收和恢复入口见 development/R01_ACCEPTANCE.md；范围见 development/milestones/R01_REVALIDATION.md。仅本地，不推送/部署，不进入真人 Pilot。
 
 ## 当前：M03 最小可追溯学习闭环
 
