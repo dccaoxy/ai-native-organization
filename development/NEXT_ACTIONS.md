@@ -1,5 +1,9 @@
 # Next Actions
 
+## 当前：UX01 统一试用入口
+
+2026-09-11：统一启动器、关联字段带入、按 Human 隔离的页面内存草稿及待办导航已实现，S01 已本地 PASS，163 项回归及实际浏览器验证通过；见 development/UX01_ACCEPTANCE.md，状态见 development/autodev/UX01.state.json，规格见 development/milestones/UX01_UNIFIED_WORKSPACE.md。后续使用固定本地 8877 入口；旧实验室保留。未推送、未部署。
+
 ## 当前：R01 知识失效与新任务重验
 
 2026-09-11 用户已确认此轮工程。影响记录、Agent 问题报告、修订理由、新重验任务、替代能力包和完成记录已实现；实际网页＋独立 Agent 流程已跑通。S01–S03 已本地 PASS，完整测试 161 项，实际浏览器＋独立 Agent 运行 65 条合成事件；验收和恢复入口见 development/R01_ACCEPTANCE.md；范围见 development/milestones/R01_REVALIDATION.md。仅本地，不推送/部署，不进入真人 Pilot。

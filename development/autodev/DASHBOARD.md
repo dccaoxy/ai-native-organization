@@ -2,7 +2,7 @@
 
 ## 当前：UX01 统一试用入口
 
-2026-09-11：统一启动器、关联字段带入、按 Human 隔离的页面内存草稿及待办导航已实现，最终验收进行中；状态见 development/autodev/UX01.state.json，规格见 development/milestones/UX01_UNIFIED_WORKSPACE.md。后续使用固定本地 8877 入口；旧实验室保留。未推送、未部署。
+2026-09-11：统一启动器、关联字段带入、按 Human 隔离的页面内存草稿及待办导航已实现，S01 已本地 PASS，163 项回归及实际浏览器验证通过；见 development/UX01_ACCEPTANCE.md，状态见 development/autodev/UX01.state.json，规格见 development/milestones/UX01_UNIFIED_WORKSPACE.md。后续使用固定本地 8877 入口；旧实验室保留。未推送、未部署。
 
 ## 当前：R01 知识失效与新任务重验
 
