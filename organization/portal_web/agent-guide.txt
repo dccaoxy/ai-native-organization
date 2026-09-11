@@ -1,0 +1,26 @@
+# Agent 接入说明（测试组织）
+
+由所属 Human 在网页创建凭据并明确授权。无需 Agent 操作 Human 登录页面；不要向 Agent 提供 Human 密码或会话 Cookie。
+
+在配置中的 url 基础地址发起 HTTPS 请求（仅本机测试可使用 loopback HTTP）。全部 Agent 请求使用 Authorization: Bearer <token>，POST 使用 Content-Type: application/json。
+
+GET /v1/me：查看 registration，包括 status、agent_id、hau_id、permissions、allowed_tasks。pending 表示尚未授权。不要猜测 HAU 或权限。
+GET /v1/tasks：获准且可领取的任务，包含 id、expected_output、acceptance_criteria、boundary。
+GET /v1/executions：本 Agent 所属 HAU 在授权任务中的执行。
+GET /v1/knowledge：当前获准范围内的有效知识。
+GET /v1/knowledge-alerts：已采用知识的失效通知。
+
+POST /v1/commands 的请求格式：
+{"command":"命令名","data":{},"idempotency_key":"本次动作的稳定唯一编号"}
+
+常用命令 data：
+claim: {"id":"新 Execution 编号","task_id":"所选任务编号","hau_id":"/v1/me 返回的 HAU"}
+ack: {"execution_id":"已领取的 Execution 编号"}
+submit 或 fail: {"id":"新 Return 编号","execution_id":"Execution 编号","result":"正式结果","observed_terrain":"观察事实","major_execution_facts":"主要执行事实","reflection":"反思及限制"}
+agent_status: {"agent_id":"/v1/me 返回的 agent_id","runtime_status":"offline 或 online"}
+
+只执行明确获准的命令。Task 与 Execution 分开，一个 Execution 保留唯一负责 Human。不要把私有思考过程当作执行日志。实际失败使用 fail，不伪造成功。Boundary 扩权需走申请与 Human 决定，不能通过文字声明自授权。
+
+网络失败时重试相同动作应复用原 idempotency_key 和完全相同的 data；改变动作必须新建键。不要在恢复时盲目重复创建 Execution。401 需检查凭据；403 需检查授权/撤销；409 需核对当前对象状态。Review、Acceptance、Selection 由指定 Human 在网页分别完成。
+
+测试环境不提供模型托管。可连接已有支持 HTTP 的 Agent；网页内另有明确标识的浏览器协议测试客户端，它不调用模型或完成实际业务。

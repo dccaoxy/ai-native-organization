@@ -1,0 +1,22 @@
+[Unit]
+Description=AI Native isolated account test portal
+After=network.target
+
+[Service]
+Type=simple
+User=ai-native-test
+Group=ai-native-test
+WorkingDirectory=/srv/ai-native-test/current
+EnvironmentFile=/srv/ai-native-test/portal.env
+ExecStart=/usr/bin/python3 -m organization.portal --db /srv/ai-native-test/data/portal.sqlite3 --port 18876 --origin ${PORTAL_ORIGIN}
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/ai-native-test/data
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,26 @@
+{
+  "role": "review",
+  "kind": "independent-process deterministic adversarial review",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "test": "tests.test_portal",
+      "passed": true
+    },
+    {
+      "test": "tests.test_agent_access",
+      "passed": true
+    },
+    {
+      "test": "tests.test_human_web",
+      "passed": true
+    }
+  ],
+  "findings": [],
+  "source_digest": "a1a917ca4146ebde014452e251710177e9a0f1beb7de9565daf51ca5bb5d3776",
+  "nonce": "443a43a08d9b447d83e24518fd78815f",
+  "limitations": [
+    "Does not replace independent human/LLM semantic review",
+    "Only configured engineering tests are covered"
+  ]
+}
