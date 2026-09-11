@@ -29,6 +29,8 @@ function renderFlowGuide(){const root=$('flow-guide');root.replaceChildren();con
  const action=(text,target)=>{const a=node('a',text,root);a.href=target;a.className='flow-action';count++;};
  for(const r of values('AgentRegistration').filter(r=>r.status==='pending'))action('审批 Agent：'+r.name,'#agents');
  for(const r of values('Return')){const e=state.Execution[r.execution_id],t=state.Task[e.task_id],review=values('Review').find(v=>v.return_id===r.id),accept=values('Acceptance').find(v=>v.return_id===r.id);if(!review&&t.review_authority===human)action('审查结果：'+t.id+' / '+r.id,'#results');else if(review&&!accept&&t.acceptance_authority===human)action('验收结果：'+t.id+' / '+r.id,'#results');else if(accept?.accepted&&t.status==='published'&&t.selection_authority===human)action('选择结果：'+t.id+' / '+r.id,'#results');}
+ for(const r of values('AgentRegistration').filter(r=>r.status==='approved'&&r.human_id===human&&state.RepresentativeAgent[r.agent_id]?.runtime_status==='offline'))action('确认 Agent 已恢复：'+r.name,'#agents');
+ for(const e of values('Execution').filter(e=>e.accountable_owner===human&&['claimed','running','blocked','interrupted'].includes(e.status)))action((e.status==='interrupted'||e.status==='blocked'?'检查并恢复执行：':'跟进 Agent 执行：')+e.id,'#tasks');
  for(const c of values('LearningClaim').filter(c=>c.status==='candidate'&&c.reviewer===human))action('验证候选认知：'+c.id,'#learning');
  for(const i of values('KnowledgeImpact').filter(i=>i.status==='open'&&state.KnowledgeRevision[i.knowledge_id]?.author===human))action('处理知识重验：'+i.knowledge_id,'#learning');
  if(!count)node('p','当前身份没有上述待处理项。可查看任务与学习记录，或切换到负责下一步的测试 Human。',root);

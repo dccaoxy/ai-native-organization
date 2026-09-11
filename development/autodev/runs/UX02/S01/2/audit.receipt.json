@@ -1,0 +1,50 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "a6e907b1f2ce6214ca8bb0fc2f3e0079d2720c558bcc138763801ad57378af6a",
+  "started": 1789088537.8585563,
+  "finished": 1789088542.2038224,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Unique Human ownership and scoped Agent recovery",
+        "test": "tests.test_identity",
+        "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md",
+        "passed": true
+      },
+      {
+        "id": "Invalid knowledge does not regain validity silently",
+        "test": "tests.test_revalidation",
+        "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md",
+        "passed": true
+      },
+      {
+        "id": "Separate Review Acceptance and Selection",
+        "test": "tests.test_core",
+        "source": "development/milestones/UX02_CONTINUOUS_ACCEPTANCE.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "a6e907b1f2ce6214ca8bb0fc2f3e0079d2720c558bcc138763801ad57378af6a",
+    "nonce": "999024fd164646248eb908018f85ba27",
+    "coverage": "UX02 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

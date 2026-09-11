@@ -3,10 +3,13 @@
   "plan": "UX02",
   "stages": {
     "S01": {
-      "status": "BLOCKED_ENGINEERING",
-      "attempt": 1,
+      "status": "CHECKPOINT_PENDING",
+      "attempt": 2,
       "worker": "caoxy-TG03",
-      "reason": "Repair budget exhausted or repair adapter unavailable"
+      "source_digest": "a6e907b1f2ce6214ca8bb0fc2f3e0079d2720c558bcc138763801ad57378af6a",
+      "tag": "autodev/UX02/S01/v1",
+      "artifact": "development/autodev/runs/UX02/S01/2/artifact.zip",
+      "artifact_sha256": "4eeaa6ff92c6393f78356ba76ac904eed97c578e0b3383feda7bab06d697682a"
     }
   },
   "events": [
@@ -53,6 +56,45 @@
       "status": "BLOCKED_ENGINEERING",
       "time": 1789088411.7042687,
       "reason": "Repair budget exhausted or repair adapter unavailable"
+    },
+    {
+      "sequence": 7,
+      "stage": "S01",
+      "status": "BUILD",
+      "time": 1789088463.8699088,
+      "attempt": 2,
+      "worker": "caoxy-TG03"
+    },
+    {
+      "sequence": 8,
+      "stage": "S01",
+      "status": "TEST",
+      "time": 1789088463.966263,
+      "attempt": 2
+    },
+    {
+      "sequence": 9,
+      "stage": "S01",
+      "status": "REVIEW",
+      "time": 1789088522.5313852,
+      "attempt": 2
+    },
+    {
+      "sequence": 10,
+      "stage": "S01",
+      "status": "AUDIT",
+      "time": 1789088537.807725,
+      "attempt": 2
+    },
+    {
+      "sequence": 11,
+      "stage": "S01",
+      "status": "CHECKPOINT_PENDING",
+      "time": 1789088542.75911,
+      "source_digest": "a6e907b1f2ce6214ca8bb0fc2f3e0079d2720c558bcc138763801ad57378af6a",
+      "tag": "autodev/UX02/S01/v1",
+      "artifact": "development/autodev/runs/UX02/S01/2/artifact.zip",
+      "artifact_sha256": "4eeaa6ff92c6393f78356ba76ac904eed97c578e0b3383feda7bab06d697682a"
     }
   ]
 }

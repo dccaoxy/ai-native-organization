@@ -37,7 +37,7 @@
       ],
       "review_tests": [
         "tests.test_identity",
-        "tests.test_agent_gateway",
+        "tests.test_agent_access",
         "tests.test_revalidation",
         "tests.test_human_web"
       ],
