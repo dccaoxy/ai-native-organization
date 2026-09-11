@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.auditor"
+  ],
+  "source_digest": "81e9398818f5fca12624824800a79af9ef646cdc14810457b90531c2072dd0d2",
+  "started": 1789091178.2517438,
+  "finished": 1789091183.757179,
+  "report": {
+    "role": "audit",
+    "verdict": "PASS",
+    "checks": [
+      {
+        "id": "baseline-preservation",
+        "passed": true
+      },
+      {
+        "id": "Authenticated unique Human authority and no actor spoofing",
+        "test": "tests.test_portal",
+        "source": "development/milestones/PA01_ACCOUNT_PORTAL.md",
+        "passed": true
+      }
+    ],
+    "findings": [],
+    "source_digest": "81e9398818f5fca12624824800a79af9ef646cdc14810457b90531c2072dd0d2",
+    "nonce": "fec3598e29ed4a6a9787e9de2fd2bd46",
+    "coverage": "PA01 listed engineering invariants only",
+    "out_of_scope": [
+      "Human Pilot evidence",
+      "M1 learning efficacy",
+      "M2 value/culture",
+      "Phase 9 completion"
+    ]
+  }
+}

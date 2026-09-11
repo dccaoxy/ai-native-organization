@@ -100,6 +100,99 @@
       "id": "S01",
       "title": "Authenticated account test portal",
       "dependencies": []
+    },
+    {
+      "phase": 5,
+      "scope_maturity": "M1",
+      "inputs": [
+        "organization",
+        "autodev",
+        "tests",
+        "specs",
+        "AGENTS.md",
+        "development/milestones/PA01_ACCOUNT_PORTAL.md",
+        "development/autodev/portal-demo",
+        "deploy/test-portal"
+      ],
+      "outputs": [
+        "organization/portal.py",
+        "organization/portal_web/index.html",
+        "tests/test_portal.py",
+        "deploy/test-portal/ai-native-test.service"
+      ],
+      "scope": [
+        "organization",
+        "tests/test_portal.py",
+        "autodev/portal_acceptance.py",
+        "deploy/test-portal"
+      ],
+      "exit_criteria": [
+        "Browser signup/login/goal/task/scoped Agent/Return and separate decisions pass",
+        "Session-derived Human identity, ownership, CSRF, expiry and idempotency tests pass",
+        "Full regression and frozen integrity pass; no push or cloud deployment"
+      ],
+      "tests": [
+        "tests.test_portal"
+      ],
+      "review_tests": [
+        "tests.test_portal"
+      ],
+      "principle_checks": [
+        {
+          "id": "Authenticated unique Human authority and no actor spoofing",
+          "test": "tests.test_portal",
+          "source": "development/milestones/PA01_ACCOUNT_PORTAL.md"
+        }
+      ],
+      "human_gates": [
+        {
+          "condition": "real_identity_or_external_company_access",
+          "active": false
+        },
+        {
+          "condition": "formal_push_or_deployment",
+          "active": false,
+          "route": "Absent from local stage commands; separate user confirmation required"
+        }
+      ],
+      "repair_budget": 1,
+      "timeout_seconds": 240,
+      "build_directories": [
+        "organization",
+        "autodev"
+      ],
+      "commands": {
+        "build": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ],
+        "test": [
+          "{python}",
+          "-m",
+          "autodev.portal_acceptance"
+        ],
+        "review": [
+          "{python}",
+          "-m",
+          "autodev.reviewer"
+        ],
+        "audit": [
+          "{python}",
+          "-m",
+          "autodev.auditor"
+        ],
+        "repair": [
+          "{python}",
+          "-m",
+          "autodev.builder"
+        ]
+      },
+      "id": "S02",
+      "title": "Account-specific guidance and unobscured mobile notices",
+      "dependencies": [
+        "S01"
+      ]
     }
   ]
 }

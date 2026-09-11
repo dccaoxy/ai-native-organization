@@ -1,0 +1,12 @@
+test_command_idempotency (tests.test_portal.PortalTests.test_command_idempotency) ... ok
+test_foreign_agent_and_actor_spoof_rejected (tests.test_portal.PortalTests.test_foreign_agent_and_actor_spoof_rejected) ... ok
+test_login_identity_csrf_logout_and_persistence (tests.test_portal.PortalTests.test_login_identity_csrf_logout_and_persistence) ... ok
+test_no_operator_or_bootstrap_escape (tests.test_portal.PortalTests.test_no_operator_or_bootstrap_escape) ... ok
+test_password_hash_and_login_rejection (tests.test_portal.PortalTests.test_password_hash_and_login_rejection) ... ok
+test_rate_limit_and_expired_session (tests.test_portal.PortalTests.test_rate_limit_and_expired_session) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.763s
+
+OK
+

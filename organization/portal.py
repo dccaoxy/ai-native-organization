@@ -132,7 +132,7 @@ def server(path,port=0,origin=None):
             try:
                 if self.headers.get('Host')!=self.server.origin.split('://',1)[1]:raise DomainError('Host denied',403)
                 if self.headers.get('Origin') and self.headers['Origin']!=self.server.origin:raise DomainError('Origin denied',403)
-                assets={'/agent-guide.txt':('portal_web/agent-guide.txt','text/plain'),'/':('portal_web/index.html','text/html'),'/portal.js':('portal_web/portal.js','text/javascript'),'/human.css':('human_web/human.css','text/css'),'/learning.js':('human_web/learning.js','text/javascript'),'/flow.js':('human_web/flow.js','text/javascript'),'/human.js':('portal_web/human.js','text/javascript')}
+                assets={'/agent-guide.txt':('portal_web/agent-guide.txt','text/plain'),'/':('portal_web/index.html','text/html'),'/portal.js':('portal_web/portal.js','text/javascript'),'/human.css':('portal_web/style.css','text/css'),'/learning.js':('human_web/learning.js','text/javascript'),'/flow.js':('portal_web/flow.js','text/javascript'),'/human.js':('portal_web/human.js','text/javascript')}
                 if self.command=='GET' and self.path in assets:
                     file,mime=assets[self.path];return self.reply(200,(Path(__file__).parent/file).read_bytes(),mime=mime+'; charset=utf-8')
                 data=None

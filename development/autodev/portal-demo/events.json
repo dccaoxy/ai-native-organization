@@ -1,133 +1,133 @@
 [
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
     "authority_source": "authenticated test account; no real identity verification",
-    "causation_id": "portal/account/H-aecbd0dc4ce77bb76debc21d",
+    "causation_id": "portal/account/H-f4fc246c5a1ab38990afb76b",
     "changes": {
       "Human": {
-        "H-aecbd0dc4ce77bb76debc21d": {
+        "H-f4fc246c5a1ab38990afb76b": {
           "display_name": "alice",
-          "id": "H-aecbd0dc4ce77bb76debc21d",
+          "id": "H-f4fc246c5a1ab38990afb76b",
           "kind": "human"
         }
       }
     },
-    "correlation_id": "H-aecbd0dc4ce77bb76debc21d",
-    "id": "c8776756f0614d55aa069c21993e96d4",
-    "idempotency_key": "portal/account/H-aecbd0dc4ce77bb76debc21d",
-    "occurred_at": 1789090971.1598048,
+    "correlation_id": "H-f4fc246c5a1ab38990afb76b",
+    "id": "9cb97660a5564cfab8ad1a5a13b994b3",
+    "idempotency_key": "portal/account/H-f4fc246c5a1ab38990afb76b",
+    "occurred_at": 1789091165.394391,
     "sequence": 1,
     "simulation": true,
     "type": "HumanRegistered"
   },
   {
-    "accountable_owner": "H-7bafcca562b3b1e1b8e7193d",
-    "actor": "H-7bafcca562b3b1e1b8e7193d",
+    "accountable_owner": "H-212d2bb69716a58a08060409",
+    "actor": "H-212d2bb69716a58a08060409",
     "authority_source": "authenticated test account; no real identity verification",
-    "causation_id": "portal/account/H-7bafcca562b3b1e1b8e7193d",
+    "causation_id": "portal/account/H-212d2bb69716a58a08060409",
     "changes": {
       "Human": {
-        "H-7bafcca562b3b1e1b8e7193d": {
+        "H-212d2bb69716a58a08060409": {
           "display_name": "bob",
-          "id": "H-7bafcca562b3b1e1b8e7193d",
+          "id": "H-212d2bb69716a58a08060409",
           "kind": "human"
         }
       }
     },
-    "correlation_id": "H-7bafcca562b3b1e1b8e7193d",
-    "id": "e12df4070f9746df9a03e87756e31c63",
-    "idempotency_key": "portal/account/H-7bafcca562b3b1e1b8e7193d",
-    "occurred_at": 1789090971.4421527,
+    "correlation_id": "H-212d2bb69716a58a08060409",
+    "id": "c4955b07e3de4924a81e152ffd4435f0",
+    "idempotency_key": "portal/account/H-212d2bb69716a58a08060409",
+    "occurred_at": 1789091165.6769953,
     "sequence": 2,
     "simulation": true,
     "type": "HumanRegistered"
   },
   {
     "accountable_owner": "not-applicable",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/a20a3084-3337-4edc-90b3-6c89b2355fb5",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/f36148b8-0c1e-45e8-8d86-75977b2b586f",
     "changes": {
       "Goal": {
-        "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f": {
+        "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f": {
           "boundary": [
             "read"
           ],
           "desired_change": "合成网页接入验证",
-          "goal_authority": "H-aecbd0dc4ce77bb76debc21d",
-          "id": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
+          "goal_authority": "H-f4fc246c5a1ab38990afb76b",
+          "id": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
           "status": "active",
           "success_criteria": "完整的注册授权与 Return 记录"
         }
       }
     },
-    "correlation_id": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
-    "id": "3ff9a9731f124e34ac70711041aabc74",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/a20a3084-3337-4edc-90b3-6c89b2355fb5",
-    "occurred_at": 1789090971.6767828,
+    "correlation_id": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
+    "id": "b8be85154bd74980a7ee997b164e8983",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/f36148b8-0c1e-45e8-8d86-75977b2b586f",
+    "occurred_at": 1789091165.8907611,
     "sequence": 3,
     "simulation": true,
     "type": "GoalActivated"
   },
   {
     "accountable_owner": "not-applicable",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/4974a38e-535f-4b38-b4d1-2713d8a3a71f",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/f219ea71-a6b7-4b21-b2ef-b49b70e93f2b",
     "changes": {
       "Task": {
-        "T-4be7ad91-bdbd-4665-983c-ca691b60d517": {
-          "acceptance_authority": "H-aecbd0dc4ce77bb76debc21d",
+        "T-533f9794-0ecf-4999-828e-77ddd4526de4": {
+          "acceptance_authority": "H-f4fc246c5a1ab38990afb76b",
           "acceptance_criteria": "明确标识测试结果，保留授权和提交记录",
           "boundary": [
             "read"
           ],
           "execution_mode": "parallel",
           "expected_output": "验证网页协议客户端",
-          "id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-          "primary_goal": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
-          "review_authority": "H-7bafcca562b3b1e1b8e7193d",
-          "selection_authority": "H-aecbd0dc4ce77bb76debc21d",
+          "id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+          "primary_goal": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
+          "review_authority": "H-212d2bb69716a58a08060409",
+          "selection_authority": "H-f4fc246c5a1ab38990afb76b",
           "status": "draft"
         }
       }
     },
-    "correlation_id": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
-    "id": "f68e9cec7b534269a826a0a2f7f107b2",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/4974a38e-535f-4b38-b4d1-2713d8a3a71f",
-    "occurred_at": 1789090971.734764,
+    "correlation_id": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
+    "id": "6adb2862ebed4b338d804e659abf427d",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/f219ea71-a6b7-4b21-b2ef-b49b70e93f2b",
+    "occurred_at": 1789091165.9489572,
     "sequence": 4,
     "simulation": true,
     "type": "TaskCreated"
   },
   {
     "accountable_owner": "not-applicable",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/10701d7c-227e-4dad-be1d-ff278331d906",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/a7d42a0a-78b3-4516-af40-5a6e4842d340",
     "changes": {
       "Task": {
-        "T-4be7ad91-bdbd-4665-983c-ca691b60d517": {
-          "acceptance_authority": "H-aecbd0dc4ce77bb76debc21d",
+        "T-533f9794-0ecf-4999-828e-77ddd4526de4": {
+          "acceptance_authority": "H-f4fc246c5a1ab38990afb76b",
           "acceptance_criteria": "明确标识测试结果，保留授权和提交记录",
           "boundary": [
             "read"
           ],
           "execution_mode": "parallel",
           "expected_output": "验证网页协议客户端",
-          "id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-          "primary_goal": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
-          "review_authority": "H-7bafcca562b3b1e1b8e7193d",
-          "selection_authority": "H-aecbd0dc4ce77bb76debc21d",
+          "id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+          "primary_goal": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
+          "review_authority": "H-212d2bb69716a58a08060409",
+          "selection_authority": "H-f4fc246c5a1ab38990afb76b",
           "status": "published"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "0f54fcd050214ebd9a76846e4f89141a",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/10701d7c-227e-4dad-be1d-ff278331d906",
-    "occurred_at": 1789090971.7674875,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "fe18c47d0c234a4087f1cfc0d5c03283",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/a7d42a0a-78b3-4516-af40-5a6e4842d340",
+    "occurred_at": 1789091165.9816434,
     "sequence": 5,
     "simulation": true,
     "type": "TaskPublished"
@@ -136,10 +136,10 @@
     "accountable_owner": "not-applicable",
     "actor": "AGENT_GATEWAY",
     "authority_source": "agent enrollment; no execution authority",
-    "causation_id": "enroll/80943880d488965885f0179d6dc64260",
+    "causation_id": "enroll/3ba16ce034750f9cebafa36ff2bfe955",
     "changes": {
       "AgentRegistration": {
-        "80943880d488965885f0179d6dc64260": {
+        "3ba16ce034750f9cebafa36ff2bfe955": {
           "agent_id": "none",
           "allowed_tasks": [],
           "capabilities": [
@@ -147,7 +147,7 @@
           ],
           "hau_id": "none",
           "human_id": "none",
-          "id": "80943880d488965885f0179d6dc64260",
+          "id": "3ba16ce034750f9cebafa36ff2bfe955",
           "name": "网页协议客户端",
           "permissions": [],
           "status": "pending",
@@ -155,26 +155,26 @@
         }
       }
     },
-    "correlation_id": "80943880d488965885f0179d6dc64260",
-    "id": "7f1e0d4430844d21bed76280bca9b501",
-    "idempotency_key": "enroll/80943880d488965885f0179d6dc64260",
-    "occurred_at": 1789090971.8396268,
+    "correlation_id": "3ba16ce034750f9cebafa36ff2bfe955",
+    "id": "1792586e7678412085934d522984a77d",
+    "idempotency_key": "enroll/3ba16ce034750f9cebafa36ff2bfe955",
+    "occurred_at": 1789091166.0505118,
     "sequence": 6,
     "simulation": true,
     "type": "AgentRegistered"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
     "changes": {
       "RepresentativeAgent": {
-        "AG-80943880d488965885f0179d6dc64260": {
+        "AG-3ba16ce034750f9cebafa36ff2bfe955": {
           "active": true,
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "human_id": "H-aecbd0dc4ce77bb76debc21d",
-          "id": "AG-80943880d488965885f0179d6dc64260",
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "human_id": "H-f4fc246c5a1ab38990afb76b",
+          "id": "AG-3ba16ce034750f9cebafa36ff2bfe955",
           "permissions": [
             "claim",
             "ack",
@@ -184,54 +184,54 @@
         }
       }
     },
-    "correlation_id": "AG-80943880d488965885f0179d6dc64260",
-    "id": "cb73cdea9f1440bb8e9a40517e222fbe",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
-    "occurred_at": 1789090971.956381,
+    "correlation_id": "AG-3ba16ce034750f9cebafa36ff2bfe955",
+    "id": "de645293c6fa4773a6c0471a83b06458",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
+    "occurred_at": 1789091166.1448314,
     "sequence": 7,
     "simulation": true,
     "type": "AgentBound"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
     "changes": {
       "HAU": {
-        "U-H-aecbd0dc4ce77bb76debc21d": {
-          "agent_id": "AG-80943880d488965885f0179d6dc64260",
-          "human_id": "H-aecbd0dc4ce77bb76debc21d",
-          "id": "U-H-aecbd0dc4ce77bb76debc21d"
+        "U-H-f4fc246c5a1ab38990afb76b": {
+          "agent_id": "AG-3ba16ce034750f9cebafa36ff2bfe955",
+          "human_id": "H-f4fc246c5a1ab38990afb76b",
+          "id": "U-H-f4fc246c5a1ab38990afb76b"
         }
       }
     },
-    "correlation_id": "U-H-aecbd0dc4ce77bb76debc21d",
-    "id": "e54024e6fda541e7ab11aee6c6529cff",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
-    "occurred_at": 1789090971.956424,
+    "correlation_id": "U-H-f4fc246c5a1ab38990afb76b",
+    "id": "71a860fb114643bb87b5ddd8e5a28df0",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
+    "occurred_at": 1789091166.1448734,
     "sequence": 8,
     "simulation": true,
     "type": "AgentBound"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
     "changes": {
       "AgentRegistration": {
-        "80943880d488965885f0179d6dc64260": {
-          "agent_id": "AG-80943880d488965885f0179d6dc64260",
+        "3ba16ce034750f9cebafa36ff2bfe955": {
+          "agent_id": "AG-3ba16ce034750f9cebafa36ff2bfe955",
           "allowed_tasks": [
-            "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+            "T-533f9794-0ecf-4999-828e-77ddd4526de4"
           ],
           "capabilities": [
             "external-client"
           ],
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "human_id": "H-aecbd0dc4ce77bb76debc21d",
-          "id": "80943880d488965885f0179d6dc64260",
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "human_id": "H-f4fc246c5a1ab38990afb76b",
+          "id": "3ba16ce034750f9cebafa36ff2bfe955",
           "name": "网页协议客户端",
           "permissions": [
             "claim",
@@ -243,82 +243,82 @@
         }
       }
     },
-    "correlation_id": "80943880d488965885f0179d6dc64260",
-    "id": "0af084371cc14a328a4c265e5bf4f9f8",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d3700e74-4474-4739-bc3a-6513cffcba4a",
-    "occurred_at": 1789090971.9564497,
+    "correlation_id": "3ba16ce034750f9cebafa36ff2bfe955",
+    "id": "e8ac42f2ada842a9bdb014f831392655",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/ed9ceaad-480a-4424-8e5e-767a5a24a9a6",
+    "occurred_at": 1789091166.1448987,
     "sequence": 9,
     "simulation": true,
     "type": "AgentRegistrationApproved"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "AG-80943880d488965885f0179d6dc64260",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d/RepresentativeAgent:AG-80943880d488965885f0179d6dc64260/claim",
-    "causation_id": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/claim",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "AG-3ba16ce034750f9cebafa36ff2bfe955",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b/RepresentativeAgent:AG-3ba16ce034750f9cebafa36ff2bfe955/claim",
+    "causation_id": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/claim",
     "changes": {
       "Execution": {
-        "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
-          "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-          "claimed_at": 1789090972.048336,
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "id": "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "last_seen": 1789090972.048336,
+        "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
+          "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+          "claimed_at": 1789091166.2410867,
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "id": "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "last_seen": 1789091166.2410867,
           "return_id": "none",
           "runtime_boundary": [
             "read"
           ],
           "status": "claimed",
-          "task_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+          "task_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "1c9f3fa38e124aba858791330c87d5f8",
-    "idempotency_key": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/claim",
-    "occurred_at": 1789090972.0483868,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "58d6f53c076b429d95d34348aa6ed67e",
+    "idempotency_key": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/claim",
+    "occurred_at": 1789091166.2411387,
     "sequence": 10,
     "simulation": true,
     "type": "ExecutionClaimed"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "AG-80943880d488965885f0179d6dc64260",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d/RepresentativeAgent:AG-80943880d488965885f0179d6dc64260/ack",
-    "causation_id": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/ack",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "AG-3ba16ce034750f9cebafa36ff2bfe955",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b/RepresentativeAgent:AG-3ba16ce034750f9cebafa36ff2bfe955/ack",
+    "causation_id": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/ack",
     "changes": {
       "Execution": {
-        "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
-          "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-          "claimed_at": 1789090972.048336,
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "id": "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "last_seen": 1789090972.0641403,
+        "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
+          "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+          "claimed_at": 1789091166.2410867,
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "id": "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "last_seen": 1789091166.2659256,
           "return_id": "none",
           "runtime_boundary": [
             "read"
           ],
           "status": "running",
-          "task_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+          "task_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "76814a520d394d94bcd5e64bb0576fa8",
-    "idempotency_key": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/ack",
-    "occurred_at": 1789090972.06419,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "b416807600c54ea79d75b1dee3bcb29c",
+    "idempotency_key": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/ack",
+    "occurred_at": 1789091166.2659717,
     "sequence": 11,
     "simulation": true,
     "type": "ACK"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "AG-80943880d488965885f0179d6dc64260",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d/RepresentativeAgent:AG-80943880d488965885f0179d6dc64260/submit",
-    "causation_id": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/return",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "AG-3ba16ce034750f9cebafa36ff2bfe955",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b/RepresentativeAgent:AG-3ba16ce034750f9cebafa36ff2bfe955/submit",
+    "causation_id": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/return",
     "changes": {
       "CapabilityRoute": {
-        "route/R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
+        "route/R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
           "components": {
             "missing": [
               "knowledge",
@@ -332,35 +332,35 @@
             "practice": "经明确授权领取任务、确认执行并提交正式 Return；未调用模型",
             "reflection": "仅证明接入与提交协议可用，不能证明实际业务任务已完成"
           },
-          "id": "route/R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+          "id": "route/R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "knowledge_id": "none",
-          "owner": "H-aecbd0dc4ce77bb76debc21d",
+          "owner": "H-f4fc246c5a1ab38990afb76b",
           "reproduction_ids": [],
-          "source_hau": "U-H-aecbd0dc4ce77bb76debc21d",
-          "source_return": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+          "source_hau": "U-H-f4fc246c5a1ab38990afb76b",
+          "source_return": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "status": "candidate"
         }
       },
       "Execution": {
-        "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
-          "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-          "claimed_at": 1789090972.048336,
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "id": "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "last_seen": 1789090972.0771208,
-          "return_id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+        "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
+          "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+          "claimed_at": 1789091166.2410867,
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "id": "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "last_seen": 1789091166.2780585,
+          "return_id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "runtime_boundary": [
             "read"
           ],
           "status": "submitted",
-          "task_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+          "task_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4"
         }
       },
       "Return": {
-        "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
-          "execution_id": "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+        "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
+          "execution_id": "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "human_annotations": [],
-          "id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+          "id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "major_execution_facts": "经明确授权领取任务、确认执行并提交正式 Return；未调用模型",
           "observed_terrain": "明确标识的测试组织任务",
           "outcome": "success",
@@ -369,129 +369,129 @@
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "14f84a2880dd4633be828f212540429f",
-    "idempotency_key": "agent/80943880d488965885f0179d6dc64260/browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76/return",
-    "occurred_at": 1789090972.0783076,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "4e3467b0596b42278ce638dcc429ad58",
+    "idempotency_key": "agent/3ba16ce034750f9cebafa36ff2bfe955/browser-62b54106-56c0-4e9f-88be-99b62bf63c6f/return",
+    "occurred_at": 1789091166.2790678,
     "sequence": 12,
     "simulation": true,
     "type": "ResultSubmitted"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-7bafcca562b3b1e1b8e7193d",
-    "authority_source": "Human:H-7bafcca562b3b1e1b8e7193d",
-    "causation_id": "portal/H-7bafcca562b3b1e1b8e7193d/human-web/df6c4395-d5b5-4a0c-be05-d84b5003ac6b",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-212d2bb69716a58a08060409",
+    "authority_source": "Human:H-212d2bb69716a58a08060409",
+    "causation_id": "portal/H-212d2bb69716a58a08060409/human-web/3fa124f5-e653-4bc4-8c46-1e78d3a74436",
     "changes": {
       "Review": {
-        "b57b0657-c03e-4bd3-a8b6-d5d52930024d": {
+        "cdff534a-7fcc-4a98-942a-85d79f5f4f2c": {
           "credible": true,
           "evidence": "合成测试，仅检查协议记录",
-          "id": "b57b0657-c03e-4bd3-a8b6-d5d52930024d",
-          "return_id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "reviewer": "H-7bafcca562b3b1e1b8e7193d"
+          "id": "cdff534a-7fcc-4a98-942a-85d79f5f4f2c",
+          "return_id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "reviewer": "H-212d2bb69716a58a08060409"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "1cee308cc1f647f180e8f28d236dc2d3",
-    "idempotency_key": "portal/H-7bafcca562b3b1e1b8e7193d/human-web/df6c4395-d5b5-4a0c-be05-d84b5003ac6b",
-    "occurred_at": 1789090972.2480056,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "6e92971c47d14c319cdab590c57a45d6",
+    "idempotency_key": "portal/H-212d2bb69716a58a08060409/human-web/3fa124f5-e653-4bc4-8c46-1e78d3a74436",
+    "occurred_at": 1789091166.4410517,
     "sequence": 13,
     "simulation": true,
     "type": "ResultReviewed"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/7bbda87d-37e8-49db-8782-c6a1f19126bb",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/641fa48f-23d9-49bd-91d3-782e99bb7a7f",
     "changes": {
       "Acceptance": {
-        "6f6a7225-9de2-4630-980b-d769b47e7f69": {
+        "ffbaf455-c1dc-4ecd-942f-4fce556b3839": {
           "accepted": true,
-          "acceptor": "H-aecbd0dc4ce77bb76debc21d",
-          "id": "6f6a7225-9de2-4630-980b-d769b47e7f69",
+          "acceptor": "H-f4fc246c5a1ab38990afb76b",
+          "id": "ffbaf455-c1dc-4ecd-942f-4fce556b3839",
           "rationale": "满足声明的协议测试标准",
-          "return_id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "review_id": "b57b0657-c03e-4bd3-a8b6-d5d52930024d"
+          "return_id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "review_id": "cdff534a-7fcc-4a98-942a-85d79f5f4f2c"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "d0ede88b7d984a71a958d1be81348d7f",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/7bbda87d-37e8-49db-8782-c6a1f19126bb",
-    "occurred_at": 1789090972.3284671,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "2f5dd74bad9645f79296e368e0eda48e",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/641fa48f-23d9-49bd-91d3-782e99bb7a7f",
+    "occurred_at": 1789091166.5314178,
     "sequence": 14,
     "simulation": true,
     "type": "ResultAccepted"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/7bbda87d-37e8-49db-8782-c6a1f19126bb",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/641fa48f-23d9-49bd-91d3-782e99bb7a7f",
     "changes": {
       "Execution": {
-        "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76": {
-          "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-          "claimed_at": 1789090972.048336,
-          "hau_id": "U-H-aecbd0dc4ce77bb76debc21d",
-          "id": "browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "last_seen": 1789090972.3283937,
-          "return_id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
+        "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f": {
+          "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+          "claimed_at": 1789091166.2410867,
+          "hau_id": "U-H-f4fc246c5a1ab38990afb76b",
+          "id": "browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "last_seen": 1789091166.531342,
+          "return_id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
           "runtime_boundary": [
             "read"
           ],
           "status": "closed",
-          "task_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+          "task_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "bfa9a614a3bf4cb7a185dce4332780c2",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/7bbda87d-37e8-49db-8782-c6a1f19126bb",
-    "occurred_at": 1789090972.32853,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "fc8c905037f14407aed5221bb6e0de83",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/641fa48f-23d9-49bd-91d3-782e99bb7a7f",
+    "occurred_at": 1789091166.531479,
     "sequence": 15,
     "simulation": true,
     "type": "ExecutionClosed"
   },
   {
-    "accountable_owner": "H-aecbd0dc4ce77bb76debc21d",
-    "actor": "H-aecbd0dc4ce77bb76debc21d",
-    "authority_source": "Human:H-aecbd0dc4ce77bb76debc21d",
-    "causation_id": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d2e01903-ba03-493d-9866-8fb97b51b448",
+    "accountable_owner": "H-f4fc246c5a1ab38990afb76b",
+    "actor": "H-f4fc246c5a1ab38990afb76b",
+    "authority_source": "Human:H-f4fc246c5a1ab38990afb76b",
+    "causation_id": "portal/H-f4fc246c5a1ab38990afb76b/human-web/7fc7a09b-2bd9-48ee-a2b3-d1202d3fe586",
     "changes": {
       "Selection": {
-        "a9e6eea6-4a17-424f-bbc0-52cea7b0a755": {
-          "id": "a9e6eea6-4a17-424f-bbc0-52cea7b0a755",
+        "db06a4d3-7217-4105-993b-56c90a5ee994": {
+          "id": "db06a4d3-7217-4105-993b-56c90a5ee994",
           "rationale": "保留这条合成协议验证记录",
-          "return_id": "R-browser-0c39ba30-614e-4e5b-a1ae-b32fa7ce2d76",
-          "selector": "H-aecbd0dc4ce77bb76debc21d",
-          "task_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517"
+          "return_id": "R-browser-62b54106-56c0-4e9f-88be-99b62bf63c6f",
+          "selector": "H-f4fc246c5a1ab38990afb76b",
+          "task_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4"
         }
       },
       "Task": {
-        "T-4be7ad91-bdbd-4665-983c-ca691b60d517": {
-          "acceptance_authority": "H-aecbd0dc4ce77bb76debc21d",
+        "T-533f9794-0ecf-4999-828e-77ddd4526de4": {
+          "acceptance_authority": "H-f4fc246c5a1ab38990afb76b",
           "acceptance_criteria": "明确标识测试结果，保留授权和提交记录",
           "boundary": [
             "read"
           ],
           "execution_mode": "parallel",
           "expected_output": "验证网页协议客户端",
-          "id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-          "primary_goal": "G-588897d6-dbd2-4633-9cc7-07d7d509fe2f",
-          "review_authority": "H-7bafcca562b3b1e1b8e7193d",
-          "selection_authority": "H-aecbd0dc4ce77bb76debc21d",
+          "id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+          "primary_goal": "G-c9385a1c-f14d-40b6-9eb1-9b8681ca339f",
+          "review_authority": "H-212d2bb69716a58a08060409",
+          "selection_authority": "H-f4fc246c5a1ab38990afb76b",
           "status": "closed"
         }
       }
     },
-    "correlation_id": "T-4be7ad91-bdbd-4665-983c-ca691b60d517",
-    "id": "50b45235544a4a66a8d65dc1d2f3bf7e",
-    "idempotency_key": "portal/H-aecbd0dc4ce77bb76debc21d/human-web/d2e01903-ba03-493d-9866-8fb97b51b448",
-    "occurred_at": 1789090972.3768156,
+    "correlation_id": "T-533f9794-0ecf-4999-828e-77ddd4526de4",
+    "id": "f8912081103d4ec799aeff9aed664712",
+    "idempotency_key": "portal/H-f4fc246c5a1ab38990afb76b/human-web/7fc7a09b-2bd9-48ee-a2b3-d1202d3fe586",
+    "occurred_at": 1789091166.5757575,
     "sequence": 16,
     "simulation": true,
     "type": "ResultSelected"
