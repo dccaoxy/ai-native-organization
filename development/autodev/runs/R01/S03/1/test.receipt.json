@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.revalidation_acceptance"
+  ],
+  "source_digest": "d2e08962b4390015a860c70d0af15c8eee014786511da18cbc2ed6e5795c5e2e",
+  "started": 1789086745.9891868,
+  "finished": 1789086805.4436526
+}
