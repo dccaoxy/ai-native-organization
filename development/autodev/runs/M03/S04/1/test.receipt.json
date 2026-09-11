@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "argv": [
+    "C:\\Python314\\python.exe",
+    "-m",
+    "autodev.learning_acceptance"
+  ],
+  "source_digest": "fc28bdf1dbecb68b4501022ee7c956582a1dd6fdfcdb8f965e3115f7ad8261bc",
+  "started": 1789085581.5355546,
+  "finished": 1789085637.71785
+}

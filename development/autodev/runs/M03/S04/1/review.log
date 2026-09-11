@@ -1,0 +1,28 @@
+test_agent_cannot_publish_claim (tests.test_learning.LearningTests.test_agent_cannot_publish_claim) ... ok
+test_boundary_cannot_expand_from_knowledge (tests.test_learning.LearningTests.test_boundary_cannot_expand_from_knowledge) ... ok
+test_counter_evidence_cannot_be_omitted (tests.test_learning.LearningTests.test_counter_evidence_cannot_be_omitted) ... ok
+test_cross_task_reproduction_and_replay (tests.test_learning.LearningTests.test_cross_task_reproduction_and_replay) ... ok
+test_evidence_snapshot_and_duplicate_source (tests.test_learning.LearningTests.test_evidence_snapshot_and_duplicate_source) ... ok
+test_failure_challenges_dependency_without_causal_claim (tests.test_learning.LearningTests.test_failure_challenges_dependency_without_causal_claim) ... ok
+test_first_success_captures_route_without_claim_or_acceptance (tests.test_learning.LearningTests.test_first_success_captures_route_without_claim_or_acceptance) ... ok
+test_idempotent_evidence_replay (tests.test_learning.LearningTests.test_idempotent_evidence_replay) ... ok
+test_outcome_cannot_reference_unrelated_return (tests.test_learning.LearningTests.test_outcome_cannot_reference_unrelated_return) ... ok
+test_revision_keeps_history_and_invalidates_package (tests.test_learning.LearningTests.test_revision_keeps_history_and_invalidates_package) ... ok
+test_self_verification_and_wrong_verifier_denied (tests.test_learning.LearningTests.test_self_verification_and_wrong_verifier_denied) ... ok
+test_shared_upstream_is_not_independence (tests.test_learning.LearningTests.test_shared_upstream_is_not_independence) ... ok
+test_single_source_not_generalized_and_no_self_verification (tests.test_learning.LearningTests.test_single_source_not_generalized_and_no_self_verification) ... ok
+test_wrong_human_and_wrong_scope_rejected (tests.test_learning.LearningTests.test_wrong_human_and_wrong_scope_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.382s
+
+OK
+
+test_pending_and_out_of_scope_knowledge_not_exposed (tests.test_learning_gateway.LearningGatewayTests.test_pending_and_out_of_scope_knowledge_not_exposed) ... ok
+test_projection_hides_evidence_and_use_needs_delegation (tests.test_learning_gateway.LearningGatewayTests.test_projection_hides_evidence_and_use_needs_delegation) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.147s
+
+OK
+
