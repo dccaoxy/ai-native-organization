@@ -1,5 +1,19 @@
 # Development Milestones
 
+## 2026-09-13 当前里程碑投影
+
+当前位于 **Phase 1 收尾 / M04 Pilot Readiness**。这不是新增 L1/L2，也不表示 M04 已启动；它是从已通过的本地合成工程跨向远程可用性和真人证据之前的门槛。
+
+| Readiness workstream | 状态 | 完成条件 |
+|---|---|---|
+| R1 状态与证据收敛 | In progress | 当前入口、验收包、测试结果和未授权边界一致 |
+| R2 远程部署决策包 | Planned | TLS、身份、持久化、备份、监控、停机与回滚均有可审查方案 |
+| R3 3–5 人理解/可用性测试 | Planned | 真实参与者完成测试并留下原始观察与结论 |
+| R4 5–10 人 Pilot 方案 | Planned | 范围、权限、指标、停止条件和 Human Gate 明确 |
+| R5 Readiness Review | Planned | 阻断项关闭并形成是否启动 M04 的决策包 |
+
+完整 Gate 见 [M04 Pilot Readiness](milestones/M04_PILOT_READINESS.md)。下方历史表保留原 checkpoint 语境；其中“当前 Milestone = AA01”的旧描述已被本节取代。
+
 ## 当前：PA02 Agent 接入说明与默认权限
 
 2026-09-11：S01 本地 PASS，7d71e90 / autodev/PA02/S01/v1。网页可复制包含真实地址/一次性凭据/动作与边界的完整 Agent 接入文本；独立客户端确认连接回执，pending 不获执行权限。基础操作默认预选、中文解释、高级折叠，Human 仍选择任务并确认；授权后可网页调整，变更立即生效且不改 Execution owner/boundary。171 项完整回归、8 项账号/权限测试、实际网页与独立客户端通过；17 条合成事件，0 位真实参与者，无模型调用。见 development/PA02_ACCEPTANCE.md、autodev/PA02.state.json。

@@ -1,3 +1,15 @@
+## 2026-09-13 唯一当前行动序列：Phase 1 收尾 / M04 Readiness
+
+本节取代下方旧分项中的“下一步”描述；旧内容保留作为历史记录。当前不进入真实 Pilot，不部署、不 push、不接入公司数据。
+
+1. **R1 状态与证据收敛**：保持 `CURRENT_STATE.md`、`MILESTONES.md`、PA02/OpenClaw 验收证据与本清单一致；任何缺失回执标记为 pending/blocked，不推断成功。
+2. **R2 远程部署决策包**：审查并补全 [M04 Deployment Decision](M04_DEPLOYMENT_DECISION.md)；域名与隔离路径、TLS、身份与密钥、进程常驻、数据持久化、备份恢复、日志监控、停机与回滚必须逐项关闭。只提交方案供 Human 决策，不执行部署。
+3. **R3 非开发者可用性与理解测试包**：使用 [M04 Usability Test Plan](M04_USABILITY_TEST_PLAN.md) 的脚本、任务、观察表和通过阈值；参与者无需安装依赖或运行 Python/Node。不得伪造参与者或结果。
+4. **R4 Pilot 方案**：定义 5–10 人、2–4 Cycle、低风险真实任务的范围、招募条件、权限、数据边界、停止条件和指标；启动必须单独取得 Human 授权。
+5. **R5 Readiness Review**：逐项核对 [M04 Pilot Readiness](milestones/M04_PILOT_READINESS.md)。只有部署入口可用、3–5 人测试完成且阻断项关闭后，才提交“是否启动 M04”的决策包。
+
+当前禁止抢跑：Reward/Honor、60 人实验、生产级 Organization-owned Agent、高风险 Action、Frozen L1/L2 变更，以及用合成测试替代真人证据。
+
 ## 2026-09-11 OpenClaw 独立 Agent 测试准备
 
 本机 OpenClaw/MiniMax 独立审查任务已完成 Claim/ACK/Progress/Submit，R-openclaw-review-1；受限工具只暴露指定证据，不向模型暴露凭据。首次协议失败修复后重试通过。Reviewer给出PASS，但仅为抽样审查建议；Human验收和完整返工链未执行。见 [OPENCLAW_LOCAL_TEST.md](OPENCLAW_LOCAL_TEST.md)。隔离测试服务已停止，未推送/部署。

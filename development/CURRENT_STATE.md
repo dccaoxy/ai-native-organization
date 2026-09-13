@@ -1,3 +1,17 @@
+## 2026-09-13 状态收敛：进入 Phase 1 收尾 / M04 Readiness
+
+当前开发事实以本节为准；下方 2026-09-10—11 的分项记录保留为历史证据，不再分别代表“当前 Stage”。
+
+- **设计基线**：M00 已完成；Operating Model v0.1 的 Frozen L1/L2 不因本轮状态收敛而修改。
+- **本地工程闭环**：M01 完成；M02、AA01、M03 最小闭环、R01、AA02、UX01、UX02、PA01、PA02 均已在各自声明范围内本地 PASS。
+- **独立 Agent 证据**：OpenClaw/MiniMax 已完成一次 Claim → ACK → Progress → Submit，独立 Reviewer 给出抽样 PASS；Human Review/Acceptance 尚未执行。
+- **当前复核**：2026-09-13 在当前工作树执行 `python -m unittest discover -s tests -q`，171 项测试通过。
+- **产品边界**：普通用户入口仍为 localhost 候选实现；未 push、未远程部署、未形成关机后持续可用服务，正式 Pilot 为 0 人。
+- **当前 Milestone**：Phase 1 收尾 / M04 Pilot Readiness。目标是形成可部署决策包、非开发者可用性与理解测试方案，以及经 Human Gate 批准后才能启动的 Pilot 方案。
+- **明确非结论**：本地 PASS 不等于真实组织有效、完整 101 个 L2 已实现、远程服务已上线或 M04 已开始。
+
+接续入口：[NEXT_ACTIONS.md](NEXT_ACTIONS.md) → [M04 Pilot Readiness](milestones/M04_PILOT_READINESS.md)。
+
 ## 2026-09-11 OpenClaw 独立 Agent 测试准备
 
 本机 OpenClaw/MiniMax 独立审查任务已完成 Claim/ACK/Progress/Submit，R-openclaw-review-1；受限工具只暴露指定证据，不向模型暴露凭据。首次协议失败修复后重试通过。Reviewer给出PASS，但仅为抽样审查建议；Human验收和完整返工链未执行。见 [OPENCLAW_LOCAL_TEST.md](OPENCLAW_LOCAL_TEST.md)。隔离测试服务已停止，未推送/部署。
