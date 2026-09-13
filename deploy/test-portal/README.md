@@ -13,3 +13,16 @@
 - 回滚：停止本独立服务，恢复上一代码目录；账号数据库保留，勿覆盖旧库。停用服务不应触碰既有域名项目。数据库 schema 此次只有新独立库新增表，无旧库迁移。
 
 正式推送、云端安装、启动常驻服务或配置入口之前，提交具体主机/目录/端口/访问 URL/备份回滚步骤，取得用户确认。当前模板不是部署完成的证据。
+
+## 2026-09-13 Gate B 本地工程补充
+
+- `GET /health` 执行 SQLite `quick_check`，只返回服务状态，不返回账号、事件或版本数据。
+- 应用日志只记录 request id、方法、无查询参数的路径、状态、耗时和客户端 IP；不记录 Header、Cookie、Authorization 或请求正文。
+- 仅当 socket peer 在重复提供的 `--trusted-proxy` 列表内时，才使用 `X-Forwarded-For` 的首个合法 IP；示例 service 只信任 `127.0.0.1`。
+- `nginx.example.conf` 必须复制成独立配置并替换占位符。配置会覆盖客户端传入的 `X-Forwarded-For`，不得改成追加不可信链。
+- 在线备份：`python -m organization.portal_backup backup SOURCE.sqlite3 DEST.sqlite3`。
+- 校验备份：`python -m organization.portal_backup verify DEST.sqlite3`。
+- 恢复演练：`python -m organization.portal_backup restore DEST.sqlite3 NEW.sqlite3`；目标已存在时拒绝覆盖。
+- systemd 模板新增 journal 输出、30 秒停止窗口、512 MB 内存、100% 单核 CPU、64 tasks 和 4096 文件描述符上限及额外内核保护。
+
+以上仅通过 Windows 本地自动化测试；Nginx 语法、systemd sandbox、证书、真实反代 IP、journal、资源上限与定时备份必须在目标 Linux 隔离环境重新验证。

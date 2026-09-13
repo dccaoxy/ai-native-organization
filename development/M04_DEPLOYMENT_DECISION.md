@@ -40,13 +40,13 @@ ai-native-test.service（单进程、独立系统用户）
 | 项目 | 当前证据 | 状态 | 关闭条件 |
 |---|---|---|---|
 | 入口与域名 | 尚未指定 | BLOCKED_DECISION | 选择独立测试域名或明确隔离路径，确认不覆盖现有站点 |
-| Nginx/TLS | 只有应用侧 Origin 约束 | BLOCKED_ENGINEERING | 形成最小配置、配置检查、证书路径和回滚片段 |
-| 健康检查 | 未发现显式 `/health` | BLOCKED_ENGINEERING | 增加不泄露数据的 readiness/liveness 检查并测试 |
-| 请求日志 | `log_message` 当前被抑制 | BLOCKED_ENGINEERING | 定义访问/错误日志、request id、保留期和敏感字段脱敏 |
-| 反代来源地址 | 限速目前使用 socket client IP | BLOCKED_ENGINEERING | 明确信任代理边界并验证限速不会把所有用户合并或信任伪造头 |
+| Nginx/TLS | 已提供隔离 `nginx.example.conf`，覆盖不可信转发链 | READY_LOCAL / TARGET_PENDING | 在目标机替换占位符，执行语法检查、证书检查和回滚演练 |
+| 健康检查 | `/health` 执行 SQLite `quick_check`，不返回业务数据 | READY_LOCAL | 在目标反代入口验证成功与数据库故障状态 |
+| 请求日志 | JSON 日志仅含 request id、方法、净化路径、状态、耗时和客户端 IP | READY_LOCAL | 在目标 journal 验证脱敏、轮转、保留期和查询方式 |
+| 反代来源地址 | 仅信任显式 `--trusted-proxy`；IP 必须合法，Nginx 模板覆盖客户端头 | READY_LOCAL | 在目标机验证真实 IP、伪造头拒绝和多用户限速 |
 | 数据迁移 | 当前声明使用新库、无旧库迁移 | READY_WITH_CONDITION | 首轮坚持全新隔离库；禁止导入旧实验或公司数据 |
-| 备份恢复 | 有原则，无脚本与演练回执 | BLOCKED_ENGINEERING | 提供在线备份/停服备份命令、校验、恢复演练与 RPO/RTO |
-| 资源限制 | systemd 有隔离，无 CPU/内存/文件数上限 | BLOCKED_ENGINEERING | 给出保守限制并完成压力与失败恢复检查 |
+| 备份恢复 | 已实现在线 backup、integrity check、恢复到新文件和拒绝覆盖；Windows 测试通过 | READY_LOCAL / TARGET_PENDING | 在目标机演练、记录哈希/数量并确定 RPO/RTO 与定时策略 |
+| 资源限制 | systemd 模板已有 512 MB、100% 单核、64 tasks、4096 fd 上限 | READY_LOCAL / TARGET_PENDING | 在目标 Linux 执行 `systemd-analyze verify`、压力与失败恢复检查 |
 | 版本与回滚 | 建议 release 目录，但未固定 artifact | BLOCKED_ENGINEERING | 固定 commit/artifact/hash，保留上一版，只切换 `current` 链接 |
 | 监控与告警 | 未定义 | BLOCKED_ENGINEERING | 定义进程、HTTP、磁盘、备份失败和异常登录的最小告警 |
 | 远端代码状态 | 2026-09-13 远端 `main` 已读回验证到 `d6025e0`，必要 annotated checkpoint tags 已推送 | READY | 后续提交继续执行审计、push 和远端读回；Git 交付不冒充服务部署 |

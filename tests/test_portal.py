@@ -9,9 +9,9 @@ from organization.portal import server
 
 class PortalTests(unittest.TestCase):
     def setUp(self):
-        self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'portal.sqlite3';self.start()
+        self.tmp=tempfile.TemporaryDirectory();self.path=Path(self.tmp.name)/'portal.sqlite3';self.logs=[];self.start()
     def start(self):
-        self.http=server(self.path);self.thread=threading.Thread(target=self.http.serve_forever,daemon=True);self.thread.start();self.url=self.http.origin
+        self.http=server(self.path,request_logger=self.logs.append);self.thread=threading.Thread(target=self.http.serve_forever,daemon=True);self.thread.start();self.url=self.http.origin
     def tearDown(self):
         self.http.shutdown();self.http.server_close();self.thread.join();self.tmp.cleanup()
     def req(self,path,data=None,cookie='',csrf='',origin=True):
@@ -28,6 +28,24 @@ class PortalTests(unittest.TestCase):
         self.assertEqual(self.req('/api/signup',body)[0],200)
         status,r,cookie=self.req('/api/login',{k:body[k] for k in ('username','password')});self.assertEqual(status,200)
         return r,cookie
+
+    def test_health_and_redacted_structured_request_log(self):
+        status,body,_=self.req('/health')
+        self.assertEqual(status,200);self.assertEqual(body,{'status':'ok','service':'ai-native-test-portal'})
+        self.assertEqual(set(self.logs[-1]),{'event','request_id','method','path','status','duration_ms','client_ip'})
+        self.assertEqual(self.logs[-1]['path'],'/health');self.assertEqual(self.logs[-1]['status'],200)
+        self.assertNotIn('Cookie',json.dumps(self.logs[-1]));self.assertNotIn('Authorization',json.dumps(self.logs[-1]))
+
+    def test_trusted_proxy_client_address_is_validated_for_rate_limit(self):
+        self.http.shutdown();self.http.server_close();self.thread.join()
+        self.http=server(self.path,trusted_proxies=['127.0.0.1'],request_logger=self.logs.append);self.thread=threading.Thread(target=self.http.serve_forever,daemon=True);self.thread.start();self.url=self.http.origin
+        body={'username':'proxyuser','name':'Proxy User','password':'synthetic-test-password'}
+        headers={'Origin':self.url,'Content-Type':'application/json','X-Forwarded-For':'203.0.113.9'}
+        with urlopen(Request(self.url+'/api/signup',data=json.dumps(body).encode(),headers=headers)) as response:self.assertEqual(response.status,200)
+        with self.http.portal.store.connect() as db:self.assertEqual(db.execute("SELECT count FROM portal_limits WHERE key='signup/203.0.113.9'").fetchone()[0],1)
+        headers['X-Forwarded-For']='not-an-ip'
+        with self.assertRaises(HTTPError) as error:urlopen(Request(self.url+'/api/signup',data=json.dumps({**body,'username':'other'}).encode(),headers=headers))
+        self.assertEqual(error.exception.code,400);error.exception.close()
     def test_login_identity_csrf_logout_and_persistence(self):
         r,c=self.account('alice');self.assertEqual(self.req('/api/state')[0],401)
         self.assertEqual(self.req('/api/agent',{'name':'test'},c)[0],403)

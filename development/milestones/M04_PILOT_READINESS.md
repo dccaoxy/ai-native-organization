@@ -21,7 +21,7 @@ Readiness 完成只允许提交“是否启动 M04”的 Human 决策包，不�
 - M02 在声明范围内完成 60 Execution / 536 合成事件验证。
 - AA01/AA02、M03 最小闭环、R01、UX01/UX02、PA01/PA02 已有本地验收证据。
 - OpenClaw/MiniMax 已完成一次独立 Agent 的 Claim → ACK → Progress → Submit；尚无 Human Review/Acceptance。
-- 2026-09-13 当前工作树 171 项单元测试通过。
+- 2026-09-13 Gate B 本地工程完成后，当前工作树 175 项单元测试通过。
 
 以上均不构成远程部署、真人 Pilot 或组织效果证据。
 
@@ -38,6 +38,8 @@ Readiness 完成只允许提交“是否启动 M04”的 Human 决策包，不�
 ## Gate B：远程可用性决策包
 
 当前提案与差距见 [M04 Deployment Decision](../M04_DEPLOYMENT_DECISION.md)。该文件是审查材料，不是部署授权或部署回执。
+
+本地工程证据：安全 `/health`、结构化脱敏日志、可信反代来源校验、SQLite 在线备份/校验/非覆盖恢复、Nginx 候选模板和 systemd 资源限制已实现；12 项目标测试与 175 项完整回归通过。目标 Linux、TLS、真实反代、journal、资源限制和恢复演练仍未执行。
 
 - [ ] 明确候选域名或隔离路径，不影响 AEGPC.CN 现有项目。
 - [ ] 明确 TLS、反向代理、监听地址和网络隔离。

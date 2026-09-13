@@ -3,7 +3,7 @@
 本节取代下方旧分项中的“下一步”描述；旧内容保留作为历史记录。GitHub 状态收敛已完成；当前不进入真实 Pilot、不部署、不接入公司数据。后续 push 仍需经过范围审计和远端读回验证。
 
 1. **R1 状态与证据收敛**：保持 `CURRENT_STATE.md`、`MILESTONES.md`、PA02/OpenClaw 验收证据与本清单一致；任何缺失回执标记为 pending/blocked，不推断成功。
-2. **R2 远程部署决策包**：审查并补全 [M04 Deployment Decision](M04_DEPLOYMENT_DECISION.md)；域名与隔离路径、TLS、身份与密钥、进程常驻、数据持久化、备份恢复、日志监控、停机与回滚必须逐项关闭。只提交方案供 Human 决策，不执行部署。
+2. **R2 远程部署决策包**：本地已完成健康检查、脱敏日志、可信反代地址、备份恢复工具、Nginx 候选模板与 systemd 资源限制；继续补全 [M04 Deployment Decision](M04_DEPLOYMENT_DECISION.md) 中的精确入口、版本发布单元、告警和目标 Linux 验证。只提交方案供 Human 决策，不执行部署。
 3. **R3 非开发者可用性与理解测试包**：使用 [M04 Usability Test Plan](M04_USABILITY_TEST_PLAN.md) 的脚本、任务、观察表和通过阈值；参与者无需安装依赖或运行 Python/Node。不得伪造参与者或结果。
 4. **R4 Pilot 方案**：定义 5–10 人、2–4 Cycle、低风险真实任务的范围、招募条件、权限、数据边界、停止条件和指标；启动必须单独取得 Human 授权。
 5. **R5 Readiness Review**：逐项核对 [M04 Pilot Readiness](milestones/M04_PILOT_READINESS.md)。只有部署入口可用、3–5 人测试完成且阻断项关闭后，才提交“是否启动 M04”的决策包。
