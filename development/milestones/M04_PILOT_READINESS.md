@@ -32,7 +32,7 @@ Readiness 完成只允许提交“是否启动 M04”的 Human 决策包，不�
 - [x] `MILESTONES.md` 不再把 AA01/M03 误写为当前里程碑。
 - [x] 最新完整测试通过，并记录测试日期与数量。
 - [x] 已核对 PA02、PA01、UX02、R01、M03、AA02、AA01、M02、M01 的本地 checkpoint/tag；PA02 artifact 与相关 state 文件存在。
-- [ ] 远端回执仍为 pending：`development/autodev/DELIVERY.json` 只验证到 `d3a4188`；本地 HEAD 为 `8cd6025`，相对本地记录的 `origin/main` 领先 46 个提交。本轮未 fetch/push，不能把这些本地 checkpoint 写成远端已交付。
+- [x] GitHub 状态收敛完成：此前 `development/autodev/DELIVERY.json` 只验证到 `d3a4188`；2026-09-13 已将累计本地提交与 annotated checkpoint tags 推送，远端 `main` 读回验证到 `d6025e0`，关键 M04 文档可匿名读取。该证据只证明 Git 交付，不证明远程服务部署。
 - [x] 已核对 Obsidian 项目 Dashboard 存在且最后修改时间晚于设计基线，但本轮未同步；继续将其定义为 Human Dashboard / 投影层，不作为开发完成依据。
 
 ## Gate B：远程可用性决策包

@@ -5,7 +5,7 @@
 状态：**Draft / NO-GO until blockers close**
 目的：为 3–5 人理解与可用性测试提供隔离、可回滚、非生产的网页入口。
 
-本文件不是部署授权。当前未 push、未安装 systemd 服务、未修改 Nginx/域名、未迁移数据、未创建真实账号。
+本文件不是部署授权。GitHub 状态收敛已完成；当前未安装 systemd 服务、未修改 Nginx/域名、未迁移数据、未创建真实账号。
 
 ## 推荐拓扑
 
@@ -49,7 +49,7 @@ ai-native-test.service（单进程、独立系统用户）
 | 资源限制 | systemd 有隔离，无 CPU/内存/文件数上限 | BLOCKED_ENGINEERING | 给出保守限制并完成压力与失败恢复检查 |
 | 版本与回滚 | 建议 release 目录，但未固定 artifact | BLOCKED_ENGINEERING | 固定 commit/artifact/hash，保留上一版，只切换 `current` 链接 |
 | 监控与告警 | 未定义 | BLOCKED_ENGINEERING | 定义进程、HTTP、磁盘、备份失败和异常登录的最小告警 |
-| 远端代码状态 | 本地相对已记录 `origin/main` 领先 46 提交 | PENDING_REMOTE | 用户批准后再核验远端、push 指定 commit/tag；不得猜测已同步 |
+| 远端代码状态 | 2026-09-13 远端 `main` 已读回验证到 `d6025e0`，必要 annotated checkpoint tags 已推送 | READY | 后续提交继续执行审计、push 和远端读回；Git 交付不冒充服务部署 |
 
 ## 建议部署单元
 

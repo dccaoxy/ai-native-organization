@@ -1,6 +1,6 @@
 ## 2026-09-13 唯一当前行动序列：Phase 1 收尾 / M04 Readiness
 
-本节取代下方旧分项中的“下一步”描述；旧内容保留作为历史记录。当前不进入真实 Pilot，不部署、不 push、不接入公司数据。
+本节取代下方旧分项中的“下一步”描述；旧内容保留作为历史记录。GitHub 状态收敛已完成；当前不进入真实 Pilot、不部署、不接入公司数据。后续 push 仍需经过范围审计和远端读回验证。
 
 1. **R1 状态与证据收敛**：保持 `CURRENT_STATE.md`、`MILESTONES.md`、PA02/OpenClaw 验收证据与本清单一致；任何缺失回执标记为 pending/blocked，不推断成功。
 2. **R2 远程部署决策包**：审查并补全 [M04 Deployment Decision](M04_DEPLOYMENT_DECISION.md)；域名与隔离路径、TLS、身份与密钥、进程常驻、数据持久化、备份恢复、日志监控、停机与回滚必须逐项关闭。只提交方案供 Human 决策，不执行部署。
